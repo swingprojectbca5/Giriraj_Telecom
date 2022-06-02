@@ -38,7 +38,7 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_account.setVisible(false);
         panel_about.setVisible(false);
         panel_help.setVisible(false);
-        panel_extra.setVisible(false);
+        panel_extra.setVisible(true);
         jLabel2.grabFocus();
 
         // this.setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -88,53 +88,17 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_gt = new javax.swing.JLabel();
         panel_main = new com.k33ptoo.components.KGradientPanel();
         panel_customer = new com.k33ptoo.components.KGradientPanel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        pnl_addcust = new com.k33ptoo.components.KGradientPanel();
-        kGradientPanel7 = new com.k33ptoo.components.KGradientPanel();
-        txt_custnm = new javax.swing.JTextField();
-        kGradientPanel8 = new com.k33ptoo.components.KGradientPanel();
-        txt_custid = new javax.swing.JTextField();
-        kGradientPanel9 = new com.k33ptoo.components.KGradientPanel();
-        txt_phone = new javax.swing.JTextField();
-        kGradientPanel10 = new com.k33ptoo.components.KGradientPanel();
-        txt_email = new javax.swing.JTextField();
-        kGradientPanel11 = new com.k33ptoo.components.KGradientPanel();
-        txt_sname = new javax.swing.JTextField();
-        kGradientPanel12 = new com.k33ptoo.components.KGradientPanel();
-        txt_saddress = new javax.swing.JTextField();
-        loginBtn = new com.k33ptoo.components.KButton();
-        jPanel2 = new javax.swing.JPanel();
-        pnl_addcust1 = new com.k33ptoo.components.KGradientPanel();
-        kGradientPanel13 = new com.k33ptoo.components.KGradientPanel();
-        txt_rmvcustnm = new javax.swing.JTextField();
-        kGradientPanel14 = new com.k33ptoo.components.KGradientPanel();
-        txt_rmvcustid = new javax.swing.JTextField();
-        kGradientPanel15 = new com.k33ptoo.components.KGradientPanel();
-        txt_rmvphone = new javax.swing.JTextField();
-        kGradientPanel16 = new com.k33ptoo.components.KGradientPanel();
-        txt_rmvemail = new javax.swing.JTextField();
-        kGradientPanel17 = new com.k33ptoo.components.KGradientPanel();
-        txt_rmvsname = new javax.swing.JTextField();
-        kGradientPanel18 = new com.k33ptoo.components.KGradientPanel();
-        txt_rmvsaddress = new javax.swing.JTextField();
-        loginBtn_rmv = new com.k33ptoo.components.KButton();
+        pnl_menu = new com.k33ptoo.components.KGradientPanel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        pnl_addcust2 = new com.k33ptoo.components.KGradientPanel();
-        kGradientPanel19 = new com.k33ptoo.components.KGradientPanel();
-        txt_rmvcustnm1 = new javax.swing.JTextField();
-        kGradientPanel20 = new com.k33ptoo.components.KGradientPanel();
-        txt_detailcustid = new javax.swing.JTextField();
-        kGradientPanel21 = new com.k33ptoo.components.KGradientPanel();
-        txt_rmvphone1 = new javax.swing.JTextField();
-        kGradientPanel22 = new com.k33ptoo.components.KGradientPanel();
-        txt_rmvemail1 = new javax.swing.JTextField();
-        kGradientPanel23 = new com.k33ptoo.components.KGradientPanel();
-        txt_rmvsname1 = new javax.swing.JTextField();
-        kGradientPanel24 = new com.k33ptoo.components.KGradientPanel();
-        txt_rmvsaddress1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        panel_custmain = new com.k33ptoo.components.KGradientPanel();
+        panel_addcust = new com.k33ptoo.components.KGradientPanel();
+        jTextField2 = new javax.swing.JTextField();
+        panel_rmcus = new com.k33ptoo.components.KGradientPanel();
+        jTextField1 = new javax.swing.JTextField();
+        panel_custdetail = new com.k33ptoo.components.KGradientPanel();
+        jTextField3 = new javax.swing.JTextField();
         panel_employee = new com.k33ptoo.components.KGradientPanel();
         panel_product = new com.k33ptoo.components.KGradientPanel();
         panel_bill = new com.k33ptoo.components.KGradientPanel();
@@ -756,897 +720,167 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_customer.setkStartColor(new java.awt.Color(228, 235, 246));
         panel_customer.setPreferredSize(new java.awt.Dimension(1061, 710));
 
-        jTabbedPane1.setBackground(new java.awt.Color(228, 235, 246));
-        jTabbedPane1.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        jTabbedPane1.addKeyListener(new java.awt.event.KeyAdapter()
+        jLabel1.setText("ADD CUSTOMER");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter()
         {
-            public void keyPressed(java.awt.event.KeyEvent evt)
+            public void mouseClicked(java.awt.event.MouseEvent evt)
             {
-                jTabbedPane1KeyPressed(evt);
+                jLabel1MouseClicked(evt);
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(178, 199, 231));
-        jPanel1.addKeyListener(new java.awt.event.KeyAdapter()
+        jLabel3.setText("REMOVE CUSTOMER");
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter()
         {
-            public void keyPressed(java.awt.event.KeyEvent evt)
+            public void mouseClicked(java.awt.event.MouseEvent evt)
             {
-                jPanel1KeyPressed(evt);
+                jLabel3MouseClicked(evt);
             }
         });
 
-        pnl_addcust.setkBorderRadius(40);
-        pnl_addcust.setkEndColor(new java.awt.Color(228, 235, 246));
-        pnl_addcust.setkStartColor(new java.awt.Color(228, 235, 246));
-        pnl_addcust.setOpaque(false);
-        pnl_addcust.addKeyListener(new java.awt.event.KeyAdapter()
+        jLabel4.setText("CUSOMER DETAIL");
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter()
         {
-            public void keyPressed(java.awt.event.KeyEvent evt)
+            public void mouseClicked(java.awt.event.MouseEvent evt)
             {
-                pnl_addcustKeyPressed(evt);
+                jLabel4MouseClicked(evt);
             }
         });
 
-        kGradientPanel7.setkBorderRadius(30);
-        kGradientPanel7.setkEndColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel7.setkStartColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel7.setOpaque(false);
-
-        txt_custnm.setBackground(new java.awt.Color(164, 177, 252));
-        txt_custnm.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_custnm.setForeground(new java.awt.Color(228, 235, 246));
-        txt_custnm.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_custnm.setText("CUSTOMER NAME");
-        txt_custnm.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
-        txt_custnm.setNextFocusableComponent(txt_phone);
-        txt_custnm.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                txt_custnmFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                txt_custnmFocusLost(evt);
-            }
-        });
-
-        javax.swing.GroupLayout kGradientPanel7Layout = new javax.swing.GroupLayout(kGradientPanel7);
-        kGradientPanel7.setLayout(kGradientPanel7Layout);
-        kGradientPanel7Layout.setHorizontalGroup(
-            kGradientPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel7Layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
-                .addComponent(txt_custnm, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        kGradientPanel7Layout.setVerticalGroup(
-            kGradientPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_custnm, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        kGradientPanel8.setkBorderRadius(30);
-        kGradientPanel8.setkEndColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel8.setkStartColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel8.setOpaque(false);
-
-        txt_custid.setBackground(new java.awt.Color(164, 177, 252));
-        txt_custid.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_custid.setForeground(new java.awt.Color(228, 235, 246));
-        txt_custid.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_custid.setText("CUSTOMER ID");
-        txt_custid.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
-        txt_custid.setNextFocusableComponent(txt_custnm);
-        txt_custid.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                txt_custidFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                txt_custidFocusLost(evt);
-            }
-        });
-
-        javax.swing.GroupLayout kGradientPanel8Layout = new javax.swing.GroupLayout(kGradientPanel8);
-        kGradientPanel8.setLayout(kGradientPanel8Layout);
-        kGradientPanel8Layout.setHorizontalGroup(
-            kGradientPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel8Layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
-                .addComponent(txt_custid, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        kGradientPanel8Layout.setVerticalGroup(
-            kGradientPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_custid, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        kGradientPanel9.setkBorderRadius(30);
-        kGradientPanel9.setkEndColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel9.setkStartColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel9.setOpaque(false);
-
-        txt_phone.setBackground(new java.awt.Color(164, 177, 252));
-        txt_phone.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_phone.setForeground(new java.awt.Color(228, 235, 246));
-        txt_phone.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_phone.setText("PHONE NO.");
-        txt_phone.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
-        txt_phone.setNextFocusableComponent(txt_email);
-        txt_phone.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                txt_phoneFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                txt_phoneFocusLost(evt);
-            }
-        });
-
-        javax.swing.GroupLayout kGradientPanel9Layout = new javax.swing.GroupLayout(kGradientPanel9);
-        kGradientPanel9.setLayout(kGradientPanel9Layout);
-        kGradientPanel9Layout.setHorizontalGroup(
-            kGradientPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel9Layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
-                .addComponent(txt_phone, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        kGradientPanel9Layout.setVerticalGroup(
-            kGradientPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_phone, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        kGradientPanel10.setkBorderRadius(30);
-        kGradientPanel10.setkEndColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel10.setkStartColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel10.setOpaque(false);
-
-        txt_email.setBackground(new java.awt.Color(164, 177, 252));
-        txt_email.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_email.setForeground(new java.awt.Color(228, 235, 246));
-        txt_email.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_email.setText("EMAIL");
-        txt_email.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
-        txt_email.setNextFocusableComponent(txt_sname);
-        txt_email.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                txt_emailFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                txt_emailFocusLost(evt);
-            }
-        });
-
-        javax.swing.GroupLayout kGradientPanel10Layout = new javax.swing.GroupLayout(kGradientPanel10);
-        kGradientPanel10.setLayout(kGradientPanel10Layout);
-        kGradientPanel10Layout.setHorizontalGroup(
-            kGradientPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel10Layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
-                .addComponent(txt_email, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        kGradientPanel10Layout.setVerticalGroup(
-            kGradientPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_email, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        kGradientPanel11.setkBorderRadius(30);
-        kGradientPanel11.setkEndColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel11.setkStartColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel11.setOpaque(false);
-
-        txt_sname.setBackground(new java.awt.Color(164, 177, 252));
-        txt_sname.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_sname.setForeground(new java.awt.Color(228, 235, 246));
-        txt_sname.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_sname.setText("SHOP NAME");
-        txt_sname.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
-        txt_sname.setNextFocusableComponent(txt_saddress);
-        txt_sname.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                txt_snameFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                txt_snameFocusLost(evt);
-            }
-        });
-
-        javax.swing.GroupLayout kGradientPanel11Layout = new javax.swing.GroupLayout(kGradientPanel11);
-        kGradientPanel11.setLayout(kGradientPanel11Layout);
-        kGradientPanel11Layout.setHorizontalGroup(
-            kGradientPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel11Layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
-                .addComponent(txt_sname, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        kGradientPanel11Layout.setVerticalGroup(
-            kGradientPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_sname, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        kGradientPanel12.setkBorderRadius(30);
-        kGradientPanel12.setkEndColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel12.setkStartColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel12.setOpaque(false);
-
-        txt_saddress.setBackground(new java.awt.Color(164, 177, 252));
-        txt_saddress.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_saddress.setForeground(new java.awt.Color(228, 235, 246));
-        txt_saddress.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_saddress.setText("SHOP ADDRESS");
-        txt_saddress.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
-        txt_saddress.setNextFocusableComponent(loginBtn);
-        txt_saddress.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                txt_saddressFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                txt_saddressFocusLost(evt);
-            }
-        });
-
-        javax.swing.GroupLayout kGradientPanel12Layout = new javax.swing.GroupLayout(kGradientPanel12);
-        kGradientPanel12.setLayout(kGradientPanel12Layout);
-        kGradientPanel12Layout.setHorizontalGroup(
-            kGradientPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel12Layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
-                .addComponent(txt_saddress, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        kGradientPanel12Layout.setVerticalGroup(
-            kGradientPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_saddress, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        loginBtn.setBorder(null);
-        loginBtn.setText("ADD CUSTOMER");
-        loginBtn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        loginBtn.setkBorderRadius(30);
-        loginBtn.setkEndColor(new java.awt.Color(68, 82, 121));
-        loginBtn.setkHoverEndColor(new java.awt.Color(178, 199, 231));
-        loginBtn.setkHoverForeGround(new java.awt.Color(68, 82, 121));
-        loginBtn.setkHoverStartColor(new java.awt.Color(178, 199, 231));
-        loginBtn.setkStartColor(new java.awt.Color(68, 82, 121));
-        loginBtn.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                loginBtnFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                loginBtnFocusLost(evt);
-            }
-        });
-        loginBtn.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
-                loginBtnMouseEntered(evt);
-            }
-        });
-
-        javax.swing.GroupLayout pnl_addcustLayout = new javax.swing.GroupLayout(pnl_addcust);
-        pnl_addcust.setLayout(pnl_addcustLayout);
-        pnl_addcustLayout.setHorizontalGroup(
-            pnl_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_addcustLayout.createSequentialGroup()
-                .addContainerGap(100, Short.MAX_VALUE)
-                .addGroup(pnl_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(kGradientPanel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(pnl_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(pnl_addcustLayout.createSequentialGroup()
-                            .addGap(1, 1, 1)
-                            .addComponent(kGradientPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(kGradientPanel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
-                .addGroup(pnl_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(kGradientPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(kGradientPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(kGradientPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(99, Short.MAX_VALUE))
-            .addGroup(pnl_addcustLayout.createSequentialGroup()
-                .addGap(253, 253, 253)
-                .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout pnl_menuLayout = new javax.swing.GroupLayout(pnl_menu);
+        pnl_menu.setLayout(pnl_menuLayout);
+        pnl_menuLayout.setHorizontalGroup(
+            pnl_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_menuLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jLabel1)
+                .addGap(41, 41, 41)
+                .addComponent(jLabel3)
+                .addGap(41, 41, 41)
+                .addComponent(jLabel4)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        pnl_addcustLayout.setVerticalGroup(
-            pnl_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_addcustLayout.createSequentialGroup()
-                .addContainerGap(80, Short.MAX_VALUE)
-                .addGroup(pnl_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(kGradientPanel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(kGradientPanel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(pnl_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnl_addcustLayout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(kGradientPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(80, 80, 80))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_addcustLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(kGradientPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(71, 71, 71)))
-                .addGroup(pnl_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(kGradientPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(kGradientPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(55, 55, 55)
-                .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80))
+        pnl_menuLayout.setVerticalGroup(
+            pnl_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(pnl_addcust, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
+        panel_custmain.setkEndColor(new java.awt.Color(255, 51, 51));
+        panel_custmain.setkStartColor(new java.awt.Color(255, 51, 0));
+
+        jTextField2.setText("ADD CUSTOMER");
+
+        javax.swing.GroupLayout panel_addcustLayout = new javax.swing.GroupLayout(panel_addcust);
+        panel_addcust.setLayout(panel_addcustLayout);
+        panel_addcustLayout.setHorizontalGroup(
+            panel_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_addcustLayout.createSequentialGroup()
+                .addGap(356, 356, 356)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(448, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(pnl_addcust, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(40, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("ADD CUSTOMER", jPanel1);
-
-        jPanel2.setBackground(new java.awt.Color(178, 199, 231));
-
-        pnl_addcust1.setkBorderRadius(40);
-        pnl_addcust1.setkEndColor(new java.awt.Color(228, 235, 246));
-        pnl_addcust1.setkStartColor(new java.awt.Color(228, 235, 246));
-        pnl_addcust1.setOpaque(false);
-
-        kGradientPanel13.setkBorderRadius(30);
-        kGradientPanel13.setkEndColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel13.setkStartColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel13.setOpaque(false);
-
-        txt_rmvcustnm.setEditable(false);
-        txt_rmvcustnm.setBackground(new java.awt.Color(164, 177, 252));
-        txt_rmvcustnm.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_rmvcustnm.setForeground(new java.awt.Color(228, 235, 246));
-        txt_rmvcustnm.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_rmvcustnm.setText("CUSTOMER NAME");
-        txt_rmvcustnm.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
-        txt_rmvcustnm.setNextFocusableComponent(txt_phone);
-
-        javax.swing.GroupLayout kGradientPanel13Layout = new javax.swing.GroupLayout(kGradientPanel13);
-        kGradientPanel13.setLayout(kGradientPanel13Layout);
-        kGradientPanel13Layout.setHorizontalGroup(
-            kGradientPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel13Layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
-                .addComponent(txt_rmvcustnm, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        kGradientPanel13Layout.setVerticalGroup(
-            kGradientPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_rmvcustnm, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        panel_addcustLayout.setVerticalGroup(
+            panel_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_addcustLayout.createSequentialGroup()
+                .addGap(259, 259, 259)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(266, Short.MAX_VALUE))
         );
 
-        kGradientPanel14.setkBorderRadius(30);
-        kGradientPanel14.setkEndColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel14.setkStartColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel14.setOpaque(false);
+        jTextField1.setText("REMOVE CUSTOMER");
 
-        txt_rmvcustid.setBackground(new java.awt.Color(164, 177, 252));
-        txt_rmvcustid.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_rmvcustid.setForeground(new java.awt.Color(228, 235, 246));
-        txt_rmvcustid.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_rmvcustid.setText("CUSTOMER ID");
-        txt_rmvcustid.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
-        txt_rmvcustid.setNextFocusableComponent(loginBtn_rmv);
-        txt_rmvcustid.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                txt_rmvcustidFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                txt_rmvcustidFocusLost(evt);
-            }
-        });
-
-        javax.swing.GroupLayout kGradientPanel14Layout = new javax.swing.GroupLayout(kGradientPanel14);
-        kGradientPanel14.setLayout(kGradientPanel14Layout);
-        kGradientPanel14Layout.setHorizontalGroup(
-            kGradientPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel14Layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
-                .addComponent(txt_rmvcustid, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+        javax.swing.GroupLayout panel_rmcusLayout = new javax.swing.GroupLayout(panel_rmcus);
+        panel_rmcus.setLayout(panel_rmcusLayout);
+        panel_rmcusLayout.setHorizontalGroup(
+            panel_rmcusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_rmcusLayout.createSequentialGroup()
+                .addGap(356, 356, 356)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(416, Short.MAX_VALUE))
         );
-        kGradientPanel14Layout.setVerticalGroup(
-            kGradientPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_rmvcustid, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        panel_rmcusLayout.setVerticalGroup(
+            panel_rmcusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_rmcusLayout.createSequentialGroup()
+                .addGap(259, 259, 259)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(266, Short.MAX_VALUE))
         );
 
-        kGradientPanel15.setkBorderRadius(30);
-        kGradientPanel15.setkEndColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel15.setkStartColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel15.setOpaque(false);
+        jTextField3.setText("CUSTOMER DETAIL");
 
-        txt_rmvphone.setEditable(false);
-        txt_rmvphone.setBackground(new java.awt.Color(164, 177, 252));
-        txt_rmvphone.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_rmvphone.setForeground(new java.awt.Color(228, 235, 246));
-        txt_rmvphone.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_rmvphone.setText("PHONE NO.");
-        txt_rmvphone.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
-        txt_rmvphone.setNextFocusableComponent(txt_email);
-
-        javax.swing.GroupLayout kGradientPanel15Layout = new javax.swing.GroupLayout(kGradientPanel15);
-        kGradientPanel15.setLayout(kGradientPanel15Layout);
-        kGradientPanel15Layout.setHorizontalGroup(
-            kGradientPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel15Layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
-                .addComponent(txt_rmvphone, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+        javax.swing.GroupLayout panel_custdetailLayout = new javax.swing.GroupLayout(panel_custdetail);
+        panel_custdetail.setLayout(panel_custdetailLayout);
+        panel_custdetailLayout.setHorizontalGroup(
+            panel_custdetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_custdetailLayout.createSequentialGroup()
+                .addGap(356, 356, 356)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(430, Short.MAX_VALUE))
         );
-        kGradientPanel15Layout.setVerticalGroup(
-            kGradientPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_rmvphone, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        panel_custdetailLayout.setVerticalGroup(
+            panel_custdetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_custdetailLayout.createSequentialGroup()
+                .addGap(259, 259, 259)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(266, Short.MAX_VALUE))
         );
 
-        kGradientPanel16.setkBorderRadius(30);
-        kGradientPanel16.setkEndColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel16.setkStartColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel16.setOpaque(false);
-
-        txt_rmvemail.setEditable(false);
-        txt_rmvemail.setBackground(new java.awt.Color(164, 177, 252));
-        txt_rmvemail.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_rmvemail.setForeground(new java.awt.Color(228, 235, 246));
-        txt_rmvemail.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_rmvemail.setText("EMAIL");
-        txt_rmvemail.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
-        txt_rmvemail.setNextFocusableComponent(txt_sname);
-
-        javax.swing.GroupLayout kGradientPanel16Layout = new javax.swing.GroupLayout(kGradientPanel16);
-        kGradientPanel16.setLayout(kGradientPanel16Layout);
-        kGradientPanel16Layout.setHorizontalGroup(
-            kGradientPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel16Layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
-                .addComponent(txt_rmvemail, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+        javax.swing.GroupLayout panel_custmainLayout = new javax.swing.GroupLayout(panel_custmain);
+        panel_custmain.setLayout(panel_custmainLayout);
+        panel_custmainLayout.setHorizontalGroup(
+            panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1061, Short.MAX_VALUE)
+            .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_custmainLayout.createSequentialGroup()
+                    .addGap(50, 50, 50)
+                    .addComponent(panel_custdetail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(50, 50, 50)))
+            .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_custmainLayout.createSequentialGroup()
+                    .addGap(50, 50, 50)
+                    .addComponent(panel_rmcus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(50, 50, 50)))
+            .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_custmainLayout.createSequentialGroup()
+                    .addGap(50, 50, 50)
+                    .addComponent(panel_addcust, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(50, 50, 50)))
         );
-        kGradientPanel16Layout.setVerticalGroup(
-            kGradientPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_rmvemail, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        panel_custmainLayout.setVerticalGroup(
+            panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 660, Short.MAX_VALUE)
+            .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_custmainLayout.createSequentialGroup()
+                    .addGap(50, 50, 50)
+                    .addComponent(panel_custdetail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(50, 50, 50)))
+            .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_custmainLayout.createSequentialGroup()
+                    .addGap(50, 50, 50)
+                    .addComponent(panel_rmcus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(50, 50, 50)))
+            .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_custmainLayout.createSequentialGroup()
+                    .addGap(50, 50, 50)
+                    .addComponent(panel_addcust, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(50, 50, 50)))
         );
-
-        kGradientPanel17.setkBorderRadius(30);
-        kGradientPanel17.setkEndColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel17.setkStartColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel17.setOpaque(false);
-
-        txt_rmvsname.setEditable(false);
-        txt_rmvsname.setBackground(new java.awt.Color(164, 177, 252));
-        txt_rmvsname.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_rmvsname.setForeground(new java.awt.Color(228, 235, 246));
-        txt_rmvsname.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_rmvsname.setText("SHOP NAME");
-        txt_rmvsname.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
-        txt_rmvsname.setNextFocusableComponent(txt_saddress);
-
-        javax.swing.GroupLayout kGradientPanel17Layout = new javax.swing.GroupLayout(kGradientPanel17);
-        kGradientPanel17.setLayout(kGradientPanel17Layout);
-        kGradientPanel17Layout.setHorizontalGroup(
-            kGradientPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel17Layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
-                .addComponent(txt_rmvsname, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        kGradientPanel17Layout.setVerticalGroup(
-            kGradientPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_rmvsname, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        kGradientPanel18.setkBorderRadius(30);
-        kGradientPanel18.setkEndColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel18.setkStartColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel18.setOpaque(false);
-
-        txt_rmvsaddress.setEditable(false);
-        txt_rmvsaddress.setBackground(new java.awt.Color(164, 177, 252));
-        txt_rmvsaddress.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_rmvsaddress.setForeground(new java.awt.Color(228, 235, 246));
-        txt_rmvsaddress.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_rmvsaddress.setText("SHOP ADDRESS");
-        txt_rmvsaddress.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
-        txt_rmvsaddress.setNextFocusableComponent(loginBtn);
-
-        javax.swing.GroupLayout kGradientPanel18Layout = new javax.swing.GroupLayout(kGradientPanel18);
-        kGradientPanel18.setLayout(kGradientPanel18Layout);
-        kGradientPanel18Layout.setHorizontalGroup(
-            kGradientPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel18Layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
-                .addComponent(txt_rmvsaddress, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        kGradientPanel18Layout.setVerticalGroup(
-            kGradientPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_rmvsaddress, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        loginBtn_rmv.setBorder(null);
-        loginBtn_rmv.setText("REMOVE CUSTOMER");
-        loginBtn_rmv.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        loginBtn_rmv.setkBorderRadius(30);
-        loginBtn_rmv.setkEndColor(new java.awt.Color(68, 82, 121));
-        loginBtn_rmv.setkHoverEndColor(new java.awt.Color(178, 199, 231));
-        loginBtn_rmv.setkHoverForeGround(new java.awt.Color(68, 82, 121));
-        loginBtn_rmv.setkHoverStartColor(new java.awt.Color(178, 199, 231));
-        loginBtn_rmv.setkStartColor(new java.awt.Color(68, 82, 121));
-        loginBtn_rmv.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                loginBtn_rmvFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                loginBtn_rmvFocusLost(evt);
-            }
-        });
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 22)); // NOI18N
-        jLabel1.setText("Please Enter The Customer ID");
-
-        javax.swing.GroupLayout pnl_addcust1Layout = new javax.swing.GroupLayout(pnl_addcust1);
-        pnl_addcust1.setLayout(pnl_addcust1Layout);
-        pnl_addcust1Layout.setHorizontalGroup(
-            pnl_addcust1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_addcust1Layout.createSequentialGroup()
-                .addContainerGap(100, Short.MAX_VALUE)
-                .addGroup(pnl_addcust1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(kGradientPanel17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(pnl_addcust1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(kGradientPanel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(pnl_addcust1Layout.createSequentialGroup()
-                            .addGap(1, 1, 1)
-                            .addGroup(pnl_addcust1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(kGradientPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
-                .addGroup(pnl_addcust1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(kGradientPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(kGradientPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(kGradientPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(99, Short.MAX_VALUE))
-            .addGroup(pnl_addcust1Layout.createSequentialGroup()
-                .addGap(253, 253, 253)
-                .addComponent(loginBtn_rmv, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        pnl_addcust1Layout.setVerticalGroup(
-            pnl_addcust1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_addcust1Layout.createSequentialGroup()
-                .addContainerGap(33, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnl_addcust1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(kGradientPanel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(kGradientPanel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(pnl_addcust1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnl_addcust1Layout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(kGradientPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(80, 80, 80))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_addcust1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(kGradientPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(71, 71, 71)))
-                .addGroup(pnl_addcust1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(kGradientPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(kGradientPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(55, 55, 55)
-                .addComponent(loginBtn_rmv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80))
-        );
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(pnl_addcust1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(pnl_addcust1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(40, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("REMOVE CUSTOMER", jPanel2);
-
-        jPanel3.setBackground(new java.awt.Color(178, 199, 231));
-
-        pnl_addcust2.setkBorderRadius(40);
-        pnl_addcust2.setkEndColor(new java.awt.Color(228, 235, 246));
-        pnl_addcust2.setkStartColor(new java.awt.Color(228, 235, 246));
-        pnl_addcust2.setOpaque(false);
-
-        kGradientPanel19.setkBorderRadius(30);
-        kGradientPanel19.setkEndColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel19.setkStartColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel19.setOpaque(false);
-
-        txt_rmvcustnm1.setEditable(false);
-        txt_rmvcustnm1.setBackground(new java.awt.Color(164, 177, 252));
-        txt_rmvcustnm1.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_rmvcustnm1.setForeground(new java.awt.Color(228, 235, 246));
-        txt_rmvcustnm1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_rmvcustnm1.setText("CUSTOMER NAME");
-        txt_rmvcustnm1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout kGradientPanel19Layout = new javax.swing.GroupLayout(kGradientPanel19);
-        kGradientPanel19.setLayout(kGradientPanel19Layout);
-        kGradientPanel19Layout.setHorizontalGroup(
-            kGradientPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel19Layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
-                .addComponent(txt_rmvcustnm1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        kGradientPanel19Layout.setVerticalGroup(
-            kGradientPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_rmvcustnm1, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        kGradientPanel20.setkBorderRadius(30);
-        kGradientPanel20.setkEndColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel20.setkStartColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel20.setOpaque(false);
-
-        txt_detailcustid.setBackground(new java.awt.Color(164, 177, 252));
-        txt_detailcustid.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_detailcustid.setForeground(new java.awt.Color(228, 235, 246));
-        txt_detailcustid.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_detailcustid.setText("CUSTOMER ID");
-        txt_detailcustid.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
-        txt_detailcustid.setNextFocusableComponent(jTabbedPane1);
-        txt_detailcustid.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                txt_detailcustidFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                txt_detailcustidFocusLost(evt);
-            }
-        });
-
-        javax.swing.GroupLayout kGradientPanel20Layout = new javax.swing.GroupLayout(kGradientPanel20);
-        kGradientPanel20.setLayout(kGradientPanel20Layout);
-        kGradientPanel20Layout.setHorizontalGroup(
-            kGradientPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel20Layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
-                .addComponent(txt_detailcustid, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        kGradientPanel20Layout.setVerticalGroup(
-            kGradientPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_detailcustid, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        kGradientPanel21.setkBorderRadius(30);
-        kGradientPanel21.setkEndColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel21.setkStartColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel21.setOpaque(false);
-
-        txt_rmvphone1.setEditable(false);
-        txt_rmvphone1.setBackground(new java.awt.Color(164, 177, 252));
-        txt_rmvphone1.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_rmvphone1.setForeground(new java.awt.Color(228, 235, 246));
-        txt_rmvphone1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_rmvphone1.setText("PHONE NO.");
-        txt_rmvphone1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout kGradientPanel21Layout = new javax.swing.GroupLayout(kGradientPanel21);
-        kGradientPanel21.setLayout(kGradientPanel21Layout);
-        kGradientPanel21Layout.setHorizontalGroup(
-            kGradientPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel21Layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
-                .addComponent(txt_rmvphone1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        kGradientPanel21Layout.setVerticalGroup(
-            kGradientPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_rmvphone1, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        kGradientPanel22.setkBorderRadius(30);
-        kGradientPanel22.setkEndColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel22.setkStartColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel22.setOpaque(false);
-
-        txt_rmvemail1.setEditable(false);
-        txt_rmvemail1.setBackground(new java.awt.Color(164, 177, 252));
-        txt_rmvemail1.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_rmvemail1.setForeground(new java.awt.Color(228, 235, 246));
-        txt_rmvemail1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_rmvemail1.setText("EMAIL");
-        txt_rmvemail1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout kGradientPanel22Layout = new javax.swing.GroupLayout(kGradientPanel22);
-        kGradientPanel22.setLayout(kGradientPanel22Layout);
-        kGradientPanel22Layout.setHorizontalGroup(
-            kGradientPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel22Layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
-                .addComponent(txt_rmvemail1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        kGradientPanel22Layout.setVerticalGroup(
-            kGradientPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_rmvemail1, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        kGradientPanel23.setkBorderRadius(30);
-        kGradientPanel23.setkEndColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel23.setkStartColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel23.setOpaque(false);
-
-        txt_rmvsname1.setEditable(false);
-        txt_rmvsname1.setBackground(new java.awt.Color(164, 177, 252));
-        txt_rmvsname1.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_rmvsname1.setForeground(new java.awt.Color(228, 235, 246));
-        txt_rmvsname1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_rmvsname1.setText("SHOP NAME");
-        txt_rmvsname1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout kGradientPanel23Layout = new javax.swing.GroupLayout(kGradientPanel23);
-        kGradientPanel23.setLayout(kGradientPanel23Layout);
-        kGradientPanel23Layout.setHorizontalGroup(
-            kGradientPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel23Layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
-                .addComponent(txt_rmvsname1, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        kGradientPanel23Layout.setVerticalGroup(
-            kGradientPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_rmvsname1, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        kGradientPanel24.setkBorderRadius(30);
-        kGradientPanel24.setkEndColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel24.setkStartColor(new java.awt.Color(164, 177, 252));
-        kGradientPanel24.setOpaque(false);
-
-        txt_rmvsaddress1.setEditable(false);
-        txt_rmvsaddress1.setBackground(new java.awt.Color(164, 177, 252));
-        txt_rmvsaddress1.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_rmvsaddress1.setForeground(new java.awt.Color(228, 235, 246));
-        txt_rmvsaddress1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_rmvsaddress1.setText("SHOP ADDRESS");
-        txt_rmvsaddress1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout kGradientPanel24Layout = new javax.swing.GroupLayout(kGradientPanel24);
-        kGradientPanel24.setLayout(kGradientPanel24Layout);
-        kGradientPanel24Layout.setHorizontalGroup(
-            kGradientPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel24Layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
-                .addComponent(txt_rmvsaddress1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        kGradientPanel24Layout.setVerticalGroup(
-            kGradientPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_rmvsaddress1, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 22)); // NOI18N
-        jLabel3.setText("Please Enter The Customer ID");
-
-        javax.swing.GroupLayout pnl_addcust2Layout = new javax.swing.GroupLayout(pnl_addcust2);
-        pnl_addcust2.setLayout(pnl_addcust2Layout);
-        pnl_addcust2Layout.setHorizontalGroup(
-            pnl_addcust2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_addcust2Layout.createSequentialGroup()
-                .addContainerGap(100, Short.MAX_VALUE)
-                .addGroup(pnl_addcust2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(kGradientPanel23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(pnl_addcust2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(kGradientPanel21, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(pnl_addcust2Layout.createSequentialGroup()
-                            .addGap(1, 1, 1)
-                            .addGroup(pnl_addcust2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(kGradientPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
-                .addGroup(pnl_addcust2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(kGradientPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(kGradientPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(kGradientPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(99, Short.MAX_VALUE))
-        );
-        pnl_addcust2Layout.setVerticalGroup(
-            pnl_addcust2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_addcust2Layout.createSequentialGroup()
-                .addContainerGap(33, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnl_addcust2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(kGradientPanel20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(kGradientPanel19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(pnl_addcust2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnl_addcust2Layout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(kGradientPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(80, 80, 80))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_addcust2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(kGradientPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(71, 71, 71)))
-                .addGroup(pnl_addcust2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(kGradientPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(kGradientPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(180, 180, 180))
-        );
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(pnl_addcust2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(pnl_addcust2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(40, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("CUSTOMER DETAIL", jPanel3);
 
         javax.swing.GroupLayout panel_customerLayout = new javax.swing.GroupLayout(panel_customer);
         panel_customer.setLayout(panel_customerLayout);
         panel_customerLayout.setHorizontalGroup(
             panel_customerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(pnl_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_custmain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panel_customerLayout.setVerticalGroup(
             panel_customerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(panel_customerLayout.createSequentialGroup()
+                .addComponent(pnl_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(panel_custmain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panel_employee.setPreferredSize(new java.awt.Dimension(1061, 710));
@@ -2349,7 +1583,6 @@ public class frm_dashboard extends javax.swing.JFrame
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
             panel_customer.setVisible(true);
-            jTabbedPane1.grabFocus();
             panel_employee.setVisible(false);
             panel_bill.setVisible(false);
             panel_product.setVisible(false);
@@ -2357,6 +1590,10 @@ public class frm_dashboard extends javax.swing.JFrame
             panel_about.setVisible(false);
             panel_help.setVisible(false);
             panel_extra.setVisible(false);
+
+            panel_rmcus.setVisible(true);
+            panel_custdetail.setVisible(false);
+            panel_custdetail.setVisible(false);
         }
     }//GEN-LAST:event_lbl_customerKeyPressed
 
@@ -2388,7 +1625,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private void lbl_customerMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_customerMouseClicked
     {//GEN-HEADEREND:event_lbl_customerMouseClicked
         panel_customer.setVisible(true);
-        jTabbedPane1.grabFocus();
+        panel_rmcus.setVisible(true);
         panel_employee.setVisible(false);
         panel_bill.setVisible(false);
         panel_product.setVisible(false);
@@ -2396,6 +1633,9 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_about.setVisible(false);
         panel_help.setVisible(false);
         panel_extra.setVisible(false);
+        panel_rmcus.setVisible(true);
+        panel_custdetail.setVisible(false);
+        panel_custdetail.setVisible(false);
         pnl_customer.setkStartColor(Color.WHITE);
         pnl_customer.setkEndColor(Color.WHITE);
         pnl_customer.setBackground(Color.WHITE);
@@ -2425,214 +1665,26 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_customer.setText("<html><u>CUSTOMER MANAGEMENT</u></html>");
     }//GEN-LAST:event_lbl_customerFocusGained
 
-    private void txt_custnmFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custnmFocusGained
-    {//GEN-HEADEREND:event_txt_custnmFocusGained
-        if (txt_custnm.getText().equals("CUSTOMER NAME"))
-        {
-            txt_custnm.setText("");
-            txt_custnm.setForeground(new Color(68, 82, 121));
-        }
-    }//GEN-LAST:event_txt_custnmFocusGained
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_jLabel1MouseClicked
+    {//GEN-HEADEREND:event_jLabel1MouseClicked
+        panel_rmcus.setVisible(true);
+        panel_custdetail.setVisible(false);
+        panel_custdetail.setVisible(false);
+    }//GEN-LAST:event_jLabel1MouseClicked
 
-    private void txt_custnmFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custnmFocusLost
-    {//GEN-HEADEREND:event_txt_custnmFocusLost
-        if (txt_custnm.getText().equals(""))
-        {
-            txt_custnm.setText("CUSTOMER NAME");
-            txt_custnm.setForeground(new Color(228, 235, 246));
-        }
-    }//GEN-LAST:event_txt_custnmFocusLost
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_jLabel3MouseClicked
+    {//GEN-HEADEREND:event_jLabel3MouseClicked
+        panel_rmcus.setVisible(false);
+        panel_custdetail.setVisible(true);
+        panel_custdetail.setVisible(false);
+    }//GEN-LAST:event_jLabel3MouseClicked
 
-    private void txt_custidFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custidFocusGained
-    {//GEN-HEADEREND:event_txt_custidFocusGained
-        if (txt_custid.getText().equals("CUSTOMER ID"))
-        {
-            txt_custid.setText("");
-            txt_custid.setForeground(new Color(68, 82, 121));
-        }
-    }//GEN-LAST:event_txt_custidFocusGained
-
-    private void txt_custidFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custidFocusLost
-    {//GEN-HEADEREND:event_txt_custidFocusLost
-        if (txt_custid.getText().equals(""))
-        {
-            txt_custid.setText("CUSTOMER ID");
-            txt_custid.setForeground(new Color(228, 235, 246));
-        }
-    }//GEN-LAST:event_txt_custidFocusLost
-
-    private void txt_phoneFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_phoneFocusGained
-    {//GEN-HEADEREND:event_txt_phoneFocusGained
-        if (txt_phone.getText().equals("PHONE NO."))
-        {
-            txt_phone.setText("");
-            txt_phone.setForeground(new Color(68, 82, 121));
-        }
-    }//GEN-LAST:event_txt_phoneFocusGained
-
-    private void txt_phoneFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_phoneFocusLost
-    {//GEN-HEADEREND:event_txt_phoneFocusLost
-        if (txt_phone.getText().equals(""))
-        {
-            txt_phone.setText("PHONE NO.");
-            txt_phone.setForeground(new Color(228, 235, 246));
-        }
-    }//GEN-LAST:event_txt_phoneFocusLost
-
-    private void txt_emailFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_emailFocusGained
-    {//GEN-HEADEREND:event_txt_emailFocusGained
-        if (txt_email.getText().equals("EMAIL"))
-        {
-            txt_email.setText("");
-            txt_email.setForeground(new Color(68, 82, 121));
-        }
-    }//GEN-LAST:event_txt_emailFocusGained
-
-    private void txt_emailFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_emailFocusLost
-    {//GEN-HEADEREND:event_txt_emailFocusLost
-        if (txt_email.getText().equals(""))
-        {
-            txt_email.setText("EMAIL");
-            txt_email.setForeground(new Color(228, 235, 246));
-        }
-    }//GEN-LAST:event_txt_emailFocusLost
-
-    private void txt_snameFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_snameFocusGained
-    {//GEN-HEADEREND:event_txt_snameFocusGained
-        if (txt_sname.getText().equals("SHOP NAME"))
-        {
-            txt_sname.setText("");
-            txt_sname.setForeground(new Color(68, 82, 121));
-        }
-    }//GEN-LAST:event_txt_snameFocusGained
-
-    private void txt_snameFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_snameFocusLost
-    {//GEN-HEADEREND:event_txt_snameFocusLost
-        if (txt_sname.getText().equals(""))
-        {
-            txt_sname.setText("SHOP NAME");
-            txt_sname.setForeground(new Color(228, 235, 246));
-        }
-    }//GEN-LAST:event_txt_snameFocusLost
-
-    private void txt_saddressFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_saddressFocusGained
-    {//GEN-HEADEREND:event_txt_saddressFocusGained
-        if (txt_saddress.getText().equals("SHOP ADDRESS"))
-        {
-            txt_saddress.setText("");
-            txt_saddress.setForeground(new Color(68, 82, 121));
-        }
-    }//GEN-LAST:event_txt_saddressFocusGained
-
-    private void txt_saddressFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_saddressFocusLost
-    {//GEN-HEADEREND:event_txt_saddressFocusLost
-        if (txt_saddress.getText().equals(""))
-        {
-            txt_saddress.setText("SHOP ADDRESS");
-            txt_saddress.setForeground(new Color(228, 235, 246));
-        }
-    }//GEN-LAST:event_txt_saddressFocusLost
-
-    private void loginBtnFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_loginBtnFocusGained
-    {//GEN-HEADEREND:event_loginBtnFocusGained
-        loginBtn.setkStartColor(new Color(178, 199, 231));
-        loginBtn.setkEndColor(new Color(178, 199, 231));
-        loginBtn.setkForeGround(new Color(68, 82, 121));
-    }//GEN-LAST:event_loginBtnFocusGained
-
-    private void loginBtnFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_loginBtnFocusLost
-    {//GEN-HEADEREND:event_loginBtnFocusLost
-        loginBtn.setkStartColor(new Color(68, 82, 121));
-        loginBtn.setkEndColor(new Color(68, 82, 121));
-        loginBtn.setkForeGround(Color.WHITE);
-    }//GEN-LAST:event_loginBtnFocusLost
-
-    private void loginBtnMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_loginBtnMouseEntered
-    {//GEN-HEADEREND:event_loginBtnMouseEntered
-        loginBtn.setCursor(new Cursor(Cursor.HAND_CURSOR));
-    }//GEN-LAST:event_loginBtnMouseEntered
-
-    private void jPanel1KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_jPanel1KeyPressed
-    {//GEN-HEADEREND:event_jPanel1KeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_TAB)
-        {
-            panel_customer.setVisible(true);
-            panel_employee.setVisible(false);
-            panel_bill.setVisible(false);
-            panel_product.setVisible(false);
-            panel_account.setVisible(false);
-            panel_about.setVisible(false);
-            panel_help.setVisible(false);
-            panel_extra.setVisible(false);
-            jPanel2.setVisible(true);
-        }
-    }//GEN-LAST:event_jPanel1KeyPressed
-
-    private void txt_rmvcustidFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_rmvcustidFocusGained
-    {//GEN-HEADEREND:event_txt_rmvcustidFocusGained
-        if (txt_rmvcustid.getText().equals("CUSTOMER ID"))
-        {
-            txt_rmvcustid.setText("");
-            txt_rmvcustid.setForeground(new Color(68, 82, 121));
-        }
-    }//GEN-LAST:event_txt_rmvcustidFocusGained
-
-    private void txt_rmvcustidFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_rmvcustidFocusLost
-    {//GEN-HEADEREND:event_txt_rmvcustidFocusLost
-        if (txt_rmvcustid.getText().equals(""))
-        {
-            txt_rmvcustid.setText("CUSTOMER ID");
-            txt_rmvcustid.setForeground(new Color(228, 235, 246));
-        }
-    }//GEN-LAST:event_txt_rmvcustidFocusLost
-
-    private void txt_detailcustidFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_detailcustidFocusGained
-    {//GEN-HEADEREND:event_txt_detailcustidFocusGained
-        if (txt_detailcustid.getText().equals("CUSTOMER ID"))
-        {
-            txt_detailcustid.setText("");
-            txt_detailcustid.setForeground(new Color(68, 82, 121));
-        }
-    }//GEN-LAST:event_txt_detailcustidFocusGained
-
-    private void txt_detailcustidFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_detailcustidFocusLost
-    {//GEN-HEADEREND:event_txt_detailcustidFocusLost
-        if (txt_detailcustid.getText().equals(""))
-        {
-            txt_detailcustid.setText("CUSTOMER ID");
-            txt_detailcustid.setForeground(new Color(228, 235, 246));
-        }
-    }//GEN-LAST:event_txt_detailcustidFocusLost
-
-    private void loginBtn_rmvFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_loginBtn_rmvFocusGained
-    {//GEN-HEADEREND:event_loginBtn_rmvFocusGained
-        loginBtn_rmv.setkStartColor(new Color(178, 199, 231));
-        loginBtn_rmv.setkEndColor(new Color(178, 199, 231));
-        loginBtn_rmv.setkForeGround(new Color(68, 82, 121));
-    }//GEN-LAST:event_loginBtn_rmvFocusGained
-
-    private void loginBtn_rmvFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_loginBtn_rmvFocusLost
-    {//GEN-HEADEREND:event_loginBtn_rmvFocusLost
-        loginBtn_rmv.setkStartColor(new Color(68, 82, 121));
-        loginBtn_rmv.setkEndColor(new Color(68, 82, 121));
-        loginBtn_rmv.setkForeGround(Color.WHITE);
-    }//GEN-LAST:event_loginBtn_rmvFocusLost
-
-    private void jTabbedPane1KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_jTabbedPane1KeyPressed
-    {//GEN-HEADEREND:event_jTabbedPane1KeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
-            lbl_customer.grabFocus();
-        }
-    }//GEN-LAST:event_jTabbedPane1KeyPressed
-
-    private void pnl_addcustKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_pnl_addcustKeyPressed
-    {//GEN-HEADEREND:event_pnl_addcustKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
-            lbl_customer.grabFocus();
-        }
-    }//GEN-LAST:event_pnl_addcustKeyPressed
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_jLabel4MouseClicked
+    {//GEN-HEADEREND:event_jLabel4MouseClicked
+        panel_rmcus.setVisible(false);
+        panel_custdetail.setVisible(false);
+        panel_custdetail.setVisible(true);
+    }//GEN-LAST:event_jLabel4MouseClicked
 
     public static void main(String args[])
     {
@@ -2649,32 +1701,14 @@ public class frm_dashboard extends javax.swing.JFrame
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     private com.k33ptoo.components.KGradientPanel kGradientPanel1;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel10;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel11;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel12;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel13;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel14;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel15;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel16;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel17;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel18;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel19;
     private com.k33ptoo.components.KGradientPanel kGradientPanel2;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel20;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel21;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel22;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel23;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel24;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel7;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel8;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel9;
     private javax.swing.JLabel lbl_about;
     private javax.swing.JLabel lbl_account;
     private javax.swing.JLabel lbl_bill;
@@ -2685,48 +1719,30 @@ public class frm_dashboard extends javax.swing.JFrame
     private javax.swing.JLabel lbl_help;
     private javax.swing.JLabel lbl_min;
     private javax.swing.JLabel lbl_product;
-    private com.k33ptoo.components.KButton loginBtn;
-    private com.k33ptoo.components.KButton loginBtn_rmv;
     private com.k33ptoo.components.KGradientPanel panel_about;
     private com.k33ptoo.components.KGradientPanel panel_account;
+    private com.k33ptoo.components.KGradientPanel panel_addcust;
     private com.k33ptoo.components.KGradientPanel panel_bill;
+    private com.k33ptoo.components.KGradientPanel panel_custdetail;
+    private com.k33ptoo.components.KGradientPanel panel_custmain;
     private com.k33ptoo.components.KGradientPanel panel_customer;
     private com.k33ptoo.components.KGradientPanel panel_employee;
     private com.k33ptoo.components.KGradientPanel panel_extra;
     private com.k33ptoo.components.KGradientPanel panel_help;
     private com.k33ptoo.components.KGradientPanel panel_main;
     private com.k33ptoo.components.KGradientPanel panel_product;
+    private com.k33ptoo.components.KGradientPanel panel_rmcus;
     private com.k33ptoo.components.KGradientPanel pnl_about;
     private com.k33ptoo.components.KGradientPanel pnl_account;
-    private com.k33ptoo.components.KGradientPanel pnl_addcust;
-    private com.k33ptoo.components.KGradientPanel pnl_addcust1;
-    private com.k33ptoo.components.KGradientPanel pnl_addcust2;
     private com.k33ptoo.components.KGradientPanel pnl_bill;
     private com.k33ptoo.components.KGradientPanel pnl_close;
     private com.k33ptoo.components.KGradientPanel pnl_customer;
     private com.k33ptoo.components.KGradientPanel pnl_employee;
     private com.k33ptoo.components.KGradientPanel pnl_header;
     private com.k33ptoo.components.KGradientPanel pnl_help;
+    private com.k33ptoo.components.KGradientPanel pnl_menu;
     private javax.swing.JPanel pnl_min;
     private com.k33ptoo.components.KGradientPanel pnl_product;
     private com.k33ptoo.components.KGradientPanel pnl_sidepane;
-    private javax.swing.JTextField txt_custid;
-    private javax.swing.JTextField txt_custnm;
-    private javax.swing.JTextField txt_detailcustid;
-    private javax.swing.JTextField txt_email;
-    private javax.swing.JTextField txt_phone;
-    private javax.swing.JTextField txt_rmvcustid;
-    private javax.swing.JTextField txt_rmvcustnm;
-    private javax.swing.JTextField txt_rmvcustnm1;
-    private javax.swing.JTextField txt_rmvemail;
-    private javax.swing.JTextField txt_rmvemail1;
-    private javax.swing.JTextField txt_rmvphone;
-    private javax.swing.JTextField txt_rmvphone1;
-    private javax.swing.JTextField txt_rmvsaddress;
-    private javax.swing.JTextField txt_rmvsaddress1;
-    private javax.swing.JTextField txt_rmvsname;
-    private javax.swing.JTextField txt_rmvsname1;
-    private javax.swing.JTextField txt_saddress;
-    private javax.swing.JTextField txt_sname;
     // End of variables declaration//GEN-END:variables
 }
