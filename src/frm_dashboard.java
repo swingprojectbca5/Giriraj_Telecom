@@ -90,15 +90,27 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_customer = new com.k33ptoo.components.KGradientPanel();
         pnl_menu = new com.k33ptoo.components.KGradientPanel();
         kGradientPanel3 = new com.k33ptoo.components.KGradientPanel();
-        jLabel1 = new javax.swing.JLabel();
+        lbl_addcust = new javax.swing.JLabel();
         kGradientPanel4 = new com.k33ptoo.components.KGradientPanel();
-        jLabel3 = new javax.swing.JLabel();
+        lbl_editcust = new javax.swing.JLabel();
         kGradientPanel5 = new com.k33ptoo.components.KGradientPanel();
-        jLabel4 = new javax.swing.JLabel();
+        lbl_custdet = new javax.swing.JLabel();
         panel_custmain = new com.k33ptoo.components.KGradientPanel();
         panel_addcust = new com.k33ptoo.components.KGradientPanel();
-        panel_rmcus = new com.k33ptoo.components.KGradientPanel();
-        jTextField1 = new javax.swing.JTextField();
+        kGradientPanel6 = new com.k33ptoo.components.KGradientPanel();
+        txt_custid = new javax.swing.JTextField();
+        kGradientPanel7 = new com.k33ptoo.components.KGradientPanel();
+        txt_custnm = new javax.swing.JTextField();
+        kGradientPanel8 = new com.k33ptoo.components.KGradientPanel();
+        txt_custemail = new javax.swing.JTextField();
+        kGradientPanel9 = new com.k33ptoo.components.KGradientPanel();
+        txt_custno = new javax.swing.JTextField();
+        kGradientPanel10 = new com.k33ptoo.components.KGradientPanel();
+        txt_custsadd = new javax.swing.JTextField();
+        kGradientPanel11 = new com.k33ptoo.components.KGradientPanel();
+        txt_custsname = new javax.swing.JTextField();
+        loginBtn = new com.k33ptoo.components.KButton();
+        panel_editcus = new com.k33ptoo.components.KGradientPanel();
         panel_custdetail = new com.k33ptoo.components.KGradientPanel();
         jTextField3 = new javax.swing.JTextField();
         panel_employee = new com.k33ptoo.components.KGradientPanel();
@@ -732,14 +744,41 @@ public class frm_dashboard extends javax.swing.JFrame
         kGradientPanel3.setkStartColor(new java.awt.Color(68, 82, 121));
         kGradientPanel3.setOpaque(false);
 
-        jLabel1.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(228, 235, 246));
-        jLabel1.setText("ADD CUSTOMER");
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter()
+        lbl_addcust.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
+        lbl_addcust.setForeground(new java.awt.Color(228, 235, 246));
+        lbl_addcust.setText("ADD CUSTOMER");
+        lbl_addcust.setNextFocusableComponent(lbl_editcust);
+        lbl_addcust.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                lbl_addcustFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                lbl_addcustFocusLost(evt);
+            }
+        });
+        lbl_addcust.addMouseListener(new java.awt.event.MouseAdapter()
         {
             public void mouseClicked(java.awt.event.MouseEvent evt)
             {
-                jLabel1MouseClicked(evt);
+                lbl_addcustMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
+                lbl_addcustMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
+                lbl_addcustMouseExited(evt);
+            }
+        });
+        lbl_addcust.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                lbl_addcustKeyPressed(evt);
             }
         });
 
@@ -749,12 +788,12 @@ public class frm_dashboard extends javax.swing.JFrame
             kGradientPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(kGradientPanel3Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jLabel1)
+                .addComponent(lbl_addcust)
                 .addContainerGap(25, Short.MAX_VALUE))
         );
         kGradientPanel3Layout.setVerticalGroup(
             kGradientPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(lbl_addcust, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
         );
 
         kGradientPanel4.setkBorderRadius(20);
@@ -762,14 +801,41 @@ public class frm_dashboard extends javax.swing.JFrame
         kGradientPanel4.setkStartColor(new java.awt.Color(68, 82, 121));
         kGradientPanel4.setOpaque(false);
 
-        jLabel3.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(228, 235, 246));
-        jLabel3.setText("EDIT CUSTOMER");
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter()
+        lbl_editcust.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
+        lbl_editcust.setForeground(new java.awt.Color(228, 235, 246));
+        lbl_editcust.setText("EDIT CUSTOMER");
+        lbl_editcust.setNextFocusableComponent(lbl_custdet);
+        lbl_editcust.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                lbl_editcustFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                lbl_editcustFocusLost(evt);
+            }
+        });
+        lbl_editcust.addMouseListener(new java.awt.event.MouseAdapter()
         {
             public void mouseClicked(java.awt.event.MouseEvent evt)
             {
-                jLabel3MouseClicked(evt);
+                lbl_editcustMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
+                lbl_editcustMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
+                lbl_editcustMouseExited(evt);
+            }
+        });
+        lbl_editcust.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                lbl_editcustKeyPressed(evt);
             }
         });
 
@@ -779,12 +845,12 @@ public class frm_dashboard extends javax.swing.JFrame
             kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(kGradientPanel4Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jLabel3)
+                .addComponent(lbl_editcust)
                 .addContainerGap(25, Short.MAX_VALUE))
         );
         kGradientPanel4Layout.setVerticalGroup(
             kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+            .addComponent(lbl_editcust, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         kGradientPanel5.setkBorderRadius(20);
@@ -792,14 +858,41 @@ public class frm_dashboard extends javax.swing.JFrame
         kGradientPanel5.setkStartColor(new java.awt.Color(68, 82, 121));
         kGradientPanel5.setOpaque(false);
 
-        jLabel4.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(228, 235, 246));
-        jLabel4.setText("CUSTOMER DETAIL");
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter()
+        lbl_custdet.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
+        lbl_custdet.setForeground(new java.awt.Color(228, 235, 246));
+        lbl_custdet.setText("CUSTOMER DETAIL");
+        lbl_custdet.setNextFocusableComponent(lbl_addcust);
+        lbl_custdet.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                lbl_custdetFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                lbl_custdetFocusLost(evt);
+            }
+        });
+        lbl_custdet.addMouseListener(new java.awt.event.MouseAdapter()
         {
             public void mouseClicked(java.awt.event.MouseEvent evt)
             {
-                jLabel4MouseClicked(evt);
+                lbl_custdetMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
+                lbl_custdetMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
+                lbl_custdetMouseExited(evt);
+            }
+        });
+        lbl_custdet.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                lbl_custdetKeyPressed(evt);
             }
         });
 
@@ -809,12 +902,12 @@ public class frm_dashboard extends javax.swing.JFrame
             kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(kGradientPanel5Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jLabel4)
+                .addComponent(lbl_custdet)
                 .addContainerGap(25, Short.MAX_VALUE))
         );
         kGradientPanel5Layout.setVerticalGroup(
             kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+            .addComponent(lbl_custdet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout pnl_menuLayout = new javax.swing.GroupLayout(pnl_menu);
@@ -844,39 +937,317 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_addcust.setkStartColor(new java.awt.Color(228, 235, 246));
         panel_addcust.setOpaque(false);
 
+        kGradientPanel6.setkBorderRadius(40);
+        kGradientPanel6.setkEndColor(new java.awt.Color(164, 177, 252));
+        kGradientPanel6.setkStartColor(new java.awt.Color(164, 177, 252));
+        kGradientPanel6.setOpaque(false);
+
+        txt_custid.setBackground(new java.awt.Color(164, 177, 252));
+        txt_custid.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
+        txt_custid.setForeground(new java.awt.Color(228, 235, 246));
+        txt_custid.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txt_custid.setText("CUSTOMER ID");
+        txt_custid.setBorder(null);
+        txt_custid.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                txt_custidFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                txt_custidFocusLost(evt);
+            }
+        });
+
+        javax.swing.GroupLayout kGradientPanel6Layout = new javax.swing.GroupLayout(kGradientPanel6);
+        kGradientPanel6.setLayout(kGradientPanel6Layout);
+        kGradientPanel6Layout.setHorizontalGroup(
+            kGradientPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kGradientPanel6Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(txt_custid, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(50, Short.MAX_VALUE))
+        );
+        kGradientPanel6Layout.setVerticalGroup(
+            kGradientPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txt_custid, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
+        kGradientPanel7.setkBorderRadius(40);
+        kGradientPanel7.setkEndColor(new java.awt.Color(164, 177, 252));
+        kGradientPanel7.setkStartColor(new java.awt.Color(164, 177, 252));
+        kGradientPanel7.setOpaque(false);
+
+        txt_custnm.setBackground(new java.awt.Color(164, 177, 252));
+        txt_custnm.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
+        txt_custnm.setForeground(new java.awt.Color(228, 235, 246));
+        txt_custnm.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txt_custnm.setText("CUSTOMER NAME");
+        txt_custnm.setBorder(null);
+        txt_custnm.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                txt_custnmFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                txt_custnmFocusLost(evt);
+            }
+        });
+
+        javax.swing.GroupLayout kGradientPanel7Layout = new javax.swing.GroupLayout(kGradientPanel7);
+        kGradientPanel7.setLayout(kGradientPanel7Layout);
+        kGradientPanel7Layout.setHorizontalGroup(
+            kGradientPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kGradientPanel7Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(txt_custnm, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(50, Short.MAX_VALUE))
+        );
+        kGradientPanel7Layout.setVerticalGroup(
+            kGradientPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txt_custnm, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
+        kGradientPanel8.setkBorderRadius(40);
+        kGradientPanel8.setkEndColor(new java.awt.Color(164, 177, 252));
+        kGradientPanel8.setkStartColor(new java.awt.Color(164, 177, 252));
+        kGradientPanel8.setOpaque(false);
+
+        txt_custemail.setBackground(new java.awt.Color(164, 177, 252));
+        txt_custemail.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
+        txt_custemail.setForeground(new java.awt.Color(228, 235, 246));
+        txt_custemail.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txt_custemail.setText("EMAIL");
+        txt_custemail.setBorder(null);
+        txt_custemail.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                txt_custemailFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                txt_custemailFocusLost(evt);
+            }
+        });
+
+        javax.swing.GroupLayout kGradientPanel8Layout = new javax.swing.GroupLayout(kGradientPanel8);
+        kGradientPanel8.setLayout(kGradientPanel8Layout);
+        kGradientPanel8Layout.setHorizontalGroup(
+            kGradientPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kGradientPanel8Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(txt_custemail, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(50, Short.MAX_VALUE))
+        );
+        kGradientPanel8Layout.setVerticalGroup(
+            kGradientPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txt_custemail, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
+        kGradientPanel9.setkBorderRadius(40);
+        kGradientPanel9.setkEndColor(new java.awt.Color(164, 177, 252));
+        kGradientPanel9.setkStartColor(new java.awt.Color(164, 177, 252));
+        kGradientPanel9.setOpaque(false);
+
+        txt_custno.setBackground(new java.awt.Color(164, 177, 252));
+        txt_custno.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
+        txt_custno.setForeground(new java.awt.Color(228, 235, 246));
+        txt_custno.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txt_custno.setText("CONTACT NO.");
+        txt_custno.setBorder(null);
+        txt_custno.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                txt_custnoFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                txt_custnoFocusLost(evt);
+            }
+        });
+
+        javax.swing.GroupLayout kGradientPanel9Layout = new javax.swing.GroupLayout(kGradientPanel9);
+        kGradientPanel9.setLayout(kGradientPanel9Layout);
+        kGradientPanel9Layout.setHorizontalGroup(
+            kGradientPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kGradientPanel9Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(txt_custno, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(50, Short.MAX_VALUE))
+        );
+        kGradientPanel9Layout.setVerticalGroup(
+            kGradientPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txt_custno, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
+        kGradientPanel10.setkBorderRadius(40);
+        kGradientPanel10.setkEndColor(new java.awt.Color(164, 177, 252));
+        kGradientPanel10.setkStartColor(new java.awt.Color(164, 177, 252));
+        kGradientPanel10.setOpaque(false);
+
+        txt_custsadd.setBackground(new java.awt.Color(164, 177, 252));
+        txt_custsadd.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
+        txt_custsadd.setForeground(new java.awt.Color(228, 235, 246));
+        txt_custsadd.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txt_custsadd.setText("SHOP ADDRESS");
+        txt_custsadd.setBorder(null);
+        txt_custsadd.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                txt_custsaddFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                txt_custsaddFocusLost(evt);
+            }
+        });
+
+        javax.swing.GroupLayout kGradientPanel10Layout = new javax.swing.GroupLayout(kGradientPanel10);
+        kGradientPanel10.setLayout(kGradientPanel10Layout);
+        kGradientPanel10Layout.setHorizontalGroup(
+            kGradientPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kGradientPanel10Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(txt_custsadd, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(50, Short.MAX_VALUE))
+        );
+        kGradientPanel10Layout.setVerticalGroup(
+            kGradientPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txt_custsadd, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
+        kGradientPanel11.setkBorderRadius(40);
+        kGradientPanel11.setkEndColor(new java.awt.Color(164, 177, 252));
+        kGradientPanel11.setkStartColor(new java.awt.Color(164, 177, 252));
+        kGradientPanel11.setOpaque(false);
+
+        txt_custsname.setBackground(new java.awt.Color(164, 177, 252));
+        txt_custsname.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
+        txt_custsname.setForeground(new java.awt.Color(228, 235, 246));
+        txt_custsname.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txt_custsname.setText("SHOP NAME");
+        txt_custsname.setBorder(null);
+        txt_custsname.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                txt_custsnameFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                txt_custsnameFocusLost(evt);
+            }
+        });
+
+        javax.swing.GroupLayout kGradientPanel11Layout = new javax.swing.GroupLayout(kGradientPanel11);
+        kGradientPanel11.setLayout(kGradientPanel11Layout);
+        kGradientPanel11Layout.setHorizontalGroup(
+            kGradientPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kGradientPanel11Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(txt_custsname, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(50, Short.MAX_VALUE))
+        );
+        kGradientPanel11Layout.setVerticalGroup(
+            kGradientPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txt_custsname, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
+        loginBtn.setBorder(null);
+        loginBtn.setText("ADD CUSTOMER");
+        loginBtn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        loginBtn.setkBorderRadius(30);
+        loginBtn.setkEndColor(new java.awt.Color(68, 82, 121));
+        loginBtn.setkHoverEndColor(new java.awt.Color(178, 199, 231));
+        loginBtn.setkHoverForeGround(new java.awt.Color(68, 82, 121));
+        loginBtn.setkHoverStartColor(new java.awt.Color(178, 199, 231));
+        loginBtn.setkStartColor(new java.awt.Color(68, 82, 121));
+        loginBtn.setNextFocusableComponent(lbl_addcust);
+        loginBtn.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                loginBtnFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                loginBtnFocusLost(evt);
+            }
+        });
+        loginBtn.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
+                loginBtnMouseEntered(evt);
+            }
+        });
+
         javax.swing.GroupLayout panel_addcustLayout = new javax.swing.GroupLayout(panel_addcust);
         panel_addcust.setLayout(panel_addcustLayout);
         panel_addcustLayout.setHorizontalGroup(
             panel_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 961, Short.MAX_VALUE)
+            .addGroup(panel_addcustLayout.createSequentialGroup()
+                .addGroup(panel_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_addcustLayout.createSequentialGroup()
+                        .addGap(131, 131, 131)
+                        .addGroup(panel_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_addcustLayout.createSequentialGroup()
+                                .addComponent(kGradientPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(100, 100, 100)
+                                .addComponent(kGradientPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panel_addcustLayout.createSequentialGroup()
+                                .addComponent(kGradientPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(100, 100, 100)
+                                .addComponent(kGradientPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panel_addcustLayout.createSequentialGroup()
+                                .addComponent(kGradientPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(100, 100, 100)
+                                .addComponent(kGradientPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(panel_addcustLayout.createSequentialGroup()
+                        .addGap(325, 325, 325)
+                        .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(130, Short.MAX_VALUE))
         );
         panel_addcustLayout.setVerticalGroup(
             panel_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_addcustLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addGroup(panel_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(kGradientPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(kGradientPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(70, 70, 70)
+                .addGroup(panel_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(kGradientPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(kGradientPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(70, 70, 70)
+                .addGroup(panel_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(kGradientPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(kGradientPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(70, 70, 70)
+                .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(85, Short.MAX_VALUE))
+        );
+
+        panel_editcus.setkBorderRadius(40);
+        panel_editcus.setkEndColor(new java.awt.Color(228, 235, 246));
+        panel_editcus.setkStartColor(new java.awt.Color(228, 235, 246));
+        panel_editcus.setOpaque(false);
+
+        javax.swing.GroupLayout panel_editcusLayout = new javax.swing.GroupLayout(panel_editcus);
+        panel_editcus.setLayout(panel_editcusLayout);
+        panel_editcusLayout.setHorizontalGroup(
+            panel_editcusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 961, Short.MAX_VALUE)
+        );
+        panel_editcusLayout.setVerticalGroup(
+            panel_editcusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 560, Short.MAX_VALUE)
-        );
-
-        panel_rmcus.setkBorderRadius(40);
-        panel_rmcus.setkEndColor(new java.awt.Color(228, 235, 246));
-        panel_rmcus.setkStartColor(new java.awt.Color(228, 235, 246));
-        panel_rmcus.setOpaque(false);
-
-        jTextField1.setText("REMOVE CUSTOMER");
-
-        javax.swing.GroupLayout panel_rmcusLayout = new javax.swing.GroupLayout(panel_rmcus);
-        panel_rmcus.setLayout(panel_rmcusLayout);
-        panel_rmcusLayout.setHorizontalGroup(
-            panel_rmcusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_rmcusLayout.createSequentialGroup()
-                .addGap(356, 356, 356)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(416, Short.MAX_VALUE))
-        );
-        panel_rmcusLayout.setVerticalGroup(
-            panel_rmcusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_rmcusLayout.createSequentialGroup()
-                .addGap(259, 259, 259)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(266, Short.MAX_VALUE))
         );
 
         panel_custdetail.setkBorderRadius(40);
@@ -916,7 +1287,7 @@ public class frm_dashboard extends javax.swing.JFrame
             .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_custmainLayout.createSequentialGroup()
                     .addGap(50, 50, 50)
-                    .addComponent(panel_rmcus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panel_editcus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGap(50, 50, 50)))
             .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_custmainLayout.createSequentialGroup()
@@ -930,18 +1301,18 @@ public class frm_dashboard extends javax.swing.JFrame
             .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_custmainLayout.createSequentialGroup()
                     .addGap(50, 50, 50)
-                    .addComponent(panel_custdetail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(50, 50, 50)))
+                    .addComponent(panel_custdetail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(50, Short.MAX_VALUE)))
             .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_custmainLayout.createSequentialGroup()
                     .addGap(50, 50, 50)
-                    .addComponent(panel_rmcus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(50, 50, 50)))
+                    .addComponent(panel_editcus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(50, Short.MAX_VALUE)))
             .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_custmainLayout.createSequentialGroup()
                     .addGap(50, 50, 50)
-                    .addComponent(panel_addcust, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(50, 50, 50)))
+                    .addComponent(panel_addcust, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(50, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout panel_customerLayout = new javax.swing.GroupLayout(panel_customer);
@@ -955,8 +1326,8 @@ public class frm_dashboard extends javax.swing.JFrame
             panel_customerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_customerLayout.createSequentialGroup()
                 .addComponent(pnl_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(panel_custmain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panel_custmain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         panel_employee.setPreferredSize(new java.awt.Dimension(1061, 710));
@@ -1211,7 +1582,6 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_help.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
         lbl_help.setForeground(Color.WHITE);
         lbl_help.setText("<html><u>HELP</u></html>");
-        lbl_help.grabFocus();
     }//GEN-LAST:event_lbl_helpMouseEntered
 
     private void lbl_helpMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_helpMouseClicked
@@ -1290,7 +1660,6 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_about.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
         lbl_about.setForeground(Color.WHITE);
         lbl_about.setText("<html><u>ABOUT US</u></html>");
-        lbl_about.grabFocus();
     }//GEN-LAST:event_lbl_aboutMouseEntered
 
     private void lbl_aboutMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_aboutMouseClicked
@@ -1370,8 +1739,6 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_account.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
         lbl_account.setForeground(Color.WHITE);
         lbl_account.setText("<html><u>ACCOUNT MANAGEMENT</u></html>");
-
-        lbl_account.grabFocus();
     }//GEN-LAST:event_lbl_accountMouseEntered
 
     private void lbl_accountMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_accountMouseClicked
@@ -1450,7 +1817,6 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_bill.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
         lbl_bill.setForeground(Color.WHITE);
         lbl_bill.setText("<html><u>BILL MANAGEMENT</u></html>");
-        lbl_bill.grabFocus();
     }//GEN-LAST:event_lbl_billMouseEntered
 
     private void lbl_billMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_billMouseClicked
@@ -1530,7 +1896,6 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_product.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
         lbl_product.setForeground(Color.WHITE);
         lbl_product.setText("<html><u>PRODUCT MANAGEMENT</u></html>");
-        lbl_product.grabFocus();
     }//GEN-LAST:event_lbl_productMouseEntered
 
     private void lbl_productMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_productMouseClicked
@@ -1610,7 +1975,6 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_employee.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
         lbl_employee.setForeground(Color.WHITE);
         lbl_employee.setText("<html><u>EMPLOYEE MANAGEMENT</u></html>");
-        lbl_employee.grabFocus();
 
     }//GEN-LAST:event_lbl_employeeMouseEntered
 
@@ -1667,9 +2031,11 @@ public class frm_dashboard extends javax.swing.JFrame
             panel_help.setVisible(false);
             panel_extra.setVisible(false);
 
-            panel_rmcus.setVisible(true);
+            panel_addcust.setVisible(true);
+            panel_editcus.setVisible(false);
             panel_custdetail.setVisible(false);
-            panel_custdetail.setVisible(false);
+
+            lbl_addcust.grabFocus();
         }
     }//GEN-LAST:event_lbl_customerKeyPressed
 
@@ -1695,13 +2061,12 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_customer.setForeground(Color.WHITE);
 
         lbl_customer.setText("<html><u>CUSTOMER MANAGEMENT</u></html>");
-        lbl_customer.grabFocus();
     }//GEN-LAST:event_lbl_customerMouseEntered
 
     private void lbl_customerMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_customerMouseClicked
     {//GEN-HEADEREND:event_lbl_customerMouseClicked
         panel_customer.setVisible(true);
-        panel_rmcus.setVisible(true);
+        panel_editcus.setVisible(true);
         panel_employee.setVisible(false);
         panel_bill.setVisible(false);
         panel_product.setVisible(false);
@@ -1709,9 +2074,13 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_about.setVisible(false);
         panel_help.setVisible(false);
         panel_extra.setVisible(false);
-        panel_rmcus.setVisible(true);
+
+        panel_addcust.setVisible(true);
+        panel_editcus.setVisible(false);
         panel_custdetail.setVisible(false);
-        panel_custdetail.setVisible(false);
+
+        lbl_addcust.grabFocus();
+
         pnl_customer.setkStartColor(Color.WHITE);
         pnl_customer.setkEndColor(Color.WHITE);
         pnl_customer.setBackground(Color.WHITE);
@@ -1741,22 +2110,289 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_customer.setText("<html><u>CUSTOMER MANAGEMENT</u></html>");
     }//GEN-LAST:event_lbl_customerFocusGained
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_jLabel1MouseClicked
-    {//GEN-HEADEREND:event_jLabel1MouseClicked
-        panel_rmcus.setVisible(true);
+    private void lbl_addcustMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_addcustMouseClicked
+    {//GEN-HEADEREND:event_lbl_addcustMouseClicked
+        panel_addcust.setVisible(true);
+        panel_editcus.setVisible(false);
         panel_custdetail.setVisible(false);
+        txt_custid.grabFocus();
+    }//GEN-LAST:event_lbl_addcustMouseClicked
+
+    private void lbl_addcustFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_addcustFocusGained
+    {//GEN-HEADEREND:event_lbl_addcustFocusGained
+        kGradientPanel3.setkStartColor(new Color(164, 177, 252));
+        kGradientPanel3.setkEndColor(new Color(164, 177, 252));
+        kGradientPanel3.setBackground(Color.BLACK);
+    }//GEN-LAST:event_lbl_addcustFocusGained
+
+    private void lbl_addcustFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_addcustFocusLost
+    {//GEN-HEADEREND:event_lbl_addcustFocusLost
+        kGradientPanel3.setkStartColor(new Color(68, 82, 121));
+        kGradientPanel3.setkEndColor(new Color(68, 82, 121));
+        kGradientPanel3.setBackground(Color.RED);
+    }//GEN-LAST:event_lbl_addcustFocusLost
+
+    private void lbl_editcustFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_editcustFocusGained
+    {//GEN-HEADEREND:event_lbl_editcustFocusGained
+        kGradientPanel4.setkStartColor(new Color(164, 177, 252));
+        kGradientPanel4.setkEndColor(new Color(164, 177, 252));
+        kGradientPanel4.setBackground(Color.BLACK);
+    }//GEN-LAST:event_lbl_editcustFocusGained
+
+    private void lbl_editcustFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_editcustFocusLost
+    {//GEN-HEADEREND:event_lbl_editcustFocusLost
+        kGradientPanel4.setkStartColor(new Color(68, 82, 121));
+        kGradientPanel4.setkEndColor(new Color(68, 82, 121));
+        kGradientPanel4.setBackground(Color.RED);
+    }//GEN-LAST:event_lbl_editcustFocusLost
+
+    private void lbl_custdetFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_custdetFocusGained
+    {//GEN-HEADEREND:event_lbl_custdetFocusGained
+        kGradientPanel5.setkStartColor(new Color(164, 177, 252));
+        kGradientPanel5.setkEndColor(new Color(164, 177, 252));
+        kGradientPanel5.setBackground(Color.BLACK);
+    }//GEN-LAST:event_lbl_custdetFocusGained
+
+    private void lbl_custdetFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_custdetFocusLost
+    {//GEN-HEADEREND:event_lbl_custdetFocusLost
+        kGradientPanel5.setkStartColor(new Color(68, 82, 121));
+        kGradientPanel5.setkEndColor(new Color(68, 82, 121));
+        kGradientPanel5.setBackground(Color.RED);
+    }//GEN-LAST:event_lbl_custdetFocusLost
+
+    private void lbl_addcustKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_addcustKeyPressed
+    {//GEN-HEADEREND:event_lbl_addcustKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
+        {
+            panel_addcust.setVisible(true);
+            panel_editcus.setVisible(false);
+            panel_custdetail.setVisible(false);
+            txt_custid.grabFocus();
+        }
+        else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
+        {
+            panel_addcust.setVisible(false);
+            panel_editcus.setVisible(false);
+            panel_custdetail.setVisible(false);
+            panel_customer.setVisible(false);
+            lbl_customer.grabFocus();
+            panel_extra.setVisible(true);
+        }
+    }//GEN-LAST:event_lbl_addcustKeyPressed
+
+    private void loginBtnFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_loginBtnFocusGained
+    {//GEN-HEADEREND:event_loginBtnFocusGained
+        loginBtn.setkStartColor(new Color(178, 199, 231));
+        loginBtn.setkEndColor(new Color(178, 199, 231));
+        loginBtn.setkForeGround(new Color(68, 82, 121));
+    }//GEN-LAST:event_loginBtnFocusGained
+
+    private void loginBtnFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_loginBtnFocusLost
+    {//GEN-HEADEREND:event_loginBtnFocusLost
+        loginBtn.setkStartColor(new Color(68, 82, 121));
+        loginBtn.setkEndColor(new Color(68, 82, 121));
+        loginBtn.setkForeGround(Color.WHITE);
+    }//GEN-LAST:event_loginBtnFocusLost
+
+    private void loginBtnMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_loginBtnMouseEntered
+    {//GEN-HEADEREND:event_loginBtnMouseEntered
+        //        loginBtn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_loginBtnMouseEntered
+
+    private void txt_custidFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custidFocusGained
+    {//GEN-HEADEREND:event_txt_custidFocusGained
+        if (txt_custid.getText().equals("CUSTOMER ID"))
+        {
+            txt_custid.setText("");
+        }
+    }//GEN-LAST:event_txt_custidFocusGained
+
+    private void txt_custidFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custidFocusLost
+    {//GEN-HEADEREND:event_txt_custidFocusLost
+        if (txt_custid.getText().equals(""))
+        {
+            txt_custid.setText("CUSTOMER ID");
+        }
+    }//GEN-LAST:event_txt_custidFocusLost
+
+    private void txt_custnmFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custnmFocusGained
+    {//GEN-HEADEREND:event_txt_custnmFocusGained
+        if (txt_custnm.getText().equals("CUSTOMER NAME"))
+        {
+            txt_custnm.setText("");
+        }
+    }//GEN-LAST:event_txt_custnmFocusGained
+
+    private void txt_custnmFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custnmFocusLost
+    {//GEN-HEADEREND:event_txt_custnmFocusLost
+        if (txt_custnm.getText().equals(""))
+        {
+            txt_custnm.setText("CUSTOMER NAME");
+        }
+    }//GEN-LAST:event_txt_custnmFocusLost
+
+    private void txt_custnoFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custnoFocusGained
+    {//GEN-HEADEREND:event_txt_custnoFocusGained
+        if (txt_custno.getText().equals("CONTACT NO."))
+        {
+            txt_custno.setText("");
+        }
+    }//GEN-LAST:event_txt_custnoFocusGained
+
+    private void txt_custnoFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custnoFocusLost
+    {//GEN-HEADEREND:event_txt_custnoFocusLost
+        if (txt_custno.getText().equals(""))
+        {
+            txt_custno.setText("CONTACT NO.");
+        }
+    }//GEN-LAST:event_txt_custnoFocusLost
+
+    private void txt_custemailFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custemailFocusGained
+    {//GEN-HEADEREND:event_txt_custemailFocusGained
+        if (txt_custemail.getText().equals("EMAIL"))
+        {
+            txt_custemail.setText("");
+        }
+    }//GEN-LAST:event_txt_custemailFocusGained
+
+    private void txt_custemailFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custemailFocusLost
+    {//GEN-HEADEREND:event_txt_custemailFocusLost
+        if (txt_custemail.getText().equals(""))
+        {
+            txt_custemail.setText("EMAIL");
+        }
+    }//GEN-LAST:event_txt_custemailFocusLost
+
+    private void txt_custsnameFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custsnameFocusGained
+    {//GEN-HEADEREND:event_txt_custsnameFocusGained
+        if (txt_custsname.getText().equals("SHOP NAME"))
+        {
+            txt_custsname.setText("");
+        }
+    }//GEN-LAST:event_txt_custsnameFocusGained
+
+    private void txt_custsnameFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custsnameFocusLost
+    {//GEN-HEADEREND:event_txt_custsnameFocusLost
+        if (txt_custsname.getText().equals(""))
+        {
+            txt_custsname.setText("SHOP NAME");
+        }
+    }//GEN-LAST:event_txt_custsnameFocusLost
+
+    private void txt_custsaddFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custsaddFocusGained
+    {//GEN-HEADEREND:event_txt_custsaddFocusGained
+        if (txt_custsadd.getText().equals("SHOP ADDRESS"))
+        {
+            txt_custsadd.setText("");
+        }
+    }//GEN-LAST:event_txt_custsaddFocusGained
+
+    private void txt_custsaddFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custsaddFocusLost
+    {//GEN-HEADEREND:event_txt_custsaddFocusLost
+        if (txt_custsadd.getText().equals(""))
+        {
+            txt_custsadd.setText("SHOP ADDRESS");
+        }
+    }//GEN-LAST:event_txt_custsaddFocusLost
+
+    private void lbl_addcustMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_addcustMouseEntered
+    {//GEN-HEADEREND:event_lbl_addcustMouseEntered
+        kGradientPanel3.setkStartColor(new Color(164, 177, 252));
+        kGradientPanel3.setkEndColor(new Color(164, 177, 252));
+        kGradientPanel3.setBackground(Color.BLACK);
+    }//GEN-LAST:event_lbl_addcustMouseEntered
+
+    private void lbl_addcustMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_addcustMouseExited
+    {//GEN-HEADEREND:event_lbl_addcustMouseExited
+
+        kGradientPanel3.setkStartColor(new Color(68, 82, 121));
+        kGradientPanel3.setkEndColor(new Color(68, 82, 121));
+        kGradientPanel3.setBackground(Color.RED);
+    }//GEN-LAST:event_lbl_addcustMouseExited
+
+    private void lbl_editcustKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_editcustKeyPressed
+    {//GEN-HEADEREND:event_lbl_editcustKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
+        {
+            panel_addcust.setVisible(false);
+            panel_editcus.setVisible(true);
+            panel_custdetail.setVisible(false);
+            //txt_custid.grabFocus();
+        }
+        else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
+        {
+            panel_addcust.setVisible(false);
+            panel_editcus.setVisible(false);
+            panel_custdetail.setVisible(false);
+            panel_customer.setVisible(false);
+            lbl_customer.grabFocus();
+            panel_extra.setVisible(true);
+        }
+    }//GEN-LAST:event_lbl_editcustKeyPressed
+
+    private void lbl_custdetKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_custdetKeyPressed
+    {//GEN-HEADEREND:event_lbl_custdetKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
+        {
+            panel_addcust.setVisible(false);
+            panel_editcus.setVisible(false);
+            panel_custdetail.setVisible(true);
+            //txt_custid.grabFocus();
+        }
+        else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
+        {
+            panel_addcust.setVisible(false);
+            panel_editcus.setVisible(false);
+            panel_custdetail.setVisible(false);
+            panel_customer.setVisible(false);
+            lbl_customer.grabFocus();
+            panel_extra.setVisible(true);
+        }
+    }//GEN-LAST:event_lbl_custdetKeyPressed
+
+    private void lbl_editcustMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_editcustMouseClicked
+    {//GEN-HEADEREND:event_lbl_editcustMouseClicked
+        panel_addcust.setVisible(false);
+        panel_editcus.setVisible(true);
         panel_custdetail.setVisible(false);
-    }//GEN-LAST:event_jLabel1MouseClicked
+        //txt_custid.grabFocus();
+    }//GEN-LAST:event_lbl_editcustMouseClicked
 
-    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_jLabel3MouseClicked
-    {//GEN-HEADEREND:event_jLabel3MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel3MouseClicked
+    private void lbl_custdetMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_custdetMouseClicked
+    {//GEN-HEADEREND:event_lbl_custdetMouseClicked
+        panel_addcust.setVisible(false);
+        panel_editcus.setVisible(false);
+        panel_custdetail.setVisible(true);
+        //txt_custid.grabFocus();
+    }//GEN-LAST:event_lbl_custdetMouseClicked
 
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_jLabel4MouseClicked
-    {//GEN-HEADEREND:event_jLabel4MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel4MouseClicked
+    private void lbl_editcustMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_editcustMouseEntered
+    {//GEN-HEADEREND:event_lbl_editcustMouseEntered
+        kGradientPanel4.setkStartColor(new Color(164, 177, 252));
+        kGradientPanel4.setkEndColor(new Color(164, 177, 252));
+        kGradientPanel4.setBackground(Color.BLACK);
+    }//GEN-LAST:event_lbl_editcustMouseEntered
+
+    private void lbl_editcustMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_editcustMouseExited
+    {//GEN-HEADEREND:event_lbl_editcustMouseExited
+        kGradientPanel4.setkStartColor(new Color(68, 82, 121));
+        kGradientPanel4.setkEndColor(new Color(68, 82, 121));
+        kGradientPanel4.setBackground(Color.RED);
+    }//GEN-LAST:event_lbl_editcustMouseExited
+
+    private void lbl_custdetMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_custdetMouseEntered
+    {//GEN-HEADEREND:event_lbl_custdetMouseEntered
+        kGradientPanel5.setkStartColor(new Color(164, 177, 252));
+        kGradientPanel5.setkEndColor(new Color(164, 177, 252));
+        kGradientPanel5.setBackground(Color.BLACK);
+    }//GEN-LAST:event_lbl_custdetMouseEntered
+
+    private void lbl_custdetMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_custdetMouseExited
+    {//GEN-HEADEREND:event_lbl_custdetMouseExited
+        kGradientPanel5.setkStartColor(new Color(68, 82, 121));
+        kGradientPanel5.setkEndColor(new Color(68, 82, 121));
+        kGradientPanel5.setBackground(Color.RED);
+    }//GEN-LAST:event_lbl_custdetMouseExited
 
     public static void main(String args[])
     {
@@ -1770,29 +2406,35 @@ public class frm_dashboard extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField3;
     private com.k33ptoo.components.KGradientPanel kGradientPanel1;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel10;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel11;
     private com.k33ptoo.components.KGradientPanel kGradientPanel2;
     private com.k33ptoo.components.KGradientPanel kGradientPanel3;
     private com.k33ptoo.components.KGradientPanel kGradientPanel4;
     private com.k33ptoo.components.KGradientPanel kGradientPanel5;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel6;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel7;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel8;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel9;
     private javax.swing.JLabel lbl_about;
     private javax.swing.JLabel lbl_account;
+    private javax.swing.JLabel lbl_addcust;
     private javax.swing.JLabel lbl_bill;
     private javax.swing.JLabel lbl_close;
+    private javax.swing.JLabel lbl_custdet;
     private javax.swing.JLabel lbl_customer;
+    private javax.swing.JLabel lbl_editcust;
     private javax.swing.JLabel lbl_employee;
     private javax.swing.JLabel lbl_gt;
     private javax.swing.JLabel lbl_help;
     private javax.swing.JLabel lbl_min;
     private javax.swing.JLabel lbl_product;
+    private com.k33ptoo.components.KButton loginBtn;
     private com.k33ptoo.components.KGradientPanel panel_about;
     private com.k33ptoo.components.KGradientPanel panel_account;
     private com.k33ptoo.components.KGradientPanel panel_addcust;
@@ -1800,12 +2442,12 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel panel_custdetail;
     private com.k33ptoo.components.KGradientPanel panel_custmain;
     private com.k33ptoo.components.KGradientPanel panel_customer;
+    private com.k33ptoo.components.KGradientPanel panel_editcus;
     private com.k33ptoo.components.KGradientPanel panel_employee;
     private com.k33ptoo.components.KGradientPanel panel_extra;
     private com.k33ptoo.components.KGradientPanel panel_help;
     private com.k33ptoo.components.KGradientPanel panel_main;
     private com.k33ptoo.components.KGradientPanel panel_product;
-    private com.k33ptoo.components.KGradientPanel panel_rmcus;
     private com.k33ptoo.components.KGradientPanel pnl_about;
     private com.k33ptoo.components.KGradientPanel pnl_account;
     private com.k33ptoo.components.KGradientPanel pnl_bill;
@@ -1818,5 +2460,11 @@ public class frm_dashboard extends javax.swing.JFrame
     private javax.swing.JPanel pnl_min;
     private com.k33ptoo.components.KGradientPanel pnl_product;
     private com.k33ptoo.components.KGradientPanel pnl_sidepane;
+    private javax.swing.JTextField txt_custemail;
+    private javax.swing.JTextField txt_custid;
+    private javax.swing.JTextField txt_custnm;
+    private javax.swing.JTextField txt_custno;
+    private javax.swing.JTextField txt_custsadd;
+    private javax.swing.JTextField txt_custsname;
     // End of variables declaration//GEN-END:variables
 }

@@ -73,14 +73,11 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace pref="100" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="kGradientPanel11" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                              <Component id="kGradientPanel8" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="kGradientPanel9" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                          <Component id="kGradientPanel11" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="kGradientPanel9" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="kGradientPanel8" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="62" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
