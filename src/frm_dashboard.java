@@ -14,13 +14,11 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-public class frm_dashboard extends javax.swing.JFrame
-{
+public class frm_dashboard extends javax.swing.JFrame {
 
     KeyEvent ke;
 
-    public frm_dashboard()
-    {
+    public frm_dashboard() {
         initComponents();
         Toolkit tk = Toolkit.getDefaultToolkit();
         int x = (int) tk.getScreenSize().getWidth();
@@ -46,8 +44,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         kGradientPanel1 = new com.k33ptoo.components.KGradientPanel()
         {
@@ -153,36 +150,27 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_customer.setText("CUSTOMER MANAGEMENT");
         lbl_customer.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_customer.setNextFocusableComponent(lbl_employee);
-        lbl_customer.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        lbl_customer.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 lbl_customerFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 lbl_customerFocusLost(evt);
             }
         });
-        lbl_customer.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        lbl_customer.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl_customerMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lbl_customerMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
                 lbl_customerMouseExited(evt);
             }
         });
-        lbl_customer.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
+        lbl_customer.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
                 lbl_customerKeyPressed(evt);
             }
         });
@@ -212,36 +200,27 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_employee.setText("EMPLOYEE MANAGEMENT");
         lbl_employee.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_employee.setNextFocusableComponent(lbl_product);
-        lbl_employee.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        lbl_employee.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 lbl_employeeFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 lbl_employeeFocusLost(evt);
             }
         });
-        lbl_employee.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        lbl_employee.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl_employeeMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lbl_employeeMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
                 lbl_employeeMouseExited(evt);
             }
         });
-        lbl_employee.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
+        lbl_employee.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
                 lbl_employeeKeyPressed(evt);
             }
         });
@@ -271,36 +250,27 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_product.setText("PRODUCT MANAGEMENT");
         lbl_product.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_product.setNextFocusableComponent(lbl_bill);
-        lbl_product.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        lbl_product.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 lbl_productFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 lbl_productFocusLost(evt);
             }
         });
-        lbl_product.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        lbl_product.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl_productMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lbl_productMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
                 lbl_productMouseExited(evt);
             }
         });
-        lbl_product.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
+        lbl_product.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
                 lbl_productKeyPressed(evt);
             }
         });
@@ -330,36 +300,27 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_bill.setText("BILL MANAGEMENT");
         lbl_bill.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_bill.setNextFocusableComponent(lbl_account);
-        lbl_bill.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        lbl_bill.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 lbl_billFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 lbl_billFocusLost(evt);
             }
         });
-        lbl_bill.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        lbl_bill.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl_billMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lbl_billMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
                 lbl_billMouseExited(evt);
             }
         });
-        lbl_bill.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
+        lbl_bill.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
                 lbl_billKeyPressed(evt);
             }
         });
@@ -389,36 +350,27 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_account.setText("ACCOUNT MANAGEMENT");
         lbl_account.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_account.setNextFocusableComponent(lbl_about);
-        lbl_account.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        lbl_account.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 lbl_accountFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 lbl_accountFocusLost(evt);
             }
         });
-        lbl_account.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        lbl_account.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl_accountMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lbl_accountMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
                 lbl_accountMouseExited(evt);
             }
         });
-        lbl_account.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
+        lbl_account.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
                 lbl_accountKeyPressed(evt);
             }
         });
@@ -448,36 +400,27 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_about.setText("ABOUT US");
         lbl_about.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_about.setNextFocusableComponent(lbl_help);
-        lbl_about.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        lbl_about.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 lbl_aboutFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 lbl_aboutFocusLost(evt);
             }
         });
-        lbl_about.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        lbl_about.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl_aboutMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lbl_aboutMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
                 lbl_aboutMouseExited(evt);
             }
         });
-        lbl_about.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
+        lbl_about.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
                 lbl_aboutKeyPressed(evt);
             }
         });
@@ -507,36 +450,27 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_help.setText("HELP");
         lbl_help.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_help.setNextFocusableComponent(jLabel2);
-        lbl_help.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        lbl_help.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 lbl_helpFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 lbl_helpFocusLost(evt);
             }
         });
-        lbl_help.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        lbl_help.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl_helpMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lbl_helpMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
                 lbl_helpMouseExited(evt);
             }
         });
-        lbl_help.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
+        lbl_help.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
                 lbl_helpKeyPressed(evt);
             }
         });
@@ -630,18 +564,14 @@ public class frm_dashboard extends javax.swing.JFrame
         pnl_close.setkEndColor(new java.awt.Color(68, 82, 121));
         pnl_close.setkStartColor(new java.awt.Color(68, 82, 121));
         pnl_close.setOpaque(false);
-        pnl_close.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        pnl_close.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnl_closeMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 pnl_closeMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
                 pnl_closeMouseExited(evt);
             }
         });
@@ -664,18 +594,14 @@ public class frm_dashboard extends javax.swing.JFrame
         );
 
         pnl_min.setBackground(new java.awt.Color(68, 82, 121));
-        pnl_min.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        pnl_min.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnl_minMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 pnl_minMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
                 pnl_minMouseExited(evt);
             }
         });
@@ -748,36 +674,27 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_addcust.setForeground(new java.awt.Color(228, 235, 246));
         lbl_addcust.setText("ADD CUSTOMER");
         lbl_addcust.setNextFocusableComponent(lbl_editcust);
-        lbl_addcust.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        lbl_addcust.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 lbl_addcustFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 lbl_addcustFocusLost(evt);
             }
         });
-        lbl_addcust.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        lbl_addcust.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl_addcustMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lbl_addcustMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
                 lbl_addcustMouseExited(evt);
             }
         });
-        lbl_addcust.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
+        lbl_addcust.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
                 lbl_addcustKeyPressed(evt);
             }
         });
@@ -805,36 +722,27 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_editcust.setForeground(new java.awt.Color(228, 235, 246));
         lbl_editcust.setText("EDIT CUSTOMER");
         lbl_editcust.setNextFocusableComponent(lbl_custdet);
-        lbl_editcust.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        lbl_editcust.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 lbl_editcustFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 lbl_editcustFocusLost(evt);
             }
         });
-        lbl_editcust.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        lbl_editcust.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl_editcustMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lbl_editcustMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
                 lbl_editcustMouseExited(evt);
             }
         });
-        lbl_editcust.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
+        lbl_editcust.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
                 lbl_editcustKeyPressed(evt);
             }
         });
@@ -862,36 +770,27 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_custdet.setForeground(new java.awt.Color(228, 235, 246));
         lbl_custdet.setText("CUSTOMER DETAIL");
         lbl_custdet.setNextFocusableComponent(lbl_addcust);
-        lbl_custdet.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        lbl_custdet.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 lbl_custdetFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 lbl_custdetFocusLost(evt);
             }
         });
-        lbl_custdet.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        lbl_custdet.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl_custdetMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lbl_custdetMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
                 lbl_custdetMouseExited(evt);
             }
         });
-        lbl_custdet.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
+        lbl_custdet.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
                 lbl_custdetKeyPressed(evt);
             }
         });
@@ -948,14 +847,11 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_custid.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_custid.setText("CUSTOMER ID");
         txt_custid.setBorder(null);
-        txt_custid.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        txt_custid.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 txt_custidFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 txt_custidFocusLost(evt);
             }
         });
@@ -985,14 +881,11 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_custnm.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_custnm.setText("CUSTOMER NAME");
         txt_custnm.setBorder(null);
-        txt_custnm.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        txt_custnm.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 txt_custnmFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 txt_custnmFocusLost(evt);
             }
         });
@@ -1022,14 +915,11 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_custemail.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_custemail.setText("EMAIL");
         txt_custemail.setBorder(null);
-        txt_custemail.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        txt_custemail.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 txt_custemailFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 txt_custemailFocusLost(evt);
             }
         });
@@ -1059,14 +949,11 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_custno.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_custno.setText("CONTACT NO.");
         txt_custno.setBorder(null);
-        txt_custno.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        txt_custno.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 txt_custnoFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 txt_custnoFocusLost(evt);
             }
         });
@@ -1096,14 +983,11 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_custsadd.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_custsadd.setText("SHOP ADDRESS");
         txt_custsadd.setBorder(null);
-        txt_custsadd.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        txt_custsadd.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 txt_custsaddFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 txt_custsaddFocusLost(evt);
             }
         });
@@ -1133,14 +1017,11 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_custsname.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_custsname.setText("SHOP NAME");
         txt_custsname.setBorder(null);
-        txt_custsname.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        txt_custsname.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 txt_custsnameFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 txt_custsnameFocusLost(evt);
             }
         });
@@ -1169,21 +1050,16 @@ public class frm_dashboard extends javax.swing.JFrame
         loginBtn.setkHoverStartColor(new java.awt.Color(178, 199, 231));
         loginBtn.setkStartColor(new java.awt.Color(68, 82, 121));
         loginBtn.setNextFocusableComponent(lbl_addcust);
-        loginBtn.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        loginBtn.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 loginBtnFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 loginBtnFocusLost(evt);
             }
         });
-        loginBtn.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+        loginBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 loginBtnMouseEntered(evt);
             }
         });
@@ -1264,14 +1140,14 @@ public class frm_dashboard extends javax.swing.JFrame
             .addGroup(panel_custdetailLayout.createSequentialGroup()
                 .addGap(356, 356, 356)
                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(430, Short.MAX_VALUE))
+                .addContainerGap(505, Short.MAX_VALUE))
         );
         panel_custdetailLayout.setVerticalGroup(
             panel_custdetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_custdetailLayout.createSequentialGroup()
                 .addGap(259, 259, 259)
                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(266, Short.MAX_VALUE))
+                .addContainerGap(282, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panel_custmainLayout = new javax.swing.GroupLayout(panel_custmain);
@@ -1282,7 +1158,7 @@ public class frm_dashboard extends javax.swing.JFrame
             .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_custmainLayout.createSequentialGroup()
                     .addGap(50, 50, 50)
-                    .addComponent(panel_custdetail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panel_custdetail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(50, 50, 50)))
             .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_custmainLayout.createSequentialGroup()
@@ -1548,8 +1424,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_helpKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_helpKeyPressed
     {//GEN-HEADEREND:event_lbl_helpKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
-        {
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             panel_customer.setVisible(false);
             panel_employee.setVisible(false);
             panel_bill.setVisible(false);
@@ -1625,8 +1500,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_aboutKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_aboutKeyPressed
     {//GEN-HEADEREND:event_lbl_aboutKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
-        {
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             panel_customer.setVisible(false);
             panel_employee.setVisible(false);
             panel_bill.setVisible(false);
@@ -1704,8 +1578,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_accountKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_accountKeyPressed
     {//GEN-HEADEREND:event_lbl_accountKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
-        {
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             panel_customer.setVisible(false);
             panel_employee.setVisible(false);
             panel_bill.setVisible(false);
@@ -1782,8 +1655,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_billKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_billKeyPressed
     {//GEN-HEADEREND:event_lbl_billKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
-        {
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             panel_customer.setVisible(false);
             panel_employee.setVisible(false);
             panel_bill.setVisible(true);
@@ -1861,8 +1733,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_productKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_productKeyPressed
     {//GEN-HEADEREND:event_lbl_productKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
-        {
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             panel_customer.setVisible(false);
             panel_employee.setVisible(false);
             panel_bill.setVisible(false);
@@ -1940,8 +1811,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_employeeKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_employeeKeyPressed
     {//GEN-HEADEREND:event_lbl_employeeKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
-        {
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             panel_customer.setVisible(false);
             panel_employee.setVisible(true);
             panel_bill.setVisible(false);
@@ -2020,8 +1890,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_customerKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_customerKeyPressed
     {//GEN-HEADEREND:event_lbl_customerKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
-        {
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             panel_customer.setVisible(true);
             panel_employee.setVisible(false);
             panel_bill.setVisible(false);
@@ -2162,15 +2031,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_addcustKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_addcustKeyPressed
     {//GEN-HEADEREND:event_lbl_addcustKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
-        {
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             panel_addcust.setVisible(true);
             panel_editcus.setVisible(false);
             panel_custdetail.setVisible(false);
             txt_custid.grabFocus();
-        }
-        else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
+        } else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE) {
             panel_addcust.setVisible(false);
             panel_editcus.setVisible(false);
             panel_custdetail.setVisible(false);
@@ -2201,96 +2067,84 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void txt_custidFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custidFocusGained
     {//GEN-HEADEREND:event_txt_custidFocusGained
-        if (txt_custid.getText().equals("CUSTOMER ID"))
-        {
+        if (txt_custid.getText().equals("CUSTOMER ID")) {
             txt_custid.setText("");
         }
     }//GEN-LAST:event_txt_custidFocusGained
 
     private void txt_custidFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custidFocusLost
     {//GEN-HEADEREND:event_txt_custidFocusLost
-        if (txt_custid.getText().equals(""))
-        {
+        if (txt_custid.getText().equals("")) {
             txt_custid.setText("CUSTOMER ID");
         }
     }//GEN-LAST:event_txt_custidFocusLost
 
     private void txt_custnmFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custnmFocusGained
     {//GEN-HEADEREND:event_txt_custnmFocusGained
-        if (txt_custnm.getText().equals("CUSTOMER NAME"))
-        {
+        if (txt_custnm.getText().equals("CUSTOMER NAME")) {
             txt_custnm.setText("");
         }
     }//GEN-LAST:event_txt_custnmFocusGained
 
     private void txt_custnmFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custnmFocusLost
     {//GEN-HEADEREND:event_txt_custnmFocusLost
-        if (txt_custnm.getText().equals(""))
-        {
+        if (txt_custnm.getText().equals("")) {
             txt_custnm.setText("CUSTOMER NAME");
         }
     }//GEN-LAST:event_txt_custnmFocusLost
 
     private void txt_custnoFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custnoFocusGained
     {//GEN-HEADEREND:event_txt_custnoFocusGained
-        if (txt_custno.getText().equals("CONTACT NO."))
-        {
+        if (txt_custno.getText().equals("CONTACT NO.")) {
             txt_custno.setText("");
         }
     }//GEN-LAST:event_txt_custnoFocusGained
 
     private void txt_custnoFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custnoFocusLost
     {//GEN-HEADEREND:event_txt_custnoFocusLost
-        if (txt_custno.getText().equals(""))
-        {
+        if (txt_custno.getText().equals("")) {
             txt_custno.setText("CONTACT NO.");
         }
     }//GEN-LAST:event_txt_custnoFocusLost
 
     private void txt_custemailFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custemailFocusGained
     {//GEN-HEADEREND:event_txt_custemailFocusGained
-        if (txt_custemail.getText().equals("EMAIL"))
-        {
+        if (txt_custemail.getText().equals("EMAIL")) {
             txt_custemail.setText("");
         }
     }//GEN-LAST:event_txt_custemailFocusGained
 
     private void txt_custemailFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custemailFocusLost
     {//GEN-HEADEREND:event_txt_custemailFocusLost
-        if (txt_custemail.getText().equals(""))
-        {
+        if (txt_custemail.getText().equals("")) {
             txt_custemail.setText("EMAIL");
         }
     }//GEN-LAST:event_txt_custemailFocusLost
 
     private void txt_custsnameFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custsnameFocusGained
     {//GEN-HEADEREND:event_txt_custsnameFocusGained
-        if (txt_custsname.getText().equals("SHOP NAME"))
-        {
+        if (txt_custsname.getText().equals("SHOP NAME")) {
             txt_custsname.setText("");
         }
     }//GEN-LAST:event_txt_custsnameFocusGained
 
     private void txt_custsnameFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custsnameFocusLost
     {//GEN-HEADEREND:event_txt_custsnameFocusLost
-        if (txt_custsname.getText().equals(""))
-        {
+        if (txt_custsname.getText().equals("")) {
             txt_custsname.setText("SHOP NAME");
         }
     }//GEN-LAST:event_txt_custsnameFocusLost
 
     private void txt_custsaddFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custsaddFocusGained
     {//GEN-HEADEREND:event_txt_custsaddFocusGained
-        if (txt_custsadd.getText().equals("SHOP ADDRESS"))
-        {
+        if (txt_custsadd.getText().equals("SHOP ADDRESS")) {
             txt_custsadd.setText("");
         }
     }//GEN-LAST:event_txt_custsaddFocusGained
 
     private void txt_custsaddFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custsaddFocusLost
     {//GEN-HEADEREND:event_txt_custsaddFocusLost
-        if (txt_custsadd.getText().equals(""))
-        {
+        if (txt_custsadd.getText().equals("")) {
             txt_custsadd.setText("SHOP ADDRESS");
         }
     }//GEN-LAST:event_txt_custsaddFocusLost
@@ -2312,15 +2166,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_editcustKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_editcustKeyPressed
     {//GEN-HEADEREND:event_lbl_editcustKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
-        {
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             panel_addcust.setVisible(false);
             panel_editcus.setVisible(true);
             panel_custdetail.setVisible(false);
             //txt_custid.grabFocus();
-        }
-        else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
+        } else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE) {
             panel_addcust.setVisible(false);
             panel_editcus.setVisible(false);
             panel_custdetail.setVisible(false);
@@ -2332,15 +2183,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_custdetKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_custdetKeyPressed
     {//GEN-HEADEREND:event_lbl_custdetKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
-        {
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             panel_addcust.setVisible(false);
             panel_editcus.setVisible(false);
             panel_custdetail.setVisible(true);
             //txt_custid.grabFocus();
-        }
-        else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
+        } else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE) {
             panel_addcust.setVisible(false);
             panel_editcus.setVisible(false);
             panel_custdetail.setVisible(false);
@@ -2394,12 +2242,9 @@ public class frm_dashboard extends javax.swing.JFrame
         kGradientPanel5.setBackground(Color.RED);
     }//GEN-LAST:event_lbl_custdetMouseExited
 
-    public static void main(String args[])
-    {
-        java.awt.EventQueue.invokeLater(new Runnable()
-        {
-            public void run()
-            {
+    public static void main(String args[]) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
                 new frm_dashboard().setVisible(true);
             }
         });

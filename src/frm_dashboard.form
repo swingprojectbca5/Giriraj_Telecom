@@ -1091,7 +1091,7 @@
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                                      <Component id="panel_custdetail" max="32767" attributes="0"/>
+                                      <Component id="panel_custdetail" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -1609,7 +1609,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="356" max="-2" attributes="0"/>
                                       <Component id="jTextField3" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="430" max="32767" attributes="0"/>
+                                      <EmptySpace pref="505" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1618,7 +1618,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="259" max="-2" attributes="0"/>
                                       <Component id="jTextField3" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="266" max="32767" attributes="0"/>
+                                      <EmptySpace pref="282" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
