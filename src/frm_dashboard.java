@@ -1,18 +1,13 @@
 
-import com.sun.beans.editors.ColorEditor;
 import java.awt.Color;
 import java.awt.Cursor;
-import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.Insets;
-import java.awt.Toolkit;
 import java.awt.Graphics;
 import java.awt.Image;
-import java.awt.color.ColorSpace;
+import java.awt.Insets;
+import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 
 public class frm_dashboard extends javax.swing.JFrame
 {
