@@ -33,43 +33,18 @@ public class NewJFrame extends javax.swing.JFrame
     private void initComponents()
     {
 
-        pnl_sidepane1 = new com.k33ptoo.components.KGradientPanel();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
-
-        pnl_sidepane1.setkBorderRadius(40);
-        pnl_sidepane1.setkEndColor(new java.awt.Color(178, 199, 231));
-        pnl_sidepane1.setkStartColor(new java.awt.Color(178, 199, 231));
-        pnl_sidepane1.setOpaque(false);
-        pnl_sidepane1.setPreferredSize(new java.awt.Dimension(390, 550));
-
-        javax.swing.GroupLayout pnl_sidepane1Layout = new javax.swing.GroupLayout(pnl_sidepane1);
-        pnl_sidepane1.setLayout(pnl_sidepane1Layout);
-        pnl_sidepane1Layout.setHorizontalGroup(
-            pnl_sidepane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 390, Short.MAX_VALUE)
-        );
-        pnl_sidepane1Layout.setVerticalGroup(
-            pnl_sidepane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 550, Short.MAX_VALUE)
-        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(800, Short.MAX_VALUE)
-                .addComponent(pnl_sidepane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(742, 742, 742))
+            .addGap(0, 1956, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(393, 393, 393)
-                .addComponent(pnl_sidepane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(537, Short.MAX_VALUE))
+            .addGap(0, 1480, Short.MAX_VALUE)
         );
 
         pack();
@@ -126,6 +101,5 @@ public class NewJFrame extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.k33ptoo.components.KGradientPanel pnl_sidepane1;
     // End of variables declaration//GEN-END:variables
 }
