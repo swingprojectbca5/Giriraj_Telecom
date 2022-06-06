@@ -958,7 +958,6 @@ public class frm_dashboard extends javax.swing.JFrame
         kGradientPanel6.setkStartColor(new java.awt.Color(164, 177, 252));
         kGradientPanel6.setOpaque(false);
 
-        txt_custid.setEditable(false);
         txt_custid.setBackground(new java.awt.Color(164, 177, 252));
         txt_custid.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
         txt_custid.setForeground(new java.awt.Color(228, 235, 246));
@@ -2738,10 +2737,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void txt_custnmFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custnmFocusGained
     {//GEN-HEADEREND:event_txt_custnmFocusGained
-        if (txt_custnm.getText().equals("CUSTOMER NAME"))
-        {
-            txt_custnm.setText("");
-        }
+
     }//GEN-LAST:event_txt_custnmFocusGained
 
     private void txt_custnmFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custnmFocusLost
@@ -2754,10 +2750,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void txt_custnoFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custnoFocusGained
     {//GEN-HEADEREND:event_txt_custnoFocusGained
-        if (txt_custno.getText().equals("CONTACT NO."))
-        {
-            txt_custno.setText("");
-        }
+
     }//GEN-LAST:event_txt_custnoFocusGained
 
     private void txt_custnoFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custnoFocusLost
@@ -2770,10 +2763,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void txt_custemailFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custemailFocusGained
     {//GEN-HEADEREND:event_txt_custemailFocusGained
-        if (txt_custemail.getText().equals("EMAIL"))
-        {
-            txt_custemail.setText("");
-        }
+
     }//GEN-LAST:event_txt_custemailFocusGained
 
     private void txt_custemailFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custemailFocusLost
@@ -2786,10 +2776,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void txt_custsnameFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custsnameFocusGained
     {//GEN-HEADEREND:event_txt_custsnameFocusGained
-        if (txt_custsname.getText().equals("SHOP NAME"))
-        {
-            txt_custsname.setText("");
-        }
+
     }//GEN-LAST:event_txt_custsnameFocusGained
 
     private void txt_custsnameFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custsnameFocusLost
@@ -2802,10 +2789,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void txt_custsaddFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custsaddFocusGained
     {//GEN-HEADEREND:event_txt_custsaddFocusGained
-        if (txt_custsadd.getText().equals("SHOP ADDRESS"))
-        {
-            txt_custsadd.setText("");
-        }
+
     }//GEN-LAST:event_txt_custsaddFocusGained
 
     private void txt_custsaddFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_custsaddFocusLost
@@ -2923,7 +2907,6 @@ public class frm_dashboard extends javax.swing.JFrame
         }
         else if (txt_custid.getText().equals("CUSTOMER ID"))
         {
-            txt_custid.setEditable(true);
             txt_custid.setText("");
         }
     }//GEN-LAST:event_txt_custidKeyPressed
@@ -2934,6 +2917,10 @@ public class frm_dashboard extends javax.swing.JFrame
         {
             lbl_addcust.grabFocus();
         }
+        else if (txt_custnm.getText().equals("CUSTOMER NAME"))
+        {
+            txt_custnm.setText("");
+        }
     }//GEN-LAST:event_txt_custnmKeyPressed
 
     private void txt_custnoKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_custnoKeyPressed
@@ -2941,6 +2928,10 @@ public class frm_dashboard extends javax.swing.JFrame
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
         {
             lbl_addcust.grabFocus();
+        }
+        else if (txt_custno.getText().equals("CONTACT NO."))
+        {
+            txt_custno.setText("");
         }
     }//GEN-LAST:event_txt_custnoKeyPressed
 
@@ -2950,6 +2941,10 @@ public class frm_dashboard extends javax.swing.JFrame
         {
             lbl_addcust.grabFocus();
         }
+        else if (txt_custemail.getText().equals("EMAIL"))
+        {
+            txt_custemail.setText("");
+        }
     }//GEN-LAST:event_txt_custemailKeyPressed
 
     private void txt_custsnameKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_custsnameKeyPressed
@@ -2958,6 +2953,10 @@ public class frm_dashboard extends javax.swing.JFrame
         {
             lbl_addcust.grabFocus();
         }
+        else if (txt_custsname.getText().equals("SHOP NAME"))
+        {
+            txt_custsname.setText("");
+        }
     }//GEN-LAST:event_txt_custsnameKeyPressed
 
     private void txt_custsaddKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_custsaddKeyPressed
@@ -2965,6 +2964,10 @@ public class frm_dashboard extends javax.swing.JFrame
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
         {
             lbl_addcust.grabFocus();
+        }
+        else if (txt_custsadd.getText().equals("SHOP ADDRESS"))
+        {
+            txt_custsadd.setText("");
         }
     }//GEN-LAST:event_txt_custsaddKeyPressed
 
