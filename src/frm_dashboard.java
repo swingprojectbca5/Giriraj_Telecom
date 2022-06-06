@@ -3179,6 +3179,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private javax.swing.JLabel lbl_addcust;
     private javax.swing.JLabel lbl_bill;
     private javax.swing.JLabel lbl_close;
+    private javax.swing.JLabel lbl_close1;
     private javax.swing.JLabel lbl_custdet;
     private javax.swing.JLabel lbl_customer;
     private javax.swing.JLabel lbl_editcust;
@@ -3207,9 +3208,11 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel pnl_account;
     private com.k33ptoo.components.KGradientPanel pnl_bill;
     private com.k33ptoo.components.KGradientPanel pnl_close;
+    private com.k33ptoo.components.KGradientPanel pnl_close1;
     private com.k33ptoo.components.KGradientPanel pnl_customer;
     private com.k33ptoo.components.KGradientPanel pnl_employee;
     private com.k33ptoo.components.KGradientPanel pnl_header;
+    private com.k33ptoo.components.KGradientPanel pnl_header1;
     private com.k33ptoo.components.KGradientPanel pnl_help;
     private com.k33ptoo.components.KGradientPanel pnl_menu;
     private javax.swing.JPanel pnl_min;
