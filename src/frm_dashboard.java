@@ -161,6 +161,7 @@ public class frm_dashboard extends javax.swing.JFrame
         pnl_customer.setkStartColor(new java.awt.Color(228, 235, 246));
         pnl_customer.setOpaque(false);
 
+        lbl_customer.setDisplayedMnemonic('c');
         lbl_customer.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
         lbl_customer.setForeground(new java.awt.Color(68, 82, 121));
         lbl_customer.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -221,10 +222,12 @@ public class frm_dashboard extends javax.swing.JFrame
         pnl_employee.setkStartColor(new java.awt.Color(228, 235, 246));
         pnl_employee.setOpaque(false);
 
+        lbl_employee.setDisplayedMnemonic('e');
         lbl_employee.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
         lbl_employee.setForeground(new java.awt.Color(68, 82, 121));
         lbl_employee.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lbl_employee.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/employee.png"))); // NOI18N
+        lbl_employee.setLabelFor(panel_employee);
         lbl_employee.setText("EMPLOYEE MANAGEMENT");
         lbl_employee.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_employee.setNextFocusableComponent(lbl_product);
@@ -280,10 +283,12 @@ public class frm_dashboard extends javax.swing.JFrame
         pnl_product.setkStartColor(new java.awt.Color(228, 235, 246));
         pnl_product.setOpaque(false);
 
+        lbl_product.setDisplayedMnemonic('p');
         lbl_product.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
         lbl_product.setForeground(new java.awt.Color(68, 82, 121));
         lbl_product.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lbl_product.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/product.png"))); // NOI18N
+        lbl_product.setLabelFor(panel_product);
         lbl_product.setText("PRODUCT MANAGEMENT");
         lbl_product.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_product.setNextFocusableComponent(lbl_bill);
@@ -343,6 +348,7 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_bill.setForeground(new java.awt.Color(68, 82, 121));
         lbl_bill.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lbl_bill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/bill.png"))); // NOI18N
+        lbl_bill.setLabelFor(panel_bill);
         lbl_bill.setText("BILL MANAGEMENT");
         lbl_bill.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_bill.setNextFocusableComponent(lbl_account);
