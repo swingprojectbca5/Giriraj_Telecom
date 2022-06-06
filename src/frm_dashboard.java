@@ -35,7 +35,6 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_help.setVisible(false);
         panel_extra.setVisible(true);
         jLabel2.grabFocus();
-
         // this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
@@ -128,7 +127,7 @@ public class frm_dashboard extends javax.swing.JFrame
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         kGradientPanel20 = new com.k33ptoo.components.KGradientPanel();
-        jTextField1 = new javax.swing.JTextField();
+        txt_custidedit = new javax.swing.JTextField();
         panel_employee = new com.k33ptoo.components.KGradientPanel();
         panel_product = new com.k33ptoo.components.KGradientPanel();
         panel_bill = new com.k33ptoo.components.KGradientPanel();
@@ -166,6 +165,7 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_customer.setForeground(new java.awt.Color(68, 82, 121));
         lbl_customer.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lbl_customer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/customer.png"))); // NOI18N
+        lbl_customer.setLabelFor(panel_customer);
         lbl_customer.setText("CUSTOMER MANAGEMENT");
         lbl_customer.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_customer.setNextFocusableComponent(lbl_employee);
@@ -1731,6 +1731,13 @@ public class frm_dashboard extends javax.swing.JFrame
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable2.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                jTable2KeyPressed(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTable2);
 
         javax.swing.GroupLayout kGradientPanel19Layout = new javax.swing.GroupLayout(kGradientPanel19);
@@ -1755,12 +1762,19 @@ public class frm_dashboard extends javax.swing.JFrame
         kGradientPanel20.setkStartColor(new java.awt.Color(164, 177, 252));
         kGradientPanel20.setOpaque(false);
 
-        jTextField1.setBackground(new java.awt.Color(164, 177, 252));
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 30)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(228, 235, 246));
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setText("CUSTOMER ID OR NAME");
-        jTextField1.setBorder(null);
+        txt_custidedit.setBackground(new java.awt.Color(164, 177, 252));
+        txt_custidedit.setFont(new java.awt.Font("Segoe UI", 0, 30)); // NOI18N
+        txt_custidedit.setForeground(new java.awt.Color(228, 235, 246));
+        txt_custidedit.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txt_custidedit.setText("CUSTOMER ID OR NAME");
+        txt_custidedit.setBorder(null);
+        txt_custidedit.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                txt_custideditKeyPressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout kGradientPanel20Layout = new javax.swing.GroupLayout(kGradientPanel20);
         kGradientPanel20.setLayout(kGradientPanel20Layout);
@@ -1768,12 +1782,12 @@ public class frm_dashboard extends javax.swing.JFrame
             kGradientPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(kGradientPanel20Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 861, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_custidedit, javax.swing.GroupLayout.PREFERRED_SIZE, 861, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         kGradientPanel20Layout.setVerticalGroup(
             kGradientPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(txt_custidedit, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout panel_custdetailLayout = new javax.swing.GroupLayout(panel_custdetail);
@@ -2822,7 +2836,7 @@ public class frm_dashboard extends javax.swing.JFrame
             panel_addcust.setVisible(false);
             panel_editcus.setVisible(true);
             panel_custdetail.setVisible(false);
-            //txt_custid.grabFocus();
+//            txt_custidedit.grabFocus();
         }
         else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
         {
@@ -2842,7 +2856,7 @@ public class frm_dashboard extends javax.swing.JFrame
             panel_addcust.setVisible(false);
             panel_editcus.setVisible(false);
             panel_custdetail.setVisible(true);
-            //txt_custid.grabFocus();
+            txt_custidedit.grabFocus();
         }
         else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
         {
@@ -3099,6 +3113,22 @@ public class frm_dashboard extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_custidActionPerformed
 
+    private void jTable2KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_jTable2KeyPressed
+    {//GEN-HEADEREND:event_jTable2KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
+        {
+            lbl_custdet.grabFocus();
+        }
+    }//GEN-LAST:event_jTable2KeyPressed
+
+    private void txt_custideditKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_custideditKeyPressed
+    {//GEN-HEADEREND:event_txt_custideditKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
+        {
+            lbl_custdet.grabFocus();
+        }
+    }//GEN-LAST:event_txt_custideditKeyPressed
+
     public static void main(String args[])
     {
         java.awt.EventQueue.invokeLater(new Runnable()
@@ -3118,7 +3148,6 @@ public class frm_dashboard extends javax.swing.JFrame
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextField1;
     private com.k33ptoo.components.KGradientPanel kGradientPanel1;
     private com.k33ptoo.components.KGradientPanel kGradientPanel10;
     private com.k33ptoo.components.KGradientPanel kGradientPanel11;
@@ -3188,6 +3217,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private javax.swing.JTextField txt_custid4;
     private javax.swing.JTextField txt_custid5;
     private javax.swing.JTextField txt_custid6;
+    private javax.swing.JTextField txt_custidedit;
     private javax.swing.JTextField txt_custnm;
     private javax.swing.JTextField txt_custno;
     private javax.swing.JTextField txt_custsadd;

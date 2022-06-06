@@ -30,7 +30,6 @@ public class Responsive extends javax.swing.JFrame
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents()
     {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         kGradientPanel1 = new com.k33ptoo.components.KGradientPanel();
         kGradientPanel2 = new com.k33ptoo.components.KGradientPanel();
@@ -44,7 +43,6 @@ public class Responsive extends javax.swing.JFrame
         kGradientPanel1.setkStartColor(new java.awt.Color(204, 204, 255));
         kGradientPanel1.setOpaque(false);
         kGradientPanel1.setPreferredSize(new java.awt.Dimension(1920, 1008));
-        kGradientPanel1.setLayout(new java.awt.GridBagLayout());
 
         kGradientPanel2.setkBorderRadius(40);
         kGradientPanel2.setOpaque(false);
@@ -60,14 +58,20 @@ public class Responsive extends javax.swing.JFrame
             .addGap(0, 580, Short.MAX_VALUE)
         );
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 1160;
-        gridBagConstraints.ipady = 580;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(140, 140, 140, 140);
-        kGradientPanel1.add(kGradientPanel2, gridBagConstraints);
+        javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
+        kGradientPanel1.setLayout(kGradientPanel1Layout);
+        kGradientPanel1Layout.setHorizontalGroup(
+            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kGradientPanel1Layout.createSequentialGroup()
+                .addGap(380, 380, 380)
+                .addComponent(kGradientPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        kGradientPanel1Layout.setVerticalGroup(
+            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kGradientPanel1Layout.createSequentialGroup()
+                .addGap(214, 214, 214)
+                .addComponent(kGradientPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         getContentPane().add(kGradientPanel1);
 

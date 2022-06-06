@@ -307,6 +307,7 @@ public class frm_login extends javax.swing.JFrame
         jPanel7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
 
         loginBtn.setBorder(null);
+        loginBtn.setMnemonic('c');
         loginBtn.setText("LOGIN");
         loginBtn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         loginBtn.setkBorderRadius(30);
