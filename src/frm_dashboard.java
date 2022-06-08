@@ -1,4 +1,5 @@
 
+import com.k33ptoo.components.KGradientPanel;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
@@ -87,13 +88,6 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_gt = new javax.swing.JLabel();
         panel_main = new com.k33ptoo.components.KGradientPanel();
         panel_customer = new com.k33ptoo.components.KGradientPanel();
-        pnl_menu = new com.k33ptoo.components.KGradientPanel();
-        kGradientPanel3 = new com.k33ptoo.components.KGradientPanel();
-        lbl_addcust = new javax.swing.JLabel();
-        kGradientPanel4 = new com.k33ptoo.components.KGradientPanel();
-        lbl_editcust = new javax.swing.JLabel();
-        kGradientPanel5 = new com.k33ptoo.components.KGradientPanel();
-        lbl_custdet = new javax.swing.JLabel();
         panel_custmain = new com.k33ptoo.components.KGradientPanel();
         panel_addcust = new com.k33ptoo.components.KGradientPanel();
         kGradientPanel6 = new com.k33ptoo.components.KGradientPanel();
@@ -135,7 +129,22 @@ public class frm_dashboard extends javax.swing.JFrame
         jTable2 = new javax.swing.JTable()
         ;
         panel_cust_extra = new com.k33ptoo.components.KGradientPanel();
+        panel_custmenu = new com.k33ptoo.components.KGradientPanel();
+        kGradientPanel3 = new com.k33ptoo.components.KGradientPanel();
+        lbl_addcust = new javax.swing.JLabel();
+        kGradientPanel4 = new com.k33ptoo.components.KGradientPanel();
+        lbl_editcust = new javax.swing.JLabel();
+        kGradientPanel5 = new com.k33ptoo.components.KGradientPanel();
+        lbl_custdet = new javax.swing.JLabel();
         panel_employee = new com.k33ptoo.components.KGradientPanel();
+        kGradientPanel24 = new com.k33ptoo.components.KGradientPanel();
+        panel_empmenu = new com.k33ptoo.components.KGradientPanel();
+        kGradientPanel21 = new com.k33ptoo.components.KGradientPanel();
+        lbl_addemp = new javax.swing.JLabel();
+        kGradientPanel22 = new com.k33ptoo.components.KGradientPanel();
+        lbl_editemp = new javax.swing.JLabel();
+        kGradientPanel23 = new com.k33ptoo.components.KGradientPanel();
+        lbl_empdet = new javax.swing.JLabel();
         panel_product = new com.k33ptoo.components.KGradientPanel();
         panel_bill = new com.k33ptoo.components.KGradientPanel();
         panel_account = new com.k33ptoo.components.KGradientPanel();
@@ -704,205 +713,12 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_main.setkStartColor(new java.awt.Color(228, 235, 246));
         panel_main.setPreferredSize(new java.awt.Dimension(1061, 710));
 
+        panel_customer.setkBorderRadius(40);
         panel_customer.setkEndColor(new java.awt.Color(228, 235, 246));
         panel_customer.setkStartColor(new java.awt.Color(228, 235, 246));
         panel_customer.setPreferredSize(new java.awt.Dimension(1061, 710));
 
-        pnl_menu.setkBorderRadius(20);
-        pnl_menu.setkEndColor(new java.awt.Color(68, 82, 121));
-        pnl_menu.setkStartColor(new java.awt.Color(68, 82, 121));
-        pnl_menu.setOpaque(false);
-
-        kGradientPanel3.setkBorderRadius(20);
-        kGradientPanel3.setkEndColor(new java.awt.Color(68, 82, 121));
-        kGradientPanel3.setkStartColor(new java.awt.Color(68, 82, 121));
-        kGradientPanel3.setOpaque(false);
-
-        lbl_addcust.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        lbl_addcust.setForeground(new java.awt.Color(228, 235, 246));
-        lbl_addcust.setText("ADD CUSTOMER");
-        lbl_addcust.setNextFocusableComponent(lbl_editcust);
-        lbl_addcust.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                lbl_addcustFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                lbl_addcustFocusLost(evt);
-            }
-        });
-        lbl_addcust.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
-                lbl_addcustMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
-                lbl_addcustMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
-                lbl_addcustMouseExited(evt);
-            }
-        });
-        lbl_addcust.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
-                lbl_addcustKeyPressed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout kGradientPanel3Layout = new javax.swing.GroupLayout(kGradientPanel3);
-        kGradientPanel3.setLayout(kGradientPanel3Layout);
-        kGradientPanel3Layout.setHorizontalGroup(
-            kGradientPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel3Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(lbl_addcust)
-                .addContainerGap(25, Short.MAX_VALUE))
-        );
-        kGradientPanel3Layout.setVerticalGroup(
-            kGradientPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbl_addcust, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-        );
-
-        kGradientPanel4.setkBorderRadius(20);
-        kGradientPanel4.setkEndColor(new java.awt.Color(68, 82, 121));
-        kGradientPanel4.setkStartColor(new java.awt.Color(68, 82, 121));
-        kGradientPanel4.setOpaque(false);
-
-        lbl_editcust.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        lbl_editcust.setForeground(new java.awt.Color(228, 235, 246));
-        lbl_editcust.setText("EDIT CUSTOMER");
-        lbl_editcust.setNextFocusableComponent(lbl_custdet);
-        lbl_editcust.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                lbl_editcustFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                lbl_editcustFocusLost(evt);
-            }
-        });
-        lbl_editcust.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
-                lbl_editcustMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
-                lbl_editcustMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
-                lbl_editcustMouseExited(evt);
-            }
-        });
-        lbl_editcust.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
-                lbl_editcustKeyPressed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout kGradientPanel4Layout = new javax.swing.GroupLayout(kGradientPanel4);
-        kGradientPanel4.setLayout(kGradientPanel4Layout);
-        kGradientPanel4Layout.setHorizontalGroup(
-            kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel4Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(lbl_editcust)
-                .addContainerGap(25, Short.MAX_VALUE))
-        );
-        kGradientPanel4Layout.setVerticalGroup(
-            kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbl_editcust, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        kGradientPanel5.setkBorderRadius(20);
-        kGradientPanel5.setkEndColor(new java.awt.Color(68, 82, 121));
-        kGradientPanel5.setkStartColor(new java.awt.Color(68, 82, 121));
-        kGradientPanel5.setOpaque(false);
-
-        lbl_custdet.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        lbl_custdet.setForeground(new java.awt.Color(228, 235, 246));
-        lbl_custdet.setText("CUSTOMER DETAIL");
-        lbl_custdet.setNextFocusableComponent(lbl_addcust);
-        lbl_custdet.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                lbl_custdetFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                lbl_custdetFocusLost(evt);
-            }
-        });
-        lbl_custdet.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
-                lbl_custdetMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
-                lbl_custdetMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
-                lbl_custdetMouseExited(evt);
-            }
-        });
-        lbl_custdet.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
-                lbl_custdetKeyPressed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout kGradientPanel5Layout = new javax.swing.GroupLayout(kGradientPanel5);
-        kGradientPanel5.setLayout(kGradientPanel5Layout);
-        kGradientPanel5Layout.setHorizontalGroup(
-            kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel5Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(lbl_custdet)
-                .addContainerGap(25, Short.MAX_VALUE))
-        );
-        kGradientPanel5Layout.setVerticalGroup(
-            kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbl_custdet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout pnl_menuLayout = new javax.swing.GroupLayout(pnl_menu);
-        pnl_menu.setLayout(pnl_menuLayout);
-        pnl_menuLayout.setHorizontalGroup(
-            pnl_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_menuLayout.createSequentialGroup()
-                .addComponent(kGradientPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(kGradientPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(kGradientPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        pnl_menuLayout.setVerticalGroup(
-            pnl_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(kGradientPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(kGradientPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(kGradientPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
+        panel_custmain.setkBorderRadius(40);
         panel_custmain.setkEndColor(new java.awt.Color(178, 199, 231));
         panel_custmain.setkStartColor(new java.awt.Color(178, 199, 231));
 
@@ -1621,7 +1437,7 @@ public class frm_dashboard extends javax.swing.JFrame
                         .addGap(42, 42, 42)
                         .addComponent(kGradientPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(kGradientPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addGap(25, 25, 25))
         );
 
         panel_custdetail.setkBorderRadius(40);
@@ -1808,17 +1624,212 @@ public class frm_dashboard extends javax.swing.JFrame
                     .addContainerGap(56, Short.MAX_VALUE)))
         );
 
+        panel_custmenu.setkBorderRadius(40);
+        panel_custmenu.setkEndColor(new java.awt.Color(68, 82, 121));
+        panel_custmenu.setkStartColor(new java.awt.Color(68, 82, 121));
+        panel_custmenu.setOpaque(false);
+
+        kGradientPanel3.setkBorderRadius(40);
+        kGradientPanel3.setkEndColor(new java.awt.Color(68, 82, 121));
+        kGradientPanel3.setkStartColor(new java.awt.Color(68, 82, 121));
+        kGradientPanel3.setOpaque(false);
+
+        lbl_addcust.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
+        lbl_addcust.setForeground(new java.awt.Color(228, 235, 246));
+        lbl_addcust.setText("ADD CUSTOMER");
+        lbl_addcust.setNextFocusableComponent(lbl_editcust);
+        lbl_addcust.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                lbl_addcustFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                lbl_addcustFocusLost(evt);
+            }
+        });
+        lbl_addcust.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                lbl_addcustMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
+                lbl_addcustMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
+                lbl_addcustMouseExited(evt);
+            }
+        });
+        lbl_addcust.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                lbl_addcustKeyPressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout kGradientPanel3Layout = new javax.swing.GroupLayout(kGradientPanel3);
+        kGradientPanel3.setLayout(kGradientPanel3Layout);
+        kGradientPanel3Layout.setHorizontalGroup(
+            kGradientPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kGradientPanel3Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(lbl_addcust)
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+        kGradientPanel3Layout.setVerticalGroup(
+            kGradientPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbl_addcust, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+        );
+
+        kGradientPanel4.setkBorderRadius(20);
+        kGradientPanel4.setkEndColor(new java.awt.Color(68, 82, 121));
+        kGradientPanel4.setkStartColor(new java.awt.Color(68, 82, 121));
+        kGradientPanel4.setOpaque(false);
+
+        lbl_editcust.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
+        lbl_editcust.setForeground(new java.awt.Color(228, 235, 246));
+        lbl_editcust.setText("EDIT CUSTOMER");
+        lbl_editcust.setNextFocusableComponent(lbl_custdet);
+        lbl_editcust.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                lbl_editcustFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                lbl_editcustFocusLost(evt);
+            }
+        });
+        lbl_editcust.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                lbl_editcustMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
+                lbl_editcustMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
+                lbl_editcustMouseExited(evt);
+            }
+        });
+        lbl_editcust.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                lbl_editcustKeyPressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout kGradientPanel4Layout = new javax.swing.GroupLayout(kGradientPanel4);
+        kGradientPanel4.setLayout(kGradientPanel4Layout);
+        kGradientPanel4Layout.setHorizontalGroup(
+            kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kGradientPanel4Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(lbl_editcust)
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+        kGradientPanel4Layout.setVerticalGroup(
+            kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbl_editcust, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        kGradientPanel5.setkBorderRadius(20);
+        kGradientPanel5.setkEndColor(new java.awt.Color(68, 82, 121));
+        kGradientPanel5.setkStartColor(new java.awt.Color(68, 82, 121));
+        kGradientPanel5.setOpaque(false);
+
+        lbl_custdet.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
+        lbl_custdet.setForeground(new java.awt.Color(228, 235, 246));
+        lbl_custdet.setText("CUSTOMER DETAIL");
+        lbl_custdet.setNextFocusableComponent(lbl_addcust);
+        lbl_custdet.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                lbl_custdetFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                lbl_custdetFocusLost(evt);
+            }
+        });
+        lbl_custdet.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                lbl_custdetMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
+                lbl_custdetMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
+                lbl_custdetMouseExited(evt);
+            }
+        });
+        lbl_custdet.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                lbl_custdetKeyPressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout kGradientPanel5Layout = new javax.swing.GroupLayout(kGradientPanel5);
+        kGradientPanel5.setLayout(kGradientPanel5Layout);
+        kGradientPanel5Layout.setHorizontalGroup(
+            kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kGradientPanel5Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(lbl_custdet)
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+        kGradientPanel5Layout.setVerticalGroup(
+            kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbl_custdet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout panel_custmenuLayout = new javax.swing.GroupLayout(panel_custmenu);
+        panel_custmenu.setLayout(panel_custmenuLayout);
+        panel_custmenuLayout.setHorizontalGroup(
+            panel_custmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_custmenuLayout.createSequentialGroup()
+                .addComponent(kGradientPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(kGradientPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(kGradientPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        panel_custmenuLayout.setVerticalGroup(
+            panel_custmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(kGradientPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(kGradientPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(kGradientPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout panel_customerLayout = new javax.swing.GroupLayout(panel_customer);
         panel_customer.setLayout(panel_customerLayout);
         panel_customerLayout.setHorizontalGroup(
             panel_customerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnl_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(panel_custmain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_custmenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panel_customerLayout.setVerticalGroup(
             panel_customerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_customerLayout.createSequentialGroup()
-                .addComponent(pnl_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panel_custmenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panel_custmain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -1827,15 +1838,227 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_employee.setkStartColor(new java.awt.Color(228, 235, 246));
         panel_employee.setPreferredSize(new java.awt.Dimension(1061, 710));
 
+        kGradientPanel24.setkBorderRadius(40);
+        kGradientPanel24.setkEndColor(new java.awt.Color(178, 199, 231));
+        kGradientPanel24.setkStartColor(new java.awt.Color(178, 199, 231));
+        kGradientPanel24.setOpaque(false);
+
+        javax.swing.GroupLayout kGradientPanel24Layout = new javax.swing.GroupLayout(kGradientPanel24);
+        kGradientPanel24.setLayout(kGradientPanel24Layout);
+        kGradientPanel24Layout.setHorizontalGroup(
+            kGradientPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1061, Short.MAX_VALUE)
+        );
+        kGradientPanel24Layout.setVerticalGroup(
+            kGradientPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 666, Short.MAX_VALUE)
+        );
+
+        panel_empmenu.setkBorderRadius(40);
+        panel_empmenu.setkEndColor(new java.awt.Color(68, 82, 121));
+        panel_empmenu.setkStartColor(new java.awt.Color(68, 82, 121));
+        panel_empmenu.setOpaque(false);
+
+        kGradientPanel21.setkBorderRadius(40);
+        kGradientPanel21.setkEndColor(new java.awt.Color(68, 82, 121));
+        kGradientPanel21.setkStartColor(new java.awt.Color(68, 82, 121));
+        kGradientPanel21.setOpaque(false);
+
+        lbl_addemp.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
+        lbl_addemp.setForeground(new java.awt.Color(228, 235, 246));
+        lbl_addemp.setText("ADD EMPLOYEE");
+        lbl_addemp.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                lbl_addempFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                lbl_addempFocusLost(evt);
+            }
+        });
+        lbl_addemp.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                lbl_addempMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
+                lbl_addempMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
+                lbl_addempMouseExited(evt);
+            }
+        });
+        lbl_addemp.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                lbl_addempKeyPressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout kGradientPanel21Layout = new javax.swing.GroupLayout(kGradientPanel21);
+        kGradientPanel21.setLayout(kGradientPanel21Layout);
+        kGradientPanel21Layout.setHorizontalGroup(
+            kGradientPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kGradientPanel21Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(lbl_addemp)
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+        kGradientPanel21Layout.setVerticalGroup(
+            kGradientPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbl_addemp, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+        );
+
+        kGradientPanel22.setkBorderRadius(20);
+        kGradientPanel22.setkEndColor(new java.awt.Color(68, 82, 121));
+        kGradientPanel22.setkStartColor(new java.awt.Color(68, 82, 121));
+        kGradientPanel22.setOpaque(false);
+
+        lbl_editemp.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
+        lbl_editemp.setForeground(new java.awt.Color(228, 235, 246));
+        lbl_editemp.setText("EDIT EMPLOYEE");
+        lbl_editemp.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                lbl_editempFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                lbl_editempFocusLost(evt);
+            }
+        });
+        lbl_editemp.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                lbl_editempMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
+                lbl_editempMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
+                lbl_editempMouseExited(evt);
+            }
+        });
+        lbl_editemp.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                lbl_editempKeyPressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout kGradientPanel22Layout = new javax.swing.GroupLayout(kGradientPanel22);
+        kGradientPanel22.setLayout(kGradientPanel22Layout);
+        kGradientPanel22Layout.setHorizontalGroup(
+            kGradientPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kGradientPanel22Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(lbl_editemp)
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+        kGradientPanel22Layout.setVerticalGroup(
+            kGradientPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbl_editemp, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        kGradientPanel23.setkBorderRadius(20);
+        kGradientPanel23.setkEndColor(new java.awt.Color(68, 82, 121));
+        kGradientPanel23.setkStartColor(new java.awt.Color(68, 82, 121));
+        kGradientPanel23.setOpaque(false);
+
+        lbl_empdet.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
+        lbl_empdet.setForeground(new java.awt.Color(228, 235, 246));
+        lbl_empdet.setText("EMPLOYEE DETAIL");
+        lbl_empdet.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                lbl_empdetFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                lbl_empdetFocusLost(evt);
+            }
+        });
+        lbl_empdet.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                lbl_empdetMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
+                lbl_empdetMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
+                lbl_empdetMouseExited(evt);
+            }
+        });
+        lbl_empdet.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                lbl_empdetKeyPressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout kGradientPanel23Layout = new javax.swing.GroupLayout(kGradientPanel23);
+        kGradientPanel23.setLayout(kGradientPanel23Layout);
+        kGradientPanel23Layout.setHorizontalGroup(
+            kGradientPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kGradientPanel23Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(lbl_empdet)
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+        kGradientPanel23Layout.setVerticalGroup(
+            kGradientPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbl_empdet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout panel_empmenuLayout = new javax.swing.GroupLayout(panel_empmenu);
+        panel_empmenu.setLayout(panel_empmenuLayout);
+        panel_empmenuLayout.setHorizontalGroup(
+            panel_empmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_empmenuLayout.createSequentialGroup()
+                .addComponent(kGradientPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(kGradientPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(kGradientPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        panel_empmenuLayout.setVerticalGroup(
+            panel_empmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(kGradientPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(kGradientPanel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(kGradientPanel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout panel_employeeLayout = new javax.swing.GroupLayout(panel_employee);
         panel_employee.setLayout(panel_employeeLayout);
         panel_employeeLayout.setHorizontalGroup(
             panel_employeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1061, Short.MAX_VALUE)
+            .addComponent(kGradientPanel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_empmenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panel_employeeLayout.setVerticalGroup(
             panel_employeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 710, Short.MAX_VALUE)
+            .addGroup(panel_employeeLayout.createSequentialGroup()
+                .addComponent(panel_empmenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(kGradientPanel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panel_product.setPreferredSize(new java.awt.Dimension(1061, 710));
@@ -1970,7 +2193,7 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addComponent(pnl_sidepane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25)
                 .addComponent(panel_main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
             .addComponent(pnl_header, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         kGradientPanel2Layout.setVerticalGroup(
@@ -2366,6 +2589,7 @@ public class frm_dashboard extends javax.swing.JFrame
             panel_about.setVisible(false);
             panel_help.setVisible(false);
             panel_extra.setVisible(false);
+            lbl_addemp.grabFocus();
         }
     }//GEN-LAST:event_lbl_employeeKeyPressed
 
@@ -2404,10 +2628,13 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_about.setVisible(false);
         panel_extra.setVisible(false);
         panel_help.setVisible(false);
+
         pnl_employee.setkStartColor(Color.WHITE);
         pnl_employee.setkEndColor(Color.WHITE);
         pnl_employee.setBackground(Color.WHITE);
         lbl_employee.setForeground(Color.BLACK);
+
+        lbl_addemp.grabFocus();
     }//GEN-LAST:event_lbl_employeeMouseClicked
 
     private void lbl_employeeFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_employeeFocusLost
@@ -3025,6 +3252,175 @@ public class frm_dashboard extends javax.swing.JFrame
         }
     }//GEN-LAST:event_jTable2KeyPressed
 
+    private void lbl_addempFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_addempFocusGained
+    {//GEN-HEADEREND:event_lbl_addempFocusGained
+        kGradientPanel21.setkStartColor(new Color(164, 177, 252));
+        kGradientPanel21.setkEndColor(new Color(164, 177, 252));
+        kGradientPanel21.setBackground(Color.BLACK);
+    }//GEN-LAST:event_lbl_addempFocusGained
+
+    private void lbl_addempFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_addempFocusLost
+    {//GEN-HEADEREND:event_lbl_addempFocusLost
+        kGradientPanel21.setkStartColor(new Color(68, 82, 121));
+        kGradientPanel21.setkEndColor(new Color(68, 82, 121));
+        kGradientPanel21.setBackground(Color.RED);
+    }//GEN-LAST:event_lbl_addempFocusLost
+
+    private void lbl_addempMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_addempMouseClicked
+    {//GEN-HEADEREND:event_lbl_addempMouseClicked
+        panel_addcust.setVisible(true);
+        panel_editcus.setVisible(false);
+        panel_custdetail.setVisible(false);
+        txt_add_custid.grabFocus();
+    }//GEN-LAST:event_lbl_addempMouseClicked
+
+    private void lbl_addempMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_addempMouseEntered
+    {//GEN-HEADEREND:event_lbl_addempMouseEntered
+        kGradientPanel21.setkStartColor(new Color(164, 177, 252));
+        kGradientPanel21.setkEndColor(new Color(164, 177, 252));
+        kGradientPanel21.setBackground(Color.BLACK);
+    }//GEN-LAST:event_lbl_addempMouseEntered
+
+    private void lbl_addempMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_addempMouseExited
+    {//GEN-HEADEREND:event_lbl_addempMouseExited
+
+        kGradientPanel21.setkStartColor(new Color(68, 82, 121));
+        kGradientPanel21.setkEndColor(new Color(68, 82, 121));
+        kGradientPanel21.setBackground(Color.RED);
+    }//GEN-LAST:event_lbl_addempMouseExited
+
+    private void lbl_addempKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_addempKeyPressed
+    {//GEN-HEADEREND:event_lbl_addempKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
+        {
+            panel_addcust.setVisible(true);
+            panel_editcus.setVisible(false);
+            panel_custdetail.setVisible(false);
+            txt_add_custid.grabFocus();
+        }
+        else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
+        {
+            panel_addcust.setVisible(false);
+            panel_editcus.setVisible(false);
+            panel_custdetail.setVisible(false);
+            panel_customer.setVisible(false);
+            lbl_customer.grabFocus();
+            panel_extra.setVisible(true);
+        }
+    }//GEN-LAST:event_lbl_addempKeyPressed
+
+    private void lbl_editempFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_editempFocusGained
+    {//GEN-HEADEREND:event_lbl_editempFocusGained
+        kGradientPanel22.setkStartColor(new Color(164, 177, 252));
+        kGradientPanel22.setkEndColor(new Color(164, 177, 252));
+        kGradientPanel22.setBackground(Color.BLACK);
+    }//GEN-LAST:event_lbl_editempFocusGained
+
+    private void lbl_editempFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_editempFocusLost
+    {//GEN-HEADEREND:event_lbl_editempFocusLost
+        kGradientPanel22.setkStartColor(new Color(68, 82, 121));
+        kGradientPanel22.setkEndColor(new Color(68, 82, 121));
+        kGradientPanel22.setBackground(Color.RED);
+    }//GEN-LAST:event_lbl_editempFocusLost
+
+    private void lbl_editempMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_editempMouseClicked
+    {//GEN-HEADEREND:event_lbl_editempMouseClicked
+        panel_addcust.setVisible(false);
+        panel_editcus.setVisible(true);
+        panel_custdetail.setVisible(false);
+        //txt_custid.grabFocus();
+    }//GEN-LAST:event_lbl_editempMouseClicked
+
+    private void lbl_editempMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_editempMouseEntered
+    {//GEN-HEADEREND:event_lbl_editempMouseEntered
+        kGradientPanel22.setkStartColor(new Color(164, 177, 252));
+        kGradientPanel22.setkEndColor(new Color(164, 177, 252));
+        kGradientPanel22.setBackground(Color.BLACK);
+    }//GEN-LAST:event_lbl_editempMouseEntered
+
+    private void lbl_editempMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_editempMouseExited
+    {//GEN-HEADEREND:event_lbl_editempMouseExited
+        kGradientPanel22.setkStartColor(new Color(68, 82, 121));
+        kGradientPanel22.setkEndColor(new Color(68, 82, 121));
+        kGradientPanel22.setBackground(Color.RED);
+    }//GEN-LAST:event_lbl_editempMouseExited
+
+    private void lbl_editempKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_editempKeyPressed
+    {//GEN-HEADEREND:event_lbl_editempKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
+        {
+            panel_addcust.setVisible(false);
+            panel_editcus.setVisible(true);
+            panel_custdetail.setVisible(false);
+            txt_edit_custid.grabFocus();
+        }
+        else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
+        {
+            panel_addcust.setVisible(false);
+            panel_editcus.setVisible(false);
+            panel_custdetail.setVisible(false);
+            panel_customer.setVisible(false);
+            lbl_customer.grabFocus();
+            panel_extra.setVisible(true);
+        }
+    }//GEN-LAST:event_lbl_editempKeyPressed
+
+    private void lbl_empdetFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_empdetFocusGained
+    {//GEN-HEADEREND:event_lbl_empdetFocusGained
+        kGradientPanel23.setkStartColor(new Color(164, 177, 252));
+        kGradientPanel23.setkEndColor(new Color(164, 177, 252));
+        kGradientPanel23.setBackground(Color.BLACK);
+    }//GEN-LAST:event_lbl_empdetFocusGained
+
+    private void lbl_empdetFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_empdetFocusLost
+    {//GEN-HEADEREND:event_lbl_empdetFocusLost
+        kGradientPanel23.setkStartColor(new Color(68, 82, 121));
+        kGradientPanel23.setkEndColor(new Color(68, 82, 121));
+        kGradientPanel23.setBackground(Color.RED);
+    }//GEN-LAST:event_lbl_empdetFocusLost
+
+    private void lbl_empdetMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_empdetMouseClicked
+    {//GEN-HEADEREND:event_lbl_empdetMouseClicked
+        panel_addcust.setVisible(false);
+        panel_editcus.setVisible(false);
+        panel_custdetail.setVisible(true);
+        //txt_custid.grabFocus();
+    }//GEN-LAST:event_lbl_empdetMouseClicked
+
+    private void lbl_empdetMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_empdetMouseEntered
+    {//GEN-HEADEREND:event_lbl_empdetMouseEntered
+        kGradientPanel23.setkStartColor(new Color(164, 177, 252));
+        kGradientPanel23.setkEndColor(new Color(164, 177, 252));
+        kGradientPanel23.setBackground(Color.BLACK);
+    }//GEN-LAST:event_lbl_empdetMouseEntered
+
+    private void lbl_empdetMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_empdetMouseExited
+    {//GEN-HEADEREND:event_lbl_empdetMouseExited
+        kGradientPanel23.setkStartColor(new Color(68, 82, 121));
+        kGradientPanel23.setkEndColor(new Color(68, 82, 121));
+        kGradientPanel23.setBackground(Color.RED);
+    }//GEN-LAST:event_lbl_empdetMouseExited
+
+    private void lbl_empdetKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_empdetKeyPressed
+    {//GEN-HEADEREND:event_lbl_empdetKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
+        {
+            panel_addcust.setVisible(false);
+            panel_editcus.setVisible(false);
+            panel_custdetail.setVisible(true);
+            txt_det_custid.grabFocus();
+        }
+        else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
+        {
+            panel_addcust.setVisible(false);
+            panel_editcus.setVisible(false);
+            panel_custdetail.setVisible(false);
+            panel_customer.setVisible(false);
+            lbl_customer.grabFocus();
+            panel_extra.setVisible(true);
+        }
+    }//GEN-LAST:event_lbl_empdetKeyPressed
+
     public static void main(String args[])
     {
         java.awt.EventQueue.invokeLater(new Runnable()
@@ -3036,6 +3432,11 @@ public class frm_dashboard extends javax.swing.JFrame
         });
     }
 
+    public void hoverColor(KGradientPanel panel, Color color)
+    {
+        panel.setkStartColor(color);
+        panel.setkEndColor(color);
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
@@ -3059,6 +3460,10 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel kGradientPanel19;
     private com.k33ptoo.components.KGradientPanel kGradientPanel2;
     private com.k33ptoo.components.KGradientPanel kGradientPanel20;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel21;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel22;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel23;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel24;
     private com.k33ptoo.components.KGradientPanel kGradientPanel3;
     private com.k33ptoo.components.KGradientPanel kGradientPanel4;
     private com.k33ptoo.components.KGradientPanel kGradientPanel5;
@@ -3068,11 +3473,14 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel kGradientPanel9;
     private javax.swing.JLabel lbl_account;
     private javax.swing.JLabel lbl_addcust;
+    private javax.swing.JLabel lbl_addemp;
     private javax.swing.JLabel lbl_bill;
     private javax.swing.JLabel lbl_close;
     private javax.swing.JLabel lbl_custdet;
     private javax.swing.JLabel lbl_customer;
     private javax.swing.JLabel lbl_editcust;
+    private javax.swing.JLabel lbl_editemp;
+    private javax.swing.JLabel lbl_empdet;
     private javax.swing.JLabel lbl_employee;
     private javax.swing.JLabel lbl_gt;
     private javax.swing.JLabel lbl_min;
@@ -3088,9 +3496,11 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel panel_cust_extra;
     private com.k33ptoo.components.KGradientPanel panel_custdetail;
     private com.k33ptoo.components.KGradientPanel panel_custmain;
+    private com.k33ptoo.components.KGradientPanel panel_custmenu;
     private com.k33ptoo.components.KGradientPanel panel_customer;
     private com.k33ptoo.components.KGradientPanel panel_editcus;
     private com.k33ptoo.components.KGradientPanel panel_employee;
+    private com.k33ptoo.components.KGradientPanel panel_empmenu;
     private com.k33ptoo.components.KGradientPanel panel_extra;
     private com.k33ptoo.components.KGradientPanel panel_help;
     private com.k33ptoo.components.KGradientPanel panel_main;
@@ -3102,7 +3512,6 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel pnl_employee;
     private com.k33ptoo.components.KGradientPanel pnl_header;
     private com.k33ptoo.components.KGradientPanel pnl_help;
-    private com.k33ptoo.components.KGradientPanel pnl_menu;
     private javax.swing.JPanel pnl_min;
     private com.k33ptoo.components.KGradientPanel pnl_product;
     private com.k33ptoo.components.KGradientPanel pnl_sidepane;
