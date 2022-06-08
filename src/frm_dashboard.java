@@ -8,11 +8,10 @@ import java.awt.Insets;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
+import javax.swing.table.JTableHeader;
 
 public class frm_dashboard extends javax.swing.JFrame
 {
-
-    KeyEvent ke;
 
     public frm_dashboard()
     {
@@ -35,6 +34,12 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_help.setVisible(false);
         panel_extra.setVisible(true);
         jLabel2.grabFocus();
+
+        JTableHeader header = jTable2.getTableHeader();
+        header.setFont(new Font("Cascadia Mono", Font.PLAIN, 20));
+
+        JTableHeader header1 = jTable1.getTableHeader();
+        header1.setFont(new Font("Cascadia Mono", Font.PLAIN, 20));
         // this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
@@ -123,11 +128,13 @@ public class frm_dashboard extends javax.swing.JFrame
         kGradientPanel18 = new com.k33ptoo.components.KGradientPanel();
         txt_edit_custsadd = new javax.swing.JTextField();
         panel_custdetail = new com.k33ptoo.components.KGradientPanel();
-        kGradientPanel19 = new com.k33ptoo.components.KGradientPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
         kGradientPanel20 = new com.k33ptoo.components.KGradientPanel();
         txt_det_custid = new javax.swing.JTextField();
+        kGradientPanel19 = new com.k33ptoo.components.KGradientPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable()
+        ;
+        panel_cust_extra = new com.k33ptoo.components.KGradientPanel();
         panel_employee = new com.k33ptoo.components.KGradientPanel();
         panel_product = new com.k33ptoo.components.KGradientPanel();
         panel_bill = new com.k33ptoo.components.KGradientPanel();
@@ -887,7 +894,7 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addComponent(kGradientPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(kGradientPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 345, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         pnl_menuLayout.setVerticalGroup(
             pnl_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1267,9 +1274,11 @@ public class frm_dashboard extends javax.swing.JFrame
         kGradientPanel12.setkStartColor(new java.awt.Color(178, 199, 231));
         kGradientPanel12.setOpaque(false);
 
+        jTable1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
+                {"spareparts", "chargin socket", "display", "combo"},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
@@ -1280,6 +1289,7 @@ public class frm_dashboard extends javax.swing.JFrame
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable1.setRowHeight(31);
         jScrollPane1.setViewportView(jTable1);
 
         loginBtn1.setBorder(null);
@@ -1619,51 +1629,6 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_custdetail.setkStartColor(new java.awt.Color(228, 235, 246));
         panel_custdetail.setOpaque(false);
 
-        kGradientPanel19.setkBorderRadius(40);
-        kGradientPanel19.setkEndColor(new java.awt.Color(178, 199, 231));
-        kGradientPanel19.setkStartColor(new java.awt.Color(178, 199, 231));
-        kGradientPanel19.setOpaque(false);
-
-        jTable2.setBackground(new java.awt.Color(228, 235, 246));
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][]
-            {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String []
-            {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jTable2.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
-                jTable2KeyPressed(evt);
-            }
-        });
-        jScrollPane2.setViewportView(jTable2);
-
-        javax.swing.GroupLayout kGradientPanel19Layout = new javax.swing.GroupLayout(kGradientPanel19);
-        kGradientPanel19.setLayout(kGradientPanel19Layout);
-        kGradientPanel19Layout.setHorizontalGroup(
-            kGradientPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel19Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 861, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
-        );
-        kGradientPanel19Layout.setVerticalGroup(
-            kGradientPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel19Layout.createSequentialGroup()
-                .addContainerGap(25, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
-        );
-
         kGradientPanel20.setkBorderRadius(40);
         kGradientPanel20.setkEndColor(new java.awt.Color(164, 177, 252));
         kGradientPanel20.setkStartColor(new java.awt.Color(164, 177, 252));
@@ -1705,6 +1670,56 @@ public class frm_dashboard extends javax.swing.JFrame
             .addComponent(txt_det_custid, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
+        kGradientPanel19.setkBorderRadius(40);
+        kGradientPanel19.setkEndColor(new java.awt.Color(178, 199, 231));
+        kGradientPanel19.setkStartColor(new java.awt.Color(178, 199, 231));
+        kGradientPanel19.setOpaque(false);
+
+        jScrollPane2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+
+        jTable2.setBackground(new java.awt.Color(228, 235, 246));
+        jTable2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][]
+            {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String []
+            {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jTable2.setOpaque(false);
+        jTable2.setRowHeight(40);
+        jTable2.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                jTable2KeyPressed(evt);
+            }
+        });
+        jScrollPane2.setViewportView(jTable2);
+
+        javax.swing.GroupLayout kGradientPanel19Layout = new javax.swing.GroupLayout(kGradientPanel19);
+        kGradientPanel19.setLayout(kGradientPanel19Layout);
+        kGradientPanel19Layout.setHorizontalGroup(
+            kGradientPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kGradientPanel19Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 861, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+        kGradientPanel19Layout.setVerticalGroup(
+            kGradientPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel19Layout.createSequentialGroup()
+                .addContainerGap(25, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
+        );
+
         javax.swing.GroupLayout panel_custdetailLayout = new javax.swing.GroupLayout(panel_custdetail);
         panel_custdetail.setLayout(panel_custdetailLayout);
         panel_custdetailLayout.setHorizontalGroup(
@@ -1724,6 +1739,22 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addGap(30, 30, 30)
                 .addComponent(kGradientPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(25, Short.MAX_VALUE))
+        );
+
+        panel_cust_extra.setkBorderRadius(40);
+        panel_cust_extra.setkEndColor(new java.awt.Color(228, 235, 246));
+        panel_cust_extra.setkStartColor(new java.awt.Color(228, 235, 246));
+        panel_cust_extra.setOpaque(false);
+
+        javax.swing.GroupLayout panel_cust_extraLayout = new javax.swing.GroupLayout(panel_cust_extra);
+        panel_cust_extra.setLayout(panel_cust_extraLayout);
+        panel_cust_extraLayout.setHorizontalGroup(
+            panel_cust_extraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 961, Short.MAX_VALUE)
+        );
+        panel_cust_extraLayout.setVerticalGroup(
+            panel_cust_extraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 560, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout panel_custmainLayout = new javax.swing.GroupLayout(panel_custmain);
@@ -1746,6 +1777,11 @@ public class frm_dashboard extends javax.swing.JFrame
                     .addGap(50, 50, 50)
                     .addComponent(panel_addcust, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGap(50, 50, 50)))
+            .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_custmainLayout.createSequentialGroup()
+                    .addGap(50, 50, 50)
+                    .addComponent(panel_cust_extra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(50, 50, 50)))
         );
         panel_custmainLayout.setVerticalGroup(
             panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1764,6 +1800,11 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addGroup(panel_custmainLayout.createSequentialGroup()
                     .addGap(50, 50, 50)
                     .addComponent(panel_addcust, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(56, Short.MAX_VALUE)))
+            .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_custmainLayout.createSequentialGroup()
+                    .addGap(50, 50, 50)
+                    .addComponent(panel_cust_extra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(56, Short.MAX_VALUE)))
         );
 
@@ -2836,14 +2877,6 @@ public class frm_dashboard extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_add_custidActionPerformed
 
-    private void jTable2KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_jTable2KeyPressed
-    {//GEN-HEADEREND:event_jTable2KeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
-            lbl_custdet.grabFocus();
-        }
-    }//GEN-LAST:event_jTable2KeyPressed
-
     private void txt_edit_custidKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_custidKeyPressed
     {//GEN-HEADEREND:event_txt_edit_custidKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
@@ -2984,6 +3017,14 @@ public class frm_dashboard extends javax.swing.JFrame
         }
     }//GEN-LAST:event_txt_det_custidKeyPressed
 
+    private void jTable2KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_jTable2KeyPressed
+    {//GEN-HEADEREND:event_jTable2KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
+        {
+            lbl_custdet.grabFocus();
+        }
+    }//GEN-LAST:event_jTable2KeyPressed
+
     public static void main(String args[])
     {
         java.awt.EventQueue.invokeLater(new Runnable()
@@ -3044,6 +3085,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel panel_account;
     private com.k33ptoo.components.KGradientPanel panel_addcust;
     private com.k33ptoo.components.KGradientPanel panel_bill;
+    private com.k33ptoo.components.KGradientPanel panel_cust_extra;
     private com.k33ptoo.components.KGradientPanel panel_custdetail;
     private com.k33ptoo.components.KGradientPanel panel_custmain;
     private com.k33ptoo.components.KGradientPanel panel_customer;
