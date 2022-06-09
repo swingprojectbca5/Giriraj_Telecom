@@ -11,6 +11,8 @@ import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.table.JTableHeader;
 
 public class frm_dashboard extends javax.swing.JFrame
@@ -19,13 +21,7 @@ public class frm_dashboard extends javax.swing.JFrame
     public frm_dashboard()
     {
         initComponents();
-        Toolkit tk = Toolkit.getDefaultToolkit();
-        int x = (int) tk.getScreenSize().getWidth();
-        int y = (int) tk.getScreenSize().getHeight();
-        Insets scnmax = Toolkit.getDefaultToolkit().getScreenInsets(getGraphicsConfiguration());
-        int taskbar = scnmax.bottom;
-
-        this.setSize(x, y - taskbar);
+        screensize();
 
         panel_main.setVisible(true);
         panel_customer.setVisible(false);
@@ -38,12 +34,8 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_extra.setVisible(true);
         jLabel2.grabFocus();
 
-        JTableHeader header = jTable2.getTableHeader();
-        header.setFont(new Font("Cascadia Mono", Font.PLAIN, 20));
-
-        JTableHeader header1 = jTable1.getTableHeader();
-        header1.setFont(new Font("Cascadia Mono", Font.PLAIN, 20));
-        // this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        tableheader(table_custedit.getTableHeader());
+        tableheader(table_custdet.getTableHeader());
     }
 
     @SuppressWarnings("unchecked")
@@ -75,7 +67,7 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_bill = new javax.swing.JLabel();
         pnl_account = new com.k33ptoo.components.KGradientPanel();
         lbl_account = new javax.swing.JLabel();
-        pnl_help = new com.k33ptoo.components.KGradientPanel();
+        pnl_user = new com.k33ptoo.components.KGradientPanel();
         lbl_user = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -107,7 +99,7 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_editcus = new com.k33ptoo.components.KGradientPanel();
         kGradientPanel12 = new com.k33ptoo.components.KGradientPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        table_custedit = new javax.swing.JTable();
         loginBtn1 = new com.k33ptoo.components.KButton();
         loginBtn2 = new com.k33ptoo.components.KButton();
         kGradientPanel13 = new com.k33ptoo.components.KGradientPanel();
@@ -127,7 +119,7 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_det_custid = new javax.swing.JTextField();
         kGradientPanel19 = new com.k33ptoo.components.KGradientPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable()
+        table_custdet = new javax.swing.JTable()
         ;
         panel_cust_extra = new com.k33ptoo.components.KGradientPanel();
         panel_custmenu = new com.k33ptoo.components.KGradientPanel();
@@ -475,10 +467,10 @@ public class frm_dashboard extends javax.swing.JFrame
             .addComponent(lbl_account, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pnl_help.setkBorderRadius(40);
-        pnl_help.setkEndColor(new java.awt.Color(228, 235, 246));
-        pnl_help.setkStartColor(new java.awt.Color(228, 235, 246));
-        pnl_help.setOpaque(false);
+        pnl_user.setkBorderRadius(40);
+        pnl_user.setkEndColor(new java.awt.Color(228, 235, 246));
+        pnl_user.setkStartColor(new java.awt.Color(228, 235, 246));
+        pnl_user.setOpaque(false);
 
         lbl_user.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
         lbl_user.setForeground(new java.awt.Color(68, 82, 121));
@@ -521,16 +513,16 @@ public class frm_dashboard extends javax.swing.JFrame
             }
         });
 
-        javax.swing.GroupLayout pnl_helpLayout = new javax.swing.GroupLayout(pnl_help);
-        pnl_help.setLayout(pnl_helpLayout);
-        pnl_helpLayout.setHorizontalGroup(
-            pnl_helpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_helpLayout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_userLayout = new javax.swing.GroupLayout(pnl_user);
+        pnl_user.setLayout(pnl_userLayout);
+        pnl_userLayout.setHorizontalGroup(
+            pnl_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_userLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(lbl_user, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-        pnl_helpLayout.setVerticalGroup(
-            pnl_helpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnl_userLayout.setVerticalGroup(
+            pnl_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbl_user, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -578,7 +570,7 @@ public class frm_dashboard extends javax.swing.JFrame
                     .addComponent(pnl_product, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnl_bill, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnl_account, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl_help, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_user, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(50, Short.MAX_VALUE))
@@ -601,7 +593,7 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addGap(40, 40, 40)
                 .addComponent(pnl_account, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
-                .addComponent(pnl_help, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
@@ -1091,8 +1083,8 @@ public class frm_dashboard extends javax.swing.JFrame
         kGradientPanel12.setkStartColor(new java.awt.Color(178, 199, 231));
         kGradientPanel12.setOpaque(false);
 
-        jTable1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        table_custedit.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        table_custedit.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
                 {"spareparts", "chargin socket", "display", "combo"},
@@ -1106,8 +1098,8 @@ public class frm_dashboard extends javax.swing.JFrame
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jTable1.setRowHeight(31);
-        jScrollPane1.setViewportView(jTable1);
+        table_custedit.setRowHeight(31);
+        jScrollPane1.setViewportView(table_custedit);
 
         loginBtn1.setBorder(null);
         loginBtn1.setText("ADD CUSTOMER");
@@ -1501,9 +1493,9 @@ public class frm_dashboard extends javax.swing.JFrame
 
         jScrollPane2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
 
-        jTable2.setBackground(new java.awt.Color(228, 235, 246));
-        jTable2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        table_custdet.setBackground(new java.awt.Color(228, 235, 246));
+        table_custdet.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        table_custdet.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
                 {null, null, null, null},
@@ -1516,16 +1508,16 @@ public class frm_dashboard extends javax.swing.JFrame
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jTable2.setOpaque(false);
-        jTable2.setRowHeight(40);
-        jTable2.addKeyListener(new java.awt.event.KeyAdapter()
+        table_custdet.setOpaque(false);
+        table_custdet.setRowHeight(40);
+        table_custdet.addKeyListener(new java.awt.event.KeyAdapter()
         {
             public void keyPressed(java.awt.event.KeyEvent evt)
             {
-                jTable2KeyPressed(evt);
+                table_custdetKeyPressed(evt);
             }
         });
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(table_custdet);
 
         javax.swing.GroupLayout kGradientPanel19Layout = new javax.swing.GroupLayout(kGradientPanel19);
         kGradientPanel19.setLayout(kGradientPanel19Layout);
@@ -1694,7 +1686,7 @@ public class frm_dashboard extends javax.swing.JFrame
             .addComponent(lbl_addcust, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
         );
 
-        panel_editcustmenu.setkBorderRadius(20);
+        panel_editcustmenu.setkBorderRadius(40);
         panel_editcustmenu.setkEndColor(new java.awt.Color(68, 82, 121));
         panel_editcustmenu.setkStartColor(new java.awt.Color(68, 82, 121));
         panel_editcustmenu.setOpaque(false);
@@ -1751,7 +1743,7 @@ public class frm_dashboard extends javax.swing.JFrame
             .addComponent(lbl_editcust, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        panel_custdetmenu.setkBorderRadius(20);
+        panel_custdetmenu.setkBorderRadius(40);
         panel_custdetmenu.setkEndColor(new java.awt.Color(68, 82, 121));
         panel_custdetmenu.setkStartColor(new java.awt.Color(68, 82, 121));
         panel_custdetmenu.setOpaque(false);
@@ -2287,12 +2279,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_userMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_userMouseExited
     {//GEN-HEADEREND:event_lbl_userMouseExited
-        hoverColor(pnl_help, lbl_user, new Color(228, 235, 246), Color.BLACK, new Color(68, 82, 121), new Font("Cascadia Monocai", Font.PLAIN, 24), "USER MANUAL");
+        hoverColor(pnl_user, lbl_user, new Color(228, 235, 246), Color.BLACK, new Color(68, 82, 121), new Font("Cascadia Monocai", Font.PLAIN, 24), "USER MANUAL");
     }//GEN-LAST:event_lbl_userMouseExited
 
     private void lbl_userMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_userMouseEntered
     {//GEN-HEADEREND:event_lbl_userMouseEntered
-        hoverColor(pnl_help, lbl_user, new Color(68, 82, 121), Color.red, Color.WHITE, new Font("Cascadia Monocai", Font.PLAIN, 24), "<html><u>USER MANUAL</u></html>");
+        hoverColor(pnl_user, lbl_user, new Color(68, 82, 121), Color.red, Color.WHITE, new Font("Cascadia Monocai", Font.PLAIN, 24), "<html><u>USER MANUAL</u></html>");
     }//GEN-LAST:event_lbl_userMouseEntered
 
     private void lbl_userMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_userMouseClicked
@@ -2305,20 +2297,17 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_about.setVisible(false);
         panel_help.setVisible(true);
         panel_extra.setVisible(false);
-        pnl_help.setkStartColor(Color.WHITE);
-        pnl_help.setkEndColor(Color.WHITE);
-        pnl_help.setBackground(Color.WHITE);
-        lbl_user.setForeground(Color.BLACK);
+        HoverColor(pnl_user, lbl_user, Color.WHITE, Color.WHITE, Color.BLACK);
     }//GEN-LAST:event_lbl_userMouseClicked
 
     private void lbl_userFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_userFocusLost
     {//GEN-HEADEREND:event_lbl_userFocusLost
-        hoverColor(pnl_help, lbl_user, new Color(228, 235, 246), Color.BLACK, new Color(68, 82, 121), new Font("Cascadia Monocai", Font.PLAIN, 24), "USER MANUAL");
+        hoverColor(pnl_user, lbl_user, new Color(228, 235, 246), Color.BLACK, new Color(68, 82, 121), new Font("Cascadia Monocai", Font.PLAIN, 24), "USER MANUAL");
     }//GEN-LAST:event_lbl_userFocusLost
 
     private void lbl_userFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_userFocusGained
     {//GEN-HEADEREND:event_lbl_userFocusGained
-        hoverColor(pnl_help, lbl_user, new Color(68, 82, 121), Color.red, Color.WHITE, new Font("Cascadia Monocai", Font.PLAIN, 24), "<html><u>USER MANUAL</u></html>");
+        hoverColor(pnl_user, lbl_user, new Color(68, 82, 121), Color.red, Color.WHITE, new Font("Cascadia Monocai", Font.PLAIN, 24), "<html><u>USER MANUAL</u></html>");
     }//GEN-LAST:event_lbl_userFocusGained
 
     private void lbl_accountKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_accountKeyPressed
@@ -2356,10 +2345,7 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_about.setVisible(false);
         panel_help.setVisible(false);
         panel_extra.setVisible(false);
-        pnl_account.setkStartColor(Color.WHITE);
-        pnl_account.setkEndColor(Color.WHITE);
-        pnl_account.setBackground(Color.WHITE);
-        lbl_account.setForeground(Color.BLACK);
+        HoverColor(pnl_account, lbl_account, Color.WHITE, Color.WHITE, Color.BLACK);
     }//GEN-LAST:event_lbl_accountMouseClicked
 
     private void lbl_accountFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_accountFocusLost
@@ -2407,10 +2393,7 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_about.setVisible(false);
         panel_help.setVisible(false);
         panel_extra.setVisible(false);
-        pnl_bill.setkStartColor(Color.WHITE);
-        pnl_bill.setkEndColor(Color.WHITE);
-        pnl_bill.setBackground(Color.WHITE);
-        lbl_bill.setForeground(Color.BLACK);
+        HoverColor(pnl_bill, lbl_bill, Color.WHITE, Color.WHITE, Color.BLACK);
     }//GEN-LAST:event_lbl_billMouseClicked
 
     private void lbl_billFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_billFocusLost
@@ -2458,10 +2441,7 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_about.setVisible(false);
         panel_help.setVisible(false);
         panel_extra.setVisible(false);
-        pnl_product.setkStartColor(Color.WHITE);
-        pnl_product.setkEndColor(Color.WHITE);
-        pnl_product.setBackground(Color.WHITE);
-        lbl_product.setForeground(Color.BLACK);
+        HoverColor(pnl_product, lbl_product, Color.WHITE, Color.WHITE, Color.BLACK);
     }//GEN-LAST:event_lbl_productMouseClicked
 
     private void lbl_productFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_productFocusLost
@@ -2511,10 +2491,7 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_extra.setVisible(false);
         panel_help.setVisible(false);
 
-        pnl_employee.setkStartColor(Color.WHITE);
-        pnl_employee.setkEndColor(Color.WHITE);
-        pnl_employee.setBackground(Color.WHITE);
-        lbl_employee.setForeground(Color.BLACK);
+        HoverColor(pnl_employee, lbl_employee, Color.WHITE, Color.WHITE, Color.BLACK);
 
         lbl_addemp.grabFocus();
     }//GEN-LAST:event_lbl_employeeMouseClicked
@@ -2578,10 +2555,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
         lbl_addcust.grabFocus();
 
-        pnl_customer.setkStartColor(Color.WHITE);
-        pnl_customer.setkEndColor(Color.WHITE);
-        pnl_customer.setBackground(Color.WHITE);
-        lbl_customer.setForeground(Color.BLACK);
+        HoverColor(pnl_customer, lbl_customer, Color.WHITE, Color.WHITE, Color.BLACK);
     }//GEN-LAST:event_lbl_customerMouseClicked
 
     private void lbl_customerFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_customerFocusLost
@@ -2678,10 +2652,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void txt_add_custidFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custidFocusLost
     {//GEN-HEADEREND:event_txt_add_custidFocusLost
-        if (txt_add_custid.getText().equals(""))
-        {
-            txt_add_custid.setText("CUSTOMER ID");
-        }
+        txtfocuslost(txt_add_custid, txt_add_custid.getText(), "CUSTOMER ID");
     }//GEN-LAST:event_txt_add_custidFocusLost
 
     private void txt_add_custnmFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custnmFocusGained
@@ -2691,10 +2662,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void txt_add_custnmFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custnmFocusLost
     {//GEN-HEADEREND:event_txt_add_custnmFocusLost
-        if (txt_add_custnm.getText().equals(""))
-        {
-            txt_add_custnm.setText("CUSTOMER NAME");
-        }
+        txtfocuslost(txt_add_custnm, txt_add_custnm.getText(), "CUSTOMER NAME");
     }//GEN-LAST:event_txt_add_custnmFocusLost
 
     private void txt_add_custnoFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custnoFocusGained
@@ -2704,10 +2672,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void txt_add_custnoFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custnoFocusLost
     {//GEN-HEADEREND:event_txt_add_custnoFocusLost
-        if (txt_add_custno.getText().equals(""))
-        {
-            txt_add_custno.setText("CONTACT NO.");
-        }
+        txtfocuslost(txt_add_custno, txt_add_custno.getText(), "CONTACT NO.");
     }//GEN-LAST:event_txt_add_custnoFocusLost
 
     private void txt_add_custemailFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custemailFocusGained
@@ -2717,10 +2682,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void txt_add_custemailFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custemailFocusLost
     {//GEN-HEADEREND:event_txt_add_custemailFocusLost
-        if (txt_add_custemail.getText().equals(""))
-        {
-            txt_add_custemail.setText("EMAIL");
-        }
+        txtfocuslost(txt_add_custemail, txt_add_custemail.getText(), "EMAIL");
     }//GEN-LAST:event_txt_add_custemailFocusLost
 
     private void txt_add_custsnameFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custsnameFocusGained
@@ -2730,10 +2692,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void txt_add_custsnameFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custsnameFocusLost
     {//GEN-HEADEREND:event_txt_add_custsnameFocusLost
-        if (txt_add_custsname.getText().equals(""))
-        {
-            txt_add_custsname.setText("SHOP NAME");
-        }
+        txtfocuslost(txt_add_custsname, txt_add_custsname.getText(), "SHOP NAME");
     }//GEN-LAST:event_txt_add_custsnameFocusLost
 
     private void txt_add_custsaddFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custsaddFocusGained
@@ -2743,20 +2702,17 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void txt_add_custsaddFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custsaddFocusLost
     {//GEN-HEADEREND:event_txt_add_custsaddFocusLost
-        if (txt_add_custsadd.getText().equals(""))
-        {
-            txt_add_custsadd.setText("SHOP ADDRESS");
-        }
+        txtfocuslost(txt_add_custsadd, txt_add_custsadd.getText(), "SHOP ADDRESS");
     }//GEN-LAST:event_txt_add_custsaddFocusLost
 
     private void lbl_addcustMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_addcustMouseEntered
     {//GEN-HEADEREND:event_lbl_addcustMouseEntered
-        HoverColor(panel_addcust, new Color(164, 177, 252), Color.BLACK);
+        HoverColor(panel_addcustmenu, new Color(164, 177, 252), Color.BLACK);
     }//GEN-LAST:event_lbl_addcustMouseEntered
 
     private void lbl_addcustMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_addcustMouseExited
     {//GEN-HEADEREND:event_lbl_addcustMouseExited
-        HoverColor(panel_addcust, new Color(68, 82, 121), Color.WHITE);
+        HoverColor(panel_addcustmenu, new Color(68, 82, 121), Color.WHITE);
     }//GEN-LAST:event_lbl_addcustMouseExited
 
     private void lbl_editcustKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_editcustKeyPressed
@@ -2838,82 +2794,43 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void txt_add_custidKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_custidKeyPressed
     {//GEN-HEADEREND:event_txt_add_custidKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
-            lbl_addcust.grabFocus();
-        }
-        else if (txt_add_custid.getText().equals("CUSTOMER ID"))
-        {
-            txt_add_custid.setText("");
-        }
+        escape(lbl_addcust, evt.getKeyCode());
+        cleartextfield(txt_add_custid, txt_add_custid.getText(), "CUSTOMER ID");
     }//GEN-LAST:event_txt_add_custidKeyPressed
 
     private void txt_add_custnmKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_custnmKeyPressed
     {//GEN-HEADEREND:event_txt_add_custnmKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
-            lbl_addcust.grabFocus();
-        }
-        else if (txt_add_custnm.getText().equals("CUSTOMER NAME"))
-        {
-            txt_add_custnm.setText("");
-        }
+        escape(lbl_addcust, evt.getKeyCode());
+        cleartextfield(txt_add_custnm, txt_add_custnm.getText(), "CUSTOMER NAME");
     }//GEN-LAST:event_txt_add_custnmKeyPressed
 
     private void txt_add_custnoKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_custnoKeyPressed
     {//GEN-HEADEREND:event_txt_add_custnoKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
-            lbl_addcust.grabFocus();
-        }
-        else if (txt_add_custno.getText().equals("CONTACT NO."))
-        {
-            txt_add_custno.setText("");
-        }
+        escape(lbl_addcust, evt.getKeyCode());
+        cleartextfield(txt_add_custno, txt_add_custno.getText(), "CONTACT NO.");
     }//GEN-LAST:event_txt_add_custnoKeyPressed
 
     private void txt_add_custemailKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_custemailKeyPressed
     {//GEN-HEADEREND:event_txt_add_custemailKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
-            lbl_addcust.grabFocus();
-        }
-        else if (txt_add_custemail.getText().equals("EMAIL"))
-        {
-            txt_add_custemail.setText("");
-        }
+        escape(lbl_addcust, evt.getKeyCode());
+        cleartextfield(txt_add_custemail, txt_add_custemail.getText(), "EMAIL");
     }//GEN-LAST:event_txt_add_custemailKeyPressed
 
     private void txt_add_custsnameKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_custsnameKeyPressed
     {//GEN-HEADEREND:event_txt_add_custsnameKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
-            lbl_addcust.grabFocus();
-        }
-        else if (txt_add_custsname.getText().equals("SHOP NAME"))
-        {
-            txt_add_custsname.setText("");
-        }
+        escape(lbl_addcust, evt.getKeyCode());
+        cleartextfield(txt_add_custsname, txt_add_custsname.getText(), "SHOP NAME");
     }//GEN-LAST:event_txt_add_custsnameKeyPressed
 
     private void txt_add_custsaddKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_custsaddKeyPressed
     {//GEN-HEADEREND:event_txt_add_custsaddKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
-            lbl_addcust.grabFocus();
-        }
-        else if (txt_add_custsadd.getText().equals("SHOP ADDRESS"))
-        {
-            txt_add_custsadd.setText("");
-        }
+        escape(lbl_addcust, evt.getKeyCode());
+        cleartextfield(txt_add_custsadd, txt_add_custsadd.getText(), "SHOP ADDRESS");
     }//GEN-LAST:event_txt_add_custsaddKeyPressed
 
     private void loginBtnKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_loginBtnKeyPressed
     {//GEN-HEADEREND:event_loginBtnKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
-            lbl_addcust.grabFocus();
-        }
+        escape(lbl_addcust, evt.getKeyCode());
     }//GEN-LAST:event_loginBtnKeyPressed
 
     private void txt_add_custidActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_txt_add_custidActionPerformed
@@ -2923,153 +2840,85 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void txt_edit_custidKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_custidKeyPressed
     {//GEN-HEADEREND:event_txt_edit_custidKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
-            lbl_editcust.grabFocus();
-        }
-        else if (txt_edit_custid.getText().equals("CUSTOMER ID"))
-        {
-            txt_edit_custid.setText("");
-        }
+        escape(lbl_editcust, evt.getKeyCode());
+        cleartextfield(txt_edit_custid, txt_edit_custid.getText(), "CUSTOMER ID");
     }//GEN-LAST:event_txt_edit_custidKeyPressed
 
     private void txt_edit_custnmKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_custnmKeyPressed
     {//GEN-HEADEREND:event_txt_edit_custnmKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
-            lbl_editcust.grabFocus();
-        }
-        else if (txt_edit_custnm.getText().equals("CUSTOMER NAME"))
-        {
-            txt_edit_custnm.setText("");
-        }
+        escape(lbl_editcust, evt.getKeyCode());
+        cleartextfield(txt_edit_custnm, txt_edit_custnm.getText(), "CUSTOMER NAME");
     }//GEN-LAST:event_txt_edit_custnmKeyPressed
 
     private void txt_edit_custnoKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_custnoKeyPressed
     {//GEN-HEADEREND:event_txt_edit_custnoKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
-            lbl_editcust.grabFocus();
-        }
-        else if (txt_edit_custno.getText().equals("CONTACT NO."))
-        {
-            txt_edit_custno.setText("");
-        }
+        escape(lbl_editcust, evt.getKeyCode());
+        cleartextfield(txt_edit_custno, txt_edit_custno.getText(), "CONTACT NO.");
     }//GEN-LAST:event_txt_edit_custnoKeyPressed
 
     private void txt_edit_custemailKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_custemailKeyPressed
     {//GEN-HEADEREND:event_txt_edit_custemailKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
-            lbl_editcust.grabFocus();
-        }
-        else if (txt_edit_custemail.getText().equals("EMAIL"))
-        {
-            txt_edit_custemail.setText("");
-        }
+        escape(lbl_editcust, evt.getKeyCode());
+        cleartextfield(txt_edit_custemail, txt_edit_custemail.getText(), "EMAIL");
     }//GEN-LAST:event_txt_edit_custemailKeyPressed
 
     private void txt_edit_custsnmKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_custsnmKeyPressed
     {//GEN-HEADEREND:event_txt_edit_custsnmKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
-            lbl_editcust.grabFocus();
-        }
-        else if (txt_edit_custsnm.getText().equals("SHOP NAME"))
-        {
-            txt_edit_custsnm.setText("");
-        }
+        escape(lbl_editcust, evt.getKeyCode());
+        cleartextfield(txt_edit_custsnm, txt_edit_custsnm.getText(), "SHOP NAME");
     }//GEN-LAST:event_txt_edit_custsnmKeyPressed
 
     private void txt_edit_custsaddKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_custsaddKeyPressed
     {//GEN-HEADEREND:event_txt_edit_custsaddKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
-            lbl_editcust.grabFocus();
-        }
-
-        if (txt_edit_custsadd.getText().equals("SHOP ADDRESS"))
-        {
-            txt_edit_custsadd.setText("");
-        }
+        escape(lbl_editcust, evt.getKeyCode());
+        cleartextfield(txt_edit_custsadd, txt_edit_custsadd.getText(), "SHOP ADDRESS");
     }//GEN-LAST:event_txt_edit_custsaddKeyPressed
 
     private void txt_edit_custidFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_edit_custidFocusLost
     {//GEN-HEADEREND:event_txt_edit_custidFocusLost
-        if (txt_edit_custid.getText().equals(""))
-        {
-            txt_edit_custid.setText("CUSTOMER ID");
-        }
+        txtfocuslost(txt_edit_custid, txt_edit_custid.getText(), "CUSTOMER ID");
     }//GEN-LAST:event_txt_edit_custidFocusLost
 
     private void txt_edit_custnmFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_edit_custnmFocusLost
     {//GEN-HEADEREND:event_txt_edit_custnmFocusLost
-        if (txt_edit_custnm.getText().equals(""))
-        {
-            txt_edit_custnm.setText("CUSTOMER NAME");
-        }
+        txtfocuslost(txt_edit_custnm, txt_edit_custnm.getText(), "CUSTOMER NAME");
     }//GEN-LAST:event_txt_edit_custnmFocusLost
 
     private void txt_edit_custnoFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_edit_custnoFocusLost
     {//GEN-HEADEREND:event_txt_edit_custnoFocusLost
-        if (txt_edit_custno.getText().equals(""))
-        {
-            txt_edit_custno.setText("CONTACT NO.");
-        }
+        txtfocuslost(txt_edit_custno, txt_edit_custno.getText(), "CONTACT NO.");
     }//GEN-LAST:event_txt_edit_custnoFocusLost
 
     private void txt_edit_custemailFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_edit_custemailFocusLost
     {//GEN-HEADEREND:event_txt_edit_custemailFocusLost
-        if (txt_edit_custemail.getText().equals(""))
-        {
-            txt_edit_custemail.setText("EMAIL");
-        }
+        txtfocuslost(txt_edit_custemail, txt_edit_custemail.getText(), "EMAIL");
     }//GEN-LAST:event_txt_edit_custemailFocusLost
 
     private void txt_edit_custsnmFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_edit_custsnmFocusLost
     {//GEN-HEADEREND:event_txt_edit_custsnmFocusLost
-        if (txt_edit_custsnm.getText().equals(""))
-        {
-            txt_edit_custsnm.setText("SHOP NAME");
-        }
+        txtfocuslost(txt_edit_custsnm, txt_edit_custsnm.getText(), "SHOP NAME");
     }//GEN-LAST:event_txt_edit_custsnmFocusLost
 
     private void txt_edit_custsaddFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_edit_custsaddFocusLost
     {//GEN-HEADEREND:event_txt_edit_custsaddFocusLost
-        if (txt_edit_custsadd.getText().equals(""))
-        {
-            txt_edit_custsadd.setText("SHOP ADDRESS");
-        }
+        txtfocuslost(txt_edit_custsadd, txt_edit_custsadd.getText(), "SHOP ADDRESS");
     }//GEN-LAST:event_txt_edit_custsaddFocusLost
 
     private void txt_det_custidFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_det_custidFocusLost
     {//GEN-HEADEREND:event_txt_det_custidFocusLost
-        if (txt_det_custid.getText().equals(""))
-        {
-            txt_det_custid.setText("CUSTOMER ID OR NAME");
-        }
+        txtfocuslost(txt_det_custid, txt_det_custid.getText(), "CUSTOMER ID OR NAME");
     }//GEN-LAST:event_txt_det_custidFocusLost
 
     private void txt_det_custidKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_det_custidKeyPressed
     {//GEN-HEADEREND:event_txt_det_custidKeyPressed
-
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
-            lbl_custdet.grabFocus();
-        }
-        else if (txt_det_custid.getText().equals("CUSTOMER ID OR NAME"))
-        {
-            txt_det_custid.setText("");
-        }
+        escape(lbl_custdet, evt.getKeyCode());
+        cleartextfield(txt_det_custid, txt_det_custid.getText(), "CUSTOMER ID OR NAME");
     }//GEN-LAST:event_txt_det_custidKeyPressed
 
-    private void jTable2KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_jTable2KeyPressed
-    {//GEN-HEADEREND:event_jTable2KeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
-            lbl_custdet.grabFocus();
-        }
-    }//GEN-LAST:event_jTable2KeyPressed
+    private void table_custdetKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_table_custdetKeyPressed
+    {//GEN-HEADEREND:event_table_custdetKeyPressed
+        escape(lbl_custdet, evt.getKeyCode());
+    }//GEN-LAST:event_table_custdetKeyPressed
 
     private void lbl_addempFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_addempFocusGained
     {//GEN-HEADEREND:event_lbl_addempFocusGained
@@ -3256,13 +3105,52 @@ public class frm_dashboard extends javax.swing.JFrame
         panel.setBackground(bColor);
     }
 
+    public void HoverColor(KGradientPanel panel, JLabel label, Color kColor, Color bColor, Color foreground)
+    {
+        panel.setkStartColor(kColor);
+        panel.setkEndColor(kColor);
+        panel.setBackground(bColor);
+        label.setForeground(foreground);
+    }
+
     public void escape(JLabel label, int code)
     {
         if (code == KeyEvent.VK_ESCAPE)
         {
             label.grabFocus();
         }
-        //escape(lbl_custadd,evt.getkeycode);
+    }
+
+    public void cleartextfield(JTextField field, String gottext, String text)
+    {
+        if (gottext.equals(text))
+        {
+            field.setText("");
+        }
+    }
+
+    public void txtfocuslost(JTextField field, String gottext, String settext)
+    {
+        if (gottext.equals(""))
+        {
+            field.setText(settext);
+        }
+    }
+
+    public void screensize()
+    {
+        Toolkit tk = Toolkit.getDefaultToolkit();
+        int x = (int) tk.getScreenSize().getWidth();
+        int y = (int) tk.getScreenSize().getHeight();
+        Insets scnmax = Toolkit.getDefaultToolkit().getScreenInsets(getGraphicsConfiguration());
+        int taskbar = scnmax.bottom;
+
+        this.setSize(x, y - taskbar);
+    }
+
+    public void tableheader(JTableHeader header)
+    {
+        header.setFont(new Font("Cascadia Mono", Font.PLAIN, 20));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -3272,8 +3160,6 @@ public class frm_dashboard extends javax.swing.JFrame
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
     private com.k33ptoo.components.KGradientPanel kGradientPanel1;
     private com.k33ptoo.components.KGradientPanel kGradientPanel10;
     private com.k33ptoo.components.KGradientPanel kGradientPanel11;
@@ -3338,10 +3224,12 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel pnl_customer;
     private com.k33ptoo.components.KGradientPanel pnl_employee;
     private com.k33ptoo.components.KGradientPanel pnl_header;
-    private com.k33ptoo.components.KGradientPanel pnl_help;
     private javax.swing.JPanel pnl_min;
     private com.k33ptoo.components.KGradientPanel pnl_product;
     private com.k33ptoo.components.KGradientPanel pnl_sidepane;
+    private com.k33ptoo.components.KGradientPanel pnl_user;
+    private javax.swing.JTable table_custdet;
+    private javax.swing.JTable table_custedit;
     private javax.swing.JTextField txt_add_custemail;
     private javax.swing.JTextField txt_add_custid;
     private javax.swing.JTextField txt_add_custnm;

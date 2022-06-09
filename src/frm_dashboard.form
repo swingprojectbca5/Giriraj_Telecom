@@ -89,7 +89,7 @@
                       <Component id="pnl_sidepane" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="panel_main" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="35" max="32767" attributes="0"/>
+                      <EmptySpace pref="25" max="32767" attributes="0"/>
                   </Group>
                   <Component id="pnl_header" alignment="1" max="32767" attributes="0"/>
               </Group>
@@ -132,7 +132,7 @@
                               <Component id="pnl_product" max="32767" attributes="0"/>
                               <Component id="pnl_bill" alignment="0" max="32767" attributes="0"/>
                               <Component id="pnl_account" alignment="0" max="32767" attributes="0"/>
-                              <Component id="pnl_help" alignment="0" max="32767" attributes="0"/>
+                              <Component id="pnl_user" alignment="0" max="32767" attributes="0"/>
                               <Component id="jPanel4" max="32767" attributes="0"/>
                               <Component id="jLabel1" max="32767" attributes="0"/>
                           </Group>
@@ -158,7 +158,7 @@
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="pnl_account" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                          <Component id="pnl_help" min="-2" max="-2" attributes="0"/>
+                          <Component id="pnl_user" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="26" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -475,7 +475,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_help">
+                <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_user">
                   <Properties>
                     <Property name="kBorderRadius" type="int" value="40"/>
                     <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1469,7 +1469,7 @@
 
                                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                                   <SubComponents>
-                                    <Component class="javax.swing.JTable" name="jTable1">
+                                    <Component class="javax.swing.JTable" name="table_custedit">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Segoe UI" size="24" style="0"/>
@@ -2078,7 +2078,7 @@
 
                                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                                   <SubComponents>
-                                    <Component class="javax.swing.JTable" name="jTable2">
+                                    <Component class="javax.swing.JTable" name="table_custdet">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="f6" green="eb" red="e4" type="rgb"/>
@@ -2101,7 +2101,7 @@
                                         </Property>
                                       </Properties>
                                       <Events>
-                                        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTable2KeyPressed"/>
+                                        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="table_custdetKeyPressed"/>
                                       </Events>
                                       <AuxValues>
                                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JTable()&#xa;"/>
@@ -2229,7 +2229,7 @@
                         </Container>
                         <Container class="com.k33ptoo.components.KGradientPanel" name="panel_editcustmenu">
                           <Properties>
-                            <Property name="kBorderRadius" type="int" value="20"/>
+                            <Property name="kBorderRadius" type="int" value="40"/>
                             <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="79" green="52" red="44" type="rgb"/>
                             </Property>
@@ -2282,7 +2282,7 @@
                         </Container>
                         <Container class="com.k33ptoo.components.KGradientPanel" name="panel_custdetmenu">
                           <Properties>
-                            <Property name="kBorderRadius" type="int" value="20"/>
+                            <Property name="kBorderRadius" type="int" value="40"/>
                             <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="79" green="52" red="44" type="rgb"/>
                             </Property>
