@@ -6,9 +6,11 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Insets;
+import java.awt.TextField;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.table.JTableHeader;
 
 public class frm_dashboard extends javax.swing.JFrame
@@ -49,7 +51,6 @@ public class frm_dashboard extends javax.swing.JFrame
     private void initComponents()
     {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
         kGradientPanel1 = new com.k33ptoo.components.KGradientPanel()
         {
 
@@ -130,20 +131,20 @@ public class frm_dashboard extends javax.swing.JFrame
         ;
         panel_cust_extra = new com.k33ptoo.components.KGradientPanel();
         panel_custmenu = new com.k33ptoo.components.KGradientPanel();
-        kGradientPanel3 = new com.k33ptoo.components.KGradientPanel();
+        panel_addcustmenu = new com.k33ptoo.components.KGradientPanel();
         lbl_addcust = new javax.swing.JLabel();
-        kGradientPanel4 = new com.k33ptoo.components.KGradientPanel();
+        panel_editcustmenu = new com.k33ptoo.components.KGradientPanel();
         lbl_editcust = new javax.swing.JLabel();
-        kGradientPanel5 = new com.k33ptoo.components.KGradientPanel();
+        panel_custdetmenu = new com.k33ptoo.components.KGradientPanel();
         lbl_custdet = new javax.swing.JLabel();
         panel_employee = new com.k33ptoo.components.KGradientPanel();
-        kGradientPanel24 = new com.k33ptoo.components.KGradientPanel();
+        panel_empmain = new com.k33ptoo.components.KGradientPanel();
         panel_empmenu = new com.k33ptoo.components.KGradientPanel();
-        kGradientPanel21 = new com.k33ptoo.components.KGradientPanel();
+        panel_addempmenu = new com.k33ptoo.components.KGradientPanel();
         lbl_addemp = new javax.swing.JLabel();
-        kGradientPanel22 = new com.k33ptoo.components.KGradientPanel();
+        panel_editempmenu = new com.k33ptoo.components.KGradientPanel();
         lbl_editemp = new javax.swing.JLabel();
-        kGradientPanel23 = new com.k33ptoo.components.KGradientPanel();
+        panel_empdetmenu = new com.k33ptoo.components.KGradientPanel();
         lbl_empdet = new javax.swing.JLabel();
         panel_product = new com.k33ptoo.components.KGradientPanel();
         panel_bill = new com.k33ptoo.components.KGradientPanel();
@@ -1464,6 +1465,13 @@ public class frm_dashboard extends javax.swing.JFrame
                 txt_det_custidFocusLost(evt);
             }
         });
+        txt_det_custid.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                txt_det_custidActionPerformed(evt);
+            }
+        });
         txt_det_custid.addKeyListener(new java.awt.event.KeyAdapter()
         {
             public void keyPressed(java.awt.event.KeyEvent evt)
@@ -1586,7 +1594,7 @@ public class frm_dashboard extends javax.swing.JFrame
             .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_custmainLayout.createSequentialGroup()
                     .addGap(50, 50, 50)
-                    .addComponent(panel_custdetail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panel_custdetail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGap(50, 50, 50)))
             .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_custmainLayout.createSequentialGroup()
@@ -1605,23 +1613,23 @@ public class frm_dashboard extends javax.swing.JFrame
             .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_custmainLayout.createSequentialGroup()
                     .addGap(50, 50, 50)
-                    .addComponent(panel_editcus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(56, Short.MAX_VALUE)))
+                    .addComponent(panel_editcus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(56, 56, 56)))
             .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_custmainLayout.createSequentialGroup()
                     .addGap(50, 50, 50)
-                    .addComponent(panel_custdetail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(56, Short.MAX_VALUE)))
+                    .addComponent(panel_custdetail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(56, 56, 56)))
             .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_custmainLayout.createSequentialGroup()
                     .addGap(50, 50, 50)
-                    .addComponent(panel_addcust, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(56, Short.MAX_VALUE)))
+                    .addComponent(panel_addcust, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(56, 56, 56)))
             .addGroup(panel_custmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_custmainLayout.createSequentialGroup()
                     .addGap(50, 50, 50)
-                    .addComponent(panel_cust_extra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(56, Short.MAX_VALUE)))
+                    .addComponent(panel_cust_extra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(56, 56, 56)))
         );
 
         panel_custmenu.setkBorderRadius(40);
@@ -1629,10 +1637,10 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_custmenu.setkStartColor(new java.awt.Color(68, 82, 121));
         panel_custmenu.setOpaque(false);
 
-        kGradientPanel3.setkBorderRadius(40);
-        kGradientPanel3.setkEndColor(new java.awt.Color(68, 82, 121));
-        kGradientPanel3.setkStartColor(new java.awt.Color(68, 82, 121));
-        kGradientPanel3.setOpaque(false);
+        panel_addcustmenu.setkBorderRadius(40);
+        panel_addcustmenu.setkEndColor(new java.awt.Color(68, 82, 121));
+        panel_addcustmenu.setkStartColor(new java.awt.Color(68, 82, 121));
+        panel_addcustmenu.setOpaque(false);
 
         lbl_addcust.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
         lbl_addcust.setForeground(new java.awt.Color(228, 235, 246));
@@ -1672,24 +1680,24 @@ public class frm_dashboard extends javax.swing.JFrame
             }
         });
 
-        javax.swing.GroupLayout kGradientPanel3Layout = new javax.swing.GroupLayout(kGradientPanel3);
-        kGradientPanel3.setLayout(kGradientPanel3Layout);
-        kGradientPanel3Layout.setHorizontalGroup(
-            kGradientPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout panel_addcustmenuLayout = new javax.swing.GroupLayout(panel_addcustmenu);
+        panel_addcustmenu.setLayout(panel_addcustmenuLayout);
+        panel_addcustmenuLayout.setHorizontalGroup(
+            panel_addcustmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_addcustmenuLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(lbl_addcust)
                 .addContainerGap(25, Short.MAX_VALUE))
         );
-        kGradientPanel3Layout.setVerticalGroup(
-            kGradientPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panel_addcustmenuLayout.setVerticalGroup(
+            panel_addcustmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbl_addcust, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
         );
 
-        kGradientPanel4.setkBorderRadius(20);
-        kGradientPanel4.setkEndColor(new java.awt.Color(68, 82, 121));
-        kGradientPanel4.setkStartColor(new java.awt.Color(68, 82, 121));
-        kGradientPanel4.setOpaque(false);
+        panel_editcustmenu.setkBorderRadius(20);
+        panel_editcustmenu.setkEndColor(new java.awt.Color(68, 82, 121));
+        panel_editcustmenu.setkStartColor(new java.awt.Color(68, 82, 121));
+        panel_editcustmenu.setOpaque(false);
 
         lbl_editcust.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
         lbl_editcust.setForeground(new java.awt.Color(228, 235, 246));
@@ -1729,24 +1737,24 @@ public class frm_dashboard extends javax.swing.JFrame
             }
         });
 
-        javax.swing.GroupLayout kGradientPanel4Layout = new javax.swing.GroupLayout(kGradientPanel4);
-        kGradientPanel4.setLayout(kGradientPanel4Layout);
-        kGradientPanel4Layout.setHorizontalGroup(
-            kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout panel_editcustmenuLayout = new javax.swing.GroupLayout(panel_editcustmenu);
+        panel_editcustmenu.setLayout(panel_editcustmenuLayout);
+        panel_editcustmenuLayout.setHorizontalGroup(
+            panel_editcustmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_editcustmenuLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(lbl_editcust)
                 .addContainerGap(25, Short.MAX_VALUE))
         );
-        kGradientPanel4Layout.setVerticalGroup(
-            kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panel_editcustmenuLayout.setVerticalGroup(
+            panel_editcustmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbl_editcust, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        kGradientPanel5.setkBorderRadius(20);
-        kGradientPanel5.setkEndColor(new java.awt.Color(68, 82, 121));
-        kGradientPanel5.setkStartColor(new java.awt.Color(68, 82, 121));
-        kGradientPanel5.setOpaque(false);
+        panel_custdetmenu.setkBorderRadius(20);
+        panel_custdetmenu.setkEndColor(new java.awt.Color(68, 82, 121));
+        panel_custdetmenu.setkStartColor(new java.awt.Color(68, 82, 121));
+        panel_custdetmenu.setOpaque(false);
 
         lbl_custdet.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
         lbl_custdet.setForeground(new java.awt.Color(228, 235, 246));
@@ -1786,17 +1794,17 @@ public class frm_dashboard extends javax.swing.JFrame
             }
         });
 
-        javax.swing.GroupLayout kGradientPanel5Layout = new javax.swing.GroupLayout(kGradientPanel5);
-        kGradientPanel5.setLayout(kGradientPanel5Layout);
-        kGradientPanel5Layout.setHorizontalGroup(
-            kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel5Layout.createSequentialGroup()
+        javax.swing.GroupLayout panel_custdetmenuLayout = new javax.swing.GroupLayout(panel_custdetmenu);
+        panel_custdetmenu.setLayout(panel_custdetmenuLayout);
+        panel_custdetmenuLayout.setHorizontalGroup(
+            panel_custdetmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_custdetmenuLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(lbl_custdet)
                 .addContainerGap(25, Short.MAX_VALUE))
         );
-        kGradientPanel5Layout.setVerticalGroup(
-            kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panel_custdetmenuLayout.setVerticalGroup(
+            panel_custdetmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbl_custdet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -1805,18 +1813,18 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_custmenuLayout.setHorizontalGroup(
             panel_custmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_custmenuLayout.createSequentialGroup()
-                .addComponent(kGradientPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panel_addcustmenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(kGradientPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panel_editcustmenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(kGradientPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panel_custdetmenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         panel_custmenuLayout.setVerticalGroup(
             panel_custmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(kGradientPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(kGradientPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(kGradientPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_addcustmenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_editcustmenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_custdetmenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout panel_customerLayout = new javax.swing.GroupLayout(panel_customer);
@@ -1831,26 +1839,26 @@ public class frm_dashboard extends javax.swing.JFrame
             .addGroup(panel_customerLayout.createSequentialGroup()
                 .addComponent(panel_custmenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panel_custmain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(panel_custmain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panel_employee.setkEndColor(new java.awt.Color(228, 235, 246));
         panel_employee.setkStartColor(new java.awt.Color(228, 235, 246));
         panel_employee.setPreferredSize(new java.awt.Dimension(1061, 710));
 
-        kGradientPanel24.setkBorderRadius(40);
-        kGradientPanel24.setkEndColor(new java.awt.Color(178, 199, 231));
-        kGradientPanel24.setkStartColor(new java.awt.Color(178, 199, 231));
-        kGradientPanel24.setOpaque(false);
+        panel_empmain.setkBorderRadius(40);
+        panel_empmain.setkEndColor(new java.awt.Color(178, 199, 231));
+        panel_empmain.setkStartColor(new java.awt.Color(178, 199, 231));
+        panel_empmain.setOpaque(false);
 
-        javax.swing.GroupLayout kGradientPanel24Layout = new javax.swing.GroupLayout(kGradientPanel24);
-        kGradientPanel24.setLayout(kGradientPanel24Layout);
-        kGradientPanel24Layout.setHorizontalGroup(
-            kGradientPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1061, Short.MAX_VALUE)
+        javax.swing.GroupLayout panel_empmainLayout = new javax.swing.GroupLayout(panel_empmain);
+        panel_empmain.setLayout(panel_empmainLayout);
+        panel_empmainLayout.setHorizontalGroup(
+            panel_empmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
-        kGradientPanel24Layout.setVerticalGroup(
-            kGradientPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panel_empmainLayout.setVerticalGroup(
+            panel_empmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 666, Short.MAX_VALUE)
         );
 
@@ -1859,14 +1867,15 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_empmenu.setkStartColor(new java.awt.Color(68, 82, 121));
         panel_empmenu.setOpaque(false);
 
-        kGradientPanel21.setkBorderRadius(40);
-        kGradientPanel21.setkEndColor(new java.awt.Color(68, 82, 121));
-        kGradientPanel21.setkStartColor(new java.awt.Color(68, 82, 121));
-        kGradientPanel21.setOpaque(false);
+        panel_addempmenu.setkBorderRadius(40);
+        panel_addempmenu.setkEndColor(new java.awt.Color(68, 82, 121));
+        panel_addempmenu.setkStartColor(new java.awt.Color(68, 82, 121));
+        panel_addempmenu.setOpaque(false);
 
         lbl_addemp.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
         lbl_addemp.setForeground(new java.awt.Color(228, 235, 246));
         lbl_addemp.setText("ADD EMPLOYEE");
+        lbl_addemp.setNextFocusableComponent(lbl_editemp);
         lbl_addemp.addFocusListener(new java.awt.event.FocusAdapter()
         {
             public void focusGained(java.awt.event.FocusEvent evt)
@@ -1901,28 +1910,29 @@ public class frm_dashboard extends javax.swing.JFrame
             }
         });
 
-        javax.swing.GroupLayout kGradientPanel21Layout = new javax.swing.GroupLayout(kGradientPanel21);
-        kGradientPanel21.setLayout(kGradientPanel21Layout);
-        kGradientPanel21Layout.setHorizontalGroup(
-            kGradientPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel21Layout.createSequentialGroup()
+        javax.swing.GroupLayout panel_addempmenuLayout = new javax.swing.GroupLayout(panel_addempmenu);
+        panel_addempmenu.setLayout(panel_addempmenuLayout);
+        panel_addempmenuLayout.setHorizontalGroup(
+            panel_addempmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_addempmenuLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(lbl_addemp)
                 .addContainerGap(25, Short.MAX_VALUE))
         );
-        kGradientPanel21Layout.setVerticalGroup(
-            kGradientPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panel_addempmenuLayout.setVerticalGroup(
+            panel_addempmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbl_addemp, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
         );
 
-        kGradientPanel22.setkBorderRadius(20);
-        kGradientPanel22.setkEndColor(new java.awt.Color(68, 82, 121));
-        kGradientPanel22.setkStartColor(new java.awt.Color(68, 82, 121));
-        kGradientPanel22.setOpaque(false);
+        panel_editempmenu.setkBorderRadius(20);
+        panel_editempmenu.setkEndColor(new java.awt.Color(68, 82, 121));
+        panel_editempmenu.setkStartColor(new java.awt.Color(68, 82, 121));
+        panel_editempmenu.setOpaque(false);
 
         lbl_editemp.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
         lbl_editemp.setForeground(new java.awt.Color(228, 235, 246));
         lbl_editemp.setText("EDIT EMPLOYEE");
+        lbl_editemp.setNextFocusableComponent(lbl_empdet);
         lbl_editemp.addFocusListener(new java.awt.event.FocusAdapter()
         {
             public void focusGained(java.awt.event.FocusEvent evt)
@@ -1957,28 +1967,29 @@ public class frm_dashboard extends javax.swing.JFrame
             }
         });
 
-        javax.swing.GroupLayout kGradientPanel22Layout = new javax.swing.GroupLayout(kGradientPanel22);
-        kGradientPanel22.setLayout(kGradientPanel22Layout);
-        kGradientPanel22Layout.setHorizontalGroup(
-            kGradientPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel22Layout.createSequentialGroup()
+        javax.swing.GroupLayout panel_editempmenuLayout = new javax.swing.GroupLayout(panel_editempmenu);
+        panel_editempmenu.setLayout(panel_editempmenuLayout);
+        panel_editempmenuLayout.setHorizontalGroup(
+            panel_editempmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_editempmenuLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(lbl_editemp)
                 .addContainerGap(25, Short.MAX_VALUE))
         );
-        kGradientPanel22Layout.setVerticalGroup(
-            kGradientPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panel_editempmenuLayout.setVerticalGroup(
+            panel_editempmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbl_editemp, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        kGradientPanel23.setkBorderRadius(20);
-        kGradientPanel23.setkEndColor(new java.awt.Color(68, 82, 121));
-        kGradientPanel23.setkStartColor(new java.awt.Color(68, 82, 121));
-        kGradientPanel23.setOpaque(false);
+        panel_empdetmenu.setkBorderRadius(20);
+        panel_empdetmenu.setkEndColor(new java.awt.Color(68, 82, 121));
+        panel_empdetmenu.setkStartColor(new java.awt.Color(68, 82, 121));
+        panel_empdetmenu.setOpaque(false);
 
         lbl_empdet.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
         lbl_empdet.setForeground(new java.awt.Color(228, 235, 246));
         lbl_empdet.setText("EMPLOYEE DETAIL");
+        lbl_empdet.setNextFocusableComponent(lbl_addemp);
         lbl_empdet.addFocusListener(new java.awt.event.FocusAdapter()
         {
             public void focusGained(java.awt.event.FocusEvent evt)
@@ -2013,17 +2024,17 @@ public class frm_dashboard extends javax.swing.JFrame
             }
         });
 
-        javax.swing.GroupLayout kGradientPanel23Layout = new javax.swing.GroupLayout(kGradientPanel23);
-        kGradientPanel23.setLayout(kGradientPanel23Layout);
-        kGradientPanel23Layout.setHorizontalGroup(
-            kGradientPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel23Layout.createSequentialGroup()
+        javax.swing.GroupLayout panel_empdetmenuLayout = new javax.swing.GroupLayout(panel_empdetmenu);
+        panel_empdetmenu.setLayout(panel_empdetmenuLayout);
+        panel_empdetmenuLayout.setHorizontalGroup(
+            panel_empdetmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_empdetmenuLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(lbl_empdet)
                 .addContainerGap(25, Short.MAX_VALUE))
         );
-        kGradientPanel23Layout.setVerticalGroup(
-            kGradientPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panel_empdetmenuLayout.setVerticalGroup(
+            panel_empdetmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbl_empdet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -2032,33 +2043,33 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_empmenuLayout.setHorizontalGroup(
             panel_empmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_empmenuLayout.createSequentialGroup()
-                .addComponent(kGradientPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panel_addempmenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(kGradientPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panel_editempmenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(kGradientPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(panel_empdetmenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 345, Short.MAX_VALUE))
         );
         panel_empmenuLayout.setVerticalGroup(
             panel_empmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(kGradientPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(kGradientPanel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(kGradientPanel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_addempmenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_editempmenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_empdetmenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout panel_employeeLayout = new javax.swing.GroupLayout(panel_employee);
         panel_employee.setLayout(panel_employeeLayout);
         panel_employeeLayout.setHorizontalGroup(
             panel_employeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(kGradientPanel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(panel_empmenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_empmain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_empmenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         panel_employeeLayout.setVerticalGroup(
             panel_employeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_employeeLayout.createSequentialGroup()
                 .addComponent(panel_empmenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(kGradientPanel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panel_empmain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panel_product.setPreferredSize(new java.awt.Dimension(1061, 710));
@@ -2246,10 +2257,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void pnl_closeMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_pnl_closeMouseEntered
     {//GEN-HEADEREND:event_pnl_closeMouseEntered
-        pnl_close.setkStartColor(new Color(255, 0, 0));
-        pnl_close.setBackground(Color.red);
-        pnl_close.setkEndColor(new Color(255, 0, 0));
-
+        HoverColor(pnl_close, new Color(255, 0, 0), Color.BLACK);
     }//GEN-LAST:event_pnl_closeMouseEntered
 
     private void pnl_closeMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_pnl_closeMouseClicked
@@ -2259,9 +2267,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void pnl_closeMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_pnl_closeMouseExited
     {//GEN-HEADEREND:event_pnl_closeMouseExited
-        pnl_close.setkStartColor(new Color(68, 82, 121));
-        pnl_close.setBackground(Color.black);
-        pnl_close.setkEndColor(new Color(68, 82, 121));
+        HoverColor(pnl_close, new Color(68, 82, 121), Color.WHITE);
     }//GEN-LAST:event_pnl_closeMouseExited
 
     private void lbl_userKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_userKeyPressed
@@ -2281,25 +2287,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_userMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_userMouseExited
     {//GEN-HEADEREND:event_lbl_userMouseExited
-        pnl_help.setkStartColor(new Color(228, 235, 246));
-        pnl_help.setkEndColor(new Color(228, 235, 246));
-        pnl_help.setBackground(Color.BLACK);
-        lbl_user.setForeground(new Color(68, 82, 121));
-
-        lbl_user.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_user.setForeground(new Color(68, 82, 121));
-        lbl_user.setText("USER MANUAL");
+        hoverColor(pnl_help, lbl_user, new Color(228, 235, 246), Color.BLACK, new Color(68, 82, 121), new Font("Cascadia Monocai", Font.PLAIN, 24), "USER MANUAL");
     }//GEN-LAST:event_lbl_userMouseExited
 
     private void lbl_userMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_userMouseEntered
     {//GEN-HEADEREND:event_lbl_userMouseEntered
-        pnl_help.setkStartColor(new Color(68, 82, 121));
-        pnl_help.setkEndColor(new Color(68, 82, 121));
-        pnl_help.setBackground(Color.red);
-
-        lbl_user.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_user.setForeground(Color.WHITE);
-        lbl_user.setText("<html><u>USER MANUAL</u></html>");
+        hoverColor(pnl_help, lbl_user, new Color(68, 82, 121), Color.red, Color.WHITE, new Font("Cascadia Monocai", Font.PLAIN, 24), "<html><u>USER MANUAL</u></html>");
     }//GEN-LAST:event_lbl_userMouseEntered
 
     private void lbl_userMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_userMouseClicked
@@ -2315,30 +2308,17 @@ public class frm_dashboard extends javax.swing.JFrame
         pnl_help.setkStartColor(Color.WHITE);
         pnl_help.setkEndColor(Color.WHITE);
         pnl_help.setBackground(Color.WHITE);
-        //lbl_help.setForeground(Color.BLACK);
+        lbl_user.setForeground(Color.BLACK);
     }//GEN-LAST:event_lbl_userMouseClicked
 
     private void lbl_userFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_userFocusLost
     {//GEN-HEADEREND:event_lbl_userFocusLost
-        pnl_help.setkStartColor(new Color(228, 235, 246));
-        pnl_help.setkEndColor(new Color(228, 235, 246));
-        pnl_help.setBackground(Color.BLACK);
-        lbl_user.setForeground(new Color(68, 82, 121));
-
-        lbl_user.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_user.setForeground(new Color(68, 82, 121));
-        lbl_user.setText("USER MANUAL");
+        hoverColor(pnl_help, lbl_user, new Color(228, 235, 246), Color.BLACK, new Color(68, 82, 121), new Font("Cascadia Monocai", Font.PLAIN, 24), "USER MANUAL");
     }//GEN-LAST:event_lbl_userFocusLost
 
     private void lbl_userFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_userFocusGained
     {//GEN-HEADEREND:event_lbl_userFocusGained
-        pnl_help.setkStartColor(new Color(68, 82, 121));
-        pnl_help.setkEndColor(new Color(68, 82, 121));
-        pnl_help.setBackground(Color.red);
-        lbl_user.setForeground(Color.WHITE);
-
-        lbl_user.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_user.setText("<html><u>USER MANUAL</u></html>");
+        hoverColor(pnl_help, lbl_user, new Color(68, 82, 121), Color.red, Color.WHITE, new Font("Cascadia Monocai", Font.PLAIN, 24), "<html><u>USER MANUAL</u></html>");
     }//GEN-LAST:event_lbl_userFocusGained
 
     private void lbl_accountKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_accountKeyPressed
@@ -2358,26 +2338,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_accountMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_accountMouseExited
     {//GEN-HEADEREND:event_lbl_accountMouseExited
-
-        pnl_account.setkStartColor(new Color(228, 235, 246));
-        pnl_account.setkEndColor(new Color(228, 235, 246));
-        pnl_account.setBackground(Color.BLACK);
-        lbl_account.setForeground(new Color(68, 82, 121));
-
-        lbl_account.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_account.setForeground(new Color(68, 82, 121));
-        lbl_account.setText("ACCOUNT MANAGEMENT");
+        hoverColor(pnl_account, lbl_account, new Color(228, 235, 246), Color.BLACK, new Color(68, 82, 121), new Font("Cascadia Monocai", Font.PLAIN, 24), "ACCOUNT MANAGEMENT");
     }//GEN-LAST:event_lbl_accountMouseExited
 
     private void lbl_accountMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_accountMouseEntered
     {//GEN-HEADEREND:event_lbl_accountMouseEntered
-        pnl_account.setkStartColor(new Color(68, 82, 121));
-        pnl_account.setkEndColor(new Color(68, 82, 121));
-        pnl_account.setBackground(Color.red);
-
-        lbl_account.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_account.setForeground(Color.WHITE);
-        lbl_account.setText("<html><u>ACCOUNT MANAGEMENT</u></html>");
+        hoverColor(pnl_account, lbl_account, new Color(68, 82, 121), Color.red, Color.WHITE, new Font("Cascadia Monocai", Font.PLAIN, 24), "<html><u>ACCOUNT MANAGEMENT</u></html>");
     }//GEN-LAST:event_lbl_accountMouseEntered
 
     private void lbl_accountMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_accountMouseClicked
@@ -2398,25 +2364,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_accountFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_accountFocusLost
     {//GEN-HEADEREND:event_lbl_accountFocusLost
-        pnl_account.setkStartColor(new Color(228, 235, 246));
-        pnl_account.setkEndColor(new Color(228, 235, 246));
-        pnl_account.setBackground(Color.BLACK);
-        lbl_account.setForeground(new Color(68, 82, 121));
-
-        lbl_account.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_account.setForeground(new Color(68, 82, 121));
-        lbl_account.setText("ACCOUNT MANAGEMENT");
+        hoverColor(pnl_account, lbl_account, new Color(228, 235, 246), Color.BLACK, new Color(68, 82, 121), new Font("Cascadia Monocai", Font.PLAIN, 24), "ACCOUNT MANAGEMENT");
     }//GEN-LAST:event_lbl_accountFocusLost
 
     private void lbl_accountFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_accountFocusGained
     {//GEN-HEADEREND:event_lbl_accountFocusGained
-        pnl_account.setkStartColor(new Color(68, 82, 121));
-        pnl_account.setkEndColor(new Color(68, 82, 121));
-        pnl_account.setBackground(Color.red);
-        lbl_account.setForeground(Color.WHITE);
-
-        lbl_account.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_account.setText("<html><u>ACCOUNT MANAGEMENT</u></html>");
+        hoverColor(pnl_account, lbl_account, new Color(68, 82, 121), Color.red, Color.WHITE, new Font("Cascadia Monocai", Font.PLAIN, 24), "<html><u>ACCOUNT MANAGEMENT</u></html>");
     }//GEN-LAST:event_lbl_accountFocusGained
 
     private void lbl_billKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_billKeyPressed
@@ -2436,26 +2389,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_billMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_billMouseExited
     {//GEN-HEADEREND:event_lbl_billMouseExited
-
-        pnl_bill.setkStartColor(new Color(228, 235, 246));
-        pnl_bill.setkEndColor(new Color(228, 235, 246));
-        pnl_bill.setBackground(Color.BLACK);
-        lbl_bill.setForeground(new Color(68, 82, 121));
-
-        lbl_bill.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_bill.setForeground(new Color(68, 82, 121));
-        lbl_bill.setText("BILL MANAGEMENT");
+        hoverColor(pnl_bill, lbl_bill, new Color(228, 235, 246), Color.BLACK, new Color(68, 82, 121), new Font("Cascadia Monocai", Font.PLAIN, 24), "BILL MANAGEMENT");
     }//GEN-LAST:event_lbl_billMouseExited
 
     private void lbl_billMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_billMouseEntered
     {//GEN-HEADEREND:event_lbl_billMouseEntered
-        pnl_bill.setkStartColor(new Color(68, 82, 121));
-        pnl_bill.setkEndColor(new Color(68, 82, 121));
-        pnl_bill.setBackground(Color.RED);
-
-        lbl_bill.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_bill.setForeground(Color.WHITE);
-        lbl_bill.setText("<html><u>BILL MANAGEMENT</u></html>");
+        hoverColor(pnl_bill, lbl_bill, new Color(68, 82, 121), Color.red, Color.WHITE, new Font("Cascadia Monocai", Font.PLAIN, 24), "<html><u>BILL MANAGEMENT</u></html>");
     }//GEN-LAST:event_lbl_billMouseEntered
 
     private void lbl_billMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_billMouseClicked
@@ -2476,26 +2415,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_billFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_billFocusLost
     {//GEN-HEADEREND:event_lbl_billFocusLost
-        pnl_bill.setkStartColor(new Color(228, 235, 246));
-        pnl_bill.setkEndColor(new Color(228, 235, 246));
-        pnl_bill.setBackground(Color.BLACK);
-        lbl_bill.setForeground(new Color(68, 82, 121));
-
-        lbl_bill.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_bill.setForeground(new Color(68, 82, 121));
-        lbl_bill.setText("BILL MANAGEMENT");
+        hoverColor(pnl_bill, lbl_bill, new Color(228, 235, 246), Color.BLACK, new Color(68, 82, 121), new Font("Cascadia Monocai", Font.PLAIN, 24), "BILL MANAGEMENT");
     }//GEN-LAST:event_lbl_billFocusLost
 
     private void lbl_billFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_billFocusGained
     {//GEN-HEADEREND:event_lbl_billFocusGained
-        pnl_bill.setkStartColor(new Color(68, 82, 121));
-        pnl_bill.setkEndColor(new Color(68, 82, 121));
-        pnl_bill.setBackground(Color.red);
-        lbl_bill.setForeground(Color.WHITE);
-
-        lbl_bill.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_bill.setText("<html><u>BILL MANAGEMENT</u></html>");
-
+        hoverColor(pnl_bill, lbl_bill, new Color(68, 82, 121), Color.red, Color.WHITE, new Font("Cascadia Monocai", Font.PLAIN, 24), "<html><u>BILL MANAGEMENT</u></html>");
     }//GEN-LAST:event_lbl_billFocusGained
 
     private void lbl_productKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_productKeyPressed
@@ -2515,26 +2440,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_productMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_productMouseExited
     {//GEN-HEADEREND:event_lbl_productMouseExited
-
-        pnl_product.setkStartColor(new Color(228, 235, 246));
-        pnl_product.setkEndColor(new Color(228, 235, 246));
-        pnl_product.setBackground(Color.BLACK);
-        lbl_product.setForeground(new Color(68, 82, 121));
-
-        lbl_product.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_product.setForeground(new Color(68, 82, 121));
-        lbl_product.setText("PRODUCT MANAGEMENT");
+        hoverColor(pnl_product, lbl_product, new Color(228, 235, 246), Color.BLACK, new Color(68, 82, 121), new Font("Cascadia Monocai", Font.PLAIN, 24), "PRODUCT MANAGEMENT");
     }//GEN-LAST:event_lbl_productMouseExited
 
     private void lbl_productMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_productMouseEntered
     {//GEN-HEADEREND:event_lbl_productMouseEntered
-        pnl_product.setkStartColor(new Color(68, 82, 121));
-        pnl_product.setkEndColor(new Color(68, 82, 121));
-        pnl_product.setBackground(Color.red);
-
-        lbl_product.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_product.setForeground(Color.WHITE);
-        lbl_product.setText("<html><u>PRODUCT MANAGEMENT</u></html>");
+        hoverColor(pnl_product, lbl_product, new Color(68, 82, 121), Color.red, Color.WHITE, new Font("Cascadia Monocai", Font.PLAIN, 24), "<html><u>PRODUCT MANAGEMENT</u></html>");
     }//GEN-LAST:event_lbl_productMouseEntered
 
     private void lbl_productMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_productMouseClicked
@@ -2555,26 +2466,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_productFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_productFocusLost
     {//GEN-HEADEREND:event_lbl_productFocusLost
-        pnl_product.setkStartColor(new Color(228, 235, 246));
-        pnl_product.setkEndColor(new Color(228, 235, 246));
-        pnl_product.setBackground(Color.BLACK);
-        lbl_product.setForeground(new Color(68, 82, 121));
-
-        lbl_product.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_product.setForeground(new Color(68, 82, 121));
-        lbl_product.setText("PRODUCT MANAGEMENT");
+        hoverColor(pnl_product, lbl_product, new Color(228, 235, 246), Color.BLACK, new Color(68, 82, 121), new Font("Cascadia Monocai", Font.PLAIN, 24), "PRODUCT MANAGEMENT");
     }//GEN-LAST:event_lbl_productFocusLost
 
     private void lbl_productFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_productFocusGained
     {//GEN-HEADEREND:event_lbl_productFocusGained
-        pnl_product.setkStartColor(new Color(68, 82, 121));
-        pnl_product.setkEndColor(new Color(68, 82, 121));
-        pnl_product.setBackground(Color.red);
-        lbl_product.setForeground(Color.WHITE);
-
-        lbl_product.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_product.setText("<html><u>PRODUCT MANAGEMENT</u></html>");
-
+        hoverColor(pnl_product, lbl_product, new Color(68, 82, 121), Color.red, Color.WHITE, new Font("Cascadia Monocai", Font.PLAIN, 24), "<html><u>PRODUCT MANAGEMENT</u></html>");
     }//GEN-LAST:event_lbl_productFocusGained
 
     private void lbl_employeeKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_employeeKeyPressed
@@ -2595,27 +2492,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_employeeMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_employeeMouseExited
     {//GEN-HEADEREND:event_lbl_employeeMouseExited
-
-        pnl_employee.setkStartColor(new Color(228, 235, 246));
-        pnl_employee.setkEndColor(new Color(228, 235, 246));
-        pnl_employee.setBackground(Color.BLACK);
-        lbl_employee.setForeground(new Color(68, 82, 121));
-
-        lbl_employee.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_employee.setForeground(new Color(68, 82, 121));
-        lbl_employee.setText("EMPLOYEE MANAGEMENT");
+        hoverColor(pnl_employee, lbl_employee, new Color(228, 235, 246), Color.BLACK, new Color(68, 82, 121), new Font("Cascadia Monocai", Font.PLAIN, 24), "EMPLOYEE MANAGEMENT");
     }//GEN-LAST:event_lbl_employeeMouseExited
 
     private void lbl_employeeMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_employeeMouseEntered
     {//GEN-HEADEREND:event_lbl_employeeMouseEntered
-        pnl_employee.setkStartColor(new Color(68, 82, 121));
-        pnl_employee.setkEndColor(new Color(68, 82, 121));
-        pnl_employee.setBackground(Color.red);
-
-        lbl_employee.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_employee.setForeground(Color.WHITE);
-        lbl_employee.setText("<html><u>EMPLOYEE MANAGEMENT</u></html>");
-
+        hoverColor(pnl_employee, lbl_employee, new Color(68, 82, 121), Color.red, Color.WHITE, new Font("Cascadia Monocai", Font.PLAIN, 24), "<html><u>EMPLOYEE MANAGEMENT</u></html>");
     }//GEN-LAST:event_lbl_employeeMouseEntered
 
     private void lbl_employeeMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_employeeMouseClicked
@@ -2639,26 +2521,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_employeeFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_employeeFocusLost
     {//GEN-HEADEREND:event_lbl_employeeFocusLost
-        pnl_employee.setkStartColor(new Color(228, 235, 246));
-        pnl_employee.setkEndColor(new Color(228, 235, 246));
-        pnl_employee.setBackground(Color.BLACK);
-        lbl_employee.setForeground(new Color(68, 82, 121));
-
-        lbl_employee.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_employee.setForeground(new Color(68, 82, 121));
-        lbl_employee.setText("EMPLOYEE MANAGEMENT");
-
+        hoverColor(pnl_employee, lbl_employee, new Color(228, 235, 246), Color.BLACK, new Color(68, 82, 121), new Font("Cascadia Monocai", Font.PLAIN, 24), "EMPLOYEE MANAGEMENT");
     }//GEN-LAST:event_lbl_employeeFocusLost
 
     private void lbl_employeeFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_employeeFocusGained
     {//GEN-HEADEREND:event_lbl_employeeFocusGained
-        pnl_employee.setkStartColor(new Color(68, 82, 121));
-        pnl_employee.setkEndColor(new Color(68, 82, 121));
-        pnl_employee.setBackground(Color.red);
-        lbl_employee.setForeground(Color.WHITE);
-
-        lbl_employee.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_employee.setText("<html><u>EMPLOYEE MANAGEMENT</u></html>");
+        hoverColor(pnl_employee, lbl_employee, new Color(68, 82, 121), Color.red, Color.WHITE, new Font("Cascadia Monocai", Font.PLAIN, 24), "<html><u>EMPLOYEE MANAGEMENT</u></html>");
     }//GEN-LAST:event_lbl_employeeFocusGained
 
     private void lbl_customerKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_customerKeyPressed
@@ -2684,26 +2552,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_customerMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_customerMouseExited
     {//GEN-HEADEREND:event_lbl_customerMouseExited
-
-        pnl_customer.setkStartColor(new Color(228, 235, 246));
-        pnl_customer.setkEndColor(new Color(228, 235, 246));
-        pnl_customer.setBackground(Color.BLACK);
-        lbl_customer.setForeground(new Color(68, 82, 121));
-
-        lbl_customer.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_customer.setForeground(new Color(68, 82, 121));
-        lbl_customer.setText("CUSTOMER MANAGEMENT");
+        hoverColor(pnl_customer, lbl_customer, new Color(228, 235, 246), Color.BLACK, new Color(68, 82, 121), new Font("Cascadia Monocai", Font.PLAIN, 24), "CUSTOMER MANAGEMENT");
     }//GEN-LAST:event_lbl_customerMouseExited
 
     private void lbl_customerMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_customerMouseEntered
     {//GEN-HEADEREND:event_lbl_customerMouseEntered
-        pnl_customer.setkStartColor(new Color(68, 82, 121));
-        pnl_customer.setkEndColor(new Color(68, 82, 121));
-        pnl_customer.setBackground(Color.red);
-        lbl_customer.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_customer.setForeground(Color.WHITE);
-
-        lbl_customer.setText("<html><u>CUSTOMER MANAGEMENT</u></html>");
+        hoverColor(pnl_customer, lbl_customer, new Color(68, 82, 121), Color.red, Color.WHITE, new Font("Cascadia Monocai", Font.PLAIN, 24), "<html><u>CUSTOMER MANAGEMENT</u></html>");
     }//GEN-LAST:event_lbl_customerMouseEntered
 
     private void lbl_customerMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_customerMouseClicked
@@ -2732,25 +2586,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_customerFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_customerFocusLost
     {//GEN-HEADEREND:event_lbl_customerFocusLost
-        pnl_customer.setkStartColor(new Color(228, 235, 246));
-        pnl_customer.setkEndColor(new Color(228, 235, 246));
-        pnl_customer.setBackground(Color.BLACK);
-        lbl_customer.setForeground(new Color(68, 82, 121));
-
-        lbl_customer.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_customer.setForeground(new Color(68, 82, 121));
-        lbl_customer.setText("CUSTOMER MANAGEMENT");
+        hoverColor(pnl_customer, lbl_customer, new Color(228, 235, 246), Color.BLACK, new Color(68, 82, 121), new Font("Cascadia Monocai", Font.PLAIN, 24), "CUSTOMER MANAGEMENT");
     }//GEN-LAST:event_lbl_customerFocusLost
 
     private void lbl_customerFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_customerFocusGained
     {//GEN-HEADEREND:event_lbl_customerFocusGained
-        pnl_customer.setkStartColor(new Color(68, 82, 121));
-        pnl_customer.setkEndColor(new Color(68, 82, 121));
-        pnl_customer.setBackground(Color.red);
-        lbl_customer.setForeground(Color.WHITE);
-
-        lbl_customer.setFont(new Font("Cascadia Monocai", Font.PLAIN, 24));
-        lbl_customer.setText("<html><u>CUSTOMER MANAGEMENT</u></html>");
+        hoverColor(pnl_customer, lbl_customer, new Color(68, 82, 121), Color.red, Color.WHITE, new Font("Cascadia Monocai", Font.PLAIN, 24), "<html><u>CUSTOMER MANAGEMENT</u></html>");
     }//GEN-LAST:event_lbl_customerFocusGained
 
     private void lbl_addcustMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_addcustMouseClicked
@@ -2763,44 +2604,32 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_addcustFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_addcustFocusGained
     {//GEN-HEADEREND:event_lbl_addcustFocusGained
-        kGradientPanel3.setkStartColor(new Color(164, 177, 252));
-        kGradientPanel3.setkEndColor(new Color(164, 177, 252));
-        kGradientPanel3.setBackground(Color.BLACK);
+        HoverColor(panel_addcustmenu, new Color(164, 177, 252), Color.BLACK);
     }//GEN-LAST:event_lbl_addcustFocusGained
 
     private void lbl_addcustFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_addcustFocusLost
     {//GEN-HEADEREND:event_lbl_addcustFocusLost
-        kGradientPanel3.setkStartColor(new Color(68, 82, 121));
-        kGradientPanel3.setkEndColor(new Color(68, 82, 121));
-        kGradientPanel3.setBackground(Color.RED);
+        HoverColor(panel_addcustmenu, new Color(68, 82, 121), Color.WHITE);
     }//GEN-LAST:event_lbl_addcustFocusLost
 
     private void lbl_editcustFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_editcustFocusGained
     {//GEN-HEADEREND:event_lbl_editcustFocusGained
-        kGradientPanel4.setkStartColor(new Color(164, 177, 252));
-        kGradientPanel4.setkEndColor(new Color(164, 177, 252));
-        kGradientPanel4.setBackground(Color.BLACK);
+        HoverColor(panel_editcustmenu, new Color(164, 177, 252), Color.BLACK);
     }//GEN-LAST:event_lbl_editcustFocusGained
 
     private void lbl_editcustFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_editcustFocusLost
     {//GEN-HEADEREND:event_lbl_editcustFocusLost
-        kGradientPanel4.setkStartColor(new Color(68, 82, 121));
-        kGradientPanel4.setkEndColor(new Color(68, 82, 121));
-        kGradientPanel4.setBackground(Color.RED);
+        HoverColor(panel_editcustmenu, new Color(68, 82, 121), Color.WHITE);
     }//GEN-LAST:event_lbl_editcustFocusLost
 
     private void lbl_custdetFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_custdetFocusGained
     {//GEN-HEADEREND:event_lbl_custdetFocusGained
-        kGradientPanel5.setkStartColor(new Color(164, 177, 252));
-        kGradientPanel5.setkEndColor(new Color(164, 177, 252));
-        kGradientPanel5.setBackground(Color.BLACK);
+        HoverColor(panel_custdetmenu, new Color(164, 177, 252), Color.BLACK);
     }//GEN-LAST:event_lbl_custdetFocusGained
 
     private void lbl_custdetFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_custdetFocusLost
     {//GEN-HEADEREND:event_lbl_custdetFocusLost
-        kGradientPanel5.setkStartColor(new Color(68, 82, 121));
-        kGradientPanel5.setkEndColor(new Color(68, 82, 121));
-        kGradientPanel5.setBackground(Color.RED);
+        HoverColor(panel_custdetmenu, new Color(68, 82, 121), Color.WHITE);
     }//GEN-LAST:event_lbl_custdetFocusLost
 
     private void lbl_addcustKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_addcustKeyPressed
@@ -2922,21 +2751,17 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_addcustMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_addcustMouseEntered
     {//GEN-HEADEREND:event_lbl_addcustMouseEntered
-        kGradientPanel3.setkStartColor(new Color(164, 177, 252));
-        kGradientPanel3.setkEndColor(new Color(164, 177, 252));
-        kGradientPanel3.setBackground(Color.BLACK);
+        HoverColor(panel_addcust, new Color(164, 177, 252), Color.BLACK);
     }//GEN-LAST:event_lbl_addcustMouseEntered
 
     private void lbl_addcustMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_addcustMouseExited
     {//GEN-HEADEREND:event_lbl_addcustMouseExited
-
-        kGradientPanel3.setkStartColor(new Color(68, 82, 121));
-        kGradientPanel3.setkEndColor(new Color(68, 82, 121));
-        kGradientPanel3.setBackground(Color.RED);
+        HoverColor(panel_addcust, new Color(68, 82, 121), Color.WHITE);
     }//GEN-LAST:event_lbl_addcustMouseExited
 
     private void lbl_editcustKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_editcustKeyPressed
     {//GEN-HEADEREND:event_lbl_editcustKeyPressed
+
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
             panel_addcust.setVisible(false);
@@ -2993,30 +2818,22 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_editcustMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_editcustMouseEntered
     {//GEN-HEADEREND:event_lbl_editcustMouseEntered
-        kGradientPanel4.setkStartColor(new Color(164, 177, 252));
-        kGradientPanel4.setkEndColor(new Color(164, 177, 252));
-        kGradientPanel4.setBackground(Color.BLACK);
+        HoverColor(panel_editcus, new Color(164, 177, 252), Color.BLACK);
     }//GEN-LAST:event_lbl_editcustMouseEntered
 
     private void lbl_editcustMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_editcustMouseExited
     {//GEN-HEADEREND:event_lbl_editcustMouseExited
-        kGradientPanel4.setkStartColor(new Color(68, 82, 121));
-        kGradientPanel4.setkEndColor(new Color(68, 82, 121));
-        kGradientPanel4.setBackground(Color.RED);
+        HoverColor(panel_editcus, new Color(68, 82, 121), Color.WHITE);
     }//GEN-LAST:event_lbl_editcustMouseExited
 
     private void lbl_custdetMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_custdetMouseEntered
     {//GEN-HEADEREND:event_lbl_custdetMouseEntered
-        kGradientPanel5.setkStartColor(new Color(164, 177, 252));
-        kGradientPanel5.setkEndColor(new Color(164, 177, 252));
-        kGradientPanel5.setBackground(Color.BLACK);
+        HoverColor(panel_custdetail, new Color(164, 177, 252), Color.BLACK);
     }//GEN-LAST:event_lbl_custdetMouseEntered
 
     private void lbl_custdetMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_custdetMouseExited
     {//GEN-HEADEREND:event_lbl_custdetMouseExited
-        kGradientPanel5.setkStartColor(new Color(68, 82, 121));
-        kGradientPanel5.setkEndColor(new Color(68, 82, 121));
-        kGradientPanel5.setBackground(Color.RED);
+        HoverColor(panel_editcus, new Color(68, 82, 121), Color.WHITE);
     }//GEN-LAST:event_lbl_custdetMouseExited
 
     private void txt_add_custidKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_custidKeyPressed
@@ -3170,7 +2987,8 @@ public class frm_dashboard extends javax.swing.JFrame
         {
             lbl_editcust.grabFocus();
         }
-        else if (txt_edit_custsadd.getText().equals("SHOP ADDRESS"))
+
+        if (txt_edit_custsadd.getText().equals("SHOP ADDRESS"))
         {
             txt_edit_custsadd.setText("");
         }
@@ -3234,6 +3052,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void txt_det_custidKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_det_custidKeyPressed
     {//GEN-HEADEREND:event_txt_det_custidKeyPressed
+
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
         {
             lbl_custdet.grabFocus();
@@ -3254,16 +3073,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_addempFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_addempFocusGained
     {//GEN-HEADEREND:event_lbl_addempFocusGained
-        kGradientPanel21.setkStartColor(new Color(164, 177, 252));
-        kGradientPanel21.setkEndColor(new Color(164, 177, 252));
-        kGradientPanel21.setBackground(Color.BLACK);
+        HoverColor(panel_addempmenu, new Color(164, 177, 252), Color.BLACK);
     }//GEN-LAST:event_lbl_addempFocusGained
 
     private void lbl_addempFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_addempFocusLost
     {//GEN-HEADEREND:event_lbl_addempFocusLost
-        kGradientPanel21.setkStartColor(new Color(68, 82, 121));
-        kGradientPanel21.setkEndColor(new Color(68, 82, 121));
-        kGradientPanel21.setBackground(Color.RED);
+        HoverColor(panel_addempmenu, new Color(68, 82, 121), Color.WHITE);
     }//GEN-LAST:event_lbl_addempFocusLost
 
     private void lbl_addempMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_addempMouseClicked
@@ -3276,17 +3091,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_addempMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_addempMouseEntered
     {//GEN-HEADEREND:event_lbl_addempMouseEntered
-        kGradientPanel21.setkStartColor(new Color(164, 177, 252));
-        kGradientPanel21.setkEndColor(new Color(164, 177, 252));
-        kGradientPanel21.setBackground(Color.BLACK);
+        HoverColor(panel_addempmenu, new Color(164, 177, 252), Color.BLACK);
     }//GEN-LAST:event_lbl_addempMouseEntered
 
     private void lbl_addempMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_addempMouseExited
     {//GEN-HEADEREND:event_lbl_addempMouseExited
-
-        kGradientPanel21.setkStartColor(new Color(68, 82, 121));
-        kGradientPanel21.setkEndColor(new Color(68, 82, 121));
-        kGradientPanel21.setBackground(Color.RED);
+        HoverColor(panel_addempmenu, new Color(68, 82, 121), Color.WHITE);
     }//GEN-LAST:event_lbl_addempMouseExited
 
     private void lbl_addempKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_addempKeyPressed
@@ -3303,24 +3113,24 @@ public class frm_dashboard extends javax.swing.JFrame
             panel_addcust.setVisible(false);
             panel_editcus.setVisible(false);
             panel_custdetail.setVisible(false);
+
             panel_customer.setVisible(false);
-            lbl_customer.grabFocus();
+            panel_employee.setVisible(false);
+
+            lbl_employee.grabFocus();
+
             panel_extra.setVisible(true);
         }
     }//GEN-LAST:event_lbl_addempKeyPressed
 
     private void lbl_editempFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_editempFocusGained
     {//GEN-HEADEREND:event_lbl_editempFocusGained
-        kGradientPanel22.setkStartColor(new Color(164, 177, 252));
-        kGradientPanel22.setkEndColor(new Color(164, 177, 252));
-        kGradientPanel22.setBackground(Color.BLACK);
+        HoverColor(panel_editempmenu, new Color(164, 177, 252), Color.BLACK);
     }//GEN-LAST:event_lbl_editempFocusGained
 
     private void lbl_editempFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_editempFocusLost
     {//GEN-HEADEREND:event_lbl_editempFocusLost
-        kGradientPanel22.setkStartColor(new Color(68, 82, 121));
-        kGradientPanel22.setkEndColor(new Color(68, 82, 121));
-        kGradientPanel22.setBackground(Color.RED);
+        HoverColor(panel_editempmenu, new Color(68, 82, 121), Color.WHITE);
     }//GEN-LAST:event_lbl_editempFocusLost
 
     private void lbl_editempMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_editempMouseClicked
@@ -3333,16 +3143,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_editempMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_editempMouseEntered
     {//GEN-HEADEREND:event_lbl_editempMouseEntered
-        kGradientPanel22.setkStartColor(new Color(164, 177, 252));
-        kGradientPanel22.setkEndColor(new Color(164, 177, 252));
-        kGradientPanel22.setBackground(Color.BLACK);
+        HoverColor(panel_editempmenu, new Color(164, 177, 252), Color.BLACK);
     }//GEN-LAST:event_lbl_editempMouseEntered
 
     private void lbl_editempMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_editempMouseExited
     {//GEN-HEADEREND:event_lbl_editempMouseExited
-        kGradientPanel22.setkStartColor(new Color(68, 82, 121));
-        kGradientPanel22.setkEndColor(new Color(68, 82, 121));
-        kGradientPanel22.setBackground(Color.RED);
+        HoverColor(panel_editempmenu, new Color(68, 82, 121), Color.WHITE);
     }//GEN-LAST:event_lbl_editempMouseExited
 
     private void lbl_editempKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_editempKeyPressed
@@ -3359,24 +3165,23 @@ public class frm_dashboard extends javax.swing.JFrame
             panel_addcust.setVisible(false);
             panel_editcus.setVisible(false);
             panel_custdetail.setVisible(false);
+
             panel_customer.setVisible(false);
-            lbl_customer.grabFocus();
+            panel_employee.setVisible(false);
+
+            lbl_employee.grabFocus();
             panel_extra.setVisible(true);
         }
     }//GEN-LAST:event_lbl_editempKeyPressed
 
     private void lbl_empdetFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_empdetFocusGained
     {//GEN-HEADEREND:event_lbl_empdetFocusGained
-        kGradientPanel23.setkStartColor(new Color(164, 177, 252));
-        kGradientPanel23.setkEndColor(new Color(164, 177, 252));
-        kGradientPanel23.setBackground(Color.BLACK);
+        HoverColor(panel_empdetmenu, new Color(164, 177, 252), Color.BLACK);
     }//GEN-LAST:event_lbl_empdetFocusGained
 
     private void lbl_empdetFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_empdetFocusLost
     {//GEN-HEADEREND:event_lbl_empdetFocusLost
-        kGradientPanel23.setkStartColor(new Color(68, 82, 121));
-        kGradientPanel23.setkEndColor(new Color(68, 82, 121));
-        kGradientPanel23.setBackground(Color.RED);
+        HoverColor(panel_empdetmenu, new Color(68, 82, 121), Color.WHITE);
     }//GEN-LAST:event_lbl_empdetFocusLost
 
     private void lbl_empdetMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_empdetMouseClicked
@@ -3389,16 +3194,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_empdetMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_empdetMouseEntered
     {//GEN-HEADEREND:event_lbl_empdetMouseEntered
-        kGradientPanel23.setkStartColor(new Color(164, 177, 252));
-        kGradientPanel23.setkEndColor(new Color(164, 177, 252));
-        kGradientPanel23.setBackground(Color.BLACK);
+        HoverColor(panel_empdetmenu, new Color(164, 177, 252), Color.BLACK);
     }//GEN-LAST:event_lbl_empdetMouseEntered
 
     private void lbl_empdetMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_empdetMouseExited
     {//GEN-HEADEREND:event_lbl_empdetMouseExited
-        kGradientPanel23.setkStartColor(new Color(68, 82, 121));
-        kGradientPanel23.setkEndColor(new Color(68, 82, 121));
-        kGradientPanel23.setBackground(Color.RED);
+        HoverColor(panel_empdetmenu, new Color(68, 82, 121), Color.WHITE);
     }//GEN-LAST:event_lbl_empdetMouseExited
 
     private void lbl_empdetKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_empdetKeyPressed
@@ -3416,10 +3217,16 @@ public class frm_dashboard extends javax.swing.JFrame
             panel_editcus.setVisible(false);
             panel_custdetail.setVisible(false);
             panel_customer.setVisible(false);
-            lbl_customer.grabFocus();
+            panel_employee.setVisible(false);
+            lbl_employee.grabFocus();
             panel_extra.setVisible(true);
         }
     }//GEN-LAST:event_lbl_empdetKeyPressed
+
+    private void txt_det_custidActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_txt_det_custidActionPerformed
+    {//GEN-HEADEREND:event_txt_det_custidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_det_custidActionPerformed
 
     public static void main(String args[])
     {
@@ -3432,13 +3239,33 @@ public class frm_dashboard extends javax.swing.JFrame
         });
     }
 
-    public void hoverColor(KGradientPanel panel, Color color)
+    public void hoverColor(KGradientPanel panel, JLabel label, Color kcolor, Color bcolor, Color foreground, Font font, String text)
     {
-        panel.setkStartColor(color);
-        panel.setkEndColor(color);
+        panel.setkStartColor(kcolor);
+        panel.setkEndColor(kcolor);
+        panel.setBackground(bcolor);
+        label.setForeground(foreground);
+        label.setFont(font);
+        label.setText(text);
     }
+
+    public void HoverColor(KGradientPanel panel, Color kColor, Color bColor)
+    {
+        panel.setkStartColor(kColor);
+        panel.setkEndColor(kColor);
+        panel.setBackground(bColor);
+    }
+
+    public void escape(JLabel label, int code)
+    {
+        if (code == KeyEvent.VK_ESCAPE)
+        {
+            label.grabFocus();
+        }
+        //escape(lbl_custadd,evt.getkeycode);
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel4;
@@ -3460,13 +3287,6 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel kGradientPanel19;
     private com.k33ptoo.components.KGradientPanel kGradientPanel2;
     private com.k33ptoo.components.KGradientPanel kGradientPanel20;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel21;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel22;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel23;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel24;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel3;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel4;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel5;
     private com.k33ptoo.components.KGradientPanel kGradientPanel6;
     private com.k33ptoo.components.KGradientPanel kGradientPanel7;
     private com.k33ptoo.components.KGradientPanel kGradientPanel8;
@@ -3492,14 +3312,21 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel panel_about;
     private com.k33ptoo.components.KGradientPanel panel_account;
     private com.k33ptoo.components.KGradientPanel panel_addcust;
+    private com.k33ptoo.components.KGradientPanel panel_addcustmenu;
+    private com.k33ptoo.components.KGradientPanel panel_addempmenu;
     private com.k33ptoo.components.KGradientPanel panel_bill;
     private com.k33ptoo.components.KGradientPanel panel_cust_extra;
     private com.k33ptoo.components.KGradientPanel panel_custdetail;
+    private com.k33ptoo.components.KGradientPanel panel_custdetmenu;
     private com.k33ptoo.components.KGradientPanel panel_custmain;
     private com.k33ptoo.components.KGradientPanel panel_custmenu;
     private com.k33ptoo.components.KGradientPanel panel_customer;
     private com.k33ptoo.components.KGradientPanel panel_editcus;
+    private com.k33ptoo.components.KGradientPanel panel_editcustmenu;
+    private com.k33ptoo.components.KGradientPanel panel_editempmenu;
+    private com.k33ptoo.components.KGradientPanel panel_empdetmenu;
     private com.k33ptoo.components.KGradientPanel panel_employee;
+    private com.k33ptoo.components.KGradientPanel panel_empmain;
     private com.k33ptoo.components.KGradientPanel panel_empmenu;
     private com.k33ptoo.components.KGradientPanel panel_extra;
     private com.k33ptoo.components.KGradientPanel panel_help;
