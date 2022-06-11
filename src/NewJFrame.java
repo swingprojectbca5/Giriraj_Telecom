@@ -38,7 +38,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
+                {"1", "Mayank", "Kanakiya", "Student"},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null}
