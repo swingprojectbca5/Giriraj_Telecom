@@ -5,11 +5,9 @@ import java.awt.Font;
 import java.awt.Insets;
 import java.awt.Toolkit;
 
-public class MyDashboard extends javax.swing.JFrame
-{
+public class MyDashboard extends javax.swing.JFrame {
 
-    public MyDashboard()
-    {
+    public MyDashboard() {
         initComponents();
 
         Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
@@ -29,8 +27,7 @@ public class MyDashboard extends javax.swing.JFrame
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         panel_bg = new com.k33ptoo.components.KGradientPanel();
         kGradientPanel2 = new com.k33ptoo.components.KGradientPanel();
@@ -54,6 +51,7 @@ public class MyDashboard extends javax.swing.JFrame
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jRadioButton1 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -77,18 +75,14 @@ public class MyDashboard extends javax.swing.JFrame
         pnl_close2.setkEndColor(new java.awt.Color(68, 82, 121));
         pnl_close2.setkStartColor(new java.awt.Color(68, 82, 121));
         pnl_close2.setOpaque(false);
-        pnl_close2.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        pnl_close2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnl_close2MouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 pnl_close2MouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
                 pnl_close2MouseExited(evt);
             }
         });
@@ -111,18 +105,14 @@ public class MyDashboard extends javax.swing.JFrame
         );
 
         pnl_min.setBackground(new java.awt.Color(68, 82, 121));
-        pnl_min.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        pnl_min.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnl_minMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 pnl_minMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
                 pnl_minMouseExited(evt);
             }
         });
@@ -222,36 +212,27 @@ public class MyDashboard extends javax.swing.JFrame
         lbl_customer.setText("CUSTOMER MANAGEMENT");
         lbl_customer.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_customer.setPreferredSize(new java.awt.Dimension(262, 50));
-        lbl_customer.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        lbl_customer.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 lbl_customerFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 lbl_customerFocusLost(evt);
             }
         });
-        lbl_customer.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        lbl_customer.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl_customerMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lbl_customerMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
                 lbl_customerMouseExited(evt);
             }
         });
-        lbl_customer.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
+        lbl_customer.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
                 lbl_customerKeyPressed(evt);
             }
         });
@@ -262,7 +243,7 @@ public class MyDashboard extends javax.swing.JFrame
             pnl_customerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_customerLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lbl_customer, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                .addComponent(lbl_customer, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
                 .addContainerGap())
         );
         pnl_customerLayout.setVerticalGroup(
@@ -283,36 +264,27 @@ public class MyDashboard extends javax.swing.JFrame
         lbl_employee.setText("EMPLOYEE MANAGEMENT");
         lbl_employee.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_employee.setPreferredSize(new java.awt.Dimension(262, 50));
-        lbl_employee.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        lbl_employee.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 lbl_employeeFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 lbl_employeeFocusLost(evt);
             }
         });
-        lbl_employee.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        lbl_employee.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl_employeeMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lbl_employeeMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
                 lbl_employeeMouseExited(evt);
             }
         });
-        lbl_employee.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
+        lbl_employee.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
                 lbl_employeeKeyPressed(evt);
             }
         });
@@ -347,36 +319,27 @@ public class MyDashboard extends javax.swing.JFrame
         lbl_product.setText("PRODUCT MANAGEMENT");
         lbl_product.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_product.setPreferredSize(new java.awt.Dimension(262, 50));
-        lbl_product.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        lbl_product.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 lbl_productFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 lbl_productFocusLost(evt);
             }
         });
-        lbl_product.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        lbl_product.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl_productMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lbl_productMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
                 lbl_productMouseExited(evt);
             }
         });
-        lbl_product.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
+        lbl_product.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
                 lbl_productKeyPressed(evt);
             }
         });
@@ -405,9 +368,9 @@ public class MyDashboard extends javax.swing.JFrame
                     .addComponent(pnl_product, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnl_sidepaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(pnl_customer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(pnl_customer, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)
                         .addComponent(pnl_employee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         pnl_sidepaneLayout.setVerticalGroup(
             pnl_sidepaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -420,7 +383,7 @@ public class MyDashboard extends javax.swing.JFrame
                 .addComponent(pnl_employee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addComponent(pnl_product, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(192, Short.MAX_VALUE))
+                .addContainerGap(195, Short.MAX_VALUE))
         );
 
         jLabel1.setText("HELLO");
@@ -446,6 +409,8 @@ public class MyDashboard extends javax.swing.JFrame
 
         jButton2.setText("jButton2");
 
+        jRadioButton1.setText("jRadioButton1");
+
         javax.swing.GroupLayout kGradientPanel2Layout = new javax.swing.GroupLayout(kGradientPanel2);
         kGradientPanel2.setLayout(kGradientPanel2Layout);
         kGradientPanel2Layout.setHorizontalGroup(
@@ -459,12 +424,14 @@ public class MyDashboard extends javax.swing.JFrame
                         .addGap(272, 272, 272)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(kGradientPanel2Layout.createSequentialGroup()
-                        .addGap(333, 333, 333)
-                        .addComponent(jButton1))
-                    .addGroup(kGradientPanel2Layout.createSequentialGroup()
                         .addGap(253, 253, 253)
-                        .addComponent(jButton2)))
-                .addContainerGap(311, Short.MAX_VALUE))
+                        .addComponent(jButton2))
+                    .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                        .addGap(333, 333, 333)
+                        .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton1)
+                            .addComponent(jButton1))))
+                .addContainerGap(334, Short.MAX_VALUE))
         );
         kGradientPanel2Layout.setVerticalGroup(
             kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -477,7 +444,9 @@ public class MyDashboard extends javax.swing.JFrame
                     .addGroup(kGradientPanel2Layout.createSequentialGroup()
                         .addGap(72, 72, 72)
                         .addComponent(jButton1)
-                        .addGap(73, 73, 73)
+                        .addGap(34, 34, 34)
+                        .addComponent(jRadioButton1)
+                        .addGap(18, 18, 18)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(74, 74, 74)
                         .addComponent(jButton2)))
@@ -770,13 +739,10 @@ public class MyDashboard extends javax.swing.JFrame
 //        }
     }//GEN-LAST:event_lbl_productKeyPressed
 
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
 
-        java.awt.EventQueue.invokeLater(new Runnable()
-        {
-            public void run()
-            {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
                 new MyDashboard().setVisible(true);
             }
         });
@@ -789,6 +755,7 @@ public class MyDashboard extends javax.swing.JFrame
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JSeparator jSeparator1;
     private com.k33ptoo.components.KGradientPanel kGradientPanel2;
     private javax.swing.JLabel lbl_customer;
