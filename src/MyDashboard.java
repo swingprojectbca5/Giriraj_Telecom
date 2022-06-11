@@ -53,6 +53,7 @@ public class MyDashboard extends javax.swing.JFrame
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -443,6 +444,8 @@ public class MyDashboard extends javax.swing.JFrame
 
         jButton1.setText("jButton1");
 
+        jButton2.setText("jButton2");
+
         javax.swing.GroupLayout kGradientPanel2Layout = new javax.swing.GroupLayout(kGradientPanel2);
         kGradientPanel2.setLayout(kGradientPanel2Layout);
         kGradientPanel2Layout.setHorizontalGroup(
@@ -457,7 +460,10 @@ public class MyDashboard extends javax.swing.JFrame
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(kGradientPanel2Layout.createSequentialGroup()
                         .addGap(333, 333, 333)
-                        .addComponent(jButton1)))
+                        .addComponent(jButton1))
+                    .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                        .addGap(253, 253, 253)
+                        .addComponent(jButton2)))
                 .addContainerGap(311, Short.MAX_VALUE))
         );
         kGradientPanel2Layout.setVerticalGroup(
@@ -472,7 +478,9 @@ public class MyDashboard extends javax.swing.JFrame
                         .addGap(72, 72, 72)
                         .addComponent(jButton1)
                         .addGap(73, 73, 73)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(74, 74, 74)
+                        .addComponent(jButton2)))
                 .addGap(25, 25, 25))
         );
 
@@ -776,6 +784,7 @@ public class MyDashboard extends javax.swing.JFrame
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
