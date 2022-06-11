@@ -36,7 +36,7 @@ public class MyDashboard extends javax.swing.JFrame
         kGradientPanel2 = new com.k33ptoo.components.KGradientPanel();
         pnl_header2 = new com.k33ptoo.components.KGradientPanel();
         pnl_close2 = new com.k33ptoo.components.KGradientPanel();
-        lbl_close2 = new javax.swing.JLabel();
+        pnl_close = new javax.swing.JLabel();
         pnl_min = new javax.swing.JPanel();
         lbl_min = new javax.swing.JLabel();
         lbl_gt = new javax.swing.JLabel();
@@ -50,6 +50,8 @@ public class MyDashboard extends javax.swing.JFrame
         lbl_employee = new javax.swing.JLabel();
         pnl_product = new com.k33ptoo.components.KGradientPanel();
         lbl_product = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -89,7 +91,7 @@ public class MyDashboard extends javax.swing.JFrame
             }
         });
 
-        lbl_close2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/outline_close_white_48dp.png"))); // NOI18N
+        pnl_close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/outline_close_white_48dp.png"))); // NOI18N
 
         javax.swing.GroupLayout pnl_close2Layout = new javax.swing.GroupLayout(pnl_close2);
         pnl_close2.setLayout(pnl_close2Layout);
@@ -97,12 +99,12 @@ public class MyDashboard extends javax.swing.JFrame
             pnl_close2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_close2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(lbl_close2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(pnl_close, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         pnl_close2Layout.setVerticalGroup(
             pnl_close2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_close2Layout.createSequentialGroup()
-                .addComponent(lbl_close2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_close, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -201,7 +203,7 @@ public class MyDashboard extends javax.swing.JFrame
                 .addGap(0, 0, 0)
                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 5, Short.MAX_VALUE))
+                .addComponent(jSeparator1))
         );
 
         pnl_customer.setkBorderRadius(40);
@@ -419,6 +421,25 @@ public class MyDashboard extends javax.swing.JFrame
                 .addContainerGap(192, Short.MAX_VALUE))
         );
 
+        jLabel1.setText("HELLO");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addComponent(jLabel1)
+                .addContainerGap(95, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addComponent(jLabel1)
+                .addContainerGap(78, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout kGradientPanel2Layout = new javax.swing.GroupLayout(kGradientPanel2);
         kGradientPanel2.setLayout(kGradientPanel2Layout);
         kGradientPanel2Layout.setHorizontalGroup(
@@ -427,14 +448,21 @@ public class MyDashboard extends javax.swing.JFrame
             .addGroup(kGradientPanel2Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(pnl_sidepane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(813, Short.MAX_VALUE))
+                .addGap(272, 272, 272)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(311, Short.MAX_VALUE))
         );
         kGradientPanel2Layout.setVerticalGroup(
             kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(kGradientPanel2Layout.createSequentialGroup()
                 .addComponent(pnl_header2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
-                .addComponent(pnl_sidepane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(pnl_sidepane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                        .addGap(180, 180, 180)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(25, 25, 25))
         );
 
@@ -452,16 +480,13 @@ public class MyDashboard extends javax.swing.JFrame
 
     private void pnl_close2MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_pnl_close2MouseEntered
     {//GEN-HEADEREND:event_pnl_close2MouseEntered
-        pnl_close.setkStartColor(new Color(255, 0, 0));
         pnl_close.setBackground(Color.red);
-        pnl_close.setkEndColor(new Color(255, 0, 0));
     }//GEN-LAST:event_pnl_close2MouseEntered
 
     private void pnl_close2MouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_pnl_close2MouseExited
     {//GEN-HEADEREND:event_pnl_close2MouseExited
-        pnl_close.setkStartColor(new Color(68, 82, 121));
+
         pnl_close.setBackground(Color.black);
-        pnl_close.setkEndColor(new Color(68, 82, 121));
     }//GEN-LAST:event_pnl_close2MouseExited
 
     private void pnl_minMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_pnl_minMouseClicked
@@ -740,26 +765,22 @@ public class MyDashboard extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JSeparator jSeparator1;
     private com.k33ptoo.components.KGradientPanel kGradientPanel2;
-    private javax.swing.JLabel lbl_close;
-    private javax.swing.JLabel lbl_close1;
-    private javax.swing.JLabel lbl_close2;
     private javax.swing.JLabel lbl_customer;
     private javax.swing.JLabel lbl_employee;
     private javax.swing.JLabel lbl_gt;
     private javax.swing.JLabel lbl_min;
     private javax.swing.JLabel lbl_product;
     private com.k33ptoo.components.KGradientPanel panel_bg;
-    private com.k33ptoo.components.KGradientPanel pnl_close;
-    private com.k33ptoo.components.KGradientPanel pnl_close1;
+    private javax.swing.JLabel pnl_close;
     private com.k33ptoo.components.KGradientPanel pnl_close2;
     private com.k33ptoo.components.KGradientPanel pnl_customer;
     private com.k33ptoo.components.KGradientPanel pnl_employee;
-    private com.k33ptoo.components.KGradientPanel pnl_header;
-    private com.k33ptoo.components.KGradientPanel pnl_header1;
     private com.k33ptoo.components.KGradientPanel pnl_header2;
     private javax.swing.JPanel pnl_min;
     private com.k33ptoo.components.KGradientPanel pnl_product;
