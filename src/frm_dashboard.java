@@ -26,9 +26,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
         panel_main.setVisible(true);
 
-        visibility(false, false, false, false, false, false, true);
-
-        jLabel2.grabFocus();
+        visibility(jLabel2, false, false, false, false, false, false, true);
 
         tableheader(table_custedit.getTableHeader());
         tableheader(table_custdet.getTableHeader());
@@ -732,20 +730,9 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_custid.setBorder(null);
         txt_add_custid.addFocusListener(new java.awt.event.FocusAdapter()
         {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                txt_add_custidFocusGained(evt);
-            }
             public void focusLost(java.awt.event.FocusEvent evt)
             {
                 txt_add_custidFocusLost(evt);
-            }
-        });
-        txt_add_custid.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                txt_add_custidActionPerformed(evt);
             }
         });
         txt_add_custid.addKeyListener(new java.awt.event.KeyAdapter()
@@ -783,10 +770,6 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_custnm.setBorder(null);
         txt_add_custnm.addFocusListener(new java.awt.event.FocusAdapter()
         {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                txt_add_custnmFocusGained(evt);
-            }
             public void focusLost(java.awt.event.FocusEvent evt)
             {
                 txt_add_custnmFocusLost(evt);
@@ -827,10 +810,6 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_custemail.setBorder(null);
         txt_add_custemail.addFocusListener(new java.awt.event.FocusAdapter()
         {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                txt_add_custemailFocusGained(evt);
-            }
             public void focusLost(java.awt.event.FocusEvent evt)
             {
                 txt_add_custemailFocusLost(evt);
@@ -871,10 +850,6 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_custno.setBorder(null);
         txt_add_custno.addFocusListener(new java.awt.event.FocusAdapter()
         {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                txt_add_custnoFocusGained(evt);
-            }
             public void focusLost(java.awt.event.FocusEvent evt)
             {
                 txt_add_custnoFocusLost(evt);
@@ -915,10 +890,6 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_custsadd.setBorder(null);
         txt_add_custsadd.addFocusListener(new java.awt.event.FocusAdapter()
         {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                txt_add_custsaddFocusGained(evt);
-            }
             public void focusLost(java.awt.event.FocusEvent evt)
             {
                 txt_add_custsaddFocusLost(evt);
@@ -959,10 +930,6 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_custsname.setBorder(null);
         txt_add_custsname.addFocusListener(new java.awt.event.FocusAdapter()
         {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                txt_add_custsnameFocusGained(evt);
-            }
             public void focusLost(java.awt.event.FocusEvent evt)
             {
                 txt_add_custsnameFocusLost(evt);
@@ -1454,13 +1421,6 @@ public class frm_dashboard extends javax.swing.JFrame
             public void focusLost(java.awt.event.FocusEvent evt)
             {
                 txt_det_custidFocusLost(evt);
-            }
-        });
-        txt_det_custid.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                txt_det_custidActionPerformed(evt);
             }
         });
         txt_det_custid.addKeyListener(new java.awt.event.KeyAdapter()
@@ -2234,21 +2194,21 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_main.setLayout(panel_mainLayout);
         panel_mainLayout.setHorizontalGroup(
             panel_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 1061, Short.MAX_VALUE)
             .addGroup(panel_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panel_user, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1067, Short.MAX_VALUE))
+                .addComponent(panel_user, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panel_product, javax.swing.GroupLayout.DEFAULT_SIZE, 1067, Short.MAX_VALUE))
+                .addComponent(panel_product, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panel_bill, javax.swing.GroupLayout.DEFAULT_SIZE, 1067, Short.MAX_VALUE))
+                .addComponent(panel_bill, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panel_account, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1067, Short.MAX_VALUE))
+                .addComponent(panel_account, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panel_employee, javax.swing.GroupLayout.DEFAULT_SIZE, 1061, Short.MAX_VALUE))
+                .addComponent(panel_employee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panel_extra, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1067, Short.MAX_VALUE))
+                .addComponent(panel_extra, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panel_customer, javax.swing.GroupLayout.DEFAULT_SIZE, 1067, Short.MAX_VALUE))
+                .addComponent(panel_customer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panel_mainLayout.setVerticalGroup(
             panel_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2346,10 +2306,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_userKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_userKeyPressed
     {//GEN-HEADEREND:event_lbl_userKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
-        {
-            visibility(false, false, false, false, false, true, false);
-        }
+        visibility(evt.getKeyCode(), lbl_user, false, false, false, false, false, true, false);
     }//GEN-LAST:event_lbl_userKeyPressed
 
     private void lbl_userMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_userMouseExited
@@ -2364,7 +2321,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_userMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_userMouseClicked
     {//GEN-HEADEREND:event_lbl_userMouseClicked
-        visibility(false, false, false, false, false, true, false);
+        visibility(lbl_user, false, false, false, false, false, true, false);
         HoverColor(pnl_user, lbl_user, Color.WHITE, Color.WHITE, Color.BLACK);
     }//GEN-LAST:event_lbl_userMouseClicked
 
@@ -2380,10 +2337,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_accountKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_accountKeyPressed
     {//GEN-HEADEREND:event_lbl_accountKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
-        {
-            visibility(false, false, false, false, true, false, false);
-        }
+        visibility(evt.getKeyCode(), lbl_account, false, false, false, false, true, false, false);
     }//GEN-LAST:event_lbl_accountKeyPressed
 
     private void lbl_accountMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_accountMouseExited
@@ -2398,7 +2352,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_accountMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_accountMouseClicked
     {//GEN-HEADEREND:event_lbl_accountMouseClicked
-        visibility(false, false, false, false, true, false, false);
+        visibility(lbl_account, false, false, false, false, true, false, false);
         HoverColor(pnl_account, lbl_account, Color.WHITE, Color.WHITE, Color.BLACK);
     }//GEN-LAST:event_lbl_accountMouseClicked
 
@@ -2414,10 +2368,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_billKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_billKeyPressed
     {//GEN-HEADEREND:event_lbl_billKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
-        {
-            visibility(false, false, true, false, false, false, false);
-        }
+        visibility(evt.getKeyCode(), lbl_bill, false, false, true, false, false, false, false);
     }//GEN-LAST:event_lbl_billKeyPressed
 
     private void lbl_billMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_billMouseExited
@@ -2432,7 +2383,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_billMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_billMouseClicked
     {//GEN-HEADEREND:event_lbl_billMouseClicked
-        visibility(false, false, true, false, false, false, false);
+        visibility(lbl_product, false, false, true, false, false, false, false);
         HoverColor(pnl_bill, lbl_bill, Color.WHITE, Color.WHITE, Color.BLACK);
     }//GEN-LAST:event_lbl_billMouseClicked
 
@@ -2448,10 +2399,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_productKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_productKeyPressed
     {//GEN-HEADEREND:event_lbl_productKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
-        {
-            visibility(false, false, false, true, false, false, false);
-        }
+        visibility(evt.getKeyCode(), lbl_product, false, false, false, true, false, false, false);
     }//GEN-LAST:event_lbl_productKeyPressed
 
     private void lbl_productMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_productMouseExited
@@ -2466,7 +2414,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_productMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_productMouseClicked
     {//GEN-HEADEREND:event_lbl_productMouseClicked
-        visibility(false, false, false, true, false, false, false);
+        visibility(lbl_product, false, false, false, true, false, false, false);
         HoverColor(pnl_product, lbl_product, Color.WHITE, Color.WHITE, Color.BLACK);
     }//GEN-LAST:event_lbl_productMouseClicked
 
@@ -2482,11 +2430,8 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_employeeKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_employeeKeyPressed
     {//GEN-HEADEREND:event_lbl_employeeKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
-        {
-            visibility(false, true, false, false, false, false, false);
-            lbl_addemp.grabFocus();
-        }
+        visibility(evt.getKeyCode(), lbl_employee, false, true, false, false, false, false, false);
+        lbl_addemp.grabFocus();
     }//GEN-LAST:event_lbl_employeeKeyPressed
 
     private void lbl_employeeMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_employeeMouseExited
@@ -2501,7 +2446,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_employeeMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_employeeMouseClicked
     {//GEN-HEADEREND:event_lbl_employeeMouseClicked
-        visibility(false, true, false, false, false, false, false);
+        visibility(lbl_employee, false, true, false, false, false, false, false);
 
         HoverColor(pnl_employee, lbl_employee, Color.WHITE, Color.WHITE, Color.BLACK);
 
@@ -2520,12 +2465,9 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_customerKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_customerKeyPressed
     {//GEN-HEADEREND:event_lbl_customerKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
-        {
-            visibility(true, false, false, false, false, false, false);
+        visibility(evt.getKeyCode(), lbl_addcust, true, false, false, false, false, false, false);
 
-            visibility(lbl_addcust, panel_addcust, true, panel_editcus, false, panel_custdetail, false);
-        }
+        visibility(panel_addcust, true, panel_editcus, false, panel_custdetail, false);
     }//GEN-LAST:event_lbl_customerKeyPressed
 
     private void lbl_customerMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_customerMouseExited
@@ -2541,9 +2483,9 @@ public class frm_dashboard extends javax.swing.JFrame
     private void lbl_customerMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_customerMouseClicked
     {//GEN-HEADEREND:event_lbl_customerMouseClicked
 
-        visibility(true, false, false, false, false, false, false);
+        visibility(lbl_addcust, true, false, false, false, false, false, false);
 
-        visibility(lbl_addcust, panel_addcust, true, panel_editcus, false, panel_custdetail, false);
+        visibility(panel_addcust, true, panel_editcus, false, panel_custdetail, false);
 
         HoverColor(pnl_customer, lbl_customer, Color.WHITE, Color.WHITE, Color.BLACK);
     }//GEN-LAST:event_lbl_customerMouseClicked
@@ -2560,11 +2502,6 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_addcustMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_addcustMouseClicked
     {//GEN-HEADEREND:event_lbl_addcustMouseClicked
-        panel_addcust.setVisible(true);
-        panel_editcus.setVisible(false);
-        panel_custdetail.setVisible(false);
-        txt_add_custid.grabFocus();
-
         visibility(txt_add_custid, panel_addcust, true, panel_editcus, false, panel_custdetail, false);
     }//GEN-LAST:event_lbl_addcustMouseClicked
 
@@ -2624,60 +2561,30 @@ public class frm_dashboard extends javax.swing.JFrame
         //        loginBtn.setCursor(new Cursor(Cursor.HAND_CURSOR));
     }//GEN-LAST:event_loginBtnMouseEntered
 
-    private void txt_add_custidFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custidFocusGained
-    {//GEN-HEADEREND:event_txt_add_custidFocusGained
-
-    }//GEN-LAST:event_txt_add_custidFocusGained
-
     private void txt_add_custidFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custidFocusLost
     {//GEN-HEADEREND:event_txt_add_custidFocusLost
         txtfocuslost(txt_add_custid, txt_add_custid.getText(), "CUSTOMER ID");
     }//GEN-LAST:event_txt_add_custidFocusLost
-
-    private void txt_add_custnmFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custnmFocusGained
-    {//GEN-HEADEREND:event_txt_add_custnmFocusGained
-
-    }//GEN-LAST:event_txt_add_custnmFocusGained
 
     private void txt_add_custnmFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custnmFocusLost
     {//GEN-HEADEREND:event_txt_add_custnmFocusLost
         txtfocuslost(txt_add_custnm, txt_add_custnm.getText(), "CUSTOMER NAME");
     }//GEN-LAST:event_txt_add_custnmFocusLost
 
-    private void txt_add_custnoFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custnoFocusGained
-    {//GEN-HEADEREND:event_txt_add_custnoFocusGained
-
-    }//GEN-LAST:event_txt_add_custnoFocusGained
-
     private void txt_add_custnoFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custnoFocusLost
     {//GEN-HEADEREND:event_txt_add_custnoFocusLost
         txtfocuslost(txt_add_custno, txt_add_custno.getText(), "CONTACT NO.");
     }//GEN-LAST:event_txt_add_custnoFocusLost
-
-    private void txt_add_custemailFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custemailFocusGained
-    {//GEN-HEADEREND:event_txt_add_custemailFocusGained
-
-    }//GEN-LAST:event_txt_add_custemailFocusGained
 
     private void txt_add_custemailFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custemailFocusLost
     {//GEN-HEADEREND:event_txt_add_custemailFocusLost
         txtfocuslost(txt_add_custemail, txt_add_custemail.getText(), "EMAIL");
     }//GEN-LAST:event_txt_add_custemailFocusLost
 
-    private void txt_add_custsnameFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custsnameFocusGained
-    {//GEN-HEADEREND:event_txt_add_custsnameFocusGained
-
-    }//GEN-LAST:event_txt_add_custsnameFocusGained
-
     private void txt_add_custsnameFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custsnameFocusLost
     {//GEN-HEADEREND:event_txt_add_custsnameFocusLost
         txtfocuslost(txt_add_custsname, txt_add_custsname.getText(), "SHOP NAME");
     }//GEN-LAST:event_txt_add_custsnameFocusLost
-
-    private void txt_add_custsaddFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custsaddFocusGained
-    {//GEN-HEADEREND:event_txt_add_custsaddFocusGained
-
-    }//GEN-LAST:event_txt_add_custsaddFocusGained
 
     private void txt_add_custsaddFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_custsaddFocusLost
     {//GEN-HEADEREND:event_txt_add_custsaddFocusLost
@@ -2696,7 +2603,6 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_editcustKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_editcustKeyPressed
     {//GEN-HEADEREND:event_lbl_editcustKeyPressed
-
         visibility(txt_edit_custid, panel_addcust, false, panel_editcus, true, panel_custdetail, false);
         escape(lbl_customer, evt.getKeyCode(), panel_customer);
     }//GEN-LAST:event_lbl_editcustKeyPressed
@@ -2777,11 +2683,6 @@ public class frm_dashboard extends javax.swing.JFrame
     {//GEN-HEADEREND:event_loginBtnKeyPressed
         escape(lbl_addcust, evt.getKeyCode());
     }//GEN-LAST:event_loginBtnKeyPressed
-
-    private void txt_add_custidActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_txt_add_custidActionPerformed
-    {//GEN-HEADEREND:event_txt_add_custidActionPerformed
-
-    }//GEN-LAST:event_txt_add_custidActionPerformed
 
     private void txt_edit_custidKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_custidKeyPressed
     {//GEN-HEADEREND:event_txt_edit_custidKeyPressed
@@ -2877,10 +2778,6 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_addempMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_addempMouseClicked
     {//GEN-HEADEREND:event_lbl_addempMouseClicked
-        panel_addcust.setVisible(true);
-        panel_editcus.setVisible(false);
-        panel_custdetail.setVisible(false);
-        txt_add_custid.grabFocus();
     }//GEN-LAST:event_lbl_addempMouseClicked
 
     private void lbl_addempMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_addempMouseEntered
@@ -2897,10 +2794,6 @@ public class frm_dashboard extends javax.swing.JFrame
     {//GEN-HEADEREND:event_lbl_addempKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
-            panel_addcust.setVisible(true);
-            panel_editcus.setVisible(false);
-            panel_custdetail.setVisible(false);
-            txt_add_custid.grabFocus();
         }
         escape(lbl_employee, evt.getKeyCode(), panel_employee);
     }//GEN-LAST:event_lbl_addempKeyPressed
@@ -2984,11 +2877,6 @@ public class frm_dashboard extends javax.swing.JFrame
         }
         escape(lbl_employee, evt.getKeyCode(), panel_employee);
     }//GEN-LAST:event_lbl_empdetKeyPressed
-
-    private void txt_det_custidActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_txt_det_custidActionPerformed
-    {//GEN-HEADEREND:event_txt_det_custidActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_det_custidActionPerformed
 
     public static void main(String args[])
     {
@@ -3076,7 +2964,24 @@ public class frm_dashboard extends javax.swing.JFrame
         header.setFont(new Font("Cascadia Mono", Font.PLAIN, 20));
     }
 
-    public void visibility(boolean cust, boolean emp, boolean product, boolean bill, boolean account, boolean user, boolean extra)
+    //to call when enter key pressed
+    public void visibility(int code, JLabel label, boolean cust, boolean emp, boolean product, boolean bill, boolean account, boolean user, boolean extra)
+    {
+        if (code == KeyEvent.VK_ENTER)
+        {
+            panel_customer.setVisible(cust);
+            panel_employee.setVisible(emp);
+            panel_product.setVisible(product);
+            panel_bill.setVisible(bill);
+            panel_account.setVisible(account);
+            panel_user.setVisible(user);
+            panel_extra.setVisible(extra);
+            label.grabFocus();
+        }
+    }
+
+    //to call when from sidepane with mouseclick
+    public void visibility(JLabel label, boolean cust, boolean emp, boolean product, boolean bill, boolean account, boolean user, boolean extra)
     {
         panel_customer.setVisible(cust);
         panel_employee.setVisible(emp);
@@ -3085,22 +2990,36 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_account.setVisible(account);
         panel_user.setVisible(user);
         panel_extra.setVisible(extra);
-    }
-
-    public void visibility(JLabel label, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool)
-    {
-        add.setVisible(addbool);
-        edit.setVisible(editbool);
-        det.setVisible(detbool);
         label.grabFocus();
     }
 
+    //to call when the enter key pressed in main panel
+    void visibility(int code, JTextField field, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool)
+    {
+        if (code == KeyEvent.VK_ENTER)
+        {
+            add.setVisible(addbool);
+            edit.setVisible(editbool);
+            det.setVisible(detbool);
+            field.grabFocus();
+        }
+    }
+
+    //while inside the main panel
     public void visibility(JTextField field, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool)
     {
         add.setVisible(addbool);
         edit.setVisible(editbool);
         det.setVisible(detbool);
         field.grabFocus();
+    }
+
+    //to call from sidepane
+    public void visibility(KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool)
+    {
+        add.setVisible(addbool);
+        edit.setVisible(editbool);
+        det.setVisible(detbool);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

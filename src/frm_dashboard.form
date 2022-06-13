@@ -755,27 +755,27 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="1061" max="32767" attributes="0"/>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Component id="panel_user" alignment="1" pref="1067" max="32767" attributes="0"/>
+                          <Component id="panel_user" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-                          <Component id="panel_product" alignment="0" pref="1067" max="32767" attributes="0"/>
+                          <Component id="panel_product" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
-                          <Component id="panel_bill" alignment="0" pref="1067" max="32767" attributes="0"/>
+                          <Component id="panel_bill" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="4" groupAlignment="0" attributes="0">
-                          <Component id="panel_account" alignment="1" pref="1067" max="32767" attributes="0"/>
+                          <Component id="panel_account" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
-                          <Component id="panel_employee" alignment="0" pref="1061" max="32767" attributes="0"/>
+                          <Component id="panel_employee" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="6" groupAlignment="0" attributes="0">
-                          <Component id="panel_extra" alignment="1" pref="1067" max="32767" attributes="0"/>
+                          <Component id="panel_extra" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="7" groupAlignment="0" attributes="0">
-                          <Component id="panel_customer" alignment="0" pref="1067" max="32767" attributes="0"/>
+                          <Component id="panel_customer" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1038,9 +1038,7 @@
                                     </Property>
                                   </Properties>
                                   <Events>
-                                    <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_add_custidFocusGained"/>
                                     <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_add_custidFocusLost"/>
-                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_add_custidActionPerformed"/>
                                     <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_custidKeyPressed"/>
                                   </Events>
                                 </Component>
@@ -1093,7 +1091,6 @@
                                     </Property>
                                   </Properties>
                                   <Events>
-                                    <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_add_custnmFocusGained"/>
                                     <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_add_custnmFocusLost"/>
                                     <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_custnmKeyPressed"/>
                                   </Events>
@@ -1147,7 +1144,6 @@
                                     </Property>
                                   </Properties>
                                   <Events>
-                                    <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_add_custemailFocusGained"/>
                                     <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_add_custemailFocusLost"/>
                                     <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_custemailKeyPressed"/>
                                   </Events>
@@ -1201,7 +1197,6 @@
                                     </Property>
                                   </Properties>
                                   <Events>
-                                    <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_add_custnoFocusGained"/>
                                     <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_add_custnoFocusLost"/>
                                     <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_custnoKeyPressed"/>
                                   </Events>
@@ -1255,7 +1250,6 @@
                                     </Property>
                                   </Properties>
                                   <Events>
-                                    <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_add_custsaddFocusGained"/>
                                     <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_add_custsaddFocusLost"/>
                                     <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_custsaddKeyPressed"/>
                                   </Events>
@@ -1309,7 +1303,6 @@
                                     </Property>
                                   </Properties>
                                   <Events>
-                                    <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_add_custsnameFocusGained"/>
                                     <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_add_custsnameFocusLost"/>
                                     <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_custsnameKeyPressed"/>
                                   </Events>
@@ -2021,7 +2014,6 @@
                                   </Properties>
                                   <Events>
                                     <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_det_custidFocusLost"/>
-                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_det_custidActionPerformed"/>
                                     <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_det_custidKeyPressed"/>
                                   </Events>
                                 </Component>
