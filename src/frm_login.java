@@ -29,7 +29,6 @@ public class frm_login extends javax.swing.JFrame
         pnl_bg_login = new javax.swing.JPanel();
         kpanel_left = new com.k33ptoo.components.KGradientPanel();
         lbl_right_img = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         kpanel_right = new com.k33ptoo.components.KGradientPanel();
         kGradientPanel3 = new com.k33ptoo.components.KGradientPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -107,30 +106,17 @@ public class frm_login extends javax.swing.JFrame
         lbl_right_img.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_right_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/repair-phone - Copy.png"))); // NOI18N
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/outline_close_white_48dp.png"))); // NOI18N
-        jLabel4.setPreferredSize(new java.awt.Dimension(40, 50));
-
         javax.swing.GroupLayout kpanel_leftLayout = new javax.swing.GroupLayout(kpanel_left);
         kpanel_left.setLayout(kpanel_leftLayout);
         kpanel_leftLayout.setHorizontalGroup(
             kpanel_leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbl_right_img, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
-            .addGroup(kpanel_leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(kpanel_leftLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         kpanel_leftLayout.setVerticalGroup(
             kpanel_leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(kpanel_leftLayout.createSequentialGroup()
                 .addComponent(lbl_right_img, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 50, Short.MAX_VALUE))
-            .addGroup(kpanel_leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(kpanel_leftLayout.createSequentialGroup()
-                    .addGap(0, 276, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 276, Short.MAX_VALUE)))
         );
 
         kpanel_right.setkEndColor(new java.awt.Color(228, 235, 246));
@@ -707,7 +693,6 @@ public class frm_login extends javax.swing.JFrame
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLayeredPane jLayeredPane1;
