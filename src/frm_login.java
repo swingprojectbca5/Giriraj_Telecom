@@ -672,8 +672,11 @@ public class frm_login extends javax.swing.JFrame
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_loginBtnActionPerformed
     {//GEN-HEADEREND:event_loginBtnActionPerformed
-        frm_dashboard dashboard = new frm_dashboard();
+        frm_dashboard dashboard = new frm_dashboard(jComboBox1.getSelectedItem().toString());
         dashboard.setVisible(true);
+
+        dashboard.jLabel1.setText(jComboBox1.getSelectedItem().toString());
+        this.dispose();
     }//GEN-LAST:event_loginBtnActionPerformed
 
     public static void main(String args[])
@@ -689,7 +692,7 @@ public class frm_login extends javax.swing.JFrame
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox chk_show;
-    private javax.swing.JComboBox<String> jComboBox1;
+    public javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

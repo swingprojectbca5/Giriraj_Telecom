@@ -23,14 +23,34 @@ public class frm_dashboard extends javax.swing.JFrame
     public frm_dashboard()
     {
         initComponents();
-        screensize();
-
         panel_main.setVisible(true);
-
         visibility(jLabel2, false, false, false, false, false, false, true);
+
+        screensize();
 
         tableheader(table_custedit.getTableHeader());
         tableheader(table_custdet.getTableHeader());
+    }
+
+    public frm_dashboard(String name)
+    {
+        initComponents();
+        panel_main.setVisible(true);
+        visibility(jLabel2, false, false, false, false, false, false, true);
+
+        screensize();
+
+        tableheader(table_custedit.getTableHeader());
+        tableheader(table_custdet.getTableHeader());
+
+        if (name.equals("ADMIN"))
+        {
+            lbl_customer.setEnabled(true);
+        }
+        else
+        {
+            lbl_customer.setEnabled(false);
+        }
     }
 
     @SuppressWarnings("unchecked")
@@ -586,7 +606,6 @@ public class frm_dashboard extends javax.swing.JFrame
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 30)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("HELLO DHRUV");
 
         javax.swing.GroupLayout pnl_sidepaneLayout = new javax.swing.GroupLayout(pnl_sidepane);
         pnl_sidepane.setLayout(pnl_sidepaneLayout);
@@ -1823,7 +1842,7 @@ public class frm_dashboard extends javax.swing.JFrame
             .addGroup(panel_customerLayout.createSequentialGroup()
                 .addComponent(panel_custmenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addComponent(panel_custmain, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE))
+                .addComponent(panel_custmain, javax.swing.GroupLayout.PREFERRED_SIZE, 660, Short.MAX_VALUE))
         );
 
         panel_employee.setkEndColor(new java.awt.Color(228, 235, 246));
@@ -3819,7 +3838,7 @@ public class frm_dashboard extends javax.swing.JFrame
         det.setVisible(detbool);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
