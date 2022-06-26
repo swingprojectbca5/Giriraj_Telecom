@@ -208,27 +208,10 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_prodet = new javax.swing.JLabel();
         panel_promain = new com.k33ptoo.components.KGradientPanel();
         panel_addpro = new com.k33ptoo.components.KGradientPanel();
-        panel_txt_addproid8 = new com.k33ptoo.components.KGradientPanel();
-        txt_add_proid6 = new javax.swing.JTextField();
-        panel_txt_addproid9 = new com.k33ptoo.components.KGradientPanel();
-        txt_add_proid7 = new javax.swing.JTextField();
-        panel_txt_addproid10 = new com.k33ptoo.components.KGradientPanel();
-        txt_add_proid8 = new javax.swing.JTextField();
-        panel_txt_addproid = new com.k33ptoo.components.KGradientPanel();
-        txt_add_proid = new javax.swing.JTextField();
-        panel_txt_addproid6 = new com.k33ptoo.components.KGradientPanel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        panel_txt_addproid7 = new com.k33ptoo.components.KGradientPanel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        panel_txt_addproid11 = new com.k33ptoo.components.KGradientPanel();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        panel_txt_addproid12 = new com.k33ptoo.components.KGradientPanel();
-        txt_add_proid1 = new javax.swing.JTextField();
-        lbl_add_emprmimg2 = new javax.swing.JLabel();
-        lbl_add_empimg1 = new javax.swing.JLabel();
-        lbl_add_empaddimg2 = new javax.swing.JLabel();
-        loginBtn6 = new com.k33ptoo.components.KButton();
+        kGradientPanel6 = new com.k33ptoo.components.KGradientPanel();
+        kGradientPanel5 = new com.k33ptoo.components.KGradientPanel();
+        kGradientPanel4 = new com.k33ptoo.components.KGradientPanel();
+        kGradientPanel3 = new com.k33ptoo.components.KGradientPanel();
         panel_bill = new com.k33ptoo.components.KGradientPanel();
         panel_account = new com.k33ptoo.components.KGradientPanel();
         panel_user = new com.k33ptoo.components.KGradientPanel();
@@ -380,6 +363,13 @@ public class frm_dashboard extends javax.swing.JFrame
         pnl_product.setkEndColor(new java.awt.Color(228, 235, 246));
         pnl_product.setkStartColor(new java.awt.Color(228, 235, 246));
         pnl_product.setOpaque(false);
+        pnl_product.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                pnl_productMouseClicked(evt);
+            }
+        });
 
         lbl_product.setDisplayedMnemonic('p');
         lbl_product.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
@@ -3212,7 +3202,7 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addComponent(panel_editempmenu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panel_empdetmenu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 387, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         panel_promenuLayout.setVerticalGroup(
             panel_promenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3231,400 +3221,136 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_addpro.setkStartColor(new java.awt.Color(228, 235, 246));
         panel_addpro.setOpaque(false);
 
-        panel_txt_addproid8.setkBorderRadius(40);
-        panel_txt_addproid8.setkEndColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addproid8.setkStartColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addproid8.setOpaque(false);
-
-        txt_add_proid6.setBackground(new java.awt.Color(164, 177, 252));
-        txt_add_proid6.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_add_proid6.setForeground(new java.awt.Color(228, 235, 246));
-        txt_add_proid6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_add_proid6.setText("PRODUCT ID");
-        txt_add_proid6.setBorder(null);
-        txt_add_proid6.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                txt_add_proid6FocusLost(evt);
-            }
-        });
-        txt_add_proid6.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
-                txt_add_proid6KeyPressed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout panel_txt_addproid8Layout = new javax.swing.GroupLayout(panel_txt_addproid8);
-        panel_txt_addproid8.setLayout(panel_txt_addproid8Layout);
-        panel_txt_addproid8Layout.setHorizontalGroup(
-            panel_txt_addproid8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_txt_addproid8Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(txt_add_proid6, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
-        );
-        panel_txt_addproid8Layout.setVerticalGroup(
-            panel_txt_addproid8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_add_proid6, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        panel_txt_addproid9.setkBorderRadius(40);
-        panel_txt_addproid9.setkEndColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addproid9.setkStartColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addproid9.setOpaque(false);
-
-        txt_add_proid7.setBackground(new java.awt.Color(164, 177, 252));
-        txt_add_proid7.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_add_proid7.setForeground(new java.awt.Color(228, 235, 246));
-        txt_add_proid7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_add_proid7.setText("PRODUCT NAME");
-        txt_add_proid7.setBorder(null);
-        txt_add_proid7.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                txt_add_proid7FocusLost(evt);
-            }
-        });
-        txt_add_proid7.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
-                txt_add_proid7KeyPressed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout panel_txt_addproid9Layout = new javax.swing.GroupLayout(panel_txt_addproid9);
-        panel_txt_addproid9.setLayout(panel_txt_addproid9Layout);
-        panel_txt_addproid9Layout.setHorizontalGroup(
-            panel_txt_addproid9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_txt_addproid9Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(txt_add_proid7, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
-        );
-        panel_txt_addproid9Layout.setVerticalGroup(
-            panel_txt_addproid9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_add_proid7, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        panel_txt_addproid10.setkBorderRadius(40);
-        panel_txt_addproid10.setkEndColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addproid10.setkStartColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addproid10.setOpaque(false);
-
-        txt_add_proid8.setBackground(new java.awt.Color(164, 177, 252));
-        txt_add_proid8.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_add_proid8.setForeground(new java.awt.Color(228, 235, 246));
-        txt_add_proid8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_add_proid8.setText("COST PRICE");
-        txt_add_proid8.setBorder(null);
-        txt_add_proid8.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                txt_add_proid8FocusLost(evt);
-            }
-        });
-        txt_add_proid8.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
-                txt_add_proid8KeyPressed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout panel_txt_addproid10Layout = new javax.swing.GroupLayout(panel_txt_addproid10);
-        panel_txt_addproid10.setLayout(panel_txt_addproid10Layout);
-        panel_txt_addproid10Layout.setHorizontalGroup(
-            panel_txt_addproid10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_txt_addproid10Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(txt_add_proid8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
-        );
-        panel_txt_addproid10Layout.setVerticalGroup(
-            panel_txt_addproid10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_add_proid8, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        panel_txt_addproid.setkBorderRadius(40);
-        panel_txt_addproid.setkEndColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addproid.setkStartColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addproid.setOpaque(false);
-
-        txt_add_proid.setBackground(new java.awt.Color(164, 177, 252));
-        txt_add_proid.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_add_proid.setForeground(new java.awt.Color(228, 235, 246));
-        txt_add_proid.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_add_proid.setText("SELLING PRICE");
-        txt_add_proid.setBorder(null);
-        txt_add_proid.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                txt_add_proidFocusLost(evt);
-            }
-        });
-        txt_add_proid.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
-                txt_add_proidKeyPressed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout panel_txt_addproidLayout = new javax.swing.GroupLayout(panel_txt_addproid);
-        panel_txt_addproid.setLayout(panel_txt_addproidLayout);
-        panel_txt_addproidLayout.setHorizontalGroup(
-            panel_txt_addproidLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_txt_addproidLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(txt_add_proid, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
-        );
-        panel_txt_addproidLayout.setVerticalGroup(
-            panel_txt_addproidLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_add_proid, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        panel_txt_addproid6.setkBorderRadius(40);
-        panel_txt_addproid6.setkEndColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addproid6.setkStartColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addproid6.setOpaque(false);
-
-        jComboBox2.setBackground(new java.awt.Color(164, 177, 252));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BRAND", "Item 2", "Item 3", "Item 4" }));
-        jComboBox2.setBorder(new javax.swing.border.MatteBorder(null));
-
-        javax.swing.GroupLayout panel_txt_addproid6Layout = new javax.swing.GroupLayout(panel_txt_addproid6);
-        panel_txt_addproid6.setLayout(panel_txt_addproid6Layout);
-        panel_txt_addproid6Layout.setHorizontalGroup(
-            panel_txt_addproid6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_txt_addproid6Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
-        );
-        panel_txt_addproid6Layout.setVerticalGroup(
-            panel_txt_addproid6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jComboBox2, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        panel_txt_addproid7.setkBorderRadius(40);
-        panel_txt_addproid7.setkEndColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addproid7.setkStartColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addproid7.setOpaque(false);
-
-        jComboBox3.setBackground(new java.awt.Color(164, 177, 252));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CATAGORY", "Item 2", "Item 3", "Item 4" }));
-        jComboBox3.setBorder(new javax.swing.border.MatteBorder(null));
-
-        javax.swing.GroupLayout panel_txt_addproid7Layout = new javax.swing.GroupLayout(panel_txt_addproid7);
-        panel_txt_addproid7.setLayout(panel_txt_addproid7Layout);
-        panel_txt_addproid7Layout.setHorizontalGroup(
-            panel_txt_addproid7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_txt_addproid7Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
-        );
-        panel_txt_addproid7Layout.setVerticalGroup(
-            panel_txt_addproid7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jComboBox3, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        panel_txt_addproid11.setkBorderRadius(40);
-        panel_txt_addproid11.setkEndColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addproid11.setkStartColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addproid11.setOpaque(false);
-
-        jTextArea1.setBackground(new java.awt.Color(164, 177, 252));
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("DISCRIPTION");
-        jScrollPane5.setViewportView(jTextArea1);
-
-        javax.swing.GroupLayout panel_txt_addproid11Layout = new javax.swing.GroupLayout(panel_txt_addproid11);
-        panel_txt_addproid11.setLayout(panel_txt_addproid11Layout);
-        panel_txt_addproid11Layout.setHorizontalGroup(
-            panel_txt_addproid11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_txt_addproid11Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        panel_txt_addproid11Layout.setVerticalGroup(
-            panel_txt_addproid11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
-        );
-
-        panel_txt_addproid12.setkBorderRadius(40);
-        panel_txt_addproid12.setkEndColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addproid12.setkStartColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addproid12.setOpaque(false);
-
-        txt_add_proid1.setBackground(new java.awt.Color(164, 177, 252));
-        txt_add_proid1.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_add_proid1.setForeground(new java.awt.Color(228, 235, 246));
-        txt_add_proid1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_add_proid1.setText("QTY");
-        txt_add_proid1.setBorder(null);
-        txt_add_proid1.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                txt_add_proid1FocusLost(evt);
-            }
-        });
-        txt_add_proid1.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
-                txt_add_proid1KeyPressed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout panel_txt_addproid12Layout = new javax.swing.GroupLayout(panel_txt_addproid12);
-        panel_txt_addproid12.setLayout(panel_txt_addproid12Layout);
-        panel_txt_addproid12Layout.setHorizontalGroup(
-            panel_txt_addproid12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_txt_addproid12Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(txt_add_proid1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
-        );
-        panel_txt_addproid12Layout.setVerticalGroup(
-            panel_txt_addproid12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_add_proid1, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        lbl_add_emprmimg2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbl_add_emprmimg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/substract.png"))); // NOI18N
-        lbl_add_emprmimg2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lbl_add_emprmimg2.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
-                lbl_add_emprmimg2MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
-                lbl_add_emprmimg2MouseExited(evt);
-            }
-        });
-
-        lbl_add_empimg1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbl_add_empimg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/man.png"))); // NOI18N
-
-        lbl_add_empaddimg2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbl_add_empaddimg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/add-user.png"))); // NOI18N
-        lbl_add_empaddimg2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lbl_add_empaddimg2.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
-                lbl_add_empaddimg2MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
-                lbl_add_empaddimg2MouseExited(evt);
-            }
-        });
-
-        loginBtn6.setBorder(null);
-        loginBtn6.setText("ADD CUSTOMER");
-        loginBtn6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        loginBtn6.setkBorderRadius(30);
-        loginBtn6.setkEndColor(new java.awt.Color(68, 82, 121));
-        loginBtn6.setkHoverEndColor(new java.awt.Color(178, 199, 231));
-        loginBtn6.setkHoverForeGround(new java.awt.Color(68, 82, 121));
-        loginBtn6.setkHoverStartColor(new java.awt.Color(178, 199, 231));
-        loginBtn6.setkStartColor(new java.awt.Color(68, 82, 121));
-
         javax.swing.GroupLayout panel_addproLayout = new javax.swing.GroupLayout(panel_addpro);
         panel_addpro.setLayout(panel_addproLayout);
         panel_addproLayout.setHorizontalGroup(
             panel_addproLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_addproLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbl_add_empimg1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panel_addproLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lbl_add_emprmimg2, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                    .addComponent(lbl_add_empaddimg2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(366, 366, 366))
-            .addGroup(panel_addproLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(panel_addproLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel_addproLayout.createSequentialGroup()
-                        .addComponent(panel_txt_addproid8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(panel_txt_addproid9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(panel_txt_addproid10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panel_addproLayout.createSequentialGroup()
-                        .addGroup(panel_addproLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panel_addproLayout.createSequentialGroup()
-                                .addComponent(panel_txt_addproid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(10, 10, 10)
-                                .addComponent(panel_txt_addproid6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panel_addproLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(loginBtn6, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(panel_txt_addproid11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(10, 10, 10)
-                        .addGroup(panel_addproLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(panel_txt_addproid12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(panel_txt_addproid7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(21, Short.MAX_VALUE))
+            .addGap(0, 961, Short.MAX_VALUE)
         );
         panel_addproLayout.setVerticalGroup(
             panel_addproLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_addproLayout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addGroup(panel_addproLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lbl_add_empimg1)
-                    .addGroup(panel_addproLayout.createSequentialGroup()
-                        .addComponent(lbl_add_emprmimg2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lbl_add_empaddimg2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(panel_addproLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(panel_txt_addproid9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panel_txt_addproid8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panel_txt_addproid10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(60, 60, 60)
-                .addGroup(panel_addproLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panel_txt_addproid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panel_txt_addproid6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panel_txt_addproid7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(60, 60, 60)
-                .addGroup(panel_addproLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panel_txt_addproid12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panel_txt_addproid11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                .addComponent(loginBtn6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37))
+            .addGap(0, 560, Short.MAX_VALUE)
+        );
+
+        kGradientPanel6.setkEndColor(new java.awt.Color(228, 235, 246));
+        kGradientPanel6.setkStartColor(new java.awt.Color(228, 235, 246));
+        kGradientPanel6.setOpaque(false);
+
+        javax.swing.GroupLayout kGradientPanel6Layout = new javax.swing.GroupLayout(kGradientPanel6);
+        kGradientPanel6.setLayout(kGradientPanel6Layout);
+        kGradientPanel6Layout.setHorizontalGroup(
+            kGradientPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 961, Short.MAX_VALUE)
+        );
+        kGradientPanel6Layout.setVerticalGroup(
+            kGradientPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 560, Short.MAX_VALUE)
+        );
+
+        kGradientPanel5.setkEndColor(new java.awt.Color(228, 235, 246));
+        kGradientPanel5.setkStartColor(new java.awt.Color(228, 235, 246));
+        kGradientPanel5.setOpaque(false);
+
+        javax.swing.GroupLayout kGradientPanel5Layout = new javax.swing.GroupLayout(kGradientPanel5);
+        kGradientPanel5.setLayout(kGradientPanel5Layout);
+        kGradientPanel5Layout.setHorizontalGroup(
+            kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 961, Short.MAX_VALUE)
+        );
+        kGradientPanel5Layout.setVerticalGroup(
+            kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 560, Short.MAX_VALUE)
+        );
+
+        kGradientPanel4.setkEndColor(new java.awt.Color(228, 235, 246));
+        kGradientPanel4.setkStartColor(new java.awt.Color(228, 235, 246));
+        kGradientPanel4.setOpaque(false);
+
+        javax.swing.GroupLayout kGradientPanel4Layout = new javax.swing.GroupLayout(kGradientPanel4);
+        kGradientPanel4.setLayout(kGradientPanel4Layout);
+        kGradientPanel4Layout.setHorizontalGroup(
+            kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 961, Short.MAX_VALUE)
+        );
+        kGradientPanel4Layout.setVerticalGroup(
+            kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 560, Short.MAX_VALUE)
+        );
+
+        kGradientPanel3.setkEndColor(new java.awt.Color(228, 235, 246));
+        kGradientPanel3.setkStartColor(new java.awt.Color(228, 235, 246));
+        kGradientPanel3.setOpaque(false);
+
+        javax.swing.GroupLayout kGradientPanel3Layout = new javax.swing.GroupLayout(kGradientPanel3);
+        kGradientPanel3.setLayout(kGradientPanel3Layout);
+        kGradientPanel3Layout.setHorizontalGroup(
+            kGradientPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 961, Short.MAX_VALUE)
+        );
+        kGradientPanel3Layout.setVerticalGroup(
+            kGradientPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 560, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout panel_promainLayout = new javax.swing.GroupLayout(panel_promain);
         panel_promain.setLayout(panel_promainLayout);
         panel_promainLayout.setHorizontalGroup(
             panel_promainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_promainLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(panel_addpro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 1061, Short.MAX_VALUE)
+            .addGroup(panel_promainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_promainLayout.createSequentialGroup()
+                    .addGap(50, 50, 50)
+                    .addComponent(kGradientPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(50, 50, 50)))
+            .addGroup(panel_promainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_promainLayout.createSequentialGroup()
+                    .addGap(50, 50, 50)
+                    .addComponent(kGradientPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(50, 50, 50)))
+            .addGroup(panel_promainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_promainLayout.createSequentialGroup()
+                    .addGap(50, 50, 50)
+                    .addComponent(kGradientPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(50, 50, 50)))
+            .addGroup(panel_promainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_promainLayout.createSequentialGroup()
+                    .addGap(50, 50, 50)
+                    .addComponent(panel_addpro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(50, Short.MAX_VALUE)))
+            .addGroup(panel_promainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_promainLayout.createSequentialGroup()
+                    .addGap(50, 50, 50)
+                    .addComponent(kGradientPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(50, 50, 50)))
         );
         panel_promainLayout.setVerticalGroup(
             panel_promainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_promainLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(panel_addpro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
+            .addGap(0, 660, Short.MAX_VALUE)
+            .addGroup(panel_promainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_promainLayout.createSequentialGroup()
+                    .addGap(50, 50, 50)
+                    .addComponent(kGradientPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(50, 50, 50)))
+            .addGroup(panel_promainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_promainLayout.createSequentialGroup()
+                    .addGap(50, 50, 50)
+                    .addComponent(kGradientPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(50, 50, 50)))
+            .addGroup(panel_promainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_promainLayout.createSequentialGroup()
+                    .addGap(50, 50, 50)
+                    .addComponent(kGradientPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(50, 50, 50)))
+            .addGroup(panel_promainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_promainLayout.createSequentialGroup()
+                    .addGap(50, 50, 50)
+                    .addComponent(panel_addpro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(50, Short.MAX_VALUE)))
+            .addGroup(panel_promainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_promainLayout.createSequentialGroup()
+                    .addGap(50, 50, 50)
+                    .addComponent(kGradientPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(50, 50, 50)))
         );
 
         javax.swing.GroupLayout panel_productLayout = new javax.swing.GroupLayout(panel_product);
@@ -3920,8 +3646,10 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_productMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_productMouseClicked
     {//GEN-HEADEREND:event_lbl_productMouseClicked
-        visibility(lbl_product, false, false, false, true, false, false, false);
+        visibility(lbl_addpro, false, false, true, false, false, false, false);
         HoverColor(pnl_product, lbl_product, Color.WHITE, Color.WHITE, Color.BLACK);
+        // visibility(panel_addpro, true, panel, false, panel_detemp, false, panel_empextra, false);
+        panel_addpro.setVisible(true);
     }//GEN-LAST:event_lbl_productMouseClicked
 
     private void lbl_productFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_productFocusLost
@@ -3937,7 +3665,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private void lbl_employeeKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_employeeKeyPressed
     {//GEN-HEADEREND:event_lbl_employeeKeyPressed
         visibility(evt.getKeyCode(), lbl_addemp, false, true, false, false, false, false, false);
-        visibility(panel_addemp, true, panel_editemp, false, panel_empextra, false);
+        visibility(panel_addemp, true, panel_editemp, false, panel_detemp, false, panel_empextra, false);
     }//GEN-LAST:event_lbl_employeeKeyPressed
 
     private void lbl_employeeMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_employeeMouseExited
@@ -3954,7 +3682,7 @@ public class frm_dashboard extends javax.swing.JFrame
     {//GEN-HEADEREND:event_lbl_employeeMouseClicked
         visibility(lbl_addemp, false, true, false, false, false, false, false);
         HoverColor(pnl_employee, lbl_employee, Color.WHITE, Color.WHITE, Color.BLACK);
-        visibility(panel_addemp, true, panel_editemp, false, panel_empextra, false);
+        visibility(panel_addemp, true, panel_editemp, false, panel_detemp, false, panel_empextra, false);
     }//GEN-LAST:event_lbl_employeeMouseClicked
 
     private void lbl_employeeFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_employeeFocusLost
@@ -4277,7 +4005,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_addempKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_addempKeyPressed
     {//GEN-HEADEREND:event_lbl_addempKeyPressed
-        visibility(txt_add_empid, panel_addemp, true, panel_editemp, false, panel_empextra, false);
+        visibility(txt_add_empid, panel_addemp, true, panel_editemp, false, panel_detemp, false, panel_empextra, false);
         escape(lbl_employee, evt.getKeyCode(), panel_employee);
     }//GEN-LAST:event_lbl_addempKeyPressed
 
@@ -4324,7 +4052,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_empdetMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_empdetMouseClicked
     {//GEN-HEADEREND:event_lbl_empdetMouseClicked
-        visibility(txt_add_empid, panel_addemp, false, panel_editemp, false, panel_detemp, true);
+        visibility(txt_add_empid, panel_addemp, false, panel_editemp, false, panel_detemp, true, panel_empextra, false);
     }//GEN-LAST:event_lbl_empdetMouseClicked
 
     private void lbl_empdetMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_empdetMouseEntered
@@ -4339,13 +4067,13 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_empdetKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_empdetKeyPressed
     {//GEN-HEADEREND:event_lbl_empdetKeyPressed
-        visibility(evt.getKeyCode(), txt_det_empid, panel_addemp, false, panel_editemp, false, panel_detemp, true);
+        visibility(evt.getKeyCode(), txt_det_empid, panel_addemp, false, panel_editemp, false, panel_detemp, true, panel_empextra, false);
         escape(lbl_employee, evt.getKeyCode(), panel_employee);
     }//GEN-LAST:event_lbl_empdetKeyPressed
 
     private void lbl_addempMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_addempMouseClicked
     {//GEN-HEADEREND:event_lbl_addempMouseClicked
-        visibility(txt_det_empid, panel_addemp, true, panel_editemp, false, panel_empextra, false);
+        visibility(txt_det_empid, panel_addemp, true, panel_editemp, false, panel_detemp, false, panel_empextra, false);
     }//GEN-LAST:event_lbl_addempMouseClicked
 
     private void txt_add_empidFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_empidFocusLost
@@ -4626,75 +4354,13 @@ public class frm_dashboard extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_lbl_prodetKeyPressed
 
-    private void txt_add_proid6FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_proid6FocusLost
-    {//GEN-HEADEREND:event_txt_add_proid6FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_add_proid6FocusLost
-
-    private void txt_add_proid6KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_proid6KeyPressed
-    {//GEN-HEADEREND:event_txt_add_proid6KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_add_proid6KeyPressed
-
-    private void txt_add_proid7FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_proid7FocusLost
-    {//GEN-HEADEREND:event_txt_add_proid7FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_add_proid7FocusLost
-
-    private void txt_add_proid7KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_proid7KeyPressed
-    {//GEN-HEADEREND:event_txt_add_proid7KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_add_proid7KeyPressed
-
-    private void txt_add_proid8FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_proid8FocusLost
-    {//GEN-HEADEREND:event_txt_add_proid8FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_add_proid8FocusLost
-
-    private void txt_add_proid8KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_proid8KeyPressed
-    {//GEN-HEADEREND:event_txt_add_proid8KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_add_proid8KeyPressed
-
-    private void txt_add_proidFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_proidFocusLost
-    {//GEN-HEADEREND:event_txt_add_proidFocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_add_proidFocusLost
-
-    private void txt_add_proidKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_proidKeyPressed
-    {//GEN-HEADEREND:event_txt_add_proidKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_add_proidKeyPressed
-
-    private void lbl_add_emprmimg2MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_add_emprmimg2MouseEntered
-    {//GEN-HEADEREND:event_lbl_add_emprmimg2MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lbl_add_emprmimg2MouseEntered
-
-    private void lbl_add_emprmimg2MouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_add_emprmimg2MouseExited
-    {//GEN-HEADEREND:event_lbl_add_emprmimg2MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lbl_add_emprmimg2MouseExited
-
-    private void lbl_add_empaddimg2MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_add_empaddimg2MouseEntered
-    {//GEN-HEADEREND:event_lbl_add_empaddimg2MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lbl_add_empaddimg2MouseEntered
-
-    private void lbl_add_empaddimg2MouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_add_empaddimg2MouseExited
-    {//GEN-HEADEREND:event_lbl_add_empaddimg2MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lbl_add_empaddimg2MouseExited
-
-    private void txt_add_proid1FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_proid1FocusLost
-    {//GEN-HEADEREND:event_txt_add_proid1FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_add_proid1FocusLost
-
-    private void txt_add_proid1KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_proid1KeyPressed
-    {//GEN-HEADEREND:event_txt_add_proid1KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_add_proid1KeyPressed
+    private void pnl_productMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_pnl_productMouseClicked
+    {//GEN-HEADEREND:event_pnl_productMouseClicked
+        visibility(lbl_addpro, false, false, true, false, false, false, false);
+        HoverColor(pnl_product, lbl_product, Color.WHITE, Color.WHITE, Color.BLACK);
+        // visibility(panel_addpro, true, panel, false, panel_detemp, false, panel_empextra, false);
+        panel_addpro.setVisible(true);
+    }//GEN-LAST:event_pnl_productMouseClicked
 
     public static void main(String args[])
     {
@@ -4839,9 +4505,39 @@ public class frm_dashboard extends javax.swing.JFrame
         edit.setVisible(editbool);
         det.setVisible(detbool);
     }
+
+    //to call when the enter key pressed in main panel
+    void visibility(int code, JTextField field, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool)
+    {
+        if (code == KeyEvent.VK_ENTER)
+        {
+            add.setVisible(addbool);
+            edit.setVisible(editbool);
+            det.setVisible(detbool);
+            fulldet.setVisible(fulldetbool);
+            field.grabFocus();
+        }
+    }
+
+    //while inside the main panel
+    public void visibility(JTextField field, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool)
+    {
+        add.setVisible(addbool);
+        edit.setVisible(editbool);
+        det.setVisible(detbool);
+        fulldet.setVisible(fulldetbool);
+        field.grabFocus();
+    }
+
+    //to call from sidepane
+    public void visibility(KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool)
+    {
+        add.setVisible(addbool);
+        edit.setVisible(editbool);
+        det.setVisible(detbool);
+        fulldet.setVisible(fulldetbool);
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
     public javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel4;
@@ -4849,23 +4545,22 @@ public class frm_dashboard extends javax.swing.JFrame
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextArea jTextArea1;
     private com.k33ptoo.components.KGradientPanel kGradientPanel1;
     private com.k33ptoo.components.KGradientPanel kGradientPanel12;
     private com.k33ptoo.components.KGradientPanel kGradientPanel19;
     private com.k33ptoo.components.KGradientPanel kGradientPanel2;
     private com.k33ptoo.components.KGradientPanel kGradientPanel20;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel3;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel4;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel5;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel6;
     private javax.swing.JLabel lbl_account;
     private javax.swing.JLabel lbl_add_empaddimg;
     private javax.swing.JLabel lbl_add_empaddimg1;
-    private javax.swing.JLabel lbl_add_empaddimg2;
     private javax.swing.JLabel lbl_add_empimg;
-    private javax.swing.JLabel lbl_add_empimg1;
     private javax.swing.JLabel lbl_add_emprmimg;
     private javax.swing.JLabel lbl_add_emprmimg1;
-    private javax.swing.JLabel lbl_add_emprmimg2;
     private javax.swing.JLabel lbl_addcust;
     private javax.swing.JLabel lbl_addemp;
     private javax.swing.JLabel lbl_addpro;
@@ -4890,7 +4585,6 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KButton loginBtn3;
     private com.k33ptoo.components.KButton loginBtn4;
     private com.k33ptoo.components.KButton loginBtn5;
-    private com.k33ptoo.components.KButton loginBtn6;
     private com.k33ptoo.components.KGradientPanel panel_account;
     private com.k33ptoo.components.KGradientPanel panel_addcust;
     private com.k33ptoo.components.KGradientPanel panel_addcustmenu;
@@ -4936,14 +4630,6 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel panel_txt_addempsadd;
     private com.k33ptoo.components.KGradientPanel panel_txt_addempsadd1;
     private com.k33ptoo.components.KGradientPanel panel_txt_addempsnm;
-    private com.k33ptoo.components.KGradientPanel panel_txt_addproid;
-    private com.k33ptoo.components.KGradientPanel panel_txt_addproid10;
-    private com.k33ptoo.components.KGradientPanel panel_txt_addproid11;
-    private com.k33ptoo.components.KGradientPanel panel_txt_addproid12;
-    private com.k33ptoo.components.KGradientPanel panel_txt_addproid6;
-    private com.k33ptoo.components.KGradientPanel panel_txt_addproid7;
-    private com.k33ptoo.components.KGradientPanel panel_txt_addproid8;
-    private com.k33ptoo.components.KGradientPanel panel_txt_addproid9;
     private com.k33ptoo.components.KGradientPanel panel_txt_detcustid;
     private com.k33ptoo.components.KGradientPanel panel_txt_detcustid1;
     private com.k33ptoo.components.KGradientPanel panel_txt_editcustadd;
@@ -4984,11 +4670,6 @@ public class frm_dashboard extends javax.swing.JFrame
     private javax.swing.JTextField txt_add_empno;
     private javax.swing.JTextField txt_add_empsadd;
     private javax.swing.JTextField txt_add_empsalary;
-    private javax.swing.JTextField txt_add_proid;
-    private javax.swing.JTextField txt_add_proid1;
-    private javax.swing.JTextField txt_add_proid6;
-    private javax.swing.JTextField txt_add_proid7;
-    private javax.swing.JTextField txt_add_proid8;
     private javax.swing.JTextField txt_det_custid;
     private javax.swing.JTextField txt_det_empid;
     private javax.swing.JTextField txt_edit_custemail;
