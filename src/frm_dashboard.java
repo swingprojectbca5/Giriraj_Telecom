@@ -17,9 +17,11 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.JTableHeader;
 
-public class frm_dashboard extends javax.swing.JFrame {
+public class frm_dashboard extends javax.swing.JFrame
+{
 
-    public frm_dashboard() {
+    public frm_dashboard()
+    {
         initComponents();
         panel_main.setVisible(true);
         visibility(jLabel2, false, false, false, false, false, false, true);
@@ -30,7 +32,8 @@ public class frm_dashboard extends javax.swing.JFrame {
         tableheader(table_custdet.getTableHeader());
     }
 
-    public frm_dashboard(String name) {
+    public frm_dashboard(String name)
+    {
         initComponents();
         panel_main.setVisible(true);
         visibility(jLabel2, false, false, false, false, false, false, true);
@@ -40,16 +43,20 @@ public class frm_dashboard extends javax.swing.JFrame {
         tableheader(table_custedit.getTableHeader());
         tableheader(table_custdet.getTableHeader());
 
-        if (name.equals("ADMIN")) {
+        if (name.equals("ADMIN"))
+        {
             lbl_customer.setEnabled(true);
-        } else {
+        }
+        else
+        {
             lbl_customer.setEnabled(false);
         }
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         kGradientPanel1 = new com.k33ptoo.components.KGradientPanel()
         {
@@ -270,27 +277,36 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_customer.setText("CUSTOMER MANAGEMENT");
         lbl_customer.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_customer.setNextFocusableComponent(lbl_employee);
-        lbl_customer.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
+        lbl_customer.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
                 lbl_customerFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt) {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 lbl_customerFocusLost(evt);
             }
         });
-        lbl_customer.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        lbl_customer.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
                 lbl_customerMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_customerMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_customerMouseExited(evt);
             }
         });
-        lbl_customer.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        lbl_customer.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 lbl_customerKeyPressed(evt);
             }
         });
@@ -322,27 +338,36 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_employee.setText("EMPLOYEE MANAGEMENT");
         lbl_employee.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_employee.setNextFocusableComponent(lbl_product);
-        lbl_employee.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
+        lbl_employee.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
                 lbl_employeeFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt) {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 lbl_employeeFocusLost(evt);
             }
         });
-        lbl_employee.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        lbl_employee.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
                 lbl_employeeMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_employeeMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_employeeMouseExited(evt);
             }
         });
-        lbl_employee.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        lbl_employee.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 lbl_employeeKeyPressed(evt);
             }
         });
@@ -364,8 +389,10 @@ public class frm_dashboard extends javax.swing.JFrame {
         pnl_product.setkEndColor(new java.awt.Color(228, 235, 246));
         pnl_product.setkStartColor(new java.awt.Color(228, 235, 246));
         pnl_product.setOpaque(false);
-        pnl_product.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        pnl_product.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
                 pnl_productMouseClicked(evt);
             }
         });
@@ -379,27 +406,36 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_product.setText("PRODUCT MANAGEMENT");
         lbl_product.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_product.setNextFocusableComponent(lbl_bill);
-        lbl_product.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
+        lbl_product.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
                 lbl_productFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt) {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 lbl_productFocusLost(evt);
             }
         });
-        lbl_product.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        lbl_product.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
                 lbl_productMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_productMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_productMouseExited(evt);
             }
         });
-        lbl_product.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        lbl_product.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 lbl_productKeyPressed(evt);
             }
         });
@@ -430,27 +466,36 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_bill.setText("BILL MANAGEMENT");
         lbl_bill.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_bill.setNextFocusableComponent(lbl_account);
-        lbl_bill.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
+        lbl_bill.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
                 lbl_billFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt) {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 lbl_billFocusLost(evt);
             }
         });
-        lbl_bill.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        lbl_bill.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
                 lbl_billMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_billMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_billMouseExited(evt);
             }
         });
-        lbl_bill.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        lbl_bill.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 lbl_billKeyPressed(evt);
             }
         });
@@ -480,27 +525,36 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_account.setText("ACCOUNT MANAGEMENT");
         lbl_account.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_account.setNextFocusableComponent(lbl_user);
-        lbl_account.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
+        lbl_account.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
                 lbl_accountFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt) {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 lbl_accountFocusLost(evt);
             }
         });
-        lbl_account.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        lbl_account.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
                 lbl_accountMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_accountMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_accountMouseExited(evt);
             }
         });
-        lbl_account.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        lbl_account.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 lbl_accountKeyPressed(evt);
             }
         });
@@ -530,27 +584,36 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_user.setText("USER MANUAL");
         lbl_user.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_user.setNextFocusableComponent(jLabel2);
-        lbl_user.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
+        lbl_user.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
                 lbl_userFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt) {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 lbl_userFocusLost(evt);
             }
         });
-        lbl_user.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        lbl_user.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
                 lbl_userMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_userMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_userMouseExited(evt);
             }
         });
-        lbl_user.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        lbl_user.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 lbl_userKeyPressed(evt);
             }
         });
@@ -635,7 +698,7 @@ public class frm_dashboard extends javax.swing.JFrame {
                 .addComponent(pnl_account, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(pnl_user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pnl_header.setkBorderRadius(30);
@@ -647,14 +710,18 @@ public class frm_dashboard extends javax.swing.JFrame {
         pnl_close.setkEndColor(new java.awt.Color(68, 82, 121));
         pnl_close.setkStartColor(new java.awt.Color(68, 82, 121));
         pnl_close.setOpaque(false);
-        pnl_close.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        pnl_close.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
                 pnl_closeMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 pnl_closeMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 pnl_closeMouseExited(evt);
             }
         });
@@ -677,14 +744,18 @@ public class frm_dashboard extends javax.swing.JFrame {
         );
 
         pnl_min.setBackground(new java.awt.Color(68, 82, 121));
-        pnl_min.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        pnl_min.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
                 pnl_minMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 pnl_minMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 pnl_minMouseExited(evt);
             }
         });
@@ -764,13 +835,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_add_custid.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_add_custid.setText("CUSTOMER ID");
         txt_add_custid.setBorder(null);
-        txt_add_custid.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_add_custid.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_add_custidFocusLost(evt);
             }
         });
-        txt_add_custid.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_add_custid.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_add_custidKeyPressed(evt);
             }
         });
@@ -800,13 +875,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_add_custnm.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_add_custnm.setText("CUSTOMER NAME");
         txt_add_custnm.setBorder(null);
-        txt_add_custnm.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_add_custnm.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_add_custnmFocusLost(evt);
             }
         });
-        txt_add_custnm.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_add_custnm.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_add_custnmKeyPressed(evt);
             }
         });
@@ -836,13 +915,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_add_custemail.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_add_custemail.setText("EMAIL");
         txt_add_custemail.setBorder(null);
-        txt_add_custemail.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_add_custemail.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_add_custemailFocusLost(evt);
             }
         });
-        txt_add_custemail.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_add_custemail.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_add_custemailKeyPressed(evt);
             }
         });
@@ -872,13 +955,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_add_custno.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_add_custno.setText("CONTACT NO.");
         txt_add_custno.setBorder(null);
-        txt_add_custno.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_add_custno.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_add_custnoFocusLost(evt);
             }
         });
-        txt_add_custno.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_add_custno.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_add_custnoKeyPressed(evt);
             }
         });
@@ -908,13 +995,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_add_custsadd.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_add_custsadd.setText("SHOP ADDRESS");
         txt_add_custsadd.setBorder(null);
-        txt_add_custsadd.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_add_custsadd.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_add_custsaddFocusLost(evt);
             }
         });
-        txt_add_custsadd.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_add_custsadd.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_add_custsaddKeyPressed(evt);
             }
         });
@@ -944,13 +1035,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_add_custsname.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_add_custsname.setText("SHOP NAME");
         txt_add_custsname.setBorder(null);
-        txt_add_custsname.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_add_custsname.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_add_custsnameFocusLost(evt);
             }
         });
-        txt_add_custsname.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_add_custsname.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_add_custsnameKeyPressed(evt);
             }
         });
@@ -979,21 +1074,28 @@ public class frm_dashboard extends javax.swing.JFrame {
         loginBtn.setkHoverStartColor(new java.awt.Color(178, 199, 231));
         loginBtn.setkStartColor(new java.awt.Color(68, 82, 121));
         loginBtn.setNextFocusableComponent(lbl_addcust);
-        loginBtn.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
+        loginBtn.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
                 loginBtnFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt) {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 loginBtnFocusLost(evt);
             }
         });
-        loginBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+        loginBtn.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 loginBtnMouseEntered(evt);
             }
         });
-        loginBtn.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        loginBtn.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 loginBtnKeyPressed(evt);
             }
         });
@@ -1056,14 +1158,16 @@ public class frm_dashboard extends javax.swing.JFrame {
 
         table_custedit.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         table_custedit.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object [][]
+            {
                 {"spareparts", "chargin socket", "display", "combo"},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null}
             },
-            new String [] {
+            new String []
+            {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
@@ -1130,13 +1234,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_edit_custid.setText("CUSTOMER ID");
         txt_edit_custid.setBorder(null);
         txt_edit_custid.setNextFocusableComponent(txt_edit_custnm);
-        txt_edit_custid.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_edit_custid.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_edit_custidFocusLost(evt);
             }
         });
-        txt_edit_custid.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_edit_custid.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_edit_custidKeyPressed(evt);
             }
         });
@@ -1167,13 +1275,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_edit_custnm.setText("CUSTOMER NAME");
         txt_edit_custnm.setBorder(null);
         txt_edit_custnm.setNextFocusableComponent(txt_edit_custno);
-        txt_edit_custnm.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_edit_custnm.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_edit_custnmFocusLost(evt);
             }
         });
-        txt_edit_custnm.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_edit_custnm.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_edit_custnmKeyPressed(evt);
             }
         });
@@ -1204,13 +1316,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_edit_custno.setText("CONTACT NO.");
         txt_edit_custno.setBorder(null);
         txt_edit_custno.setNextFocusableComponent(txt_edit_custemail);
-        txt_edit_custno.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_edit_custno.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_edit_custnoFocusLost(evt);
             }
         });
-        txt_edit_custno.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_edit_custno.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_edit_custnoKeyPressed(evt);
             }
         });
@@ -1241,13 +1357,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_edit_custemail.setText("EMAIL");
         txt_edit_custemail.setBorder(null);
         txt_edit_custemail.setNextFocusableComponent(txt_edit_custsnm);
-        txt_edit_custemail.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_edit_custemail.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_edit_custemailFocusLost(evt);
             }
         });
-        txt_edit_custemail.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_edit_custemail.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_edit_custemailKeyPressed(evt);
             }
         });
@@ -1278,13 +1398,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_edit_custsnm.setText("SHOP NAME");
         txt_edit_custsnm.setBorder(null);
         txt_edit_custsnm.setNextFocusableComponent(txt_edit_custsadd);
-        txt_edit_custsnm.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_edit_custsnm.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_edit_custsnmFocusLost(evt);
             }
         });
-        txt_edit_custsnm.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_edit_custsnm.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_edit_custsnmKeyPressed(evt);
             }
         });
@@ -1315,13 +1439,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_edit_custsadd.setText("SHOP ADDRESS");
         txt_edit_custsadd.setBorder(null);
         txt_edit_custsadd.setNextFocusableComponent(lbl_editcust);
-        txt_edit_custsadd.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_edit_custsadd.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_edit_custsaddFocusLost(evt);
             }
         });
-        txt_edit_custsadd.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_edit_custsadd.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_edit_custsaddKeyPressed(evt);
             }
         });
@@ -1395,13 +1523,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_det_custid.setText("CUSTOMER ID OR NAME");
         txt_det_custid.setBorder(null);
         txt_det_custid.setNextFocusableComponent(lbl_custdet);
-        txt_det_custid.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_det_custid.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_det_custidFocusLost(evt);
             }
         });
-        txt_det_custid.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_det_custid.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_det_custidKeyPressed(evt);
             }
         });
@@ -1430,20 +1562,24 @@ public class frm_dashboard extends javax.swing.JFrame {
         table_custdet.setBackground(new java.awt.Color(228, 235, 246));
         table_custdet.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         table_custdet.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object [][]
+            {
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null}
             },
-            new String [] {
+            new String []
+            {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
         table_custdet.setOpaque(false);
         table_custdet.setRowHeight(40);
-        table_custdet.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        table_custdet.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 table_custdetKeyPressed(evt);
             }
         });
@@ -1569,27 +1705,36 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_addcust.setText("ADD CUSTOMER");
         lbl_addcust.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_addcust.setNextFocusableComponent(lbl_editcust);
-        lbl_addcust.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
+        lbl_addcust.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
                 lbl_addcustFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt) {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 lbl_addcustFocusLost(evt);
             }
         });
-        lbl_addcust.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        lbl_addcust.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
                 lbl_addcustMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_addcustMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_addcustMouseExited(evt);
             }
         });
-        lbl_addcust.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        lbl_addcust.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 lbl_addcustKeyPressed(evt);
             }
         });
@@ -1618,27 +1763,36 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_editcust.setText("EDIT CUSTOMER");
         lbl_editcust.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_editcust.setNextFocusableComponent(lbl_custdet);
-        lbl_editcust.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
+        lbl_editcust.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
                 lbl_editcustFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt) {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 lbl_editcustFocusLost(evt);
             }
         });
-        lbl_editcust.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        lbl_editcust.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
                 lbl_editcustMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_editcustMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_editcustMouseExited(evt);
             }
         });
-        lbl_editcust.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        lbl_editcust.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 lbl_editcustKeyPressed(evt);
             }
         });
@@ -1667,27 +1821,36 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_custdet.setText("CUSTOMER DETAIL");
         lbl_custdet.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_custdet.setNextFocusableComponent(lbl_addcust);
-        lbl_custdet.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
+        lbl_custdet.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
                 lbl_custdetFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt) {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 lbl_custdetFocusLost(evt);
             }
         });
-        lbl_custdet.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        lbl_custdet.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
                 lbl_custdetMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_custdetMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_custdetMouseExited(evt);
             }
         });
-        lbl_custdet.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        lbl_custdet.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 lbl_custdetKeyPressed(evt);
             }
         });
@@ -1765,13 +1928,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_add_empid.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_add_empid.setText("EMPLOYEE ID");
         txt_add_empid.setBorder(null);
-        txt_add_empid.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_add_empid.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_add_empidFocusLost(evt);
             }
         });
-        txt_add_empid.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_add_empid.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_add_empidKeyPressed(evt);
             }
         });
@@ -1801,13 +1968,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_add_empnm.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_add_empnm.setText("EMPLOYEE NAME");
         txt_add_empnm.setBorder(null);
-        txt_add_empnm.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_add_empnm.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_add_empnmFocusLost(evt);
             }
         });
-        txt_add_empnm.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_add_empnm.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_add_empnmKeyPressed(evt);
             }
         });
@@ -1837,13 +2008,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_add_empno.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_add_empno.setText("CONTACT NO.");
         txt_add_empno.setBorder(null);
-        txt_add_empno.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_add_empno.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_add_empnoFocusLost(evt);
             }
         });
-        txt_add_empno.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_add_empno.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_add_empnoKeyPressed(evt);
             }
         });
@@ -1873,13 +2048,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_add_empemail.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_add_empemail.setText("EMAIL");
         txt_add_empemail.setBorder(null);
-        txt_add_empemail.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_add_empemail.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_add_empemailFocusLost(evt);
             }
         });
-        txt_add_empemail.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_add_empemail.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_add_empemailKeyPressed(evt);
             }
         });
@@ -1909,13 +2088,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_add_empsalary.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_add_empsalary.setText("SALARY");
         txt_add_empsalary.setBorder(null);
-        txt_add_empsalary.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_add_empsalary.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_add_empsalaryFocusLost(evt);
             }
         });
-        txt_add_empsalary.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_add_empsalary.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_add_empsalaryKeyPressed(evt);
             }
         });
@@ -1946,13 +2129,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_add_empsadd.setText("ADDRESS");
         txt_add_empsadd.setBorder(null);
         txt_add_empsadd.setNextFocusableComponent(loginBtn5);
-        txt_add_empsadd.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_add_empsadd.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_add_empsaddFocusLost(evt);
             }
         });
-        txt_add_empsadd.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_add_empsadd.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_add_empsaddKeyPressed(evt);
             }
         });
@@ -2005,11 +2192,14 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_add_empaddimg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_add_empaddimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/add-user.png"))); // NOI18N
         lbl_add_empaddimg.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lbl_add_empaddimg.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+        lbl_add_empaddimg.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_add_empaddimgMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_add_empaddimgMouseExited(evt);
             }
         });
@@ -2017,11 +2207,14 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_add_emprmimg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_add_emprmimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/substract.png"))); // NOI18N
         lbl_add_emprmimg.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lbl_add_emprmimg.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+        lbl_add_emprmimg.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_add_emprmimgMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_add_emprmimgMouseExited(evt);
             }
         });
@@ -2106,13 +2299,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_edit_empnm.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_edit_empnm.setText("EMPLOYEE NAME");
         txt_edit_empnm.setBorder(null);
-        txt_edit_empnm.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_edit_empnm.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_edit_empnmFocusLost(evt);
             }
         });
-        txt_edit_empnm.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_edit_empnm.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_edit_empnmKeyPressed(evt);
             }
         });
@@ -2142,13 +2339,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_edit_empno.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_edit_empno.setText("CONTACT NO.");
         txt_edit_empno.setBorder(null);
-        txt_edit_empno.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_edit_empno.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_edit_empnoFocusLost(evt);
             }
         });
-        txt_edit_empno.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_edit_empno.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_edit_empnoKeyPressed(evt);
             }
         });
@@ -2178,13 +2379,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_edit_empemail.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_edit_empemail.setText("EMAIL");
         txt_edit_empemail.setBorder(null);
-        txt_edit_empemail.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_edit_empemail.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_edit_empemailFocusLost(evt);
             }
         });
-        txt_edit_empemail.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_edit_empemail.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_edit_empemailKeyPressed(evt);
             }
         });
@@ -2214,13 +2419,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_edit_empsalary.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_edit_empsalary.setText("SALARY");
         txt_edit_empsalary.setBorder(null);
-        txt_edit_empsalary.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_edit_empsalary.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_edit_empsalaryFocusLost(evt);
             }
         });
-        txt_edit_empsalary.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_edit_empsalary.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_edit_empsalaryKeyPressed(evt);
             }
         });
@@ -2250,13 +2459,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_edit_empadd.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_edit_empadd.setText("ADDRESS");
         txt_edit_empadd.setBorder(null);
-        txt_edit_empadd.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_edit_empadd.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_edit_empaddFocusLost(evt);
             }
         });
-        txt_edit_empadd.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_edit_empadd.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_edit_empaddKeyPressed(evt);
             }
         });
@@ -2282,14 +2495,16 @@ public class frm_dashboard extends javax.swing.JFrame {
 
         table_empedit.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         table_empedit.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object [][]
+            {
                 {"spareparts", "chargin socket", "display", "combo"},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null}
             },
-            new String [] {
+            new String []
+            {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
@@ -2347,11 +2562,14 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_add_emprmimg1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_add_emprmimg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/substract.png"))); // NOI18N
         lbl_add_emprmimg1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lbl_add_emprmimg1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+        lbl_add_emprmimg1.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_add_emprmimg1MouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_add_emprmimg1MouseExited(evt);
             }
         });
@@ -2359,11 +2577,14 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_add_empaddimg1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_add_empaddimg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/add-user.png"))); // NOI18N
         lbl_add_empaddimg1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lbl_add_empaddimg1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+        lbl_add_empaddimg1.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_add_empaddimg1MouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_add_empaddimg1MouseExited(evt);
             }
         });
@@ -2440,21 +2661,25 @@ public class frm_dashboard extends javax.swing.JFrame {
         table_empdet.setBackground(new java.awt.Color(228, 235, 246));
         table_empdet.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         table_empdet.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object [][]
+            {
                 {"h", "e", "l", "o"},
                 {null, null, null, null},
                 {"", null, null, null},
                 {null, null, null, null},
                 {null, null, null, null}
             },
-            new String [] {
+            new String []
+            {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
         table_empdet.setOpaque(false);
         table_empdet.setRowHeight(40);
-        table_empdet.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        table_empdet.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 table_empdetKeyPressed(evt);
             }
         });
@@ -2489,13 +2714,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_det_empid.setText("EMPLOYEE ID OR NAME");
         txt_det_empid.setBorder(null);
         txt_det_empid.setNextFocusableComponent(lbl_custdet);
-        txt_det_empid.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_det_empid.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_det_empidFocusLost(evt);
             }
         });
-        txt_det_empid.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_det_empid.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_det_empidKeyPressed(evt);
             }
         });
@@ -2617,27 +2846,36 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_addemp.setText("ADD EMPLOYEE");
         lbl_addemp.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_addemp.setNextFocusableComponent(lbl_editemp);
-        lbl_addemp.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
+        lbl_addemp.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
                 lbl_addempFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt) {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 lbl_addempFocusLost(evt);
             }
         });
-        lbl_addemp.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        lbl_addemp.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
                 lbl_addempMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_addempMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_addempMouseExited(evt);
             }
         });
-        lbl_addemp.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        lbl_addemp.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 lbl_addempKeyPressed(evt);
             }
         });
@@ -2666,27 +2904,36 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_editemp.setText("EDIT EMPLOYEE");
         lbl_editemp.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_editemp.setNextFocusableComponent(lbl_empdet);
-        lbl_editemp.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
+        lbl_editemp.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
                 lbl_editempFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt) {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 lbl_editempFocusLost(evt);
             }
         });
-        lbl_editemp.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        lbl_editemp.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
                 lbl_editempMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_editempMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_editempMouseExited(evt);
             }
         });
-        lbl_editemp.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        lbl_editemp.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 lbl_editempKeyPressed(evt);
             }
         });
@@ -2715,27 +2962,36 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_empdet.setText("EMPLOYEE DETAIL");
         lbl_empdet.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_empdet.setNextFocusableComponent(lbl_addemp);
-        lbl_empdet.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
+        lbl_empdet.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
                 lbl_empdetFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt) {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 lbl_empdetFocusLost(evt);
             }
         });
-        lbl_empdet.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        lbl_empdet.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
                 lbl_empdetMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_empdetMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_empdetMouseExited(evt);
             }
         });
-        lbl_empdet.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        lbl_empdet.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 lbl_empdetKeyPressed(evt);
             }
         });
@@ -2813,13 +3069,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_add_pro_id.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_add_pro_id.setText("PRODUCT ID");
         txt_add_pro_id.setBorder(null);
-        txt_add_pro_id.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_add_pro_id.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_add_pro_idFocusLost(evt);
             }
         });
-        txt_add_pro_id.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_add_pro_id.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_add_pro_idKeyPressed(evt);
             }
         });
@@ -2844,11 +3104,14 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_add_proaddimg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_add_proaddimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/add-user.png"))); // NOI18N
         lbl_add_proaddimg.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lbl_add_proaddimg.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+        lbl_add_proaddimg.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_add_proaddimgMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_add_proaddimgMouseExited(evt);
             }
         });
@@ -2856,11 +3119,14 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_add_prormimg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_add_prormimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/substract.png"))); // NOI18N
         lbl_add_prormimg.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lbl_add_prormimg.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+        lbl_add_prormimg.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_add_prormimgMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_add_prormimgMouseExited(evt);
             }
         });
@@ -2876,13 +3142,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_add_pro_cprice.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_add_pro_cprice.setText("COST PRICE");
         txt_add_pro_cprice.setBorder(null);
-        txt_add_pro_cprice.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_add_pro_cprice.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_add_pro_cpriceFocusLost(evt);
             }
         });
-        txt_add_pro_cprice.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_add_pro_cprice.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_add_pro_cpriceKeyPressed(evt);
             }
         });
@@ -2962,13 +3232,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_add_pro_sprice.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_add_pro_sprice.setText("SELLING PRICE");
         txt_add_pro_sprice.setBorder(null);
-        txt_add_pro_sprice.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_add_pro_sprice.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_add_pro_spriceFocusLost(evt);
             }
         });
-        txt_add_pro_sprice.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_add_pro_sprice.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_add_pro_spriceKeyPressed(evt);
             }
         });
@@ -3003,13 +3277,18 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_add_pro_qty.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_add_pro_qty.setText("QTY");
         txt_add_pro_qty.setBorder(null);
-        txt_add_pro_qty.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
+        txt_add_pro_qty.setNextFocusableComponent(txtarea_add_pro_dis);
+        txt_add_pro_qty.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 txt_add_pro_qtyFocusLost(evt);
             }
         });
-        txt_add_pro_qty.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        txt_add_pro_qty.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 txt_add_pro_qtyKeyPressed(evt);
             }
         });
@@ -3064,6 +3343,21 @@ public class frm_dashboard extends javax.swing.JFrame {
         txtarea_add_pro_dis.setForeground(new java.awt.Color(228, 235, 246));
         txtarea_add_pro_dis.setRows(5);
         txtarea_add_pro_dis.setText("DISCRIPTION");
+        txtarea_add_pro_dis.setNextFocusableComponent(jList1);
+        txtarea_add_pro_dis.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                txtarea_add_pro_disFocusLost(evt);
+            }
+        });
+        txtarea_add_pro_dis.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                txtarea_add_pro_disKeyPressed(evt);
+            }
+        });
         jScrollPane5.setViewportView(txtarea_add_pro_dis);
 
         javax.swing.GroupLayout panel_txt_addproid11Layout = new javax.swing.GroupLayout(panel_txt_addproid11);
@@ -3081,11 +3375,13 @@ public class frm_dashboard extends javax.swing.JFrame {
         );
 
         jList1.setBackground(new java.awt.Color(164, 177, 252));
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        jList1.setModel(new javax.swing.AbstractListModel<String>()
+        {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
+        jList1.setNextFocusableComponent(loginBtn6);
         jScrollPane6.setViewportView(jList1);
 
         loginBtn6.setBorder(null);
@@ -3097,8 +3393,10 @@ public class frm_dashboard extends javax.swing.JFrame {
         loginBtn6.setkHoverForeGround(new java.awt.Color(68, 82, 121));
         loginBtn6.setkHoverStartColor(new java.awt.Color(178, 199, 231));
         loginBtn6.setkStartColor(new java.awt.Color(68, 82, 121));
-        loginBtn6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        loginBtn6.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 loginBtn6ActionPerformed(evt);
             }
         });
@@ -3318,27 +3616,36 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_addpro.setText("ADD PRODUCT");
         lbl_addpro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_addpro.setNextFocusableComponent(lbl_add_prombc);
-        lbl_addpro.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
+        lbl_addpro.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
                 lbl_addproFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt) {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 lbl_addproFocusLost(evt);
             }
         });
-        lbl_addpro.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        lbl_addpro.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
                 lbl_addproMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_addproMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_addproMouseExited(evt);
             }
         });
-        lbl_addpro.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        lbl_addpro.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 lbl_addproKeyPressed(evt);
             }
         });
@@ -3367,27 +3674,36 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_add_prombc.setText("ADD MODEl");
         lbl_add_prombc.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_add_prombc.setNextFocusableComponent(lbl_editpro);
-        lbl_add_prombc.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
+        lbl_add_prombc.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
                 lbl_add_prombcFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt) {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 lbl_add_prombcFocusLost(evt);
             }
         });
-        lbl_add_prombc.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        lbl_add_prombc.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
                 lbl_add_prombcMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_add_prombcMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_add_prombcMouseExited(evt);
             }
         });
-        lbl_add_prombc.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        lbl_add_prombc.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 lbl_add_prombcKeyPressed(evt);
             }
         });
@@ -3416,27 +3732,36 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_editpro.setText("EDIT PRODUCT");
         lbl_editpro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_editpro.setNextFocusableComponent(lbl_prodet);
-        lbl_editpro.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
+        lbl_editpro.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
                 lbl_editproFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt) {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 lbl_editproFocusLost(evt);
             }
         });
-        lbl_editpro.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        lbl_editpro.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
                 lbl_editproMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_editproMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_editproMouseExited(evt);
             }
         });
-        lbl_editpro.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        lbl_editpro.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 lbl_editproKeyPressed(evt);
             }
         });
@@ -3465,27 +3790,36 @@ public class frm_dashboard extends javax.swing.JFrame {
         lbl_prodet.setText("PRODUCT DETAIL");
         lbl_prodet.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_prodet.setNextFocusableComponent(lbl_addpro);
-        lbl_prodet.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
+        lbl_prodet.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
                 lbl_prodetFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt) {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
                 lbl_prodetFocusLost(evt);
             }
         });
-        lbl_prodet.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        lbl_prodet.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
                 lbl_prodetMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 lbl_prodetMouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 lbl_prodetMouseExited(evt);
             }
         });
-        lbl_prodet.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
+        lbl_prodet.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
                 lbl_prodetKeyPressed(evt);
             }
         });
@@ -4047,18 +4381,21 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_add_custidKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_custidKeyPressed
     {//GEN-HEADEREND:event_txt_add_custidKeyPressed
         escape(lbl_addcust, evt.getKeyCode());
+        whitespaceremover(txt_add_custid);
         clearplaceholder(txt_add_custid, txt_add_custid.getText(), "CUSTOMER ID");
     }//GEN-LAST:event_txt_add_custidKeyPressed
 
     private void txt_add_custnmKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_custnmKeyPressed
     {//GEN-HEADEREND:event_txt_add_custnmKeyPressed
         escape(lbl_addcust, evt.getKeyCode());
+        whitespaceremover(txt_add_custnm);
         clearplaceholder(txt_add_custnm, txt_add_custnm.getText(), "CUSTOMER NAME");
     }//GEN-LAST:event_txt_add_custnmKeyPressed
 
     private void txt_add_custnoKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_custnoKeyPressed
     {//GEN-HEADEREND:event_txt_add_custnoKeyPressed
         escape(lbl_addcust, evt.getKeyCode());
+        whitespaceremover(txt_add_custno);
         clearplaceholder(txt_add_custno, txt_add_custno.getText(), "CONTACT NO.");
     }//GEN-LAST:event_txt_add_custnoKeyPressed
 
@@ -4071,12 +4408,14 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_add_custsnameKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_custsnameKeyPressed
     {//GEN-HEADEREND:event_txt_add_custsnameKeyPressed
         escape(lbl_addcust, evt.getKeyCode());
+        whitespaceremover(txt_add_custsname);
         clearplaceholder(txt_add_custsname, txt_add_custsname.getText(), "SHOP NAME");
     }//GEN-LAST:event_txt_add_custsnameKeyPressed
 
     private void txt_add_custsaddKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_custsaddKeyPressed
     {//GEN-HEADEREND:event_txt_add_custsaddKeyPressed
         escape(lbl_addcust, evt.getKeyCode());
+        whitespaceremover(txt_add_custsadd);
         clearplaceholder(txt_add_custsadd, txt_add_custsadd.getText(), "SHOP ADDRESS");
     }//GEN-LAST:event_txt_add_custsaddKeyPressed
 
@@ -4088,30 +4427,35 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_edit_custnmKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_custnmKeyPressed
     {//GEN-HEADEREND:event_txt_edit_custnmKeyPressed
         escape(lbl_editcust, evt.getKeyCode());
+        whitespaceremover(txt_edit_custnm);
         clearplaceholder(txt_edit_custnm, txt_edit_custnm.getText(), "CUSTOMER NAME");
     }//GEN-LAST:event_txt_edit_custnmKeyPressed
 
     private void txt_edit_custnoKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_custnoKeyPressed
     {//GEN-HEADEREND:event_txt_edit_custnoKeyPressed
         escape(lbl_editcust, evt.getKeyCode());
+        whitespaceremover(txt_edit_custno);
         clearplaceholder(txt_edit_custno, txt_edit_custno.getText(), "CONTACT NO.");
     }//GEN-LAST:event_txt_edit_custnoKeyPressed
 
     private void txt_edit_custemailKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_custemailKeyPressed
     {//GEN-HEADEREND:event_txt_edit_custemailKeyPressed
         escape(lbl_editcust, evt.getKeyCode());
+        whitespaceremover(txt_edit_custemail);
         clearplaceholder(txt_edit_custemail, txt_edit_custemail.getText(), "EMAIL");
     }//GEN-LAST:event_txt_edit_custemailKeyPressed
 
     private void txt_edit_custsnmKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_custsnmKeyPressed
     {//GEN-HEADEREND:event_txt_edit_custsnmKeyPressed
         escape(lbl_editcust, evt.getKeyCode());
+        whitespaceremover(txt_edit_custsnm);
         clearplaceholder(txt_edit_custsnm, txt_edit_custsnm.getText(), "SHOP NAME");
     }//GEN-LAST:event_txt_edit_custsnmKeyPressed
 
     private void txt_edit_custsaddKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_custsaddKeyPressed
     {//GEN-HEADEREND:event_txt_edit_custsaddKeyPressed
         escape(lbl_editcust, evt.getKeyCode());
+        whitespaceremover(txt_edit_custsadd);
         clearplaceholder(txt_edit_custsadd, txt_edit_custsadd.getText(), "SHOP ADDRESS");
     }//GEN-LAST:event_txt_edit_custsaddKeyPressed
 
@@ -4148,6 +4492,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_det_custidKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_det_custidKeyPressed
     {//GEN-HEADEREND:event_txt_det_custidKeyPressed
         escape(lbl_custdet, evt.getKeyCode());
+        whitespaceremover(txt_det_custid);
         clearplaceholder(txt_det_custid, txt_det_custid.getText(), "CUSTOMER ID OR NAME");
     }//GEN-LAST:event_txt_det_custidKeyPressed
 
@@ -4257,6 +4602,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_add_empidKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_empidKeyPressed
     {//GEN-HEADEREND:event_txt_add_empidKeyPressed
         escape(lbl_addemp, evt.getKeyCode());
+        whitespaceremover(txt_add_empid);
         clearplaceholder(txt_add_empid, txt_add_empid.getText(), "EMPLOYEE ID");
     }//GEN-LAST:event_txt_add_empidKeyPressed
 
@@ -4268,6 +4614,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_add_empnmKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_empnmKeyPressed
     {//GEN-HEADEREND:event_txt_add_empnmKeyPressed
         escape(lbl_addemp, evt.getKeyCode());
+        whitespaceremover(txt_add_empnm);
         clearplaceholder(txt_add_empnm, txt_add_empnm.getText(), "EMPLOYEE NAME");
     }//GEN-LAST:event_txt_add_empnmKeyPressed
 
@@ -4279,6 +4626,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_add_empnoKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_empnoKeyPressed
     {//GEN-HEADEREND:event_txt_add_empnoKeyPressed
         escape(lbl_addemp, evt.getKeyCode());
+        whitespaceremover(txt_add_empno);
         clearplaceholder(txt_add_empno, txt_add_empno.getText(), "CONTACT NO.");
     }//GEN-LAST:event_txt_add_empnoKeyPressed
 
@@ -4290,6 +4638,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_add_empemailKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_empemailKeyPressed
     {//GEN-HEADEREND:event_txt_add_empemailKeyPressed
         escape(lbl_addemp, evt.getKeyCode());
+        whitespaceremover(txt_add_empemail);
         clearplaceholder(txt_add_empemail, txt_add_empemail.getText(), "EMAIL");
     }//GEN-LAST:event_txt_add_empemailKeyPressed
 
@@ -4301,6 +4650,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_add_empsalaryKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_empsalaryKeyPressed
     {//GEN-HEADEREND:event_txt_add_empsalaryKeyPressed
         escape(lbl_addemp, evt.getKeyCode());
+        whitespaceremover(txt_add_empsalary);
         clearplaceholder(txt_add_empsalary, txt_add_empsalary.getText(), "SALARY");
     }//GEN-LAST:event_txt_add_empsalaryKeyPressed
 
@@ -4312,6 +4662,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_add_empsaddKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_empsaddKeyPressed
     {//GEN-HEADEREND:event_txt_add_empsaddKeyPressed
         escape(lbl_addemp, evt.getKeyCode());
+        whitespaceremover(txt_add_empsadd);
         clearplaceholder(txt_add_empsadd, txt_add_empsadd.getText(), "ADDRESS");
     }//GEN-LAST:event_txt_add_empsaddKeyPressed
 
@@ -4338,6 +4689,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_edit_custidKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_custidKeyPressed
     {//GEN-HEADEREND:event_txt_edit_custidKeyPressed
         escape(lbl_editcust, evt.getKeyCode());
+        whitespaceremover(txt_edit_custid);
         clearplaceholder(txt_edit_custid, txt_edit_custid.getText(), "CUSTOMER ID");
     }//GEN-LAST:event_txt_edit_custidKeyPressed
 
@@ -4349,6 +4701,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_edit_empnmKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_empnmKeyPressed
     {//GEN-HEADEREND:event_txt_edit_empnmKeyPressed
         escape(lbl_editemp, evt.getKeyCode());
+        whitespaceremover(txt_edit_empnm);
         clearplaceholder(txt_edit_empnm, txt_edit_empnm.getText(), "EMPLOYEE NAME");
     }//GEN-LAST:event_txt_edit_empnmKeyPressed
 
@@ -4360,6 +4713,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_edit_empnoKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_empnoKeyPressed
     {//GEN-HEADEREND:event_txt_edit_empnoKeyPressed
         escape(lbl_editemp, evt.getKeyCode());
+        whitespaceremover(txt_edit_empno);
         clearplaceholder(txt_edit_empno, txt_edit_empno.getText(), "CONTACT NO.");
     }//GEN-LAST:event_txt_edit_empnoKeyPressed
 
@@ -4371,6 +4725,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_edit_empemailKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_empemailKeyPressed
     {//GEN-HEADEREND:event_txt_edit_empemailKeyPressed
         escape(lbl_editemp, evt.getKeyCode());
+        whitespaceremover(txt_edit_empemail);
         clearplaceholder(txt_edit_empemail, txt_edit_empemail.getText(), "EMAIL");
     }//GEN-LAST:event_txt_edit_empemailKeyPressed
 
@@ -4382,6 +4737,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_edit_empsalaryKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_empsalaryKeyPressed
     {//GEN-HEADEREND:event_txt_edit_empsalaryKeyPressed
         escape(lbl_editemp, evt.getKeyCode());
+        whitespaceremover(txt_edit_empsalary);
         clearplaceholder(txt_edit_empsalary, txt_edit_empsalary.getText(), "SALARY");
     }//GEN-LAST:event_txt_edit_empsalaryKeyPressed
 
@@ -4393,6 +4749,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_edit_empaddKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_empaddKeyPressed
     {//GEN-HEADEREND:event_txt_edit_empaddKeyPressed
         escape(lbl_editemp, evt.getKeyCode());
+        whitespaceremover(txt_edit_empadd);
         clearplaceholder(txt_edit_empadd, txt_edit_empadd.getText(), "ADDRESS");
     }//GEN-LAST:event_txt_edit_empaddKeyPressed
 
@@ -4414,6 +4771,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_det_empidKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_det_empidKeyPressed
     {//GEN-HEADEREND:event_txt_det_empidKeyPressed
         clearplaceholder(txt_det_empid, txt_det_empid.getText(), "EMPLOYEE ID OR NAME");
+        whitespaceremover(txt_det_empid);
         escape(lbl_empdet, evt.getKeyCode());
     }//GEN-LAST:event_txt_det_empidKeyPressed
 
@@ -4453,6 +4811,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_add_pro_idKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_pro_idKeyPressed
     {//GEN-HEADEREND:event_txt_add_pro_idKeyPressed
         escape(lbl_addpro, evt.getKeyCode());
+        whitespaceremover(txt_add_pro_id);
         clearplaceholder(txt_add_pro_id, txt_add_pro_id.getText(), "PRODUCT ID");
     }//GEN-LAST:event_txt_add_pro_idKeyPressed
 
@@ -4484,6 +4843,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_add_pro_cpriceKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_pro_cpriceKeyPressed
     {//GEN-HEADEREND:event_txt_add_pro_cpriceKeyPressed
         escape(lbl_addpro, evt.getKeyCode());
+        whitespaceremover(txt_add_pro_cprice);
         clearplaceholder(txt_add_pro_cprice, txt_add_pro_cprice.getText(), "COST PRICE");
     }//GEN-LAST:event_txt_add_pro_cpriceKeyPressed
 
@@ -4495,6 +4855,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_add_pro_spriceKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_pro_spriceKeyPressed
     {//GEN-HEADEREND:event_txt_add_pro_spriceKeyPressed
         escape(lbl_addpro, evt.getKeyCode());
+        whitespaceremover(txt_add_pro_sprice);
         clearplaceholder(txt_add_pro_sprice, txt_add_pro_sprice.getText(), "SELLING PRICE");
     }//GEN-LAST:event_txt_add_pro_spriceKeyPressed
 
@@ -4506,6 +4867,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void txt_add_pro_qtyKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_pro_qtyKeyPressed
     {//GEN-HEADEREND:event_txt_add_pro_qtyKeyPressed
         escape(lbl_addpro, evt.getKeyCode());
+        whitespaceremover(txt_add_pro_qty);
         clearplaceholder(txt_add_pro_qty, txt_add_pro_qty.getText(), "QTY");
     }//GEN-LAST:event_txt_add_pro_qtyKeyPressed
 
@@ -4541,8 +4903,7 @@ public class frm_dashboard extends javax.swing.JFrame {
 
     private void lbl_addproKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_addproKeyPressed
     {//GEN-HEADEREND:event_lbl_addproKeyPressed
-        visibility(txt_add_pro_id, panel_addpro, true, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, false, panel_pro_fulldet,
-                false);
+        visibility(txt_add_pro_id, panel_addpro, true, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, false, panel_pro_fulldet, false);
         escape(lbl_product, evt.getKeyCode(), panel_product);
     }//GEN-LAST:event_lbl_addproKeyPressed
 
@@ -4639,15 +5000,59 @@ public class frm_dashboard extends javax.swing.JFrame {
         escape(lbl_product, evt.getKeyCode(), panel_product);
     }//GEN-LAST:event_lbl_prodetKeyPressed
 
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+    private void txtarea_add_pro_disKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txtarea_add_pro_disKeyPressed
+    {//GEN-HEADEREND:event_txtarea_add_pro_disKeyPressed
+        if (txtarea_add_pro_dis.getText().equals("DISCRIPTION"))
+        {
+            txtarea_add_pro_dis.setText("");
+        }
+
+        else if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
+        {
+            lbl_addpro.grabFocus();
+        }
+        else if (txtarea_add_pro_dis.getText().equals(" "))
+        {
+            String txt = txtarea_add_pro_dis.getText().replace(" ", "");
+            txtarea_add_pro_dis.setText(txt);
+        }
+        if (evt.getKeyCode() == KeyEvent.VK_TAB)
+        {
+            txtarea_add_pro_dis.setText("DISCRIPTION");
+            jList1.grabFocus();
+        }
+    }//GEN-LAST:event_txtarea_add_pro_disKeyPressed
+
+    private void txtarea_add_pro_disFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txtarea_add_pro_disFocusLost
+    {//GEN-HEADEREND:event_txtarea_add_pro_disFocusLost
+        if (txtarea_add_pro_dis.getText().equals("") || txtarea_add_pro_dis.getText().equals(" "))
+        {
+            txtarea_add_pro_dis.setText("DISCRIPTION");
+        }
+    }//GEN-LAST:event_txtarea_add_pro_disFocusLost
+
+    public static void main(String args[])
+    {
+        java.awt.EventQueue.invokeLater(new Runnable()
+        {
+            public void run()
+            {
                 new frm_dashboard().setVisible(true);
             }
         });
     }
 
-    public void hoverColor(KGradientPanel panel, JLabel label, Color kcolor, Color bcolor, Color foreground, Font font, String text) {
+    public void whitespaceremover(JTextField field)
+    {
+        if (field.getText().equals(" "))
+        {
+            String txt = field.getText().replace(" ", "");
+            field.setText(txt);
+        }
+    }
+
+    public void hoverColor(KGradientPanel panel, JLabel label, Color kcolor, Color bcolor, Color foreground, Font font, String text)
+    {
         panel.setkStartColor(kcolor);
         panel.setkEndColor(kcolor);
         panel.setBackground(bcolor);
@@ -4656,46 +5061,57 @@ public class frm_dashboard extends javax.swing.JFrame {
         label.setText(text);
     }
 
-    public void HoverColor(KGradientPanel panel, Color kColor, Color bColor) {
+    public void HoverColor(KGradientPanel panel, Color kColor, Color bColor)
+    {
         panel.setkStartColor(kColor);
         panel.setkEndColor(kColor);
         panel.setBackground(bColor);
     }
 
-    public void HoverColor(KGradientPanel panel, JLabel label, Color kColor, Color bColor, Color foreground) {
+    public void HoverColor(KGradientPanel panel, JLabel label, Color kColor, Color bColor, Color foreground)
+    {
         panel.setkStartColor(kColor);
         panel.setkEndColor(kColor);
         panel.setBackground(bColor);
         label.setForeground(foreground);
     }
 
-    public void escape(JLabel label, int code) {
-        if (code == KeyEvent.VK_ESCAPE) {
+    public void escape(JLabel label, int code)
+    {
+        if (code == KeyEvent.VK_ESCAPE)
+        {
             label.grabFocus();
         }
     }
 
-    public void escape(JLabel label, int code, KGradientPanel panel) {
-        if (code == KeyEvent.VK_ESCAPE) {
+    public void escape(JLabel label, int code, KGradientPanel panel)
+    {
+        if (code == KeyEvent.VK_ESCAPE)
+        {
             label.grabFocus();
             panel.setVisible(false);
             panel_extra.setVisible(true);
         }
     }
 
-    public void clearplaceholder(JTextField field, String gottext, String text) {
-        if (gottext.equals(text)) {
+    public void clearplaceholder(JTextField field, String gottext, String text)
+    {
+        if (gottext.equals(text))
+        {
             field.setText("");
         }
     }
 
-    public void txtfocuslost(JTextField field, String gottext, String settext) {
-        if (gottext.equals("")) {
+    public void txtfocuslost(JTextField field, String gottext, String settext)
+    {
+        if (gottext.equals("") || gottext.equals(" "))
+        {
             field.setText(settext);
         }
     }
 
-    public void screensize() {
+    public void screensize()
+    {
         Toolkit tk = Toolkit.getDefaultToolkit();
         int x = (int) tk.getScreenSize().getWidth();
         int y = (int) tk.getScreenSize().getHeight();
@@ -4705,13 +5121,16 @@ public class frm_dashboard extends javax.swing.JFrame {
         this.setSize(x, y - taskbar);
     }
 
-    public void tableheader(JTableHeader header) {
+    public void tableheader(JTableHeader header)
+    {
         header.setFont(new Font("Cascadia Mono", Font.PLAIN, 20));
     }
 
     //to call when enter key pressed
-    public void visibility(int code, JLabel label, boolean cust, boolean emp, boolean product, boolean bill, boolean account, boolean user, boolean extra) {
-        if (code == KeyEvent.VK_ENTER) {
+    public void visibility(int code, JLabel label, boolean cust, boolean emp, boolean product, boolean bill, boolean account, boolean user, boolean extra)
+    {
+        if (code == KeyEvent.VK_ENTER)
+        {
             panel_customer.setVisible(cust);
             panel_employee.setVisible(emp);
             panel_product.setVisible(product);
@@ -4724,7 +5143,8 @@ public class frm_dashboard extends javax.swing.JFrame {
     }
 
     //to call when from sidepane with mouseclick
-    public void visibility(JLabel label, boolean cust, boolean emp, boolean product, boolean bill, boolean account, boolean user, boolean extra) {
+    public void visibility(JLabel label, boolean cust, boolean emp, boolean product, boolean bill, boolean account, boolean user, boolean extra)
+    {
         panel_customer.setVisible(cust);
         panel_employee.setVisible(emp);
         panel_product.setVisible(product);
@@ -4736,8 +5156,10 @@ public class frm_dashboard extends javax.swing.JFrame {
     }
 
     //to call when the enter key pressed in main panel
-    void visibility(int code, JTextField field, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool) {
-        if (code == KeyEvent.VK_ENTER) {
+    void visibility(int code, JTextField field, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool)
+    {
+        if (code == KeyEvent.VK_ENTER)
+        {
             add.setVisible(addbool);
             edit.setVisible(editbool);
             det.setVisible(detbool);
@@ -4746,7 +5168,8 @@ public class frm_dashboard extends javax.swing.JFrame {
     }
 
     //while inside the main panel
-    public void visibility(JTextField field, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool) {
+    public void visibility(JTextField field, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool)
+    {
         add.setVisible(addbool);
         edit.setVisible(editbool);
         det.setVisible(detbool);
@@ -4754,15 +5177,18 @@ public class frm_dashboard extends javax.swing.JFrame {
     }
 
     //to call from sidepane
-    public void visibility(KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool) {
+    public void visibility(KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool)
+    {
         add.setVisible(addbool);
         edit.setVisible(editbool);
         det.setVisible(detbool);
     }
 
     //to call when the enter key pressed in main panel
-    void visibility(int code, JTextField field, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool) {
-        if (code == KeyEvent.VK_ENTER) {
+    void visibility(int code, JTextField field, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool)
+    {
+        if (code == KeyEvent.VK_ENTER)
+        {
             add.setVisible(addbool);
             edit.setVisible(editbool);
             det.setVisible(detbool);
@@ -4772,7 +5198,8 @@ public class frm_dashboard extends javax.swing.JFrame {
     }
 
     //while inside the main panel
-    public void visibility(JTextField field, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool) {
+    public void visibility(JTextField field, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool)
+    {
         add.setVisible(addbool);
         edit.setVisible(editbool);
         det.setVisible(detbool);
@@ -4781,7 +5208,8 @@ public class frm_dashboard extends javax.swing.JFrame {
     }
 
     //to call from sidepane
-    public void visibility(KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool) {
+    public void visibility(KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool)
+    {
         add.setVisible(addbool);
         edit.setVisible(editbool);
         det.setVisible(detbool);
@@ -4789,8 +5217,10 @@ public class frm_dashboard extends javax.swing.JFrame {
     }
 
     //to call when the enter key pressed in main panel
-    void visibility(int code, JTextField field, KGradientPanel add, boolean addbool, KGradientPanel addmbc, boolean mbcbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool) {
-        if (code == KeyEvent.VK_ENTER) {
+    void visibility(int code, JTextField field, KGradientPanel add, boolean addbool, KGradientPanel addmbc, boolean mbcbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool)
+    {
+        if (code == KeyEvent.VK_ENTER)
+        {
             add.setVisible(addbool);
             addmbc.setVisible(mbcbool);
             edit.setVisible(editbool);
@@ -4801,7 +5231,8 @@ public class frm_dashboard extends javax.swing.JFrame {
     }
 
     //while inside the main panel
-    public void visibility(JTextField field, KGradientPanel add, boolean addbool, KGradientPanel addmbc, boolean mbcbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool) {
+    public void visibility(JTextField field, KGradientPanel add, boolean addbool, KGradientPanel addmbc, boolean mbcbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool)
+    {
         add.setVisible(addbool);
         addmbc.setVisible(mbcbool);
         edit.setVisible(editbool);
@@ -4811,7 +5242,8 @@ public class frm_dashboard extends javax.swing.JFrame {
     }
 
     //to call from sidepane
-    public void visibility(KGradientPanel add, boolean addbool, KGradientPanel addmbc, boolean mbcbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool) {
+    public void visibility(KGradientPanel add, boolean addbool, KGradientPanel addmbc, boolean mbcbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool)
+    {
         add.setVisible(addbool);
         addmbc.setVisible(mbcbool);
         edit.setVisible(editbool);
