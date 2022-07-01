@@ -226,6 +226,12 @@ public class frm_dashboard extends javax.swing.JFrame
         jList1 = new javax.swing.JList<>();
         loginBtn6 = new com.k33ptoo.components.KButton();
         panel_addpro_mcb = new com.k33ptoo.components.KGradientPanel();
+        textField1 = new textfield.TextField();
+        textAreaScroll1 = new textarea.TextAreaScroll();
+        textArea1 = new textarea.TextArea();
+        passwordField1 = new textfield.PasswordField();
+        comboBoxSuggestion1 = new combo_suggestion.ComboBoxSuggestion();
+        spinner1 = new spinner.Spinner();
         panel_editpro = new com.k33ptoo.components.KGradientPanel();
         panel_prodet = new com.k33ptoo.components.KGradientPanel();
         panel_pro_fulldet = new com.k33ptoo.components.KGradientPanel();
@@ -3484,15 +3490,67 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_addpro_mcb.setkStartColor(new java.awt.Color(228, 235, 246));
         panel_addpro_mcb.setOpaque(false);
 
+        textField1.setBackground(new java.awt.Color(228, 235, 246));
+        textField1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        textField1.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        textField1.setLabelText("USER NAME");
+        textField1.setLineColor(new java.awt.Color(68, 82, 121));
+        textField1.setSelectionColor(new java.awt.Color(68, 82, 121));
+
+        textAreaScroll1.setBackground(new java.awt.Color(228, 235, 246));
+        textAreaScroll1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        textAreaScroll1.setLabelText("Material TextArea");
+
+        textArea1.setBackground(new java.awt.Color(228, 235, 246));
+        textArea1.setColumns(20);
+        textArea1.setRows(5);
+        textArea1.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        textAreaScroll1.setViewportView(textArea1);
+
+        passwordField1.setBackground(new java.awt.Color(228, 235, 246));
+        passwordField1.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        passwordField1.setLabelText("PASSWORD");
+        passwordField1.setLineColor(new java.awt.Color(68, 82, 121));
+
+        comboBoxSuggestion1.setBackground(new java.awt.Color(228, 235, 246));
+        comboBoxSuggestion1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "hello ", "how", "are", "you", " " }));
+        comboBoxSuggestion1.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+
+        spinner1.setLabelText("Spinner Test");
+
         javax.swing.GroupLayout panel_addpro_mcbLayout = new javax.swing.GroupLayout(panel_addpro_mcb);
         panel_addpro_mcb.setLayout(panel_addpro_mcbLayout);
         panel_addpro_mcbLayout.setHorizontalGroup(
             panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 961, Short.MAX_VALUE)
+            .addGroup(panel_addpro_mcbLayout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(textField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(passwordField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(comboBoxSuggestion1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(textAreaScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE)
+                    .addComponent(spinner1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(242, 242, 242))
         );
         panel_addpro_mcbLayout.setVerticalGroup(
             panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 560, Short.MAX_VALUE)
+            .addGroup(panel_addpro_mcbLayout.createSequentialGroup()
+                .addGap(93, 93, 93)
+                .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(83, 83, 83)
+                .addComponent(passwordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_addpro_mcbLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(textAreaScroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_addpro_mcbLayout.createSequentialGroup()
+                        .addGap(102, 102, 102)
+                        .addComponent(comboBoxSuggestion1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         panel_editpro.setkEndColor(new java.awt.Color(228, 235, 246));
@@ -5252,6 +5310,7 @@ public class frm_dashboard extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private combo_suggestion.ComboBoxSuggestion comboBoxSuggestion1;
     private javax.swing.JComboBox<String> combo_add_pro_brand;
     private javax.swing.JComboBox<String> combo_add_pro_ctgry;
     private javax.swing.JComboBox<String> combo_add_pro_ctgry1;
@@ -5379,6 +5438,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel panel_txt_editempno;
     private com.k33ptoo.components.KGradientPanel panel_txt_editempsalary;
     private com.k33ptoo.components.KGradientPanel panel_user;
+    private textfield.PasswordField passwordField1;
     private com.k33ptoo.components.KGradientPanel pnl_account;
     private com.k33ptoo.components.KGradientPanel pnl_bill;
     private com.k33ptoo.components.KGradientPanel pnl_close;
@@ -5389,10 +5449,14 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel pnl_product;
     private com.k33ptoo.components.KGradientPanel pnl_sidepane;
     private com.k33ptoo.components.KGradientPanel pnl_user;
+    private spinner.Spinner spinner1;
     private javax.swing.JTable table_custdet;
     private javax.swing.JTable table_custedit;
     private javax.swing.JTable table_empdet;
     private javax.swing.JTable table_empedit;
+    private textarea.TextArea textArea1;
+    private textarea.TextAreaScroll textAreaScroll1;
+    private textfield.TextField textField1;
     private javax.swing.JTextField txt_add_custemail;
     private javax.swing.JTextField txt_add_custid;
     private javax.swing.JTextField txt_add_custnm;
