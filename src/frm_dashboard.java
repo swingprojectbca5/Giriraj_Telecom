@@ -3514,6 +3514,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
         comboBoxSuggestion1.setBackground(new java.awt.Color(228, 235, 246));
         comboBoxSuggestion1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "hello ", "how", "are", "you", " " }));
+        comboBoxSuggestion1.setSelectedIndex(-1);
         comboBoxSuggestion1.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
 
         spinner1.setLabelText("Spinner Test");
@@ -3529,28 +3530,26 @@ public class frm_dashboard extends javax.swing.JFrame
                     .addComponent(passwordField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(comboBoxSuggestion1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
-                .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(textAreaScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE)
-                    .addComponent(spinner1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(textAreaScroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(242, 242, 242))
         );
         panel_addpro_mcbLayout.setVerticalGroup(
             panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_addpro_mcbLayout.createSequentialGroup()
-                .addGap(93, 93, 93)
-                .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(96, 96, 96)
+                .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(spinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(83, 83, 83)
-                .addComponent(passwordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(80, 80, 80)
+                .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(panel_addpro_mcbLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(textAreaScroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panel_addpro_mcbLayout.createSequentialGroup()
+                        .addComponent(passwordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(102, 102, 102)
-                        .addComponent(comboBoxSuggestion1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(37, Short.MAX_VALUE))
+                        .addComponent(comboBoxSuggestion1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textAreaScroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(118, Short.MAX_VALUE))
         );
 
         panel_editpro.setkEndColor(new java.awt.Color(228, 235, 246));
