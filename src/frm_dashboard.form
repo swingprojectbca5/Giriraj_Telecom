@@ -4283,17 +4283,25 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="textField1" max="32767" attributes="0"/>
-                                          <Component id="passwordField1" max="32767" attributes="0"/>
-                                          <Component id="comboBoxSuggestion1" alignment="0" pref="300" max="32767" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace pref="69" max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="textAreaScroll1" min="-2" pref="282" max="-2" attributes="0"/>
-                                          <Component id="spinner1" min="-2" pref="282" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="textField2" min="-2" pref="274" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="textField1" max="32767" attributes="0"/>
+                                                  <Component id="passwordField1" max="32767" attributes="0"/>
+                                                  <Component id="comboBoxSuggestion1" alignment="0" pref="300" max="32767" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace pref="69" max="32767" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="textAreaScroll1" min="-2" pref="282" max="-2" attributes="0"/>
+                                                  <Component id="spinner1" min="-2" pref="282" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
                                       </Group>
                                       <EmptySpace min="-2" pref="242" max="-2" attributes="0"/>
                                   </Group>
@@ -4316,7 +4324,9 @@
                                           </Group>
                                           <Component id="textAreaScroll1" min="-2" pref="200" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="118" max="32767" attributes="0"/>
+                                      <EmptySpace pref="37" max="32767" attributes="0"/>
+                                      <Component id="textField2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -4404,6 +4414,11 @@
                             <Component class="spinner.Spinner" name="spinner1">
                               <Properties>
                                 <Property name="labelText" type="java.lang.String" value="Spinner Test"/>
+                              </Properties>
+                            </Component>
+                            <Component class="textfield.TextField" name="textField2">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="textField2"/>
                               </Properties>
                             </Component>
                           </SubComponents>

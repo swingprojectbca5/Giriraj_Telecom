@@ -219,6 +219,7 @@ public class frm_dashboard extends javax.swing.JFrame
         passwordField1 = new textfield.PasswordField();
         comboBoxSuggestion1 = new combo_suggestion.ComboBoxSuggestion();
         spinner1 = new spinner.Spinner();
+        textField2 = new textfield.TextField();
         panel_editpro = new com.k33ptoo.components.KGradientPanel();
         panel_prodet = new com.k33ptoo.components.KGradientPanel();
         panel_pro_fulldet = new com.k33ptoo.components.KGradientPanel();
@@ -2994,20 +2995,27 @@ public class frm_dashboard extends javax.swing.JFrame
 
         spinner1.setLabelText("Spinner Test");
 
+        textField2.setText("textField2");
+
         javax.swing.GroupLayout panel_addpro_mcbLayout = new javax.swing.GroupLayout(panel_addpro_mcb);
         panel_addpro_mcb.setLayout(panel_addpro_mcbLayout);
         panel_addpro_mcbLayout.setHorizontalGroup(
             panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_addpro_mcbLayout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(textField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(passwordField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(comboBoxSuggestion1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
-                .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(textAreaScroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(spinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_addpro_mcbLayout.createSequentialGroup()
+                .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panel_addpro_mcbLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel_addpro_mcbLayout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(textField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(passwordField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(comboBoxSuggestion1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                        .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(textAreaScroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(spinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(242, 242, 242))
         );
         panel_addpro_mcbLayout.setVerticalGroup(
@@ -3024,7 +3032,9 @@ public class frm_dashboard extends javax.swing.JFrame
                         .addGap(102, 102, 102)
                         .addComponent(comboBoxSuggestion1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(textAreaScroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(118, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
         );
 
         panel_editpro.setkEndColor(new java.awt.Color(228, 235, 246));
@@ -4727,6 +4737,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private textarea.TextArea textArea1;
     private textarea.TextAreaScroll textAreaScroll1;
     private textfield.TextField textField1;
+    private textfield.TextField textField2;
     private textfield.TextField txt_add_custemail;
     private textfield.TextField txt_add_custid;
     private textfield.TextField txt_add_custnm;
