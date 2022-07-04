@@ -137,12 +137,6 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_employee = new com.k33ptoo.components.KGradientPanel();
         panel_empmain = new com.k33ptoo.components.KGradientPanel();
         panel_addemp = new com.k33ptoo.components.KGradientPanel();
-        panel_txt_addemp = new com.k33ptoo.components.KGradientPanel();
-        txt_add_empid = new javax.swing.JTextField();
-        panel_txt_addempnm = new com.k33ptoo.components.KGradientPanel();
-        txt_add_empnm = new javax.swing.JTextField();
-        panel_txt_addempno = new com.k33ptoo.components.KGradientPanel();
-        txt_add_empno = new javax.swing.JTextField();
         panel_txt_addempemail = new com.k33ptoo.components.KGradientPanel();
         txt_add_empemail = new javax.swing.JTextField();
         panel_txt_addempsnm = new com.k33ptoo.components.KGradientPanel();
@@ -154,6 +148,9 @@ public class frm_dashboard extends javax.swing.JFrame
         loginBtn5 = new com.k33ptoo.components.KButton();
         lbl_add_empaddimg = new javax.swing.JLabel();
         lbl_add_emprmimg = new javax.swing.JLabel();
+        txt_add_empid = new textfield.TextField();
+        txt_add_empnm = new textfield.TextField();
+        txt_add_empnm1 = new textfield.TextField();
         panel_editemp = new com.k33ptoo.components.KGradientPanel();
         lbl_edit_empimg = new javax.swing.JLabel();
         panel_txt_editempnm = new com.k33ptoo.components.KGradientPanel();
@@ -829,7 +826,7 @@ public class frm_dashboard extends javax.swing.JFrame
         loginBtn.setkHoverForeGround(new java.awt.Color(68, 82, 121));
         loginBtn.setkHoverStartColor(new java.awt.Color(178, 199, 231));
         loginBtn.setkStartColor(new java.awt.Color(68, 82, 121));
-        loginBtn.setNextFocusableComponent(lbl_addcust);
+        loginBtn.setNextFocusableComponent(txt_add_custid);
         loginBtn.addFocusListener(new java.awt.event.FocusAdapter()
         {
             public void focusGained(java.awt.event.FocusEvent evt)
@@ -898,7 +895,9 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_custsnm1.setLineColor(new java.awt.Color(68, 82, 121));
         txt_add_custsnm1.setSelectionColor(new java.awt.Color(68, 82, 121));
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 19)); // NOI18N
         jLabel4.setText("CLICK HERE");
+        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         txt_add_custsnm2.setBackground(new java.awt.Color(228, 235, 246));
         txt_add_custsnm2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
@@ -918,19 +917,21 @@ public class frm_dashboard extends javax.swing.JFrame
                         .addGroup(panel_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txt_add_custid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txt_add_custno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txt_add_custsnm, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
+                            .addComponent(txt_add_custsnm, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE))
                         .addGap(100, 100, 100)
                         .addGroup(panel_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txt_add_custsnm1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txt_add_custnm, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(panel_addcustLayout.createSequentialGroup()
-                                .addComponent(txt_add_custemail, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(panel_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txt_add_custnm, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(panel_addcustLayout.createSequentialGroup()
+                                        .addComponent(txt_add_custemail, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(5, 5, 5)
+                                        .addComponent(jLabel4)))
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(panel_addcustLayout.createSequentialGroup()
-                        .addGap(98, 98, 98)
                         .addComponent(txt_add_custsnm2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(46, 46, 46)
+                        .addGap(144, 144, 144)
                         .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(124, 124, 124))
         );
@@ -1034,10 +1035,11 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addGap(25, 25, 25)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(kGradientPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(loginBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-                    .addComponent(loginBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(kGradientPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(kGradientPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(loginBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(loginBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(22, 22, 22))
         );
 
@@ -1046,6 +1048,7 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_edit_custnm.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         txt_edit_custnm.setLabelText("CUSTOMER NAME");
         txt_edit_custnm.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_edit_custnm.setNextFocusableComponent(txt_edit_custno);
         txt_edit_custnm.setSelectionColor(new java.awt.Color(68, 82, 121));
 
         txt_edit_custemail.setBackground(new java.awt.Color(228, 235, 246));
@@ -1053,6 +1056,7 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_edit_custemail.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         txt_edit_custemail.setLabelText("EMAIL");
         txt_edit_custemail.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_edit_custemail.setNextFocusableComponent(txt_edit_custsnm);
         txt_edit_custemail.setSelectionColor(new java.awt.Color(68, 82, 121));
 
         txt_edit_custno.setBackground(new java.awt.Color(228, 235, 246));
@@ -1060,6 +1064,7 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_edit_custno.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         txt_edit_custno.setLabelText("CONTACT NO.");
         txt_edit_custno.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_edit_custno.setNextFocusableComponent(txt_edit_custemail);
         txt_edit_custno.setSelectionColor(new java.awt.Color(68, 82, 121));
 
         txt_edit_custsnm.setBackground(new java.awt.Color(228, 235, 246));
@@ -1074,6 +1079,7 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_edit_custsadd.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         txt_edit_custsadd.setLabelText("SHOP ADDRESS");
         txt_edit_custsadd.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_edit_custsadd.setNextFocusableComponent(txt_edit_custnm);
         txt_edit_custsadd.setSelectionColor(new java.awt.Color(68, 82, 121));
 
         jLabel5.setText("CLICK HERE");
@@ -1495,126 +1501,6 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_addemp.setkStartColor(new java.awt.Color(228, 235, 246));
         panel_addemp.setOpaque(false);
 
-        panel_txt_addemp.setkBorderRadius(40);
-        panel_txt_addemp.setkEndColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addemp.setkStartColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addemp.setOpaque(false);
-
-        txt_add_empid.setBackground(new java.awt.Color(164, 177, 252));
-        txt_add_empid.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_add_empid.setForeground(new java.awt.Color(228, 235, 246));
-        txt_add_empid.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_add_empid.setText("EMPLOYEE ID");
-        txt_add_empid.setBorder(null);
-        txt_add_empid.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                txt_add_empidFocusLost(evt);
-            }
-        });
-        txt_add_empid.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
-                txt_add_empidKeyPressed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout panel_txt_addempLayout = new javax.swing.GroupLayout(panel_txt_addemp);
-        panel_txt_addemp.setLayout(panel_txt_addempLayout);
-        panel_txt_addempLayout.setHorizontalGroup(
-            panel_txt_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_txt_addempLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(txt_add_empid, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
-        );
-        panel_txt_addempLayout.setVerticalGroup(
-            panel_txt_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_add_empid, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        panel_txt_addempnm.setkBorderRadius(40);
-        panel_txt_addempnm.setkEndColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addempnm.setkStartColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addempnm.setOpaque(false);
-
-        txt_add_empnm.setBackground(new java.awt.Color(164, 177, 252));
-        txt_add_empnm.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_add_empnm.setForeground(new java.awt.Color(228, 235, 246));
-        txt_add_empnm.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_add_empnm.setText("EMPLOYEE NAME");
-        txt_add_empnm.setBorder(null);
-        txt_add_empnm.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                txt_add_empnmFocusLost(evt);
-            }
-        });
-        txt_add_empnm.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
-                txt_add_empnmKeyPressed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout panel_txt_addempnmLayout = new javax.swing.GroupLayout(panel_txt_addempnm);
-        panel_txt_addempnm.setLayout(panel_txt_addempnmLayout);
-        panel_txt_addempnmLayout.setHorizontalGroup(
-            panel_txt_addempnmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_txt_addempnmLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(txt_add_empnm, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
-        );
-        panel_txt_addempnmLayout.setVerticalGroup(
-            panel_txt_addempnmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_add_empnm, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        panel_txt_addempno.setkBorderRadius(40);
-        panel_txt_addempno.setkEndColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addempno.setkStartColor(new java.awt.Color(164, 177, 252));
-        panel_txt_addempno.setOpaque(false);
-
-        txt_add_empno.setBackground(new java.awt.Color(164, 177, 252));
-        txt_add_empno.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_add_empno.setForeground(new java.awt.Color(228, 235, 246));
-        txt_add_empno.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_add_empno.setText("CONTACT NO.");
-        txt_add_empno.setBorder(null);
-        txt_add_empno.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                txt_add_empnoFocusLost(evt);
-            }
-        });
-        txt_add_empno.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
-                txt_add_empnoKeyPressed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout panel_txt_addempnoLayout = new javax.swing.GroupLayout(panel_txt_addempno);
-        panel_txt_addempno.setLayout(panel_txt_addempnoLayout);
-        panel_txt_addempnoLayout.setHorizontalGroup(
-            panel_txt_addempnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_txt_addempnoLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(txt_add_empno, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
-        );
-        panel_txt_addempnoLayout.setVerticalGroup(
-            panel_txt_addempnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_add_empno, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
         panel_txt_addempemail.setkBorderRadius(40);
         panel_txt_addempemail.setkEndColor(new java.awt.Color(164, 177, 252));
         panel_txt_addempemail.setkStartColor(new java.awt.Color(164, 177, 252));
@@ -1797,26 +1683,31 @@ public class frm_dashboard extends javax.swing.JFrame
             }
         });
 
+        txt_add_empid.setBackground(new java.awt.Color(228, 235, 246));
+        txt_add_empid.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txt_add_empid.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txt_add_empid.setLabelText("EMPLOYEE ID");
+        txt_add_empid.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_add_empid.setSelectionColor(new java.awt.Color(68, 82, 121));
+
+        txt_add_empnm.setBackground(new java.awt.Color(228, 235, 246));
+        txt_add_empnm.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txt_add_empnm.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txt_add_empnm.setLabelText("EMPLOYEE NAME");
+        txt_add_empnm.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_add_empnm.setSelectionColor(new java.awt.Color(68, 82, 121));
+
+        txt_add_empnm1.setBackground(new java.awt.Color(228, 235, 246));
+        txt_add_empnm1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txt_add_empnm1.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txt_add_empnm1.setLabelText("EMPLOYEE NAME");
+        txt_add_empnm1.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_add_empnm1.setSelectionColor(new java.awt.Color(68, 82, 121));
+
         javax.swing.GroupLayout panel_addempLayout = new javax.swing.GroupLayout(panel_addemp);
         panel_addemp.setLayout(panel_addempLayout);
         panel_addempLayout.setHorizontalGroup(
             panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_addempLayout.createSequentialGroup()
-                .addGap(131, 131, 131)
-                .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel_addempLayout.createSequentialGroup()
-                        .addComponent(panel_txt_addemp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(100, 100, 100)
-                        .addComponent(panel_txt_addempnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panel_addempLayout.createSequentialGroup()
-                        .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(panel_txt_addempno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(panel_txt_addempsnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(100, 100, 100)
-                        .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(panel_txt_addempsadd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(panel_txt_addempemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_addempLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1830,6 +1721,18 @@ public class frm_dashboard extends javax.swing.JFrame
                             .addComponent(lbl_add_emprmimg, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lbl_add_empaddimg, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(374, 374, 374))))
+            .addGroup(panel_addempLayout.createSequentialGroup()
+                .addGap(131, 131, 131)
+                .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txt_add_empid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panel_txt_addempsnm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txt_add_empnm1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(100, 100, 100)
+                .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(panel_txt_addempsadd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panel_txt_addempemail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txt_add_empnm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panel_addempLayout.setVerticalGroup(
             panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1841,14 +1744,14 @@ public class frm_dashboard extends javax.swing.JFrame
                         .addComponent(lbl_add_emprmimg, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lbl_add_empaddimg)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_add_empid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_add_empnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
                 .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panel_txt_addemp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panel_txt_addempnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(70, 70, 70)
-                .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panel_txt_addempno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panel_txt_addempemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(panel_txt_addempemail, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_add_empnm1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(70, 70, 70)
                 .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panel_txt_addempsnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4080,42 +3983,6 @@ public class frm_dashboard extends javax.swing.JFrame
         visibility(txt_det_empid, panel_addemp, true, panel_editemp, false, panel_detemp, false, panel_empextra, false);
     }//GEN-LAST:event_lbl_addempMouseClicked
 
-    private void txt_add_empidFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_empidFocusLost
-    {//GEN-HEADEREND:event_txt_add_empidFocusLost
-        txtfocuslost(txt_add_empid, txt_add_empid.getText(), "EMPLOYEE ID");
-    }//GEN-LAST:event_txt_add_empidFocusLost
-
-    private void txt_add_empidKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_empidKeyPressed
-    {//GEN-HEADEREND:event_txt_add_empidKeyPressed
-        escape(lbl_addemp, evt.getKeyCode());
-        whitespaceremover(txt_add_empid);
-        clearplaceholder(txt_add_empid, txt_add_empid.getText(), "EMPLOYEE ID");
-    }//GEN-LAST:event_txt_add_empidKeyPressed
-
-    private void txt_add_empnmFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_empnmFocusLost
-    {//GEN-HEADEREND:event_txt_add_empnmFocusLost
-        txtfocuslost(txt_add_empnm, txt_add_empnm.getText(), "EMPLOYEE NAME");
-    }//GEN-LAST:event_txt_add_empnmFocusLost
-
-    private void txt_add_empnmKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_empnmKeyPressed
-    {//GEN-HEADEREND:event_txt_add_empnmKeyPressed
-        escape(lbl_addemp, evt.getKeyCode());
-        whitespaceremover(txt_add_empnm);
-        clearplaceholder(txt_add_empnm, txt_add_empnm.getText(), "EMPLOYEE NAME");
-    }//GEN-LAST:event_txt_add_empnmKeyPressed
-
-    private void txt_add_empnoFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_empnoFocusLost
-    {//GEN-HEADEREND:event_txt_add_empnoFocusLost
-        txtfocuslost(txt_add_empno, txt_add_empno.getText(), "CONTACT NO.");
-    }//GEN-LAST:event_txt_add_empnoFocusLost
-
-    private void txt_add_empnoKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_empnoKeyPressed
-    {//GEN-HEADEREND:event_txt_add_empnoKeyPressed
-        escape(lbl_addemp, evt.getKeyCode());
-        whitespaceremover(txt_add_empno);
-        clearplaceholder(txt_add_empno, txt_add_empno.getText(), "CONTACT NO.");
-    }//GEN-LAST:event_txt_add_empnoKeyPressed
-
     private void txt_add_empemailFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_add_empemailFocusLost
     {//GEN-HEADEREND:event_txt_add_empemailFocusLost
         txtfocuslost(txt_add_empemail, txt_add_empemail.getText(), "EMAIL");
@@ -4822,10 +4689,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel panel_proeditmenu;
     private com.k33ptoo.components.KGradientPanel panel_promain;
     private com.k33ptoo.components.KGradientPanel panel_promenu;
-    private com.k33ptoo.components.KGradientPanel panel_txt_addemp;
     private com.k33ptoo.components.KGradientPanel panel_txt_addempemail;
-    private com.k33ptoo.components.KGradientPanel panel_txt_addempnm;
-    private com.k33ptoo.components.KGradientPanel panel_txt_addempno;
     private com.k33ptoo.components.KGradientPanel panel_txt_addempsadd;
     private com.k33ptoo.components.KGradientPanel panel_txt_addempsadd1;
     private com.k33ptoo.components.KGradientPanel panel_txt_addempsnm;
@@ -4871,9 +4735,9 @@ public class frm_dashboard extends javax.swing.JFrame
     private textfield.TextField txt_add_custsnm1;
     private textfield.TextField txt_add_custsnm2;
     private javax.swing.JTextField txt_add_empemail;
-    private javax.swing.JTextField txt_add_empid;
-    private javax.swing.JTextField txt_add_empnm;
-    private javax.swing.JTextField txt_add_empno;
+    private textfield.TextField txt_add_empid;
+    private textfield.TextField txt_add_empnm;
+    private textfield.TextField txt_add_empnm1;
     private javax.swing.JTextField txt_add_empsadd;
     private javax.swing.JTextField txt_add_empsalary;
     private javax.swing.JTextField txt_add_pro_cprice;
