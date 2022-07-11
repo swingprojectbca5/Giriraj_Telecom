@@ -43,6 +43,13 @@ public class NewJFrame extends javax.swing.JFrame
         comboBoxSuggestion1 = new combo_suggestion.ComboBoxSuggestion();
         spinner1 = new spinner.Spinner();
         textField2 = new textfield.TextField();
+        kGradientPanel5 = new com.k33ptoo.components.KGradientPanel();
+        jLabel8 = new javax.swing.JLabel();
+        loginBtn9 = new com.k33ptoo.components.KButton();
+        txt_add_promcb_model_id = new textfield.TextField();
+        txt_add_promcb_model_nm = new textfield.TextField();
+        kGradientPanel2 = new com.k33ptoo.components.KGradientPanel();
+        kGradientPanel9 = new com.k33ptoo.components.KGradientPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
@@ -82,6 +89,83 @@ public class NewJFrame extends javax.swing.JFrame
 
         textField2.setText("textField2");
 
+        kGradientPanel5.setkBorderRadius(40);
+        kGradientPanel5.setkEndColor(new java.awt.Color(185, 207, 255));
+        kGradientPanel5.setkStartColor(new java.awt.Color(185, 207, 255));
+        kGradientPanel5.setOpaque(false);
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(68, 82, 121));
+        jLabel8.setText("ADD MODEL");
+
+        loginBtn9.setBorder(null);
+        loginBtn9.setText("ADD CATEGORY");
+        loginBtn9.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        loginBtn9.setkBorderRadius(30);
+        loginBtn9.setkEndColor(new java.awt.Color(68, 82, 121));
+        loginBtn9.setkHoverEndColor(new java.awt.Color(178, 199, 231));
+        loginBtn9.setkHoverForeGround(new java.awt.Color(68, 82, 121));
+        loginBtn9.setkHoverStartColor(new java.awt.Color(178, 199, 231));
+        loginBtn9.setkStartColor(new java.awt.Color(68, 82, 121));
+        loginBtn9.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                loginBtn9ActionPerformed(evt);
+            }
+        });
+
+        txt_add_promcb_model_id.setBackground(new java.awt.Color(185, 207, 255));
+        txt_add_promcb_model_id.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txt_add_promcb_model_id.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txt_add_promcb_model_id.setLabelText("MODEL ID");
+        txt_add_promcb_model_id.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_add_promcb_model_id.setSelectionColor(new java.awt.Color(68, 82, 121));
+
+        txt_add_promcb_model_nm.setBackground(new java.awt.Color(185, 207, 255));
+        txt_add_promcb_model_nm.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txt_add_promcb_model_nm.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txt_add_promcb_model_nm.setLabelText("MODEL NAME");
+        txt_add_promcb_model_nm.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_add_promcb_model_nm.setSelectionColor(new java.awt.Color(68, 82, 121));
+        txt_add_promcb_model_nm.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                txt_add_promcb_model_nmActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout kGradientPanel5Layout = new javax.swing.GroupLayout(kGradientPanel5);
+        kGradientPanel5.setLayout(kGradientPanel5Layout);
+        kGradientPanel5Layout.setHorizontalGroup(
+            kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kGradientPanel5Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_add_promcb_model_nm, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                        .addGroup(kGradientPanel5Layout.createSequentialGroup()
+                            .addComponent(loginBtn9, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(22, 22, 22))
+                        .addComponent(txt_add_promcb_model_id, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(128, Short.MAX_VALUE))
+        );
+        kGradientPanel5Layout.setVerticalGroup(
+            kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txt_add_promcb_model_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(txt_add_promcb_model_nm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(loginBtn9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
+        );
+
         javax.swing.GroupLayout panel_addpro_mcbLayout = new javax.swing.GroupLayout(panel_addpro_mcb);
         panel_addpro_mcb.setLayout(panel_addpro_mcbLayout);
         panel_addpro_mcbLayout.setHorizontalGroup(
@@ -93,11 +177,17 @@ public class NewJFrame extends javax.swing.JFrame
                         .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panel_addpro_mcbLayout.createSequentialGroup()
                         .addGap(68, 68, 68)
-                        .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(textField1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
-                            .addComponent(passwordField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(comboBoxSuggestion1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                        .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_addpro_mcbLayout.createSequentialGroup()
+                                .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(passwordField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(comboBoxSuggestion1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(panel_addpro_mcbLayout.createSequentialGroup()
+                                .addComponent(textField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(kGradientPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(77, 77, 77)))
                         .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(spinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(textAreaScroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -106,10 +196,15 @@ public class NewJFrame extends javax.swing.JFrame
         panel_addpro_mcbLayout.setVerticalGroup(
             panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_addpro_mcbLayout.createSequentialGroup()
-                .addGap(96, 96, 96)
-                .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(spinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_addpro_mcbLayout.createSequentialGroup()
+                        .addGap(96, 96, 96)
+                        .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(spinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panel_addpro_mcbLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(kGradientPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(55, 55, 55)
                 .addGroup(panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(panel_addpro_mcbLayout.createSequentialGroup()
@@ -117,30 +212,65 @@ public class NewJFrame extends javax.swing.JFrame
                         .addGap(102, 102, 102)
                         .addComponent(comboBoxSuggestion1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(textAreaScroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26))
+        );
+
+        javax.swing.GroupLayout kGradientPanel2Layout = new javax.swing.GroupLayout(kGradientPanel2);
+        kGradientPanel2.setLayout(kGradientPanel2Layout);
+        kGradientPanel2Layout.setHorizontalGroup(
+            kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 179, Short.MAX_VALUE)
+        );
+        kGradientPanel2Layout.setVerticalGroup(
+            kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 8, Short.MAX_VALUE)
+        );
+
+        kGradientPanel9.setkEndColor(new java.awt.Color(178, 199, 231));
+        kGradientPanel9.setkStartColor(new java.awt.Color(178, 199, 231));
+
+        javax.swing.GroupLayout kGradientPanel9Layout = new javax.swing.GroupLayout(kGradientPanel9);
+        kGradientPanel9.setLayout(kGradientPanel9Layout);
+        kGradientPanel9Layout.setHorizontalGroup(
+            kGradientPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 59, Short.MAX_VALUE)
+        );
+        kGradientPanel9Layout.setVerticalGroup(
+            kGradientPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 8, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1048, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(43, 43, 43)
-                    .addComponent(panel_addpro_mcb, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(44, 44, 44)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(643, 643, 643)
+                .addComponent(kGradientPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(kGradientPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(813, 813, 813))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(panel_addpro_mcb, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 894, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(167, 167, 167)
-                    .addComponent(panel_addpro_mcb, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(167, 167, 167)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(138, 138, 138)
+                .addComponent(kGradientPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(76, 76, 76)
+                .addComponent(kGradientPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addComponent(panel_addpro_mcb, javax.swing.GroupLayout.PREFERRED_SIZE, 473, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(154, Short.MAX_VALUE))
         );
 
         pack();
@@ -199,6 +329,13 @@ public class NewJFrame extends javax.swing.JFrame
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private combo_suggestion.ComboBoxSuggestion comboBoxSuggestion1;
+    private javax.swing.JLabel jLabel8;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel2;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel5;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel7;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel8;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel9;
+    private com.k33ptoo.components.KButton loginBtn9;
     private com.k33ptoo.components.KGradientPanel panel_addpro_mcb;
     private textfield.PasswordField passwordField1;
     private spinner.Spinner spinner1;
@@ -206,5 +343,7 @@ public class NewJFrame extends javax.swing.JFrame
     private textarea.TextAreaScroll textAreaScroll1;
     private textfield.TextField textField1;
     private textfield.TextField textField2;
+    private textfield.TextField txt_add_promcb_model_id;
+    private textfield.TextField txt_add_promcb_model_nm;
     // End of variables declaration//GEN-END:variables
 }
