@@ -222,12 +222,12 @@ public class frm_dashboard extends javax.swing.JFrame {
         panel_addcustmenu10 = new com.k33ptoo.components.KGradientPanel();
         indicatorAddmodal = new com.k33ptoo.components.KGradientPanel();
         btn_addmodal = new com.k33ptoo.components.KButton();
-        panel_addcustmenu11 = new com.k33ptoo.components.KGradientPanel();
-        indicatorEditpro = new com.k33ptoo.components.KGradientPanel();
-        btn_editPro = new com.k33ptoo.components.KButton();
         panel_addcustmenu12 = new com.k33ptoo.components.KGradientPanel();
         indicatorDetpro = new com.k33ptoo.components.KGradientPanel();
         btn_detPro = new com.k33ptoo.components.KButton();
+        panel_addcustmenu15 = new com.k33ptoo.components.KGradientPanel();
+        indicatorEditpro = new com.k33ptoo.components.KGradientPanel();
+        btn_editPro = new com.k33ptoo.components.KButton();
         panel_bill = new com.k33ptoo.components.KGradientPanel();
         panel_account = new com.k33ptoo.components.KGradientPanel();
         panel_user = new com.k33ptoo.components.KGradientPanel();
@@ -632,7 +632,7 @@ public class frm_dashboard extends javax.swing.JFrame {
                 .addComponent(pnl_account, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(pnl_user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pnl_header.setkBorderRadius(30);
@@ -2761,10 +2761,12 @@ public class frm_dashboard extends javax.swing.JFrame {
         btn_addpro.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btn_addpro.setkBorderRadius(20);
         btn_addpro.setkEndColor(new java.awt.Color(178, 199, 231));
+        btn_addpro.setkHoverColor(new java.awt.Color(68, 82, 121));
         btn_addpro.setkHoverEndColor(new java.awt.Color(68, 82, 121));
         btn_addpro.setkHoverForeGround(new java.awt.Color(255, 255, 255));
         btn_addpro.setkHoverStartColor(new java.awt.Color(68, 82, 121));
         btn_addpro.setkPressedColor(new java.awt.Color(68, 82, 121));
+        btn_addpro.setkSelectedColor(new java.awt.Color(68, 82, 121));
         btn_addpro.setkStartColor(new java.awt.Color(178, 199, 231));
         btn_addpro.setNextFocusableComponent(btn_addmodal);
         btn_addpro.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -2883,80 +2885,6 @@ public class frm_dashboard extends javax.swing.JFrame {
                 .addComponent(indicatorAddmodal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        panel_addcustmenu11.setkBorderRadius(40);
-        panel_addcustmenu11.setkEndColor(new java.awt.Color(178, 199, 231));
-        panel_addcustmenu11.setkStartColor(new java.awt.Color(178, 199, 231));
-        panel_addcustmenu11.setOpaque(false);
-
-        indicatorEditpro.setkEndColor(new java.awt.Color(209, 216, 224));
-        indicatorEditpro.setkStartColor(new java.awt.Color(209, 216, 224));
-        indicatorEditpro.setOpaque(false);
-
-        javax.swing.GroupLayout indicatorEditproLayout = new javax.swing.GroupLayout(indicatorEditpro);
-        indicatorEditpro.setLayout(indicatorEditproLayout);
-        indicatorEditproLayout.setHorizontalGroup(
-            indicatorEditproLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        indicatorEditproLayout.setVerticalGroup(
-            indicatorEditproLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        btn_editPro.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btn_editPro.setText("EDIT PRODUCT");
-        btn_editPro.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        btn_editPro.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btn_editPro.setkBorderRadius(20);
-        btn_editPro.setkEndColor(new java.awt.Color(178, 199, 231));
-        btn_editPro.setkHoverEndColor(new java.awt.Color(68, 82, 121));
-        btn_editPro.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        btn_editPro.setkHoverStartColor(new java.awt.Color(68, 82, 121));
-        btn_editPro.setkPressedColor(new java.awt.Color(68, 82, 121));
-        btn_editPro.setkStartColor(new java.awt.Color(178, 199, 231));
-        btn_editPro.setNextFocusableComponent(btn_detPro);
-        btn_editPro.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                btn_editProFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                btn_editProFocusLost(evt);
-            }
-        });
-        btn_editPro.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btn_editProMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btn_editProMouseEntered(evt);
-            }
-        });
-        btn_editPro.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btn_editProKeyPressed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout panel_addcustmenu11Layout = new javax.swing.GroupLayout(panel_addcustmenu11);
-        panel_addcustmenu11.setLayout(panel_addcustmenu11Layout);
-        panel_addcustmenu11Layout.setHorizontalGroup(
-            panel_addcustmenu11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_addcustmenu11Layout.createSequentialGroup()
-                .addContainerGap(25, Short.MAX_VALUE)
-                .addGroup(panel_addcustmenu11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(indicatorEditpro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_editPro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(25, 25, 25))
-        );
-        panel_addcustmenu11Layout.setVerticalGroup(
-            panel_addcustmenu11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_addcustmenu11Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(btn_editPro, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(indicatorEditpro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
         panel_addcustmenu12.setkBorderRadius(40);
         panel_addcustmenu12.setkEndColor(new java.awt.Color(178, 199, 231));
         panel_addcustmenu12.setkStartColor(new java.awt.Color(178, 199, 231));
@@ -3031,6 +2959,80 @@ public class frm_dashboard extends javax.swing.JFrame {
                 .addComponent(indicatorDetpro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        panel_addcustmenu15.setkBorderRadius(40);
+        panel_addcustmenu15.setkEndColor(new java.awt.Color(178, 199, 231));
+        panel_addcustmenu15.setkStartColor(new java.awt.Color(178, 199, 231));
+        panel_addcustmenu15.setOpaque(false);
+
+        indicatorEditpro.setkEndColor(new java.awt.Color(209, 216, 224));
+        indicatorEditpro.setkStartColor(new java.awt.Color(209, 216, 224));
+        indicatorEditpro.setOpaque(false);
+
+        javax.swing.GroupLayout indicatorEditproLayout = new javax.swing.GroupLayout(indicatorEditpro);
+        indicatorEditpro.setLayout(indicatorEditproLayout);
+        indicatorEditproLayout.setHorizontalGroup(
+            indicatorEditproLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        indicatorEditproLayout.setVerticalGroup(
+            indicatorEditproLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        btn_editPro.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_editPro.setText("EDIT PRODUCT");
+        btn_editPro.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        btn_editPro.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn_editPro.setkBorderRadius(20);
+        btn_editPro.setkEndColor(new java.awt.Color(178, 199, 231));
+        btn_editPro.setkHoverEndColor(new java.awt.Color(68, 82, 121));
+        btn_editPro.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_editPro.setkHoverStartColor(new java.awt.Color(68, 82, 121));
+        btn_editPro.setkPressedColor(new java.awt.Color(68, 82, 121));
+        btn_editPro.setkStartColor(new java.awt.Color(178, 199, 231));
+        btn_editPro.setNextFocusableComponent(btn_detPro);
+        btn_editPro.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                btn_editProFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                btn_editProFocusLost(evt);
+            }
+        });
+        btn_editPro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_editProMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_editProMouseEntered(evt);
+            }
+        });
+        btn_editPro.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btn_editProKeyPressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panel_addcustmenu15Layout = new javax.swing.GroupLayout(panel_addcustmenu15);
+        panel_addcustmenu15.setLayout(panel_addcustmenu15Layout);
+        panel_addcustmenu15Layout.setHorizontalGroup(
+            panel_addcustmenu15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_addcustmenu15Layout.createSequentialGroup()
+                .addContainerGap(25, Short.MAX_VALUE)
+                .addGroup(panel_addcustmenu15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(indicatorEditpro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_editPro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(25, 25, 25))
+        );
+        panel_addcustmenu15Layout.setVerticalGroup(
+            panel_addcustmenu15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_addcustmenu15Layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(btn_editPro, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(indicatorEditpro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout panel_promenuLayout = new javax.swing.GroupLayout(panel_promenu);
         panel_promenu.setLayout(panel_promenuLayout);
         panel_promenuLayout.setHorizontalGroup(
@@ -3041,8 +3043,8 @@ public class frm_dashboard extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(panel_addcustmenu10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(panel_addcustmenu11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
+                .addComponent(panel_addcustmenu15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panel_addcustmenu12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -3050,8 +3052,8 @@ public class frm_dashboard extends javax.swing.JFrame {
             panel_promenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panel_addcustmenu7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(panel_addcustmenu10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(panel_addcustmenu11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(panel_addcustmenu12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_addcustmenu15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout panel_productLayout = new javax.swing.GroupLayout(panel_product);
@@ -3171,7 +3173,7 @@ public class frm_dashboard extends javax.swing.JFrame {
                 .addComponent(pnl_sidepane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25)
                 .addComponent(panel_main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
             .addComponent(pnl_header, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         kGradientPanel2Layout.setVerticalGroup(
@@ -3351,6 +3353,7 @@ public class frm_dashboard extends javax.swing.JFrame {
         visibility(btn_addpro, false, false, true, false, false, false, false);
         HoverColor(pnl_product, lbl_product, Color.WHITE, Color.WHITE, Color.BLACK);
         visibility(panel_addpro, true, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, false, panel_pro_fulldet, false);
+        indicator(indicatorAddpro, indicatorAddmodal, indicatorEditpro, indicatorDetpro);
     }//GEN-LAST:event_lbl_productMouseClicked
 
     private void lbl_productFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_productFocusLost
@@ -3384,6 +3387,8 @@ public class frm_dashboard extends javax.swing.JFrame {
         visibility(btn_addemp, false, true, false, false, false, false, false);
         HoverColor(pnl_employee, lbl_employee, Color.WHITE, Color.WHITE, Color.BLACK);
         visibility(panel_addemp, true, panel_editemp, false, panel_detemp, false, panel_empextra, false);
+
+        indicator(indicatorAddemp, indicatorEditemp, indicatorEmpdet);
     }//GEN-LAST:event_lbl_employeeMouseClicked
 
     private void lbl_employeeFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_employeeFocusLost
@@ -3417,6 +3422,8 @@ public class frm_dashboard extends javax.swing.JFrame {
         visibility(btn_addcust, true, false, false, false, false, false, false);
         visibility(panel_addcust, true, panel_editcus, false, panel_custdetail, false);
         HoverColor(pnl_customer, lbl_customer, Color.WHITE, Color.WHITE, Color.BLACK);
+
+        indicator(indicatorAddcust, indicatorEditcust, indicatorDetcust);
     }//GEN-LAST:event_lbl_customerMouseClicked
 
     private void lbl_customerFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_customerFocusLost
@@ -3571,17 +3578,19 @@ public class frm_dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_addempFocusGained
 
     private void btn_addempFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_addempFocusLost
-        HoverColor(btn_addemp, new Color(178, 199, 231), new Color(68, 82, 121));
+        HoverColor(btn_addemp, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_addempFocusLost
 
     private void btn_addempMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addempMouseClicked
         visibility(txt_add_empid, panel_addemp, true, panel_editemp, false, panel_detemp, false);
+        indicatorOn(btn_addemp, indicatorAddemp, btn_editemp, btn_empdet, indicatorEditemp, indicatorEmpdet);
     }//GEN-LAST:event_btn_addempMouseClicked
 
     private void btn_addempKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_addempKeyPressed
         visibility(txt_add_empid, panel_addemp, true, panel_editemp, false, panel_detemp, false);
 
         escape(btn_addemp, evt.getKeyCode(), panel_customer);
+        indicatorOn(btn_addemp, indicatorAddemp, btn_editemp, btn_empdet, indicatorEditemp, indicatorEmpdet);
     }//GEN-LAST:event_btn_addempKeyPressed
 
     private void btn_editempFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_editempFocusGained
@@ -3589,17 +3598,19 @@ public class frm_dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_editempFocusGained
 
     private void btn_editempFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_editempFocusLost
-        HoverColor(btn_editemp, new Color(178, 199, 231), new Color(68, 82, 121));
+        HoverColor(btn_editemp, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_editempFocusLost
 
     private void btn_editempMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_editempMouseClicked
         visibility(txt_edit_empnm, panel_addemp, false, panel_editemp, true, panel_detemp, false);
+        indicatorOn(btn_editemp, indicatorEditemp, btn_addemp, btn_empdet, indicatorAddemp, indicatorEmpdet);
     }//GEN-LAST:event_btn_editempMouseClicked
 
     private void btn_editempKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_editempKeyPressed
         visibility(txt_edit_empnm, panel_addemp, false, panel_editemp, true, panel_detemp, false);
 
         escape(btn_editemp, evt.getKeyCode(), panel_customer);
+        indicatorOn(btn_editemp, indicatorEditemp, btn_addemp, btn_empdet, indicatorAddemp, indicatorEmpdet);
     }//GEN-LAST:event_btn_editempKeyPressed
 
     private void btn_empdetFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_empdetFocusGained
@@ -3607,17 +3618,20 @@ public class frm_dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_empdetFocusGained
 
     private void btn_empdetFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_empdetFocusLost
-        HoverColor(btn_empdet, new Color(178, 199, 231), new Color(68, 82, 121));
+        HoverColor(btn_empdet, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_empdetFocusLost
 
     private void btn_empdetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_empdetMouseClicked
         visibility(txt_det_empid, panel_addemp, false, panel_editemp, false, panel_detemp, true);
+
+        indicatorOn(btn_empdet, indicatorEmpdet, btn_addemp, btn_editemp, indicatorAddemp, indicatorEditemp);
     }//GEN-LAST:event_btn_empdetMouseClicked
 
     private void btn_empdetKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_empdetKeyPressed
         visibility(txt_det_empid, panel_addemp, false, panel_editemp, false, panel_detemp, true);
 
         escape(btn_empdet, evt.getKeyCode(), panel_customer);
+        indicatorOn(btn_empdet, indicatorEmpdet, btn_addemp, btn_editemp, indicatorAddemp, indicatorEditemp);
     }//GEN-LAST:event_btn_empdetKeyPressed
 
     private void btn_addcustMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addcustMouseClicked
@@ -3661,71 +3675,39 @@ public class frm_dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_addproFocusGained
 
     private void btn_addproFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_addproFocusLost
-        HoverColor(btn_addpro, new Color(178, 199, 231), new Color(68, 82, 121));
+        HoverColor(btn_addpro, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_addproFocusLost
 
     private void btn_addproMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addproMouseClicked
-        visibility(txt_add_pro_id, panel_addpro, true, panel_addpro_mcb, false, panel_editpro, false, panel_editpro, false, panel_pro_fulldet, false);
+        visibility(txt_add_pro_id, panel_addpro, true, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, false, panel_pro_fulldet, false);
+        indicatorOn(btn_addpro, indicatorAddpro, btn_editPro, btn_editPro, btn_detPro, indicatorAddmodal, indicatorEditpro, indicatorDetpro);
     }//GEN-LAST:event_btn_addproMouseClicked
 
     private void btn_addproKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_addproKeyPressed
-        visibility(txt_add_pro_id, panel_addpro, true, panel_addpro_mcb, false, panel_editpro, false, panel_editpro, false, panel_pro_fulldet, false);
+        visibility(txt_add_pro_id, panel_addpro, true, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, false, panel_pro_fulldet, false);
 
         escape(btn_addpro, evt.getKeyCode(), panel_customer);
+        indicatorOn(btn_addpro, indicatorAddpro, btn_editPro, btn_editPro, btn_detPro, indicatorAddmodal, indicatorEditpro, indicatorDetpro);
     }//GEN-LAST:event_btn_addproKeyPressed
-
-    private void btn_addmodalFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_addmodalFocusGained
-        HoverColor(btn_addmodal, new Color(68, 82, 121), new Color(255, 255, 255));
-    }//GEN-LAST:event_btn_addmodalFocusGained
-
-    private void btn_addmodalFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_addmodalFocusLost
-        HoverColor(btn_addmodal, new Color(178, 199, 231), new Color(68, 82, 121));
-    }//GEN-LAST:event_btn_addmodalFocusLost
-
-    private void btn_addmodalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addmodalMouseClicked
-        visibility(txt_add_promcb_brand_id, panel_addpro, false, panel_addpro_mcb, true, panel_editpro, false, panel_editpro, false, panel_pro_fulldet, false);
-    }//GEN-LAST:event_btn_addmodalMouseClicked
-
-    private void btn_addmodalKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_addmodalKeyPressed
-        visibility(txt_add_promcb_brand_id, panel_addpro, false, panel_addpro_mcb, true, panel_editpro, false, panel_editpro, false, panel_pro_fulldet, false);
-
-        escape(btn_addpro, evt.getKeyCode(), panel_customer);
-    }//GEN-LAST:event_btn_addmodalKeyPressed
-
-    private void btn_editProFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_editProFocusGained
-        HoverColor(btn_editPro, new Color(68, 82, 121), new Color(255, 255, 255));
-    }//GEN-LAST:event_btn_editProFocusGained
-
-    private void btn_editProFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_editProFocusLost
-        HoverColor(btn_editPro, new Color(178, 199, 231), new Color(68, 82, 121));
-    }//GEN-LAST:event_btn_editProFocusLost
-
-    private void btn_editProMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_editProMouseClicked
-        visibility(jTextField2, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, true, panel_editpro, false, panel_pro_fulldet, false);
-    }//GEN-LAST:event_btn_editProMouseClicked
-
-    private void btn_editProKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_editProKeyPressed
-        visibility(jTextField2, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, true, panel_editpro, false, panel_pro_fulldet, false);
-
-        escape(btn_editPro, evt.getKeyCode(), panel_customer);
-    }//GEN-LAST:event_btn_editProKeyPressed
 
     private void btn_detProFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_detProFocusGained
         HoverColor(btn_detPro, new Color(68, 82, 121), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_detProFocusGained
 
     private void btn_detProFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_detProFocusLost
-        HoverColor(btn_detPro, new Color(178, 199, 231), new Color(68, 82, 121));
+        HoverColor(btn_detPro, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_detProFocusLost
 
     private void btn_detProMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_detProMouseClicked
-        visibility(jTextField3, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, false, panel_editpro, true, panel_pro_fulldet, false);
+        visibility(jTextField3, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, true, panel_pro_fulldet, false);
+        indicatorOn(btn_detPro, indicatorDetpro, btn_addpro, btn_editPro, btn_addmodal, indicatorAddpro, indicatorAddmodal, indicatorEditpro);
     }//GEN-LAST:event_btn_detProMouseClicked
 
     private void btn_detProKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_detProKeyPressed
-        visibility(jTextField3, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, false, panel_editpro, true, panel_pro_fulldet, false);
+        visibility(jTextField3, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, true, panel_pro_fulldet, false);
 
         escape(btn_detPro, evt.getKeyCode(), panel_customer);
+        indicatorOn(btn_detPro, indicatorDetpro, btn_addpro, btn_editPro, btn_addmodal, indicatorAddpro, indicatorAddmodal, indicatorEditpro);
     }//GEN-LAST:event_btn_detProKeyPressed
 
     private void btn_addempMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addempMouseEntered
@@ -3756,20 +3738,12 @@ public class frm_dashboard extends javax.swing.JFrame {
         setCursor(new Cursor(Cursor.HAND_CURSOR));
     }//GEN-LAST:event_btn_addproMouseEntered
 
-    private void btn_addmodalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addmodalMouseEntered
-        setCursor(new Cursor(Cursor.HAND_CURSOR));
-    }//GEN-LAST:event_btn_addmodalMouseEntered
-
-    private void btn_editProMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_editProMouseEntered
-        setCursor(new Cursor(Cursor.HAND_CURSOR));
-    }//GEN-LAST:event_btn_editProMouseEntered
-
     private void btn_detProMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_detProMouseEntered
         setCursor(new Cursor(Cursor.HAND_CURSOR));
     }//GEN-LAST:event_btn_detProMouseEntered
 
     private void btn_detcustFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_detcustFocusLost
-        HoverColor(btn_detcust, new Color(178, 199, 231), new Color(68, 82, 121));
+        HoverColor(btn_detcust, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_detcustFocusLost
 
     private void btn_detcustFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_detcustFocusGained
@@ -3777,7 +3751,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_detcustFocusGained
 
     private void btn_editcustFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_editcustFocusLost
-        HoverColor(btn_editcust, new Color(178, 199, 231), new Color(68, 82, 121));
+        HoverColor(btn_editcust, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_editcustFocusLost
 
     private void btn_editcustFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_editcustFocusGained
@@ -3785,12 +3759,60 @@ public class frm_dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_editcustFocusGained
 
     private void btn_addcustFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_addcustFocusLost
-        HoverColor(btn_addcust, new Color(178, 199, 231), new Color(68, 82, 121));
+        HoverColor(btn_addcust, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_addcustFocusLost
 
     private void btn_addcustFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_addcustFocusGained
         HoverColor(btn_addcust, new Color(68, 82, 121), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_addcustFocusGained
+
+    private void btn_addmodalKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_addmodalKeyPressed
+        visibility(txt_add_promcb_brand_id, panel_addpro, false, panel_addpro_mcb, true, panel_editpro, false, panel_editpro, false, panel_pro_fulldet, false);
+
+        escape(btn_addpro, evt.getKeyCode(), panel_customer);
+        indicatorOn(btn_addmodal, indicatorAddmodal, btn_addpro, btn_editPro, btn_detPro, indicatorAddpro, indicatorEditpro, indicatorDetpro);
+    }//GEN-LAST:event_btn_addmodalKeyPressed
+
+    private void btn_addmodalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addmodalMouseEntered
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_btn_addmodalMouseEntered
+
+    private void btn_addmodalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addmodalMouseClicked
+        visibility(txt_add_promcb_brand_id, panel_addpro, false, panel_addpro_mcb, true, panel_editpro, false, panel_editpro, false, panel_pro_fulldet, false);
+        indicatorOn(btn_addmodal, indicatorAddmodal, btn_addpro, btn_editPro, btn_detPro, indicatorAddpro, indicatorEditpro, indicatorDetpro);
+    }//GEN-LAST:event_btn_addmodalMouseClicked
+
+    private void btn_addmodalFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_addmodalFocusLost
+        HoverColor(btn_addmodal, new Color(178, 199, 231), new Color(255, 255, 255));
+    }//GEN-LAST:event_btn_addmodalFocusLost
+
+    private void btn_addmodalFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_addmodalFocusGained
+        HoverColor(btn_addmodal, new Color(68, 82, 121), new Color(255, 255, 255));
+    }//GEN-LAST:event_btn_addmodalFocusGained
+
+    private void btn_editProFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_editProFocusGained
+        HoverColor(btn_editPro, new Color(68, 82, 121), new Color(255, 255, 255));
+    }//GEN-LAST:event_btn_editProFocusGained
+
+    private void btn_editProFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_editProFocusLost
+        HoverColor(btn_editPro, new Color(178, 199, 231), new Color(255, 255, 255));
+    }//GEN-LAST:event_btn_editProFocusLost
+
+    private void btn_editProMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_editProMouseClicked
+        visibility(jTextField2, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, true, panel_prodet, false, panel_pro_fulldet, false);
+        indicatorOn(btn_editPro, indicatorEditpro, btn_addpro, btn_detPro, btn_addmodal, indicatorAddpro, indicatorAddmodal, indicatorDetpro);
+    }//GEN-LAST:event_btn_editProMouseClicked
+
+    private void btn_editProMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_editProMouseEntered
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_btn_editProMouseEntered
+
+    private void btn_editProKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_editProKeyPressed
+        visibility(jTextField2, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, true, panel_prodet, false, panel_pro_fulldet, false);
+
+        escape(btn_editPro, evt.getKeyCode(), panel_customer);
+        indicatorOn(btn_editPro, indicatorEditpro, btn_addpro, btn_detPro, btn_addmodal, indicatorAddpro, indicatorAddmodal, indicatorDetpro);
+    }//GEN-LAST:event_btn_editProKeyPressed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -3837,6 +3859,42 @@ public class frm_dashboard extends javax.swing.JFrame {
     }
 //    Created by Mayank
 
+    public void indicator(KGradientPanel panel1, KGradientPanel panel2, KGradientPanel panel3) {
+        //Panel 1
+        panel1.setkStartColor(new Color(209, 216, 224));
+        panel1.setkEndColor(new Color(209, 216, 224));
+        panel1.setBackground(new Color(209, 216, 224));
+        //Panel 2
+        panel2.setkStartColor(new Color(209, 216, 224));
+        panel2.setkEndColor(new Color(209, 216, 224));
+        panel2.setBackground(new Color(209, 216, 224));
+        //Panel 3
+        panel3.setkStartColor(new Color(209, 216, 224));
+        panel3.setkEndColor(new Color(209, 216, 224));
+        panel3.setBackground(new Color(209, 216, 224));
+    }
+//    Created by Mayank
+
+    public void indicator(KGradientPanel panel1, KGradientPanel panel2, KGradientPanel panel3, KGradientPanel panel4) {
+        //Panel 1
+        panel1.setkStartColor(new Color(209, 216, 224));
+        panel1.setkEndColor(new Color(209, 216, 224));
+        panel1.setBackground(new Color(209, 216, 224));
+        //Panel 2
+        panel2.setkStartColor(new Color(209, 216, 224));
+        panel2.setkEndColor(new Color(209, 216, 224));
+        panel2.setBackground(new Color(209, 216, 224));
+        //Panel 3
+        panel3.setkStartColor(new Color(209, 216, 224));
+        panel3.setkEndColor(new Color(209, 216, 224));
+        panel3.setBackground(new Color(209, 216, 224));
+        //Panel 4
+        panel4.setkStartColor(new Color(209, 216, 224));
+        panel4.setkEndColor(new Color(209, 216, 224));
+        panel4.setBackground(new Color(209, 216, 224));
+    }
+//    Created by Mayank
+
     public void indicatorOn(KButton button, KGradientPanel panel, KButton rButton2, KButton rButton3, KGradientPanel rpanel2, KGradientPanel rpanel3) {
 
         //apply color in button
@@ -3868,6 +3926,50 @@ public class frm_dashboard extends javax.swing.JFrame {
         rpanel3.setkStartColor(new Color(209, 216, 224));
         rpanel3.setkEndColor(new Color(209, 216, 224));
         rpanel3.setBackground(new Color(209, 216, 224));
+    }
+//    Created by Mayank
+
+    public void indicatorOn(KButton button, KGradientPanel panel, KButton rButton2, KButton rButton3, KButton rButton4, KGradientPanel rpanel2, KGradientPanel rpanel3, KGradientPanel rpanel4) {
+
+        //apply color in button
+        button.setkStartColor(new Color(68, 82, 121));
+        button.setkEndColor(new Color(68, 82, 121));
+        button.setBackground(new Color(68, 82, 121));
+
+        //apply color in indicator
+        panel.setkStartColor(new Color(68, 82, 121));
+        panel.setkEndColor(new Color(68, 82, 121));
+        panel.setBackground(new Color(68, 82, 121));
+
+        //Remove button(btn2) background color
+        rButton2.setkStartColor(new Color(178, 199, 231));
+        rButton2.setkEndColor(new Color(178, 199, 231));
+        rButton2.setBackground(new Color(178, 199, 231));
+
+        //Remove button(btn3) background color
+        rButton3.setkStartColor(new Color(178, 199, 231));
+        rButton3.setkEndColor(new Color(178, 199, 231));
+        rButton3.setBackground(new Color(178, 199, 231));
+
+        //Remove button(btn4) background color
+        rButton4.setkStartColor(new Color(178, 199, 231));
+        rButton4.setkEndColor(new Color(178, 199, 231));
+        rButton4.setBackground(new Color(178, 199, 231));
+
+        //Remove indicator(2) background color
+        rpanel2.setkStartColor(new Color(209, 216, 224));
+        rpanel2.setkEndColor(new Color(209, 216, 224));
+        rpanel2.setBackground(new Color(209, 216, 224));
+
+        //Remove indicator(3) background color
+        rpanel3.setkStartColor(new Color(209, 216, 224));
+        rpanel3.setkEndColor(new Color(209, 216, 224));
+        rpanel3.setBackground(new Color(209, 216, 224));
+
+        //Remove indicator(4) background color
+        rpanel4.setkStartColor(new Color(209, 216, 224));
+        rpanel4.setkEndColor(new Color(209, 216, 224));
+        rpanel4.setBackground(new Color(209, 216, 224));
     }
 
     public void escape(JLabel label, int code) {
@@ -4079,8 +4181,6 @@ public class frm_dashboard extends javax.swing.JFrame {
     private com.k33ptoo.components.KGradientPanel kGradientPanel12;
     private com.k33ptoo.components.KGradientPanel kGradientPanel19;
     private com.k33ptoo.components.KGradientPanel kGradientPanel2;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel20;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel26;
     private com.k33ptoo.components.KGradientPanel kGradientPanel4;
     private javax.swing.JLabel lbl_account;
     private javax.swing.JLabel lbl_add_empaddimg;
@@ -4114,7 +4214,6 @@ public class frm_dashboard extends javax.swing.JFrame {
     private com.k33ptoo.components.KGradientPanel panel_account;
     private com.k33ptoo.components.KGradientPanel panel_addcust;
     private com.k33ptoo.components.KGradientPanel panel_addcustmenu10;
-    private com.k33ptoo.components.KGradientPanel panel_addcustmenu11;
     private com.k33ptoo.components.KGradientPanel panel_addcustmenu12;
     private com.k33ptoo.components.KGradientPanel panel_addcustmenu13;
     private com.k33ptoo.components.KGradientPanel panel_addcustmenu14;
@@ -4124,7 +4223,6 @@ public class frm_dashboard extends javax.swing.JFrame {
     private com.k33ptoo.components.KGradientPanel panel_addcustmenu6;
     private com.k33ptoo.components.KGradientPanel panel_addcustmenu7;
     private com.k33ptoo.components.KGradientPanel panel_addcustmenu8;
-    private com.k33ptoo.components.KGradientPanel panel_addcustmenu9;
     private com.k33ptoo.components.KGradientPanel panel_addemp;
     private com.k33ptoo.components.KGradientPanel panel_addpro;
     private com.k33ptoo.components.KGradientPanel panel_addpro_mcb;
@@ -4143,8 +4241,6 @@ public class frm_dashboard extends javax.swing.JFrame {
     private com.k33ptoo.components.KGradientPanel panel_employee;
     private com.k33ptoo.components.KGradientPanel panel_empmain;
     private com.k33ptoo.components.KGradientPanel panel_empmenu;
-    private com.k33ptoo.components.KGradientPanel panel_empmenu3;
-    private com.k33ptoo.components.KGradientPanel panel_empmenu4;
     private com.k33ptoo.components.KGradientPanel panel_extra;
     private com.k33ptoo.components.KGradientPanel panel_main;
     private com.k33ptoo.components.KGradientPanel panel_pro_fulldet;
