@@ -210,6 +210,8 @@ public class frm_dashboard extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         txt_add_promcb_model_id1 = new textfield.TextField();
         txt_add_promcb_model_nm1 = new textfield.TextField();
+        loginBtn13 = new com.k33ptoo.components.KButton();
+        loginBtn14 = new com.k33ptoo.components.KButton();
         panel_editpro = new com.k33ptoo.components.KGradientPanel();
         jTextField2 = new javax.swing.JTextField();
         panel_prodet = new com.k33ptoo.components.KGradientPanel();
@@ -632,7 +634,7 @@ public class frm_dashboard extends javax.swing.JFrame {
                 .addComponent(pnl_account, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(pnl_user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         pnl_header.setkBorderRadius(30);
@@ -2375,16 +2377,18 @@ public class frm_dashboard extends javax.swing.JFrame {
                     .addComponent(txt_add_pro_qty, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(panel_addproLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(textAreaScroll2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+                    .addComponent(textAreaScroll2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
                 .addComponent(loginBtn6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17))
         );
 
+        panel_addpro_mcb.setkBorderRadius(40);
         panel_addpro_mcb.setkEndColor(new java.awt.Color(228, 235, 246));
         panel_addpro_mcb.setkStartColor(new java.awt.Color(228, 235, 246));
         panel_addpro_mcb.setOpaque(false);
+        panel_addpro_mcb.setPreferredSize(new java.awt.Dimension(1011, 610));
 
         kGradientPanel4.setkBorderRadius(40);
         kGradientPanel4.setkEndColor(new java.awt.Color(185, 207, 255));
@@ -2522,6 +2526,36 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_add_promcb_model_nm1.setLineColor(new java.awt.Color(68, 82, 121));
         txt_add_promcb_model_nm1.setSelectionColor(new java.awt.Color(68, 82, 121));
 
+        loginBtn13.setBorder(null);
+        loginBtn13.setText("ADD");
+        loginBtn13.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        loginBtn13.setkBorderRadius(30);
+        loginBtn13.setkEndColor(new java.awt.Color(68, 82, 121));
+        loginBtn13.setkHoverEndColor(new java.awt.Color(178, 199, 231));
+        loginBtn13.setkHoverForeGround(new java.awt.Color(68, 82, 121));
+        loginBtn13.setkHoverStartColor(new java.awt.Color(178, 199, 231));
+        loginBtn13.setkStartColor(new java.awt.Color(68, 82, 121));
+        loginBtn13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginBtn13ActionPerformed(evt);
+            }
+        });
+
+        loginBtn14.setBorder(null);
+        loginBtn14.setText("ADD");
+        loginBtn14.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        loginBtn14.setkBorderRadius(30);
+        loginBtn14.setkEndColor(new java.awt.Color(68, 82, 121));
+        loginBtn14.setkHoverEndColor(new java.awt.Color(178, 199, 231));
+        loginBtn14.setkHoverForeGround(new java.awt.Color(68, 82, 121));
+        loginBtn14.setkHoverStartColor(new java.awt.Color(178, 199, 231));
+        loginBtn14.setkStartColor(new java.awt.Color(68, 82, 121));
+        loginBtn14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginBtn14ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout kGradientPanel4Layout = new javax.swing.GroupLayout(kGradientPanel4);
         kGradientPanel4.setLayout(kGradientPanel4Layout);
         kGradientPanel4Layout.setHorizontalGroup(
@@ -2530,38 +2564,46 @@ public class frm_dashboard extends javax.swing.JFrame {
                 .addGap(16, 16, 16)
                 .addGroup(kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(kGradientPanel4Layout.createSequentialGroup()
-                        .addGap(2, 2, 2)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(loginBtn8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(loginBtn11, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel4Layout.createSequentialGroup()
-                        .addComponent(txt_add_promcb_brand_id, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(txt_add_promcb_brand_nm, javax.swing.GroupLayout.DEFAULT_SIZE, 346, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(loginBtn10, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(kGradientPanel4Layout.createSequentialGroup()
                         .addGroup(kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txt_add_promcb_model_id1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
-                                .addComponent(txt_add_promcb_ctrgy_id1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_add_promcb_ctrgy_id, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txt_add_promcb_model_nm1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addComponent(loginBtn12, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18))
+                            .addGroup(kGradientPanel4Layout.createSequentialGroup()
+                                .addGap(2, 2, 2)
+                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(loginBtn8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel4Layout.createSequentialGroup()
+                                .addComponent(txt_add_promcb_brand_id, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(txt_add_promcb_brand_nm, javax.swing.GroupLayout.DEFAULT_SIZE, 346, Short.MAX_VALUE)
+                                .addGap(18, 18, 18)
+                                .addComponent(loginBtn10, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel4Layout.createSequentialGroup()
+                                .addGroup(kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(kGradientPanel4Layout.createSequentialGroup()
+                                        .addGroup(kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(txt_add_promcb_model_id1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
+                                            .addComponent(txt_add_promcb_ctrgy_id1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txt_add_promcb_ctrgy_id, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(txt_add_promcb_model_nm1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addGroup(kGradientPanel4Layout.createSequentialGroup()
+                                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(18, 18, 18)
+                                .addGroup(kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(loginBtn11, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(loginBtn12, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(loginBtn14, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(loginBtn13, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(18, 18, 18))))
         );
         kGradientPanel4Layout.setVerticalGroup(
             kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(kGradientPanel4Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(25, 25, 25)
                 .addGroup(kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(loginBtn8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2570,25 +2612,25 @@ public class frm_dashboard extends javax.swing.JFrame {
                     .addComponent(txt_add_promcb_brand_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_add_promcb_brand_nm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(loginBtn10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(kGradientPanel4Layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addComponent(loginBtn11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(kGradientPanel4Layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(jLabel7)))
+                .addGap(75, 75, 75)
+                .addGroup(kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(loginBtn11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_add_promcb_ctrgy_id1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_add_promcb_ctrgy_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(loginBtn12, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(59, 59, 59)
-                .addComponent(jLabel8)
-                .addGap(30, 30, 30)
+                .addGap(71, 71, 71)
+                .addGroup(kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(loginBtn13, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_add_promcb_model_id1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_add_promcb_model_nm1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(79, Short.MAX_VALUE))
+                    .addComponent(txt_add_promcb_model_nm1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(loginBtn14, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panel_addpro_mcbLayout = new javax.swing.GroupLayout(panel_addpro_mcb);
@@ -2598,16 +2640,17 @@ public class frm_dashboard extends javax.swing.JFrame {
             .addGroup(panel_addpro_mcbLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(kGradientPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         panel_addpro_mcbLayout.setVerticalGroup(
             panel_addpro_mcbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_addpro_mcbLayout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
+                .addContainerGap(23, Short.MAX_VALUE)
                 .addComponent(kGradientPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
         );
 
+        panel_editpro.setkBorderRadius(40);
         panel_editpro.setkEndColor(new java.awt.Color(228, 235, 246));
         panel_editpro.setkStartColor(new java.awt.Color(228, 235, 246));
         panel_editpro.setOpaque(false);
@@ -2631,6 +2674,7 @@ public class frm_dashboard extends javax.swing.JFrame {
                 .addContainerGap(464, Short.MAX_VALUE))
         );
 
+        panel_prodet.setkBorderRadius(40);
         panel_prodet.setkEndColor(new java.awt.Color(228, 235, 246));
         panel_prodet.setkStartColor(new java.awt.Color(228, 235, 246));
         panel_prodet.setOpaque(false);
@@ -2644,16 +2688,17 @@ public class frm_dashboard extends javax.swing.JFrame {
             .addGroup(panel_prodetLayout.createSequentialGroup()
                 .addGap(389, 389, 389)
                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(516, Short.MAX_VALUE))
+                .addContainerGap(566, Short.MAX_VALUE))
         );
         panel_prodetLayout.setVerticalGroup(
             panel_prodetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_prodetLayout.createSequentialGroup()
                 .addGap(206, 206, 206)
                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(335, Short.MAX_VALUE))
+                .addContainerGap(385, Short.MAX_VALUE))
         );
 
+        panel_pro_fulldet.setkBorderRadius(40);
         panel_pro_fulldet.setkEndColor(new java.awt.Color(228, 235, 246));
         panel_pro_fulldet.setkStartColor(new java.awt.Color(228, 235, 246));
         panel_pro_fulldet.setOpaque(false);
@@ -2676,14 +2721,14 @@ public class frm_dashboard extends javax.swing.JFrame {
             .addGap(0, 1061, Short.MAX_VALUE)
             .addGroup(panel_promainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_promainLayout.createSequentialGroup()
-                    .addGap(25, 25, 25)
+                    .addGap(24, 24, 24)
                     .addComponent(panel_editpro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(25, Short.MAX_VALUE)))
+                    .addContainerGap(26, Short.MAX_VALUE)))
             .addGroup(panel_promainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_promainLayout.createSequentialGroup()
-                    .addGap(50, 50, 50)
-                    .addComponent(panel_prodet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(50, 50, 50)))
+                    .addGap(22, 22, 22)
+                    .addComponent(panel_prodet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(28, Short.MAX_VALUE)))
             .addGroup(panel_promainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_promainLayout.createSequentialGroup()
                     .addGap(25, 25, 25)
@@ -2691,12 +2736,12 @@ public class frm_dashboard extends javax.swing.JFrame {
                     .addContainerGap(25, Short.MAX_VALUE)))
             .addGroup(panel_promainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_promainLayout.createSequentialGroup()
-                    .addGap(25, 25, 25)
+                    .addGap(23, 23, 23)
                     .addComponent(panel_addpro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(25, Short.MAX_VALUE)))
+                    .addContainerGap(27, Short.MAX_VALUE)))
             .addGroup(panel_promainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_promainLayout.createSequentialGroup()
-                    .addGap(25, 25, 25)
+                    .addGap(24, 24, 24)
                     .addComponent(panel_addpro_mcb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(25, Short.MAX_VALUE)))
         );
@@ -2710,9 +2755,9 @@ public class frm_dashboard extends javax.swing.JFrame {
                     .addContainerGap(25, Short.MAX_VALUE)))
             .addGroup(panel_promainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_promainLayout.createSequentialGroup()
-                    .addGap(50, 50, 50)
-                    .addComponent(panel_prodet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(50, 50, 50)))
+                    .addGap(27, 27, 27)
+                    .addComponent(panel_prodet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(23, Short.MAX_VALUE)))
             .addGroup(panel_promainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_promainLayout.createSequentialGroup()
                     .addGap(25, 25, 25)
@@ -3583,14 +3628,16 @@ public class frm_dashboard extends javax.swing.JFrame {
 
     private void btn_addempMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addempMouseClicked
         visibility(txt_add_empid, panel_addemp, true, panel_editemp, false, panel_detemp, false);
-        indicatorOn(btn_addemp, indicatorAddemp, btn_editemp, btn_empdet, indicatorEditemp, indicatorEmpdet);
+        indicatorOn(indicatorAddemp, indicatorEditemp, indicatorEmpdet);
+        HoverColor(btn_addemp, new Color(68, 82, 121), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_addempMouseClicked
 
     private void btn_addempKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_addempKeyPressed
         visibility(txt_add_empid, panel_addemp, true, panel_editemp, false, panel_detemp, false);
 
         escape(btn_addemp, evt.getKeyCode(), panel_customer);
-        indicatorOn(btn_addemp, indicatorAddemp, btn_editemp, btn_empdet, indicatorEditemp, indicatorEmpdet);
+        indicatorOn(indicatorAddemp, indicatorEditemp, indicatorEmpdet);
+        HoverColor(btn_addemp, new Color(68, 82, 121), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_addempKeyPressed
 
     private void btn_editempFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_editempFocusGained
@@ -3603,14 +3650,16 @@ public class frm_dashboard extends javax.swing.JFrame {
 
     private void btn_editempMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_editempMouseClicked
         visibility(txt_edit_empnm, panel_addemp, false, panel_editemp, true, panel_detemp, false);
-        indicatorOn(btn_editemp, indicatorEditemp, btn_addemp, btn_empdet, indicatorAddemp, indicatorEmpdet);
+        indicatorOn(indicatorEditemp, indicatorAddemp, indicatorEmpdet);
+        HoverColor(btn_editemp, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_editempMouseClicked
 
     private void btn_editempKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_editempKeyPressed
         visibility(txt_edit_empnm, panel_addemp, false, panel_editemp, true, panel_detemp, false);
 
         escape(btn_editemp, evt.getKeyCode(), panel_customer);
-        indicatorOn(btn_editemp, indicatorEditemp, btn_addemp, btn_empdet, indicatorAddemp, indicatorEmpdet);
+        indicatorOn(indicatorEditemp, indicatorAddemp, indicatorEmpdet);
+        HoverColor(btn_editemp, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_editempKeyPressed
 
     private void btn_empdetFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_empdetFocusGained
@@ -3624,50 +3673,58 @@ public class frm_dashboard extends javax.swing.JFrame {
     private void btn_empdetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_empdetMouseClicked
         visibility(txt_det_empid, panel_addemp, false, panel_editemp, false, panel_detemp, true);
 
-        indicatorOn(btn_empdet, indicatorEmpdet, btn_addemp, btn_editemp, indicatorAddemp, indicatorEditemp);
+        indicatorOn(indicatorEmpdet, indicatorAddemp, indicatorEditemp);
+        HoverColor(btn_empdet, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_empdetMouseClicked
 
     private void btn_empdetKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_empdetKeyPressed
         visibility(txt_det_empid, panel_addemp, false, panel_editemp, false, panel_detemp, true);
 
         escape(btn_empdet, evt.getKeyCode(), panel_customer);
-        indicatorOn(btn_empdet, indicatorEmpdet, btn_addemp, btn_editemp, indicatorAddemp, indicatorEditemp);
+        indicatorOn(indicatorEmpdet, indicatorAddemp, indicatorEditemp);
+        HoverColor(btn_empdet, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_empdetKeyPressed
 
     private void btn_addcustMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addcustMouseClicked
         visibility(txt_add_custid, panel_addcust, true, panel_editcus, false, panel_custdetail, false);
-        indicatorOn(btn_addcust, indicatorAddcust, btn_editcust, btn_detcust, indicatorEditcust, indicatorDetcust);
+        indicatorOn(indicatorAddcust, indicatorEditcust, indicatorDetcust);
+        HoverColor(btn_editcust, new Color(68, 82, 121), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_addcustMouseClicked
 
     private void btn_addcustKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_addcustKeyPressed
         visibility(txt_add_custid, panel_addcust, true, panel_editcus, false, panel_custdetail, false);
 
         escape(btn_addcust, evt.getKeyCode(), panel_customer);
-        indicatorOn(btn_addcust, indicatorAddcust, btn_editcust, btn_detcust, indicatorEditcust, indicatorDetcust);
+        HoverColor(btn_editcust, new Color(68, 82, 121), new Color(255, 255, 255));
+        indicatorOn(indicatorAddcust, indicatorEditcust, indicatorDetcust);
     }//GEN-LAST:event_btn_addcustKeyPressed
 
     private void btn_editcustMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_editcustMouseClicked
         visibility(txt_edit_custnm, panel_addcust, false, panel_editcus, true, panel_custdetail, false);
-        indicatorOn(btn_editcust, indicatorEditcust, btn_addcust, btn_detcust, indicatorAddcust, indicatorDetcust);
+        indicatorOn(indicatorEditcust, indicatorAddcust, indicatorDetcust);
+        HoverColor(btn_editcust, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_editcustMouseClicked
 
     private void btn_editcustKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_editcustKeyPressed
         visibility(txt_edit_custnm, panel_addcust, false, panel_editcus, true, panel_custdetail, false);
 
         escape(btn_editcust, evt.getKeyCode(), panel_customer);
-        indicatorOn(btn_editcust, indicatorEditcust, btn_addcust, btn_detcust, indicatorAddcust, indicatorDetcust);
+        indicatorOn(indicatorEditcust, indicatorAddcust, indicatorDetcust);
+        HoverColor(btn_editcust, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_editcustKeyPressed
 
     private void btn_detcustMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_detcustMouseClicked
         visibility(txt_det_custid, panel_addcust, false, panel_editcus, false, panel_custdetail, true);
-        indicatorOn(btn_detcust, indicatorDetcust, btn_addcust, btn_editcust, indicatorAddcust, indicatorEditcust);
+        indicatorOn(indicatorDetcust, indicatorAddcust, indicatorEditcust);
+        HoverColor(btn_detcust, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_detcustMouseClicked
 
     private void btn_detcustKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_detcustKeyPressed
         visibility(txt_det_custid, panel_addcust, false, panel_editcus, false, panel_custdetail, true);
 
         escape(btn_detcust, evt.getKeyCode(), panel_customer);
-        indicatorOn(btn_detcust, indicatorDetcust, btn_addcust, btn_editcust, indicatorAddcust, indicatorEditcust);
+        indicatorOn(indicatorDetcust, indicatorAddcust, indicatorEditcust);
+        HoverColor(btn_detcust, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_detcustKeyPressed
 
     private void btn_addproFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_addproFocusGained
@@ -3680,14 +3737,16 @@ public class frm_dashboard extends javax.swing.JFrame {
 
     private void btn_addproMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addproMouseClicked
         visibility(txt_add_pro_id, panel_addpro, true, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, false, panel_pro_fulldet, false);
-        indicatorOn(btn_addpro, indicatorAddpro, btn_editPro, btn_editPro, btn_detPro, indicatorAddmodal, indicatorEditpro, indicatorDetpro);
+        indicatorOn(indicatorAddpro, indicatorAddmodal, indicatorEditpro, indicatorDetpro);
+        HoverColor(btn_addpro, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_addproMouseClicked
 
     private void btn_addproKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_addproKeyPressed
         visibility(txt_add_pro_id, panel_addpro, true, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, false, panel_pro_fulldet, false);
 
         escape(btn_addpro, evt.getKeyCode(), panel_customer);
-        indicatorOn(btn_addpro, indicatorAddpro, btn_editPro, btn_editPro, btn_detPro, indicatorAddmodal, indicatorEditpro, indicatorDetpro);
+        indicatorOn(indicatorAddpro, indicatorAddmodal, indicatorEditpro, indicatorDetpro);
+        HoverColor(btn_addpro, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_addproKeyPressed
 
     private void btn_detProFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_detProFocusGained
@@ -3700,14 +3759,16 @@ public class frm_dashboard extends javax.swing.JFrame {
 
     private void btn_detProMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_detProMouseClicked
         visibility(jTextField3, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, true, panel_pro_fulldet, false);
-        indicatorOn(btn_detPro, indicatorDetpro, btn_addpro, btn_editPro, btn_addmodal, indicatorAddpro, indicatorAddmodal, indicatorEditpro);
+        indicatorOn(indicatorDetpro, indicatorAddpro, indicatorAddmodal, indicatorEditpro);
+        HoverColor(btn_detPro, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_detProMouseClicked
 
     private void btn_detProKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_detProKeyPressed
         visibility(jTextField3, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, true, panel_pro_fulldet, false);
 
         escape(btn_detPro, evt.getKeyCode(), panel_customer);
-        indicatorOn(btn_detPro, indicatorDetpro, btn_addpro, btn_editPro, btn_addmodal, indicatorAddpro, indicatorAddmodal, indicatorEditpro);
+        indicatorOn(indicatorDetpro, indicatorAddpro, indicatorAddmodal, indicatorEditpro);
+        HoverColor(btn_detPro, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_detProKeyPressed
 
     private void btn_addempMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addempMouseEntered
@@ -3767,10 +3828,11 @@ public class frm_dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_addcustFocusGained
 
     private void btn_addmodalKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_addmodalKeyPressed
-        visibility(txt_add_promcb_brand_id, panel_addpro, false, panel_addpro_mcb, true, panel_editpro, false, panel_editpro, false, panel_pro_fulldet, false);
+        visibility(txt_add_promcb_brand_id, panel_addpro, false, panel_addpro_mcb, true, panel_editpro, false, panel_prodet, false, panel_pro_fulldet, false);
 
         escape(btn_addpro, evt.getKeyCode(), panel_customer);
-        indicatorOn(btn_addmodal, indicatorAddmodal, btn_addpro, btn_editPro, btn_detPro, indicatorAddpro, indicatorEditpro, indicatorDetpro);
+        indicatorOn(indicatorAddmodal, indicatorAddpro, indicatorEditpro, indicatorDetpro);
+        HoverColor(btn_addmodal, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_addmodalKeyPressed
 
     private void btn_addmodalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addmodalMouseEntered
@@ -3778,8 +3840,9 @@ public class frm_dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_addmodalMouseEntered
 
     private void btn_addmodalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addmodalMouseClicked
-        visibility(txt_add_promcb_brand_id, panel_addpro, false, panel_addpro_mcb, true, panel_editpro, false, panel_editpro, false, panel_pro_fulldet, false);
-        indicatorOn(btn_addmodal, indicatorAddmodal, btn_addpro, btn_editPro, btn_detPro, indicatorAddpro, indicatorEditpro, indicatorDetpro);
+        visibility(txt_add_promcb_brand_id, panel_addpro, false, panel_addpro_mcb, true, panel_editpro, false, panel_prodet, false, panel_pro_fulldet, false);
+        indicatorOn(indicatorAddmodal, indicatorAddpro, indicatorEditpro, indicatorDetpro);
+        HoverColor(btn_addmodal, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_addmodalMouseClicked
 
     private void btn_addmodalFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_addmodalFocusLost
@@ -3800,7 +3863,8 @@ public class frm_dashboard extends javax.swing.JFrame {
 
     private void btn_editProMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_editProMouseClicked
         visibility(jTextField2, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, true, panel_prodet, false, panel_pro_fulldet, false);
-        indicatorOn(btn_editPro, indicatorEditpro, btn_addpro, btn_detPro, btn_addmodal, indicatorAddpro, indicatorAddmodal, indicatorDetpro);
+        indicatorOn(indicatorEditpro, indicatorAddpro, indicatorAddmodal, indicatorDetpro);
+        HoverColor(btn_editPro, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_editProMouseClicked
 
     private void btn_editProMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_editProMouseEntered
@@ -3811,8 +3875,17 @@ public class frm_dashboard extends javax.swing.JFrame {
         visibility(jTextField2, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, true, panel_prodet, false, panel_pro_fulldet, false);
 
         escape(btn_editPro, evt.getKeyCode(), panel_customer);
-        indicatorOn(btn_editPro, indicatorEditpro, btn_addpro, btn_detPro, btn_addmodal, indicatorAddpro, indicatorAddmodal, indicatorDetpro);
+        indicatorOn(indicatorEditpro, indicatorAddpro, indicatorAddmodal, indicatorDetpro);
+        HoverColor(btn_editPro, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_editProKeyPressed
+
+    private void loginBtn13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtn13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loginBtn13ActionPerformed
+
+    private void loginBtn14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtn14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loginBtn14ActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -3861,14 +3934,15 @@ public class frm_dashboard extends javax.swing.JFrame {
 
     public void indicator(KGradientPanel panel1, KGradientPanel panel2, KGradientPanel panel3) {
         //Panel 1
-        panel1.setkStartColor(new Color(209, 216, 224));
-        panel1.setkEndColor(new Color(209, 216, 224));
-        panel1.setBackground(new Color(209, 216, 224));
+        panel1.setkStartColor(new Color(68, 82, 121));
+        panel1.setkEndColor(new Color(68, 82, 121));
+        panel1.setBackground(new Color(68, 82, 121));
         //Panel 2
         panel2.setkStartColor(new Color(209, 216, 224));
         panel2.setkEndColor(new Color(209, 216, 224));
         panel2.setBackground(new Color(209, 216, 224));
-        //Panel 3
+
+//        //Panel 3
         panel3.setkStartColor(new Color(209, 216, 224));
         panel3.setkEndColor(new Color(209, 216, 224));
         panel3.setBackground(new Color(209, 216, 224));
@@ -3877,9 +3951,9 @@ public class frm_dashboard extends javax.swing.JFrame {
 
     public void indicator(KGradientPanel panel1, KGradientPanel panel2, KGradientPanel panel3, KGradientPanel panel4) {
         //Panel 1
-        panel1.setkStartColor(new Color(209, 216, 224));
-        panel1.setkEndColor(new Color(209, 216, 224));
-        panel1.setBackground(new Color(209, 216, 224));
+        panel1.setkStartColor(new Color(68, 82, 121));
+        panel1.setkEndColor(new Color(68, 82, 121));
+        panel1.setBackground(new Color(68, 82, 121));
         //Panel 2
         panel2.setkStartColor(new Color(209, 216, 224));
         panel2.setkEndColor(new Color(209, 216, 224));
@@ -3895,27 +3969,12 @@ public class frm_dashboard extends javax.swing.JFrame {
     }
 //    Created by Mayank
 
-    public void indicatorOn(KButton button, KGradientPanel panel, KButton rButton2, KButton rButton3, KGradientPanel rpanel2, KGradientPanel rpanel3) {
+    public void indicatorOn(KGradientPanel panel, KGradientPanel rpanel2, KGradientPanel rpanel3) {
 
-        //apply color in button
-        button.setkStartColor(new Color(68, 82, 121));
-        button.setkEndColor(new Color(68, 82, 121));
-        button.setBackground(new Color(68, 82, 121));
-
-        //apply color in indicator
+        //panel background color
         panel.setkStartColor(new Color(68, 82, 121));
         panel.setkEndColor(new Color(68, 82, 121));
         panel.setBackground(new Color(68, 82, 121));
-
-        //Remove button(btn2) background color
-        rButton2.setkStartColor(new Color(178, 199, 231));
-        rButton2.setkEndColor(new Color(178, 199, 231));
-        rButton2.setBackground(new Color(178, 199, 231));
-
-        //Remove button(btn3) background color
-        rButton3.setkStartColor(new Color(178, 199, 231));
-        rButton3.setkEndColor(new Color(178, 199, 231));
-        rButton3.setBackground(new Color(178, 199, 231));
 
         //Remove indicator(2) background color
         rpanel2.setkStartColor(new Color(209, 216, 224));
@@ -3929,32 +3988,12 @@ public class frm_dashboard extends javax.swing.JFrame {
     }
 //    Created by Mayank
 
-    public void indicatorOn(KButton button, KGradientPanel panel, KButton rButton2, KButton rButton3, KButton rButton4, KGradientPanel rpanel2, KGradientPanel rpanel3, KGradientPanel rpanel4) {
-
-        //apply color in button
-        button.setkStartColor(new Color(68, 82, 121));
-        button.setkEndColor(new Color(68, 82, 121));
-        button.setBackground(new Color(68, 82, 121));
+    public void indicatorOn(KGradientPanel panel, KGradientPanel rpanel2, KGradientPanel rpanel3, KGradientPanel rpanel4) {
 
         //apply color in indicator
         panel.setkStartColor(new Color(68, 82, 121));
         panel.setkEndColor(new Color(68, 82, 121));
         panel.setBackground(new Color(68, 82, 121));
-
-        //Remove button(btn2) background color
-        rButton2.setkStartColor(new Color(178, 199, 231));
-        rButton2.setkEndColor(new Color(178, 199, 231));
-        rButton2.setBackground(new Color(178, 199, 231));
-
-        //Remove button(btn3) background color
-        rButton3.setkStartColor(new Color(178, 199, 231));
-        rButton3.setkEndColor(new Color(178, 199, 231));
-        rButton3.setBackground(new Color(178, 199, 231));
-
-        //Remove button(btn4) background color
-        rButton4.setkStartColor(new Color(178, 199, 231));
-        rButton4.setkEndColor(new Color(178, 199, 231));
-        rButton4.setBackground(new Color(178, 199, 231));
 
         //Remove indicator(2) background color
         rpanel2.setkStartColor(new Color(209, 216, 224));
@@ -4205,6 +4244,8 @@ public class frm_dashboard extends javax.swing.JFrame {
     private com.k33ptoo.components.KButton loginBtn10;
     private com.k33ptoo.components.KButton loginBtn11;
     private com.k33ptoo.components.KButton loginBtn12;
+    private com.k33ptoo.components.KButton loginBtn13;
+    private com.k33ptoo.components.KButton loginBtn14;
     private com.k33ptoo.components.KButton loginBtn2;
     private com.k33ptoo.components.KButton loginBtn3;
     private com.k33ptoo.components.KButton loginBtn4;
