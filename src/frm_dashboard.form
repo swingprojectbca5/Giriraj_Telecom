@@ -159,7 +159,7 @@
                           <Component id="pnl_account" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="pnl_user" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="22" max="32767" attributes="0"/>
+                          <EmptySpace pref="26" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -760,27 +760,27 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="1061" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Component id="panel_user" alignment="1" max="32767" attributes="0"/>
+                          <Component id="panel_user" alignment="1" pref="1072" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-                          <Component id="panel_product" alignment="0" max="32767" attributes="0"/>
+                          <Component id="panel_product" alignment="0" pref="1072" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
-                          <Component id="panel_bill" alignment="0" max="32767" attributes="0"/>
+                          <Component id="panel_bill" alignment="0" pref="1072" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="4" groupAlignment="0" attributes="0">
-                          <Component id="panel_account" alignment="1" max="32767" attributes="0"/>
+                          <Component id="panel_account" alignment="1" pref="1072" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
-                          <Component id="panel_employee" alignment="0" max="32767" attributes="0"/>
+                          <Component id="panel_employee" alignment="0" pref="1072" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="6" groupAlignment="0" attributes="0">
-                          <Component id="panel_extra" alignment="1" max="32767" attributes="0"/>
+                          <Component id="panel_extra" alignment="1" pref="1072" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="7" groupAlignment="0" attributes="0">
-                          <Component id="panel_customer" alignment="0" max="32767" attributes="0"/>
+                          <Component id="panel_customer" alignment="0" pref="1072" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -829,7 +829,7 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="panel_custmain" max="32767" attributes="0"/>
+                          <Component id="panel_custmain" pref="1072" max="32767" attributes="0"/>
                           <Component id="panel_custmenu" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
@@ -3408,19 +3408,19 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="1061" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="1090" max="32767" attributes="0"/>
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace max="32767" attributes="0"/>
                                       <Component id="panel_editpro" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="26" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                                       <Component id="panel_prodet" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="28" max="32767" attributes="0"/>
+                                      <EmptySpace pref="57" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
@@ -3909,7 +3909,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                       <Component id="kGradientPanel4" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="26" max="32767" attributes="0"/>
+                                      <EmptySpace pref="23" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -3926,12 +3926,19 @@
                           <SubComponents>
                             <Container class="com.k33ptoo.components.KGradientPanel" name="kGradientPanel4">
                               <Properties>
+                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                  <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                                    <MatteColorBorder>
+                                      <Color PropertyName="color" blue="ce" green="ce" red="ce" type="rgb"/>
+                                    </MatteColorBorder>
+                                  </Border>
+                                </Property>
                                 <Property name="kBorderRadius" type="int" value="40"/>
                                 <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="ff" green="cf" red="b9" type="rgb"/>
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                 </Property>
                                 <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="ff" green="cf" red="b9" type="rgb"/>
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                 </Property>
                                 <Property name="opaque" type="boolean" value="false"/>
                               </Properties>
@@ -3942,76 +3949,90 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Component id="jLabel8" min="-2" pref="200" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="jLabel11" min="-2" pref="200" max="-2" attributes="0"/>
                                                   <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="loginBtn11" min="-2" pref="200" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" attributes="0">
                                                   <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                          <Component id="txt_add_promcb_model_id1" alignment="0" pref="350" max="32767" attributes="0"/>
+                                                          <Component id="txt_add_promcb_ctrgy_id1" alignment="0" max="32767" attributes="0"/>
+                                                      </Group>
+                                                      <Component id="jLabel12" min="-2" pref="200" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                                          <Component id="jLabel9" min="-2" pref="200" max="-2" attributes="0"/>
-                                                          <EmptySpace max="32767" attributes="0"/>
-                                                          <Component id="loginBtn8" min="-2" pref="200" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" alignment="1" attributes="0">
-                                                          <Component id="txt_add_promcb_brand_id" min="-2" pref="350" max="-2" attributes="0"/>
-                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                          <Component id="txt_add_promcb_brand_nm" pref="346" max="32767" attributes="0"/>
-                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                          <Component id="loginBtn10" min="-2" pref="200" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" alignment="1" attributes="0">
+                                                          <Component id="txt_add_promcb_model_nm1" min="-2" pref="350" max="-2" attributes="0"/>
+                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                           <Group type="103" groupAlignment="0" attributes="0">
-                                                              <Group type="102" alignment="0" attributes="0">
-                                                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                                      <Component id="txt_add_promcb_model_id1" alignment="0" pref="350" max="32767" attributes="0"/>
-                                                                      <Component id="txt_add_promcb_ctrgy_id1" alignment="0" max="32767" attributes="0"/>
-                                                                  </Group>
-                                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                                      <Component id="txt_add_promcb_ctrgy_id" max="32767" attributes="0"/>
-                                                                      <Component id="txt_add_promcb_model_nm1" max="32767" attributes="0"/>
-                                                                  </Group>
-                                                              </Group>
-                                                              <Group type="102" attributes="0">
-                                                                  <Component id="jLabel7" min="-2" pref="200" max="-2" attributes="0"/>
-                                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                                              </Group>
+                                                              <Component id="loginBtn14" min="-2" pref="200" max="-2" attributes="0"/>
+                                                              <Component id="loginBtn13" min="-2" pref="200" max="-2" attributes="0"/>
                                                           </Group>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="txt_add_promcb_ctrgy_id" min="-2" pref="348" max="-2" attributes="0"/>
                                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                          <Group type="103" groupAlignment="0" attributes="0">
-                                                              <Component id="loginBtn11" min="-2" pref="200" max="-2" attributes="0"/>
-                                                              <Component id="loginBtn12" min="-2" pref="200" max="-2" attributes="0"/>
-                                                              <Component id="loginBtn14" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                                                              <Component id="loginBtn13" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                                                          </Group>
+                                                          <Component id="loginBtn12" min="-2" pref="200" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
-                                                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" attributes="0">
+                                                          <Component id="jLabel9" min="-2" pref="200" max="-2" attributes="0"/>
+                                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="1" attributes="0">
+                                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                                          <Component id="txt_add_promcb_brand_id" min="-2" pref="350" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txt_add_promcb_brand_nm" pref="348" max="32767" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="loginBtn8" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                                      <Component id="loginBtn10" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                                  </Group>
                                               </Group>
                                           </Group>
+                                          <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
                                       </Group>
+                                      <Component id="jSeparator2" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jSeparator3" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="loginBtn8" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="3" attributes="0">
+                                                      <Component id="jLabel9" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                                                      <Component id="loginBtn8" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="3" attributes="0">
+                                                      <Component id="txt_add_promcb_brand_id" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="txt_add_promcb_brand_nm" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+                                                  <Component id="loginBtn10" min="-2" pref="30" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="txt_add_promcb_brand_id" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="txt_add_promcb_brand_nm" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="loginBtn10" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="loginBtn11" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                          <EmptySpace pref="38" max="32767" attributes="0"/>
+                                          <Component id="jSeparator2" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="loginBtn11" min="-2" pref="30" max="-2" attributes="0"/>
+                                              <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
@@ -4019,9 +4040,11 @@
                                               <Component id="txt_add_promcb_ctrgy_id" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="loginBtn12" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                                          <EmptySpace pref="38" max="32767" attributes="0"/>
+                                          <Component id="jSeparator3" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel12" alignment="3" min="-2" pref="42" max="-2" attributes="0"/>
                                               <Component id="loginBtn13" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -4030,33 +4053,16 @@
                                               <Component id="txt_add_promcb_model_nm1" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="loginBtn14" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="72" max="32767" attributes="0"/>
+                                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
                               </Layout>
                               <SubComponents>
-                                <Component class="javax.swing.JLabel" name="jLabel7">
-                                  <Properties>
-                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Segoe UI" size="24" style="0"/>
-                                    </Property>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="79" green="52" red="44" type="rgb"/>
-                                    </Property>
-                                    <Property name="horizontalAlignment" type="int" value="0"/>
-                                    <Property name="text" type="java.lang.String" value="ADD CATEGORY"/>
-                                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                                      <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                                        <MatteColorBorder/>
-                                      </Border>
-                                    </Property>
-                                  </Properties>
-                                </Component>
                                 <Component class="textfield.TextField" name="txt_add_promcb_brand_id">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="cf" red="b9" type="rgb"/>
+                                      <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="2"/>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -4075,7 +4081,7 @@
                                 <Component class="textfield.TextField" name="txt_add_promcb_brand_nm">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="cf" red="b9" type="rgb"/>
+                                      <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="2"/>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -4128,7 +4134,7 @@
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="null"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="ADD"/>
+                                    <Property name="text" type="java.lang.String" value="REMOVE"/>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Segoe UI" size="24" style="0"/>
                                     </Property>
@@ -4156,7 +4162,7 @@
                                 <Component class="textfield.TextField" name="txt_add_promcb_ctrgy_id1">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="cf" red="b9" type="rgb"/>
+                                      <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="2"/>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -4177,7 +4183,7 @@
                                 <Component class="textfield.TextField" name="txt_add_promcb_ctrgy_id">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="cf" red="b9" type="rgb"/>
+                                      <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="2"/>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -4227,7 +4233,7 @@
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="null"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="ADD"/>
+                                    <Property name="text" type="java.lang.String" value="REMOVE"/>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Segoe UI" size="24" style="0"/>
                                     </Property>
@@ -4263,25 +4269,8 @@
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="ADD BRAND"/>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                                      <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                                        <MatteColorBorder/>
-                                      </Border>
-                                    </Property>
-                                  </Properties>
-                                </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel8">
-                                  <Properties>
-                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Segoe UI" size="24" style="0"/>
-                                    </Property>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="79" green="52" red="44" type="rgb"/>
-                                    </Property>
-                                    <Property name="horizontalAlignment" type="int" value="0"/>
-                                    <Property name="text" type="java.lang.String" value="ADD CATEGORY"/>
-                                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                                      <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                                        <MatteColorBorder/>
+                                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                        <LineBorder/>
                                       </Border>
                                     </Property>
                                   </Properties>
@@ -4289,7 +4278,7 @@
                                 <Component class="textfield.TextField" name="txt_add_promcb_model_id1">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="cf" red="b9" type="rgb"/>
+                                      <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="2"/>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -4303,11 +4292,14 @@
                                       <Color blue="79" green="52" red="44" type="rgb"/>
                                     </Property>
                                   </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_add_promcb_model_id1ActionPerformed"/>
+                                  </Events>
                                 </Component>
                                 <Component class="textfield.TextField" name="txt_add_promcb_model_nm1">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="cf" red="b9" type="rgb"/>
+                                      <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="2"/>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -4357,7 +4349,7 @@
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="null"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="ADD"/>
+                                    <Property name="text" type="java.lang.String" value="REMOVE"/>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Segoe UI" size="24" style="0"/>
                                     </Property>
@@ -4382,6 +4374,44 @@
                                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginBtn14ActionPerformed"/>
                                   </Events>
                                 </Component>
+                                <Component class="javax.swing.JSeparator" name="jSeparator2">
+                                </Component>
+                                <Component class="javax.swing.JSeparator" name="jSeparator3">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="jLabel11">
+                                  <Properties>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Segoe UI" size="24" style="0"/>
+                                    </Property>
+                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="79" green="52" red="44" type="rgb"/>
+                                    </Property>
+                                    <Property name="horizontalAlignment" type="int" value="0"/>
+                                    <Property name="text" type="java.lang.String" value="ADD BRAND"/>
+                                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                        <LineBorder/>
+                                      </Border>
+                                    </Property>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="jLabel12">
+                                  <Properties>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Segoe UI" size="24" style="0"/>
+                                    </Property>
+                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="79" green="52" red="44" type="rgb"/>
+                                    </Property>
+                                    <Property name="horizontalAlignment" type="int" value="0"/>
+                                    <Property name="text" type="java.lang.String" value="ADD BRAND"/>
+                                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                        <LineBorder/>
+                                      </Border>
+                                    </Property>
+                                  </Properties>
+                                </Component>
                               </SubComponents>
                             </Container>
                           </SubComponents>
@@ -4402,26 +4432,380 @@
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="376" max="-2" attributes="0"/>
-                                      <Component id="jTextField2" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="579" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="jScrollPane5" min="-2" pref="961" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                                      <Component id="jScrollPane7" min="-2" pref="300" max="-2" attributes="0"/>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="lbl_add_empimg2" min="-2" pref="144" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Component id="lbl_add_proaddimg1" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
+                                                              <Component id="lbl_add_prormimg1" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                  </Group>
+                                                  <Component id="jLabel6" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="txt_add_pro_id4" min="-2" pref="300" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="txt_add_pro_id5" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                              <Component id="loginBtn7" alignment="0" max="32767" attributes="0"/>
+                                                              <Component id="jTextField2" alignment="1" min="-2" pref="300" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <Component id="loginBtn9" min="-2" pref="300" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="txt_add_pro_id7" max="32767" attributes="0"/>
+                                                          <Component id="txt_add_pro_id6" max="32767" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
-                                      <Component id="jTextField2" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="464" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="lbl_add_empimg2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <Group type="103" groupAlignment="3" attributes="0">
+                                                          <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="txt_add_pro_id6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                                                      <Component id="lbl_add_prormimg1" min="-2" pref="26" max="-2" attributes="0"/>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="lbl_add_proaddimg1" min="-2" pref="50" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="jLabel6" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="txt_add_pro_id4" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                                                      <Component id="txt_add_pro_id7" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                                              <Component id="txt_add_pro_id5" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace pref="50" max="32767" attributes="0"/>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="loginBtn7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="loginBtn9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="jScrollPane7" pref="0" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane5" min="-2" pref="160" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="jTextField2">
+                            <Container class="javax.swing.JScrollPane" name="jScrollPane5">
+                              <AuxValues>
+                                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                              </AuxValues>
+
+                              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                              <SubComponents>
+                                <Component class="javax.swing.JTable" name="jTable1">
+                                  <Properties>
+                                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                                      <Table columnCount="4" rowCount="4">
+                                        <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                                        <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                                        <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                                        <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                                      </Table>
+                                    </Property>
+                                  </Properties>
+                                </Component>
+                              </SubComponents>
+                            </Container>
+                            <Component class="textfield.TextField" name="jTextField2">
                               <Properties>
-                                <Property name="text" type="java.lang.String" value="jTextField2"/>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="horizontalAlignment" type="int" value="2"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                                <Property name="labelText" type="java.lang.String" value="PRODUCT ID"/>
+                                <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JLabel" name="lbl_add_empimg2">
+                              <Properties>
+                                <Property name="horizontalAlignment" type="int" value="0"/>
+                                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                  <Image iconType="3" name="/icons/man.png"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JLabel" name="lbl_add_prormimg1">
+                              <Properties>
+                                <Property name="horizontalAlignment" type="int" value="0"/>
+                                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                  <Image iconType="3" name="/icons/substract.png"/>
+                                </Property>
+                                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                  <Color id="Hand Cursor"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_add_prormimg1MouseEntered"/>
+                                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_add_prormimg1MouseExited"/>
+                              </Events>
+                            </Component>
+                            <Component class="javax.swing.JLabel" name="lbl_add_proaddimg1">
+                              <Properties>
+                                <Property name="horizontalAlignment" type="int" value="0"/>
+                                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                  <Image iconType="3" name="/icons/add-user.png"/>
+                                </Property>
+                                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                  <Color id="Hand Cursor"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_add_proaddimg1MouseEntered"/>
+                                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_add_proaddimg1MouseExited"/>
+                              </Events>
+                            </Component>
+                            <Component class="textfield.TextField" name="txt_add_pro_id4">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="horizontalAlignment" type="int" value="2"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                                <Property name="labelText" type="java.lang.String" value="COST PRICE"/>
+                                <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                            <Component class="textfield.TextField" name="txt_add_pro_id5">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="horizontalAlignment" type="int" value="2"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                                <Property name="labelText" type="java.lang.String" value="COST PRICE"/>
+                                <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                            <Component class="textfield.TextField" name="txt_add_pro_id6">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="horizontalAlignment" type="int" value="2"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                                <Property name="labelText" type="java.lang.String" value="COST PRICE"/>
+                                <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                            <Component class="textfield.TextField" name="txt_add_pro_id7">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="horizontalAlignment" type="int" value="2"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                                <Property name="labelText" type="java.lang.String" value="COST PRICE"/>
+                                <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                            <Container class="javax.swing.JScrollPane" name="jScrollPane7">
+                              <AuxValues>
+                                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                              </AuxValues>
+
+                              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                              <SubComponents>
+                                <Component class="javax.swing.JList" name="jList2">
+                                  <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                    </Property>
+                                    <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                                      <StringArray count="16">
+                                        <StringItem index="0" value="Item 1"/>
+                                        <StringItem index="1" value="Item 2"/>
+                                        <StringItem index="2" value="Item 3"/>
+                                        <StringItem index="3" value="Item 4"/>
+                                        <StringItem index="4" value="Item 5"/>
+                                        <StringItem index="5" value="Item 1"/>
+                                        <StringItem index="6" value="Item 2"/>
+                                        <StringItem index="7" value="Item 3"/>
+                                        <StringItem index="8" value="Item 4"/>
+                                        <StringItem index="9" value="Item 5"/>
+                                        <StringItem index="10" value="Item 1"/>
+                                        <StringItem index="11" value="Item 2"/>
+                                        <StringItem index="12" value="Item 3"/>
+                                        <StringItem index="13" value="Item 4"/>
+                                        <StringItem index="14" value="Item 5"/>
+                                        <StringItem index="15" value=" "/>
+                                      </StringArray>
+                                    </Property>
+                                    <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                                      <ComponentRef name="loginBtn6"/>
+                                    </Property>
+                                  </Properties>
+                                  <AuxValues>
+                                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                                  </AuxValues>
+                                </Component>
+                              </SubComponents>
+                            </Container>
+                            <Component class="com.k33ptoo.components.KButton" name="loginBtn7">
+                              <Properties>
+                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                  <Border info="null"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="ADD CUSTOMER"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="24" style="0"/>
+                                </Property>
+                                <Property name="kBorderRadius" type="int" value="30"/>
+                                <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverForeGround" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginBtn7ActionPerformed"/>
+                              </Events>
+                            </Component>
+                            <Component class="com.k33ptoo.components.KButton" name="loginBtn9">
+                              <Properties>
+                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                  <Border info="null"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="ADD CUSTOMER"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="24" style="0"/>
+                                </Property>
+                                <Property name="kBorderRadius" type="int" value="30"/>
+                                <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverForeGround" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginBtn9ActionPerformed"/>
+                              </Events>
+                            </Component>
+                            <Component class="javax.swing.JLabel" name="jLabel6">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Cascadia Mono" size="24" style="0"/>
+                                </Property>
+                                <Property name="horizontalAlignment" type="int" value="0"/>
+                                <Property name="text" type="java.lang.String" value="ALTERNATIVES"/>
+                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                    <LineBorder/>
+                                  </Border>
+                                </Property>
                               </Properties>
                             </Component>
                           </SubComponents>
@@ -4444,7 +4828,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="389" max="-2" attributes="0"/>
                                       <Component id="jTextField3" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="566" max="32767" attributes="0"/>
+                                      <EmptySpace pref="517" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -4453,7 +4837,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="206" max="-2" attributes="0"/>
                                       <Component id="jTextField3" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="385" max="32767" attributes="0"/>
+                                      <EmptySpace pref="369" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
