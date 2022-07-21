@@ -3657,7 +3657,7 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addComponent(pnl_sidepane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25)
                 .addComponent(panel_main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
             .addComponent(pnl_header, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         kGradientPanel2Layout.setVerticalGroup(
@@ -4074,7 +4074,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private void btn_addempKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_addempKeyPressed
         visibility(txt_add_empid, panel_addemp, true, panel_editemp, false, panel_detemp, false);
 
-        escape(btn_addemp, evt.getKeyCode(), panel_customer);
+        escape(lbl_employee, evt.getKeyCode(), panel_employee);
         indicatorOn(indicatorAddemp, indicatorEditemp, indicatorEmpdet);
         HoverColor(btn_addemp, new Color(68, 82, 121), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_addempKeyPressed
@@ -4096,7 +4096,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private void btn_editempKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_editempKeyPressed
         visibility(txt_edit_empnm, panel_addemp, false, panel_editemp, true, panel_detemp, false);
 
-        escape(btn_editemp, evt.getKeyCode(), panel_customer);
+        escape(lbl_employee, evt.getKeyCode(), panel_employee);
         indicatorOn(indicatorEditemp, indicatorAddemp, indicatorEmpdet);
         HoverColor(btn_editemp, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_editempKeyPressed
@@ -4119,7 +4119,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private void btn_empdetKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_empdetKeyPressed
         visibility(txt_det_empid, panel_addemp, false, panel_editemp, false, panel_detemp, true);
 
-        escape(btn_empdet, evt.getKeyCode(), panel_customer);
+        escape(lbl_employee, evt.getKeyCode(), panel_employee);
         indicatorOn(indicatorEmpdet, indicatorAddemp, indicatorEditemp);
         HoverColor(btn_empdet, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_empdetKeyPressed
@@ -4133,8 +4133,8 @@ public class frm_dashboard extends javax.swing.JFrame
     private void btn_addcustKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_addcustKeyPressed
         visibility(txt_add_custid, panel_addcust, true, panel_editcus, false, panel_custdetail, false);
 
-        escape(btn_addcust, evt.getKeyCode(), panel_customer);
-        HoverColor(btn_editcust, new Color(68, 82, 121), new Color(255, 255, 255));
+        escape(lbl_customer, evt.getKeyCode(), panel_customer);
+        HoverColor(btn_addcust, new Color(68, 82, 121), new Color(255, 255, 255));
         indicatorOn(indicatorAddcust, indicatorEditcust, indicatorDetcust);
     }//GEN-LAST:event_btn_addcustKeyPressed
 
@@ -4147,7 +4147,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private void btn_editcustKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_editcustKeyPressed
         visibility(txt_edit_custnm, panel_addcust, false, panel_editcus, true, panel_custdetail, false);
 
-        escape(btn_editcust, evt.getKeyCode(), panel_customer);
+        escape(lbl_customer, evt.getKeyCode(), panel_customer);
         indicatorOn(indicatorEditcust, indicatorAddcust, indicatorDetcust);
         HoverColor(btn_editcust, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_editcustKeyPressed
@@ -4161,7 +4161,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private void btn_detcustKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_detcustKeyPressed
         visibility(txt_det_custid, panel_addcust, false, panel_editcus, false, panel_custdetail, true);
 
-        escape(btn_detcust, evt.getKeyCode(), panel_customer);
+        escape(lbl_customer, evt.getKeyCode(), panel_customer);
         indicatorOn(indicatorDetcust, indicatorAddcust, indicatorEditcust);
         HoverColor(btn_detcust, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_detcustKeyPressed
@@ -4183,7 +4183,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private void btn_addproKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_addproKeyPressed
         visibility(txt_add_pro_id, panel_addpro, true, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, false, panel_pro_fulldet, false);
 
-        escape(btn_addpro, evt.getKeyCode(), panel_customer);
+        escape(lbl_product, evt.getKeyCode(), panel_customer);
         indicatorOn(indicatorAddpro, indicatorAddmodal, indicatorEditpro, indicatorDetpro);
         HoverColor(btn_addpro, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_addproKeyPressed
@@ -4205,7 +4205,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private void btn_detProKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_detProKeyPressed
         visibility(jTextField3, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, true, panel_pro_fulldet, false);
 
-        escape(btn_detPro, evt.getKeyCode(), panel_customer);
+        escape(lbl_product, evt.getKeyCode(), panel_customer);
         indicatorOn(indicatorDetpro, indicatorAddpro, indicatorAddmodal, indicatorEditpro);
         HoverColor(btn_detPro, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_detProKeyPressed
@@ -4269,7 +4269,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private void btn_addmodalKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_addmodalKeyPressed
         visibility(txt_add_promcb_brand_id, panel_addpro, false, panel_addpro_mcb, true, panel_editpro, false, panel_prodet, false, panel_pro_fulldet, false);
 
-        escape(btn_addpro, evt.getKeyCode(), panel_customer);
+        escape(lbl_product, evt.getKeyCode(), panel_product);
         indicatorOn(indicatorAddmodal, indicatorAddpro, indicatorEditpro, indicatorDetpro);
         HoverColor(btn_addmodal, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_addmodalKeyPressed
@@ -4313,7 +4313,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private void btn_editProKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_editProKeyPressed
         visibility(jTextField2, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, true, panel_prodet, false, panel_pro_fulldet, false);
 
-        escape(btn_editPro, evt.getKeyCode(), panel_customer);
+        escape(lbl_product, evt.getKeyCode(), panel_customer);
         indicatorOn(indicatorEditpro, indicatorAddpro, indicatorAddmodal, indicatorDetpro);
         HoverColor(btn_editPro, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_editProKeyPressed
@@ -4506,11 +4506,11 @@ public class frm_dashboard extends javax.swing.JFrame
         }
     }
 
-    public void escape(KButton button, int code, KGradientPanel panel)
+    public void escape(JLabel label, int code, KGradientPanel panel)
     {
         if (code == KeyEvent.VK_ESCAPE)
         {
-            button.grabFocus();
+            label.grabFocus();
             panel.setVisible(false);
             panel_extra.setVisible(true);
         }

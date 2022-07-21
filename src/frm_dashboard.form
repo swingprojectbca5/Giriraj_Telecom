@@ -89,7 +89,7 @@
                       <Component id="pnl_sidepane" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="panel_main" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                      <EmptySpace pref="35" max="32767" attributes="0"/>
                   </Group>
                   <Component id="pnl_header" alignment="1" max="32767" attributes="0"/>
               </Group>
