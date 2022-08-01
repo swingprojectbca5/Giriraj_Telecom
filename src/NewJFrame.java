@@ -1,7 +1,9 @@
 
-public class NewJFrame extends javax.swing.JFrame {
+public class NewJFrame extends javax.swing.JFrame
+{
 
-    public NewJFrame() {
+    public NewJFrame()
+    {
         initComponents();
     }
     double first, second, result;
@@ -311,23 +313,32 @@ public class NewJFrame extends javax.swing.JFrame {
     private void ansActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ansActionPerformed
         second = Double.parseDouble(jTextField1.getText());
 
-        if (operation == "+") {
+        if (operation == "+")
+        {
             result = first + second;
             answer = String.format("%.2f", result);
             jTextField1.setText(answer);
-        } else if (operation == "-") {
+        }
+        else if (operation == "-")
+        {
             result = first - second;
             answer = String.format("%.2f", result);
             jTextField1.setText(answer);
-        } else if (operation == "*") {
+        }
+        else if (operation == "*")
+        {
             result = first * second;
             answer = String.format("%.2f", result);
             jTextField1.setText(answer);
-        } else if (operation == "/") {
+        }
+        else if (operation == "/")
+        {
             result = first / second;
             answer = String.format("%.2f", result);
             jTextField1.setText(answer);
-        } else {
+        }
+        else
+        {
             result = first % second;
             answer = String.format("%.2f", result);
             jTextField1.setText(answer);
@@ -335,7 +346,8 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_ansActionPerformed
 
     private void dotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dotActionPerformed
-        if (!jTextField1.getText().contains(".")) {
+        if (!jTextField1.getText().contains("."))
+        {
             jTextField1.setText(jTextField1.getText() + dot.getText());
         }
     }//GEN-LAST:event_dotActionPerformed
@@ -376,9 +388,12 @@ public class NewJFrame extends javax.swing.JFrame {
         operation = "%";
     }//GEN-LAST:event_perActionPerformed
 
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+    public static void main(String args[])
+    {
+        java.awt.EventQueue.invokeLater(new Runnable()
+        {
+            public void run()
+            {
                 new NewJFrame().setVisible(true);
             }
         });
