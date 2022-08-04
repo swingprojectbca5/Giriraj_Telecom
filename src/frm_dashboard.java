@@ -19,6 +19,10 @@ import scrollbar.ScrollBarCustom;
 public class frm_dashboard extends javax.swing.JFrame
 {
 
+    double first, second, result;
+    String operation;
+    String answer;
+
     public frm_dashboard()
     {
         initComponents();
@@ -52,9 +56,6 @@ public class frm_dashboard extends javax.swing.JFrame
             lbl_customer.setEnabled(false);
         }
     }
-    double first, second, result;
-    String operation;
-    String answer;
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -278,13 +279,10 @@ public class frm_dashboard extends javax.swing.JFrame
         combo_add_pro_brand7 = new combo_suggestion.ComboBoxSuggestion();
         jScrollPane8 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
-        combo_add_pro_brand8 = new combo_suggestion.ComboBoxSuggestion();
         jLabel7 = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
         jLabel8 = new javax.swing.JLabel();
         jSeparator6 = new javax.swing.JSeparator();
-        combo_add_pro_brand9 = new combo_suggestion.ComboBoxSuggestion();
-        combo_add_pro_brand10 = new combo_suggestion.ComboBoxSuggestion();
         jPanel1 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -293,11 +291,25 @@ public class frm_dashboard extends javax.swing.JFrame
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
         loginBtn16 = new com.k33ptoo.components.KButton();
         loginBtn17 = new com.k33ptoo.components.KButton();
         loginBtn18 = new com.k33ptoo.components.KButton();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
         panel_updatbill = new com.k33ptoo.components.KGradientPanel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        combo_add_pro_brand8 = new combo_suggestion.ComboBoxSuggestion();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        txt_add_custid1 = new textfield.TextField();
+        txt_add_custid2 = new textfield.TextField();
+        jSeparator7 = new javax.swing.JSeparator();
+        loginBtn19 = new com.k33ptoo.components.KButton();
+        loginBtn20 = new com.k33ptoo.components.KButton();
+        loginBtn21 = new com.k33ptoo.components.KButton();
         panel_detbill = new com.k33ptoo.components.KGradientPanel();
         panel_extrabill = new com.k33ptoo.components.KGradientPanel();
         panel_account = new com.k33ptoo.components.KGradientPanel();
@@ -2697,7 +2709,7 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_pro_id2.setBackground(new java.awt.Color(228, 235, 246));
         txt_add_pro_id2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txt_add_pro_id2.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        txt_add_pro_id2.setLabelText("COST PRICE");
+        txt_add_pro_id2.setLabelText("SELLING PRICE");
         txt_add_pro_id2.setLineColor(new java.awt.Color(68, 82, 121));
         txt_add_pro_id2.setSelectionColor(new java.awt.Color(68, 82, 121));
         txt_add_pro_id2.addKeyListener(new java.awt.event.KeyAdapter()
@@ -4317,10 +4329,6 @@ public class frm_dashboard extends javax.swing.JFrame
         ));
         jScrollPane8.setViewportView(jTable2);
 
-        combo_add_pro_brand8.setBackground(new java.awt.Color(228, 235, 246));
-        combo_add_pro_brand8.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "QTY", "John", "Mark", "Elon" }));
-        combo_add_pro_brand8.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 22)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("CUSTOMER DETAIL");
@@ -4330,14 +4338,6 @@ public class frm_dashboard extends javax.swing.JFrame
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Product Detail");
         jLabel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-
-        combo_add_pro_brand9.setBackground(new java.awt.Color(228, 235, 246));
-        combo_add_pro_brand9.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "EMAIL", "A001", "A002" }));
-        combo_add_pro_brand9.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-
-        combo_add_pro_brand10.setBackground(new java.awt.Color(228, 235, 246));
-        combo_add_pro_brand10.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "CONTACT NO.", "A001", "A002" }));
-        combo_add_pro_brand10.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
 
         jPanel1.setBackground(new java.awt.Color(228, 235, 246));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -4379,10 +4379,13 @@ public class frm_dashboard extends javax.swing.JFrame
         jLabel15.setText("TAX :");
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jLabel16.setText("DISCOUNT:");
+        jLabel16.setText("DISCOUNT :");
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jLabel17.setText("Net Total:");
+        jLabel17.setText("Amount Paid :");
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jLabel18.setText("Net Total :");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -4390,29 +4393,32 @@ public class frm_dashboard extends javax.swing.JFrame
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(164, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                        .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel17))
+                .addContainerGap(136, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addContainerGap()
                 .addComponent(jLabel14)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel15)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel16)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel17)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(jLabel18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel17))
         );
 
         loginBtn16.setBorder(null);
-        loginBtn16.setText("Calculate");
+        loginBtn16.setText("Calculator");
         loginBtn16.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         loginBtn16.setkBorderRadius(30);
         loginBtn16.setkEndColor(new java.awt.Color(68, 82, 121));
@@ -4446,7 +4452,7 @@ public class frm_dashboard extends javax.swing.JFrame
         });
 
         loginBtn18.setBorder(null);
-        loginBtn18.setText("PRINT");
+        loginBtn18.setText("SEND");
         loginBtn18.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         loginBtn18.setkBorderRadius(30);
         loginBtn18.setkEndColor(new java.awt.Color(68, 82, 121));
@@ -4461,6 +4467,12 @@ public class frm_dashboard extends javax.swing.JFrame
                 loginBtn18ActionPerformed(evt);
             }
         });
+
+        jTextField4.setText("EMAIL");
+
+        jTextField5.setText("CONTACT NO.");
+
+        jTextField6.setText("QTY");
 
         javax.swing.GroupLayout panel_createbillLayout = new javax.swing.GroupLayout(panel_createbill);
         panel_createbill.setLayout(panel_createbillLayout);
@@ -4478,29 +4490,30 @@ public class frm_dashboard extends javax.swing.JFrame
                         .addGap(18, 18, 18)
                         .addComponent(combo_add_pro_brand3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addComponent(combo_add_pro_brand9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(combo_add_pro_brand10, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 14, 14))
+                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31))
                     .addGroup(panel_createbillLayout.createSequentialGroup()
-                        .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel_createbillLayout.createSequentialGroup()
-                                .addComponent(combo_add_pro_brand8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(18, 18, 18)
-                                .addComponent(combo_add_pro_brand4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(18, 18, 18)
-                                .addComponent(combo_add_pro_brand6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel_createbillLayout.createSequentialGroup()
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jTextField6)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE))
+                        .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_createbillLayout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addComponent(combo_add_pro_brand5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(18, 18, 18)
-                                .addComponent(combo_add_pro_brand7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addComponent(combo_add_pro_brand7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(panel_createbillLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(combo_add_pro_brand4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(18, 18, 18)
+                                .addComponent(combo_add_pro_brand6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGap(18, 18, 18)
                         .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(loginBtn15, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(loginBtn16, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(9, 9, 9))
+                        .addGap(25, 25, 25))
                     .addGroup(panel_createbillLayout.createSequentialGroup()
                         .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 674, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -4509,8 +4522,8 @@ public class frm_dashboard extends javax.swing.JFrame
                             .addGroup(panel_createbillLayout.createSequentialGroup()
                                 .addComponent(loginBtn17, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(loginBtn18, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(16, 16, 16))
+                                .addComponent(loginBtn18, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(16, 16, 16))))
             .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_createbillLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -4529,11 +4542,12 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addGap(18, 18, 18)
                 .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_createbillLayout.createSequentialGroup()
-                        .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(combo_add_pro_brand2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(combo_add_pro_brand3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(combo_add_pro_brand9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(combo_add_pro_brand10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(combo_add_pro_brand3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(combo_add_pro_brand2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -4543,11 +4557,12 @@ public class frm_dashboard extends javax.swing.JFrame
                             .addComponent(combo_add_pro_brand5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(loginBtn15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(combo_add_pro_brand8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(combo_add_pro_brand6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(combo_add_pro_brand4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(loginBtn16, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(combo_add_pro_brand6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(combo_add_pro_brand4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(loginBtn16, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -4559,7 +4574,7 @@ public class frm_dashboard extends javax.swing.JFrame
                             .addComponent(loginBtn18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(loginBtn17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 14, Short.MAX_VALUE))
+                .addGap(13, 13, 13))
         );
 
         panel_updatbill.setkBorderRadius(40);
@@ -4568,15 +4583,136 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_updatbill.setOpaque(false);
         panel_updatbill.setPreferredSize(new java.awt.Dimension(1011, 610));
 
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][]
+            {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String []
+            {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane9.setViewportView(jTable3);
+
+        combo_add_pro_brand8.setBackground(new java.awt.Color(228, 235, 246));
+        combo_add_pro_brand8.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "BILL ID", "John", "Mark", "Elon" }));
+        combo_add_pro_brand8.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+
+        jCheckBox1.setText("PENDING BILL");
+
+        txt_add_custid1.setBackground(new java.awt.Color(228, 235, 246));
+        txt_add_custid1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txt_add_custid1.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txt_add_custid1.setLabelText("EDIT TOTAL");
+        txt_add_custid1.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_add_custid1.setSelectionColor(new java.awt.Color(68, 82, 121));
+        txt_add_custid1.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                txt_add_custid1KeyPressed(evt);
+            }
+        });
+
+        txt_add_custid2.setBackground(new java.awt.Color(228, 235, 246));
+        txt_add_custid2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txt_add_custid2.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txt_add_custid2.setLabelText("SEARCH");
+        txt_add_custid2.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_add_custid2.setSelectionColor(new java.awt.Color(68, 82, 121));
+        txt_add_custid2.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                txt_add_custid2KeyPressed(evt);
+            }
+        });
+
+        loginBtn19.setBorder(null);
+        loginBtn19.setText("SAVE");
+        loginBtn19.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        loginBtn19.setkBorderRadius(30);
+        loginBtn19.setkEndColor(new java.awt.Color(68, 82, 121));
+        loginBtn19.setkHoverEndColor(new java.awt.Color(178, 199, 231));
+        loginBtn19.setkHoverForeGround(new java.awt.Color(68, 82, 121));
+        loginBtn19.setkHoverStartColor(new java.awt.Color(178, 199, 231));
+        loginBtn19.setkStartColor(new java.awt.Color(68, 82, 121));
+        loginBtn19.setNextFocusableComponent(txt_add_custid);
+
+        loginBtn20.setBorder(null);
+        loginBtn20.setText("SEND");
+        loginBtn20.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        loginBtn20.setkBorderRadius(30);
+        loginBtn20.setkEndColor(new java.awt.Color(68, 82, 121));
+        loginBtn20.setkHoverEndColor(new java.awt.Color(178, 199, 231));
+        loginBtn20.setkHoverForeGround(new java.awt.Color(68, 82, 121));
+        loginBtn20.setkHoverStartColor(new java.awt.Color(178, 199, 231));
+        loginBtn20.setkStartColor(new java.awt.Color(68, 82, 121));
+        loginBtn20.setNextFocusableComponent(txt_add_custid);
+
+        loginBtn21.setBorder(null);
+        loginBtn21.setText("DELETE");
+        loginBtn21.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        loginBtn21.setkBorderRadius(30);
+        loginBtn21.setkEndColor(new java.awt.Color(68, 82, 121));
+        loginBtn21.setkHoverEndColor(new java.awt.Color(178, 199, 231));
+        loginBtn21.setkHoverForeGround(new java.awt.Color(68, 82, 121));
+        loginBtn21.setkHoverStartColor(new java.awt.Color(178, 199, 231));
+        loginBtn21.setkStartColor(new java.awt.Color(68, 82, 121));
+        loginBtn21.setNextFocusableComponent(txt_add_custid);
+
         javax.swing.GroupLayout panel_updatbillLayout = new javax.swing.GroupLayout(panel_updatbill);
         panel_updatbill.setLayout(panel_updatbillLayout);
         panel_updatbillLayout.setHorizontalGroup(
             panel_updatbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1011, Short.MAX_VALUE)
+            .addGroup(panel_updatbillLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(panel_updatbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panel_updatbillLayout.createSequentialGroup()
+                        .addComponent(txt_add_custid2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_updatbillLayout.createSequentialGroup()
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 961, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(19, 19, 19))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel_updatbillLayout.createSequentialGroup()
+                        .addComponent(combo_add_pro_brand8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txt_add_custid1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(loginBtn19, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(loginBtn20, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(loginBtn21, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jSeparator7, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         panel_updatbillLayout.setVerticalGroup(
             panel_updatbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 610, Short.MAX_VALUE)
+            .addGroup(panel_updatbillLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addGroup(panel_updatbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panel_updatbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(combo_add_pro_brand8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_add_custid1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_updatbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(loginBtn20, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(loginBtn19, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(loginBtn21, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(25, 25, 25)
+                .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addGroup(panel_updatbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_add_custid2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
         );
 
         panel_detbill.setkBorderRadius(40);
@@ -4896,9 +5032,9 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_billKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_billKeyPressed
     {//GEN-HEADEREND:event_lbl_billKeyPressed
-        visibility(evt.getKeyCode(), btn_addpro, false, false, false, true, false, false, false);
-        //visibility(panel_addpro, true, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, false, panel_pro_fulldet, false);
-        indicatorOn(indicatorAddpro, indicatorAddmodal, indicatorEditpro, indicatorDetpro);
+        visibility(evt.getKeyCode(), btn_addbill, false, false, false, true, false, false, false);
+        visibility(panel_createbill, true, panel_updatbill, false, panel_detbill, false, panel_detbill, false);
+        indicator(indicatorAddbill, indicator_updt_bill, indicator_bill_det);
     }//GEN-LAST:event_lbl_billKeyPressed
 
     private void lbl_billMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_billMouseExited
@@ -4915,6 +5051,8 @@ public class frm_dashboard extends javax.swing.JFrame
     {//GEN-HEADEREND:event_lbl_billMouseClicked
         visibility(lbl_bill, false, false, false, true, false, false, false);
         HoverColor(pnl_bill, lbl_bill, Color.WHITE, Color.WHITE, Color.BLACK);
+        visibility(panel_createbill, true, panel_updatbill, false, panel_detbill, false, panel_extrabill, false);
+        indicator(indicatorAddbill, indicator_updt_bill, indicator_bill_det);
     }//GEN-LAST:event_lbl_billMouseClicked
 
     private void lbl_billFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_billFocusLost
@@ -5478,12 +5616,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void btn_addbillFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_addbillFocusGained
     {//GEN-HEADEREND:event_btn_addbillFocusGained
-        HoverColor(btn_addpro, new Color(68, 82, 121), new Color(255, 255, 255));
+        HoverColor(btn_addbill, new Color(68, 82, 121), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_addbillFocusGained
 
     private void btn_addbillFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_addbillFocusLost
     {//GEN-HEADEREND:event_btn_addbillFocusLost
-        HoverColor(btn_addpro, new Color(178, 199, 231), new Color(255, 255, 255));
+        HoverColor(btn_addbill, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_addbillFocusLost
 
     private void btn_addbillMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_addbillMouseClicked
@@ -5501,7 +5639,6 @@ public class frm_dashboard extends javax.swing.JFrame
     private void btn_addbillKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_addbillKeyPressed
     {//GEN-HEADEREND:event_btn_addbillKeyPressed
         visibility(txt_add_pro_id, panel_addpro, true, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, false, panel_pro_fulldet, false);
-
         escape(lbl_product, evt.getKeyCode(), panel_product);
         HoverColor(btn_addpro, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_addbillKeyPressed
@@ -5782,6 +5919,16 @@ public class frm_dashboard extends javax.swing.JFrame
     {//GEN-HEADEREND:event_loginBtn18ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_loginBtn18ActionPerformed
+
+    private void txt_add_custid1KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_custid1KeyPressed
+    {//GEN-HEADEREND:event_txt_add_custid1KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_add_custid1KeyPressed
+
+    private void txt_add_custid2KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_custid2KeyPressed
+    {//GEN-HEADEREND:event_txt_add_custid2KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_add_custid2KeyPressed
 
     public static void main(String args[])
     {
@@ -6132,7 +6279,6 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KButton btn_empdet;
     private com.k33ptoo.components.KButton btn_updtbill;
     private combo_suggestion.ComboBoxSuggestion combo_add_pro_brand;
-    private combo_suggestion.ComboBoxSuggestion combo_add_pro_brand10;
     private combo_suggestion.ComboBoxSuggestion combo_add_pro_brand2;
     private combo_suggestion.ComboBoxSuggestion combo_add_pro_brand3;
     private combo_suggestion.ComboBoxSuggestion combo_add_pro_brand4;
@@ -6140,7 +6286,6 @@ public class frm_dashboard extends javax.swing.JFrame
     private combo_suggestion.ComboBoxSuggestion combo_add_pro_brand6;
     private combo_suggestion.ComboBoxSuggestion combo_add_pro_brand7;
     private combo_suggestion.ComboBoxSuggestion combo_add_pro_brand8;
-    private combo_suggestion.ComboBoxSuggestion combo_add_pro_brand9;
     private combo_suggestion.ComboBoxSuggestion combo_add_pro_ctgry;
     private combo_suggestion.ComboBoxSuggestion combo_add_pro_model;
     private com.k33ptoo.components.KGradientPanel indicatorAddbill;
@@ -6157,6 +6302,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel indicatorEmpdet;
     private com.k33ptoo.components.KGradientPanel indicator_bill_det;
     private com.k33ptoo.components.KGradientPanel indicator_updt_bill;
+    private javax.swing.JCheckBox jCheckBox1;
     public javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -6166,6 +6312,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -6187,17 +6334,23 @@ public class frm_dashboard extends javax.swing.JFrame
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
     private javax.swing.JTextField jTextField1;
     private textfield.TextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
     private com.k33ptoo.components.KGradientPanel kGradientPanel1;
     private com.k33ptoo.components.KGradientPanel kGradientPanel12;
     private com.k33ptoo.components.KGradientPanel kGradientPanel19;
@@ -6235,7 +6388,10 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KButton loginBtn16;
     private com.k33ptoo.components.KButton loginBtn17;
     private com.k33ptoo.components.KButton loginBtn18;
+    private com.k33ptoo.components.KButton loginBtn19;
     private com.k33ptoo.components.KButton loginBtn2;
+    private com.k33ptoo.components.KButton loginBtn20;
+    private com.k33ptoo.components.KButton loginBtn21;
     private com.k33ptoo.components.KButton loginBtn3;
     private com.k33ptoo.components.KButton loginBtn4;
     private com.k33ptoo.components.KButton loginBtn5;
@@ -6309,6 +6465,8 @@ public class frm_dashboard extends javax.swing.JFrame
     private textarea.TextAreaScroll textAreaScroll2;
     private textfield.TextField txt_add_custemail;
     private textfield.TextField txt_add_custid;
+    private textfield.TextField txt_add_custid1;
+    private textfield.TextField txt_add_custid2;
     private textfield.TextField txt_add_custnm;
     private textfield.TextField txt_add_custno;
     private textfield.TextField txt_add_custsnm;

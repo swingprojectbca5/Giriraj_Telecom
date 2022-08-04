@@ -3868,7 +3868,7 @@
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Segoe UI" size="20" style="0"/>
                                 </Property>
-                                <Property name="labelText" type="java.lang.String" value="COST PRICE"/>
+                                <Property name="labelText" type="java.lang.String" value="SELLING PRICE"/>
                                 <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="79" green="52" red="44" type="rgb"/>
                                 </Property>
@@ -6062,27 +6062,29 @@
                                               </Group>
                                               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                                               <Component id="combo_add_pro_brand3" max="32767" attributes="0"/>
-                                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                                              <Component id="combo_add_pro_brand9" max="32767" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="combo_add_pro_brand10" min="-2" pref="260" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                              <Component id="jTextField4" min="-2" pref="214" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="jTextField5" min="-2" pref="259" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="1" attributes="0">
+                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                  <Component id="jTextField6" max="32767" attributes="0"/>
+                                                  <Component id="jLabel8" pref="214" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="combo_add_pro_brand8" max="32767" attributes="0"/>
-                                                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="combo_add_pro_brand4" max="32767" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                                      <Component id="combo_add_pro_brand6" max="32767" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="jLabel8" min="-2" pref="214" max="-2" attributes="0"/>
                                                       <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                                                       <Component id="combo_add_pro_brand5" max="32767" attributes="0"/>
                                                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                                       <Component id="combo_add_pro_brand7" max="32767" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" attributes="0">
+                                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                                      <Component id="combo_add_pro_brand4" max="32767" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                                      <Component id="combo_add_pro_brand6" max="32767" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
@@ -6090,7 +6092,7 @@
                                                   <Component id="loginBtn15" min="-2" pref="265" max="-2" attributes="0"/>
                                                   <Component id="loginBtn16" min="-2" pref="265" max="-2" attributes="0"/>
                                               </Group>
-                                              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jScrollPane8" min="-2" pref="674" max="-2" attributes="0"/>
@@ -6103,9 +6105,9 @@
                                                       <Component id="loginBtn18" min="-2" pref="130" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
+                                              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jSeparator4" alignment="1" max="32767" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
@@ -6127,11 +6129,13 @@
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
-                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="combo_add_pro_brand2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="combo_add_pro_brand3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="combo_add_pro_brand9" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="combo_add_pro_brand10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="combo_add_pro_brand3" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="3" attributes="0">
+                                                      <Component id="combo_add_pro_brand2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jTextField4" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                                                      <Component id="jTextField5" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                                                  </Group>
                                               </Group>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="jSeparator5" min="-2" max="-2" attributes="0"/>
@@ -6145,11 +6149,13 @@
                                           <Component id="loginBtn15" alignment="1" min="-2" pref="27" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="combo_add_pro_brand8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="combo_add_pro_brand6" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
-                                          <Component id="combo_add_pro_brand4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="loginBtn16" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jTextField6" alignment="1" min="-2" pref="41" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="combo_add_pro_brand6" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                                              <Component id="combo_add_pro_brand4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="loginBtn16" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jSeparator6" min="-2" max="-2" attributes="0"/>
@@ -6165,7 +6171,7 @@
                                           </Group>
                                           <Component id="jScrollPane8" min="-2" pref="237" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="0" pref="14" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -6329,24 +6335,6 @@
                                 </Component>
                               </SubComponents>
                             </Container>
-                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_add_pro_brand8">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
-                                </Property>
-                                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                  <StringArray count="4">
-                                    <StringItem index="0" value="QTY"/>
-                                    <StringItem index="1" value="John"/>
-                                    <StringItem index="2" value="Mark"/>
-                                    <StringItem index="3" value="Elon"/>
-                                  </StringArray>
-                                </Property>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Segoe UI" size="20" style="0"/>
-                                </Property>
-                              </Properties>
-                            </Component>
                             <Component class="javax.swing.JLabel" name="jLabel7">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -6378,40 +6366,6 @@
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JSeparator" name="jSeparator6">
-                            </Component>
-                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_add_pro_brand9">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
-                                </Property>
-                                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                  <StringArray count="3">
-                                    <StringItem index="0" value="EMAIL"/>
-                                    <StringItem index="1" value="A001"/>
-                                    <StringItem index="2" value="A002"/>
-                                  </StringArray>
-                                </Property>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Segoe UI" size="20" style="0"/>
-                                </Property>
-                              </Properties>
-                            </Component>
-                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_add_pro_brand10">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
-                                </Property>
-                                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                  <StringArray count="3">
-                                    <StringItem index="0" value="CONTACT NO."/>
-                                    <StringItem index="1" value="A001"/>
-                                    <StringItem index="2" value="A002"/>
-                                  </StringArray>
-                                </Property>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Segoe UI" size="20" style="0"/>
-                                </Property>
-                              </Properties>
                             </Component>
                             <Container class="javax.swing.JPanel" name="jPanel1">
                               <Properties>
@@ -6486,28 +6440,32 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="jLabel16" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jLabel17" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jLabel15" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jLabel14" alignment="0" max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="jLabel14" alignment="0" min="-2" pref="106" max="-2" attributes="0"/>
+                                                  <Component id="jLabel18" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="jLabel16" alignment="0" pref="123" max="32767" attributes="0"/>
+                                                  <Component id="jLabel15" alignment="0" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="164" max="32767" attributes="0"/>
+                                          <EmptySpace pref="136" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <EmptySpace pref="16" max="32767" attributes="0"/>
+                                          <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace pref="12" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -6534,7 +6492,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Segoe UI" size="20" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="DISCOUNT:"/>
+                                    <Property name="text" type="java.lang.String" value="DISCOUNT :"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabel17">
@@ -6542,7 +6500,15 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Segoe UI" size="20" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Net Total:"/>
+                                    <Property name="text" type="java.lang.String" value="Amount Paid :"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="jLabel18">
+                                  <Properties>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Segoe UI" size="20" style="1"/>
+                                    </Property>
+                                    <Property name="text" type="java.lang.String" value="Net Total :"/>
                                   </Properties>
                                 </Component>
                               </SubComponents>
@@ -6554,7 +6520,7 @@
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="null"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="Calculate"/>
+                                <Property name="text" type="java.lang.String" value="Calculator"/>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Segoe UI" size="24" style="0"/>
                                 </Property>
@@ -6614,7 +6580,7 @@
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="null"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="PRINT"/>
+                                <Property name="text" type="java.lang.String" value="SEND"/>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Segoe UI" size="24" style="0"/>
                                 </Property>
@@ -6639,6 +6605,21 @@
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginBtn18ActionPerformed"/>
                               </Events>
                             </Component>
+                            <Component class="javax.swing.JTextField" name="jTextField4">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="EMAIL"/>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JTextField" name="jTextField5">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="CONTACT NO."/>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JTextField" name="jTextField6">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="QTY"/>
+                              </Properties>
+                            </Component>
                           </SubComponents>
                         </Container>
                         <Container class="com.k33ptoo.components.KGradientPanel" name="panel_updatbill">
@@ -6659,15 +6640,244 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <EmptySpace min="0" pref="1011" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="txt_add_custid2" min="-2" pref="214" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="jCheckBox1" min="-2" pref="200" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="jScrollPane9" min="-2" pref="961" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="combo_add_pro_brand8" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="txt_add_custid1" min="-2" pref="214" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="loginBtn19" min="-2" pref="160" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="loginBtn20" min="-2" pref="160" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="loginBtn21" min="-2" pref="160" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="jSeparator7" alignment="1" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <EmptySpace min="0" pref="610" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="combo_add_pro_brand8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txt_add_custid1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="loginBtn20" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                              <Component id="loginBtn19" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                              <Component id="loginBtn21" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Component id="jSeparator7" min="-2" pref="10" max="-2" attributes="0"/>
+                                      <EmptySpace pref="33" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jCheckBox1" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                                          <Component id="txt_add_custid2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane9" min="-2" pref="350" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
+                          <SubComponents>
+                            <Container class="javax.swing.JScrollPane" name="jScrollPane9">
+                              <AuxValues>
+                                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                              </AuxValues>
+
+                              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                              <SubComponents>
+                                <Component class="javax.swing.JTable" name="jTable3">
+                                  <Properties>
+                                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                                      <Table columnCount="4" rowCount="4">
+                                        <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                                        <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                                        <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                                        <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                                      </Table>
+                                    </Property>
+                                  </Properties>
+                                </Component>
+                              </SubComponents>
+                            </Container>
+                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_add_pro_brand8">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                                  <StringArray count="4">
+                                    <StringItem index="0" value="BILL ID"/>
+                                    <StringItem index="1" value="John"/>
+                                    <StringItem index="2" value="Mark"/>
+                                    <StringItem index="3" value="Elon"/>
+                                  </StringArray>
+                                </Property>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="PENDING BILL"/>
+                              </Properties>
+                            </Component>
+                            <Component class="textfield.TextField" name="txt_add_custid1">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="horizontalAlignment" type="int" value="2"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                                <Property name="labelText" type="java.lang.String" value="EDIT TOTAL"/>
+                                <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_custid1KeyPressed"/>
+                              </Events>
+                            </Component>
+                            <Component class="textfield.TextField" name="txt_add_custid2">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="horizontalAlignment" type="int" value="2"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                                <Property name="labelText" type="java.lang.String" value="SEARCH"/>
+                                <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_custid2KeyPressed"/>
+                              </Events>
+                            </Component>
+                            <Component class="javax.swing.JSeparator" name="jSeparator7">
+                            </Component>
+                            <Component class="com.k33ptoo.components.KButton" name="loginBtn19">
+                              <Properties>
+                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                  <Border info="null"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="SAVE"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="24" style="0"/>
+                                </Property>
+                                <Property name="kBorderRadius" type="int" value="30"/>
+                                <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverForeGround" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                                  <ComponentRef name="txt_add_custid"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                            <Component class="com.k33ptoo.components.KButton" name="loginBtn20">
+                              <Properties>
+                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                  <Border info="null"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="SEND"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="24" style="0"/>
+                                </Property>
+                                <Property name="kBorderRadius" type="int" value="30"/>
+                                <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverForeGround" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                                  <ComponentRef name="txt_add_custid"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                            <Component class="com.k33ptoo.components.KButton" name="loginBtn21">
+                              <Properties>
+                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                  <Border info="null"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="DELETE"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="24" style="0"/>
+                                </Property>
+                                <Property name="kBorderRadius" type="int" value="30"/>
+                                <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverForeGround" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                                  <ComponentRef name="txt_add_custid"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                          </SubComponents>
                         </Container>
                         <Container class="com.k33ptoo.components.KGradientPanel" name="panel_detbill">
                           <Properties>
