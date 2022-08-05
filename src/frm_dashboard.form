@@ -5494,7 +5494,7 @@
                           </Group>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="0" pref="50" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   <Component id="panel_billmain" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -5638,6 +5638,9 @@
                                 <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="e7" green="c7" red="b2" type="rgb"/>
                                 </Property>
+                                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                                  <ComponentRef name="btn_updtbill"/>
+                                </Property>
                               </Properties>
                               <Events>
                                 <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_addbillFocusGained"/>
@@ -5741,6 +5744,9 @@
                                 <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="e7" green="c7" red="b2" type="rgb"/>
                                 </Property>
+                                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                                  <ComponentRef name="btn_billdet"/>
+                                </Property>
                               </Properties>
                               <Events>
                                 <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_updtbillFocusGained"/>
@@ -5770,7 +5776,7 @@
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace pref="25" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="indicatorDetpro1" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="indicatorExtraBill" alignment="1" max="32767" attributes="0"/>
                                           <Component id="btn_detPro1" alignment="1" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
@@ -5783,13 +5789,13 @@
                                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                                       <Component id="btn_detPro1" min="-2" pref="28" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="indicatorDetpro1" max="32767" attributes="0"/>
+                                      <Component id="indicatorExtraBill" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Container class="com.k33ptoo.components.KGradientPanel" name="indicatorDetpro1">
+                            <Container class="com.k33ptoo.components.KGradientPanel" name="indicatorExtraBill">
                               <Properties>
                                 <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="e0" green="d8" red="d1" type="rgb"/>
@@ -5843,6 +5849,9 @@
                                 </Property>
                                 <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                                  <ComponentRef name="btn_addbill"/>
                                 </Property>
                               </Properties>
                               <Events>
@@ -5947,6 +5956,9 @@
                                 <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="e7" green="c7" red="b2" type="rgb"/>
                                 </Property>
+                                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                                  <ComponentRef name="btn_detPro1"/>
+                                </Property>
                               </Properties>
                               <Events>
                                 <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_billdetFocusGained"/>
@@ -5978,7 +5990,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="panel_createbill" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="25" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
