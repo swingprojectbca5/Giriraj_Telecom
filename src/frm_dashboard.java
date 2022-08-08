@@ -313,15 +313,15 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_detbill = new com.k33ptoo.components.KGradientPanel();
         panel_extrabill = new com.k33ptoo.components.KGradientPanel();
         panel_account = new com.k33ptoo.components.KGradientPanel();
-        panel_billmenu1 = new com.k33ptoo.components.KGradientPanel();
+        panel_accountmenu = new com.k33ptoo.components.KGradientPanel();
         panel_addcustmenu10 = new com.k33ptoo.components.KGradientPanel();
-        indicatorAddbill1 = new com.k33ptoo.components.KGradientPanel();
-        btn_addbill1 = new com.k33ptoo.components.KButton();
+        indicatorasetting = new com.k33ptoo.components.KGradientPanel();
+        btn_setting = new com.k33ptoo.components.KButton();
         panel_addcustmenu12 = new com.k33ptoo.components.KGradientPanel();
         indicator_updt_bill1 = new com.k33ptoo.components.KGradientPanel();
         btn_updtbill1 = new com.k33ptoo.components.KButton();
-        kGradientPanel3 = new com.k33ptoo.components.KGradientPanel();
-        kGradientPanel6 = new com.k33ptoo.components.KGradientPanel();
+        panel_accountmain = new com.k33ptoo.components.KGradientPanel();
+        panel_accountsetting = new com.k33ptoo.components.KGradientPanel();
         lbl_add_empimg3 = new javax.swing.JLabel();
         lbl_add_prormimg2 = new javax.swing.JLabel();
         lbl_add_proaddimg2 = new javax.swing.JLabel();
@@ -4842,72 +4842,72 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_account.setkStartColor(new java.awt.Color(228, 235, 246));
         panel_account.setPreferredSize(new java.awt.Dimension(1061, 710));
 
-        panel_billmenu1.setkBorderRadius(40);
-        panel_billmenu1.setkEndColor(new java.awt.Color(178, 199, 231));
-        panel_billmenu1.setkStartColor(new java.awt.Color(178, 199, 231));
-        panel_billmenu1.setOpaque(false);
+        panel_accountmenu.setkBorderRadius(40);
+        panel_accountmenu.setkEndColor(new java.awt.Color(178, 199, 231));
+        panel_accountmenu.setkStartColor(new java.awt.Color(178, 199, 231));
+        panel_accountmenu.setOpaque(false);
 
         panel_addcustmenu10.setkBorderRadius(40);
         panel_addcustmenu10.setkEndColor(new java.awt.Color(178, 199, 231));
         panel_addcustmenu10.setkStartColor(new java.awt.Color(178, 199, 231));
         panel_addcustmenu10.setOpaque(false);
 
-        indicatorAddbill1.setkEndColor(new java.awt.Color(209, 216, 224));
-        indicatorAddbill1.setkStartColor(new java.awt.Color(209, 216, 224));
-        indicatorAddbill1.setOpaque(false);
+        indicatorasetting.setkEndColor(new java.awt.Color(209, 216, 224));
+        indicatorasetting.setkStartColor(new java.awt.Color(209, 216, 224));
+        indicatorasetting.setOpaque(false);
 
-        javax.swing.GroupLayout indicatorAddbill1Layout = new javax.swing.GroupLayout(indicatorAddbill1);
-        indicatorAddbill1.setLayout(indicatorAddbill1Layout);
-        indicatorAddbill1Layout.setHorizontalGroup(
-            indicatorAddbill1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout indicatorasettingLayout = new javax.swing.GroupLayout(indicatorasetting);
+        indicatorasetting.setLayout(indicatorasettingLayout);
+        indicatorasettingLayout.setHorizontalGroup(
+            indicatorasettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        indicatorAddbill1Layout.setVerticalGroup(
-            indicatorAddbill1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        indicatorasettingLayout.setVerticalGroup(
+            indicatorasettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 5, Short.MAX_VALUE)
         );
 
-        btn_addbill1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btn_addbill1.setText("SETTING");
-        btn_addbill1.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        btn_addbill1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btn_addbill1.setkBorderRadius(20);
-        btn_addbill1.setkEndColor(new java.awt.Color(178, 199, 231));
-        btn_addbill1.setkHoverColor(new java.awt.Color(68, 82, 121));
-        btn_addbill1.setkHoverEndColor(new java.awt.Color(68, 82, 121));
-        btn_addbill1.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        btn_addbill1.setkHoverStartColor(new java.awt.Color(68, 82, 121));
-        btn_addbill1.setkPressedColor(new java.awt.Color(68, 82, 121));
-        btn_addbill1.setkSelectedColor(new java.awt.Color(68, 82, 121));
-        btn_addbill1.setkStartColor(new java.awt.Color(178, 199, 231));
-        btn_addbill1.setNextFocusableComponent(btn_updtbill);
-        btn_addbill1.addFocusListener(new java.awt.event.FocusAdapter()
+        btn_setting.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_setting.setText("SETTING");
+        btn_setting.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        btn_setting.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn_setting.setkBorderRadius(20);
+        btn_setting.setkEndColor(new java.awt.Color(178, 199, 231));
+        btn_setting.setkHoverColor(new java.awt.Color(68, 82, 121));
+        btn_setting.setkHoverEndColor(new java.awt.Color(68, 82, 121));
+        btn_setting.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_setting.setkHoverStartColor(new java.awt.Color(68, 82, 121));
+        btn_setting.setkPressedColor(new java.awt.Color(68, 82, 121));
+        btn_setting.setkSelectedColor(new java.awt.Color(68, 82, 121));
+        btn_setting.setkStartColor(new java.awt.Color(178, 199, 231));
+        btn_setting.setNextFocusableComponent(btn_updtbill);
+        btn_setting.addFocusListener(new java.awt.event.FocusAdapter()
         {
             public void focusGained(java.awt.event.FocusEvent evt)
             {
-                btn_addbill1FocusGained(evt);
+                btn_settingFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt)
             {
-                btn_addbill1FocusLost(evt);
+                btn_settingFocusLost(evt);
             }
         });
-        btn_addbill1.addMouseListener(new java.awt.event.MouseAdapter()
+        btn_setting.addMouseListener(new java.awt.event.MouseAdapter()
         {
             public void mouseClicked(java.awt.event.MouseEvent evt)
             {
-                btn_addbill1MouseClicked(evt);
+                btn_settingMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt)
             {
-                btn_addbill1MouseEntered(evt);
+                btn_settingMouseEntered(evt);
             }
         });
-        btn_addbill1.addKeyListener(new java.awt.event.KeyAdapter()
+        btn_setting.addKeyListener(new java.awt.event.KeyAdapter()
         {
             public void keyPressed(java.awt.event.KeyEvent evt)
             {
-                btn_addbill1KeyPressed(evt);
+                btn_settingKeyPressed(evt);
             }
         });
 
@@ -4918,17 +4918,17 @@ public class frm_dashboard extends javax.swing.JFrame
             .addGroup(panel_addcustmenu10Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(panel_addcustmenu10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(indicatorAddbill1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_addbill1, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE))
+                    .addComponent(indicatorasetting, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_setting, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
         panel_addcustmenu10Layout.setVerticalGroup(
             panel_addcustmenu10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_addcustmenu10Layout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addComponent(btn_addbill1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_setting, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(indicatorAddbill1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(indicatorasetting, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         panel_addcustmenu12.setkBorderRadius(40);
@@ -5013,32 +5013,32 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addComponent(indicator_updt_bill1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        javax.swing.GroupLayout panel_billmenu1Layout = new javax.swing.GroupLayout(panel_billmenu1);
-        panel_billmenu1.setLayout(panel_billmenu1Layout);
-        panel_billmenu1Layout.setHorizontalGroup(
-            panel_billmenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_billmenu1Layout.createSequentialGroup()
+        javax.swing.GroupLayout panel_accountmenuLayout = new javax.swing.GroupLayout(panel_accountmenu);
+        panel_accountmenu.setLayout(panel_accountmenuLayout);
+        panel_accountmenuLayout.setHorizontalGroup(
+            panel_accountmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_accountmenuLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addComponent(panel_addcustmenu10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(panel_addcustmenu12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        panel_billmenu1Layout.setVerticalGroup(
-            panel_billmenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panel_accountmenuLayout.setVerticalGroup(
+            panel_accountmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panel_addcustmenu10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(panel_addcustmenu12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        kGradientPanel3.setkBorderRadius(40);
-        kGradientPanel3.setkEndColor(new java.awt.Color(178, 199, 231));
-        kGradientPanel3.setkStartColor(new java.awt.Color(178, 199, 231));
-        kGradientPanel3.setOpaque(false);
+        panel_accountmain.setkBorderRadius(40);
+        panel_accountmain.setkEndColor(new java.awt.Color(178, 199, 231));
+        panel_accountmain.setkStartColor(new java.awt.Color(178, 199, 231));
+        panel_accountmain.setOpaque(false);
 
-        kGradientPanel6.setkBorderRadius(40);
-        kGradientPanel6.setkEndColor(new java.awt.Color(228, 235, 246));
-        kGradientPanel6.setkStartColor(new java.awt.Color(228, 235, 246));
-        kGradientPanel6.setOpaque(false);
+        panel_accountsetting.setkBorderRadius(40);
+        panel_accountsetting.setkEndColor(new java.awt.Color(228, 235, 246));
+        panel_accountsetting.setkStartColor(new java.awt.Color(228, 235, 246));
+        panel_accountsetting.setOpaque(false);
 
         lbl_add_empimg3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_add_empimg3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/man.png"))); // NOI18N
@@ -5173,61 +5173,61 @@ public class frm_dashboard extends javax.swing.JFrame
         jLabel19.setText("ID 12345");
         jLabel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        javax.swing.GroupLayout kGradientPanel6Layout = new javax.swing.GroupLayout(kGradientPanel6);
-        kGradientPanel6.setLayout(kGradientPanel6Layout);
-        kGradientPanel6Layout.setHorizontalGroup(
-            kGradientPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel6Layout.createSequentialGroup()
+        javax.swing.GroupLayout panel_accountsettingLayout = new javax.swing.GroupLayout(panel_accountsetting);
+        panel_accountsetting.setLayout(panel_accountsettingLayout);
+        panel_accountsettingLayout.setHorizontalGroup(
+            panel_accountsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_accountsettingLayout.createSequentialGroup()
                 .addContainerGap(50, Short.MAX_VALUE)
-                .addGroup(kGradientPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel6Layout.createSequentialGroup()
+                .addGroup(panel_accountsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_accountsettingLayout.createSequentialGroup()
                         .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lbl_add_empimg3, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel6Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_accountsettingLayout.createSequentialGroup()
                         .addComponent(txt_add_pro_id3, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(106, 106, 106))
-                    .addGroup(kGradientPanel6Layout.createSequentialGroup()
-                        .addGroup(kGradientPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_accountsettingLayout.createSequentialGroup()
+                        .addGroup(panel_accountsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txt_add_pro_id9, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_add_pro_id11, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(106, 106, 106)))
-                .addGroup(kGradientPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(kGradientPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_accountsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_accountsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(lbl_add_proaddimg2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lbl_add_prormimg2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(kGradientPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_accountsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(txt_add_pro_id8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(txt_add_pro_id10, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(txt_add_pro_id12, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(55, 55, 55))
-            .addGroup(kGradientPanel6Layout.createSequentialGroup()
+            .addGroup(panel_accountsettingLayout.createSequentialGroup()
                 .addGap(380, 380, 380)
                 .addComponent(loginBtn22, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        kGradientPanel6Layout.setVerticalGroup(
-            kGradientPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel6Layout.createSequentialGroup()
+        panel_accountsettingLayout.setVerticalGroup(
+            panel_accountsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_accountsettingLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(kGradientPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(panel_accountsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lbl_add_empimg3)
-                    .addGroup(kGradientPanel6Layout.createSequentialGroup()
+                    .addGroup(panel_accountsettingLayout.createSequentialGroup()
                         .addComponent(lbl_add_prormimg2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lbl_add_proaddimg2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(kGradientPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panel_accountsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_add_pro_id3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_add_pro_id8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(70, 70, 70)
-                .addGroup(kGradientPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panel_accountsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_add_pro_id9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_add_pro_id10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(70, 70, 70)
-                .addGroup(kGradientPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panel_accountsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_add_pro_id11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_add_pro_id12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
@@ -5251,30 +5251,30 @@ public class frm_dashboard extends javax.swing.JFrame
             .addGap(0, 610, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout kGradientPanel3Layout = new javax.swing.GroupLayout(kGradientPanel3);
-        kGradientPanel3.setLayout(kGradientPanel3Layout);
-        kGradientPanel3Layout.setHorizontalGroup(
-            kGradientPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout panel_accountmainLayout = new javax.swing.GroupLayout(panel_accountmain);
+        panel_accountmain.setLayout(panel_accountmainLayout);
+        panel_accountmainLayout.setHorizontalGroup(
+            panel_accountmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_accountmainLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(kGradientPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(25, Short.MAX_VALUE))
-            .addGroup(kGradientPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(kGradientPanel3Layout.createSequentialGroup()
+            .addGroup(panel_accountmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_accountmainLayout.createSequentialGroup()
                     .addGap(25, 25, 25)
-                    .addComponent(kGradientPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panel_accountsetting, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGap(25, 25, 25)))
         );
-        kGradientPanel3Layout.setVerticalGroup(
-            kGradientPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel3Layout.createSequentialGroup()
+        panel_accountmainLayout.setVerticalGroup(
+            panel_accountmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_accountmainLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(kGradientPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(25, Short.MAX_VALUE))
-            .addGroup(kGradientPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(kGradientPanel3Layout.createSequentialGroup()
+            .addGroup(panel_accountmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_accountmainLayout.createSequentialGroup()
                     .addGap(25, 25, 25)
-                    .addComponent(kGradientPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panel_accountsetting, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGap(25, 25, 25)))
         );
 
@@ -5282,15 +5282,15 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_account.setLayout(panel_accountLayout);
         panel_accountLayout.setHorizontalGroup(
             panel_accountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel_billmenu1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(kGradientPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_accountmenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_accountmain, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panel_accountLayout.setVerticalGroup(
             panel_accountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_accountLayout.createSequentialGroup()
-                .addComponent(panel_billmenu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panel_accountmenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(5, 5, 5)
-                .addComponent(kGradientPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panel_accountmain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panel_user.setPreferredSize(new java.awt.Dimension(1061, 710));
@@ -5483,7 +5483,8 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_accountMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_accountMouseClicked
     {//GEN-HEADEREND:event_lbl_accountMouseClicked
-        visibility(lbl_account, false, false, false, false, true, false, false);
+        visibility(btn_setting, false, false, false, false, true, false, false);
+
         HoverColor(pnl_account, lbl_account, Color.WHITE, Color.WHITE, Color.BLACK);
     }//GEN-LAST:event_lbl_accountMouseClicked
 
@@ -6399,30 +6400,30 @@ public class frm_dashboard extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_add_custid2KeyPressed
 
-    private void btn_addbill1FocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_addbill1FocusGained
-    {//GEN-HEADEREND:event_btn_addbill1FocusGained
+    private void btn_settingFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_settingFocusGained
+    {//GEN-HEADEREND:event_btn_settingFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_addbill1FocusGained
+    }//GEN-LAST:event_btn_settingFocusGained
 
-    private void btn_addbill1FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_addbill1FocusLost
-    {//GEN-HEADEREND:event_btn_addbill1FocusLost
+    private void btn_settingFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_settingFocusLost
+    {//GEN-HEADEREND:event_btn_settingFocusLost
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_addbill1FocusLost
+    }//GEN-LAST:event_btn_settingFocusLost
 
-    private void btn_addbill1MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_addbill1MouseClicked
-    {//GEN-HEADEREND:event_btn_addbill1MouseClicked
+    private void btn_settingMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_settingMouseClicked
+    {//GEN-HEADEREND:event_btn_settingMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_addbill1MouseClicked
+    }//GEN-LAST:event_btn_settingMouseClicked
 
-    private void btn_addbill1MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_addbill1MouseEntered
-    {//GEN-HEADEREND:event_btn_addbill1MouseEntered
+    private void btn_settingMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_settingMouseEntered
+    {//GEN-HEADEREND:event_btn_settingMouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_addbill1MouseEntered
+    }//GEN-LAST:event_btn_settingMouseEntered
 
-    private void btn_addbill1KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_addbill1KeyPressed
-    {//GEN-HEADEREND:event_btn_addbill1KeyPressed
+    private void btn_settingKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_settingKeyPressed
+    {//GEN-HEADEREND:event_btn_settingKeyPressed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_addbill1KeyPressed
+    }//GEN-LAST:event_btn_settingKeyPressed
 
     private void btn_updtbill1FocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_updtbill1FocusGained
     {//GEN-HEADEREND:event_btn_updtbill1FocusGained
@@ -6787,6 +6788,12 @@ public class frm_dashboard extends javax.swing.JFrame
         field.grabFocus();
     }
 
+    public void visibility(JTextField field, KGradientPanel add, boolean addbool)
+    {
+        add.setVisible(addbool);
+        field.grabFocus();
+    }
+
     //to call from sidepane
     public void visibility(KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool)
     {
@@ -6794,6 +6801,11 @@ public class frm_dashboard extends javax.swing.JFrame
         edit.setVisible(editbool);
         det.setVisible(detbool);
         fulldet.setVisible(fulldetbool);
+    }
+
+    public void visibility(KGradientPanel add, boolean addbool)
+    {
+        add.setVisible(addbool);
     }
 
     //to call when the enter key pressed in main panel
@@ -6831,10 +6843,8 @@ public class frm_dashboard extends javax.swing.JFrame
         fulldet.setVisible(fulldetbool);
     }
 
-    //
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.k33ptoo.components.KButton btn_addbill;
-    private com.k33ptoo.components.KButton btn_addbill1;
     private com.k33ptoo.components.KButton btn_addcust;
     private com.k33ptoo.components.KButton btn_addemp;
     private com.k33ptoo.components.KButton btn_addmodal;
@@ -6847,6 +6857,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KButton btn_editcust;
     private com.k33ptoo.components.KButton btn_editemp;
     private com.k33ptoo.components.KButton btn_empdet;
+    private com.k33ptoo.components.KButton btn_setting;
     private com.k33ptoo.components.KButton btn_updtbill;
     private com.k33ptoo.components.KButton btn_updtbill1;
     private combo_suggestion.ComboBoxSuggestion combo_add_pro_brand;
@@ -6860,7 +6871,6 @@ public class frm_dashboard extends javax.swing.JFrame
     private combo_suggestion.ComboBoxSuggestion combo_add_pro_ctgry;
     private combo_suggestion.ComboBoxSuggestion combo_add_pro_model;
     private com.k33ptoo.components.KGradientPanel indicatorAddbill;
-    private com.k33ptoo.components.KGradientPanel indicatorAddbill1;
     private com.k33ptoo.components.KGradientPanel indicatorAddcust;
     private com.k33ptoo.components.KGradientPanel indicatorAddemp;
     private com.k33ptoo.components.KGradientPanel indicatorAddmodal;
@@ -6875,6 +6885,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel indicator_bill_det;
     private com.k33ptoo.components.KGradientPanel indicator_updt_bill;
     private com.k33ptoo.components.KGradientPanel indicator_updt_bill1;
+    private com.k33ptoo.components.KGradientPanel indicatorasetting;
     private javax.swing.JCheckBox jCheckBox1;
     public javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -6929,10 +6940,8 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel kGradientPanel12;
     private com.k33ptoo.components.KGradientPanel kGradientPanel19;
     private com.k33ptoo.components.KGradientPanel kGradientPanel2;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel3;
     private com.k33ptoo.components.KGradientPanel kGradientPanel4;
     private com.k33ptoo.components.KGradientPanel kGradientPanel5;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel6;
     private javax.swing.JLabel lbl_account;
     private javax.swing.JLabel lbl_add_empaddimg;
     private javax.swing.JLabel lbl_add_empaddimg1;
@@ -6981,6 +6990,9 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KButton loginBtn8;
     private com.k33ptoo.components.KButton loginBtn9;
     private com.k33ptoo.components.KGradientPanel panel_account;
+    private com.k33ptoo.components.KGradientPanel panel_accountmain;
+    private com.k33ptoo.components.KGradientPanel panel_accountmenu;
+    private com.k33ptoo.components.KGradientPanel panel_accountsetting;
     private com.k33ptoo.components.KGradientPanel panel_addcust;
     private com.k33ptoo.components.KGradientPanel panel_addcust_menu;
     private com.k33ptoo.components.KGradientPanel panel_addcustmenu10;
@@ -6998,7 +7010,6 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel panel_bill;
     private com.k33ptoo.components.KGradientPanel panel_billmain;
     private com.k33ptoo.components.KGradientPanel panel_billmenu;
-    private com.k33ptoo.components.KGradientPanel panel_billmenu1;
     private com.k33ptoo.components.KGradientPanel panel_createbill;
     private com.k33ptoo.components.KGradientPanel panel_custdet_menu;
     private com.k33ptoo.components.KGradientPanel panel_custdetail;

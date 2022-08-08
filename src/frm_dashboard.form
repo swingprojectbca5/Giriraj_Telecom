@@ -6961,22 +6961,22 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="panel_billmenu1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="kGradientPanel3" alignment="1" max="32767" attributes="0"/>
+                          <Component id="panel_accountmenu" alignment="0" max="32767" attributes="0"/>
+                          <Component id="panel_accountmain" alignment="1" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="panel_billmenu1" min="-2" max="-2" attributes="0"/>
+                              <Component id="panel_accountmenu" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                              <Component id="kGradientPanel3" max="32767" attributes="0"/>
+                              <Component id="panel_accountmain" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Container class="com.k33ptoo.components.KGradientPanel" name="panel_billmenu1">
+                    <Container class="com.k33ptoo.components.KGradientPanel" name="panel_accountmenu">
                       <Properties>
                         <Property name="kBorderRadius" type="int" value="40"/>
                         <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -7026,8 +7026,8 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="indicatorAddbill1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="btn_addbill1" alignment="0" pref="168" max="32767" attributes="0"/>
+                                          <Component id="indicatorasetting" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="btn_setting" alignment="0" pref="168" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace pref="25" max="32767" attributes="0"/>
                                   </Group>
@@ -7037,15 +7037,15 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                      <Component id="btn_addbill1" min="-2" pref="28" max="-2" attributes="0"/>
+                                      <Component id="btn_setting" min="-2" pref="28" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="indicatorAddbill1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="indicatorasetting" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Container class="com.k33ptoo.components.KGradientPanel" name="indicatorAddbill1">
+                            <Container class="com.k33ptoo.components.KGradientPanel" name="indicatorasetting">
                               <Properties>
                                 <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="e0" green="d8" red="d1" type="rgb"/>
@@ -7069,7 +7069,7 @@
                                 </DimensionLayout>
                               </Layout>
                             </Container>
-                            <Component class="com.k33ptoo.components.KButton" name="btn_addbill1">
+                            <Component class="com.k33ptoo.components.KButton" name="btn_setting">
                               <Properties>
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -7111,11 +7111,11 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_addbill1FocusGained"/>
-                                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_addbill1FocusLost"/>
-                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_addbill1MouseClicked"/>
-                                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_addbill1MouseEntered"/>
-                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_addbill1KeyPressed"/>
+                                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_settingFocusGained"/>
+                                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_settingFocusLost"/>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_settingMouseClicked"/>
+                                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_settingMouseEntered"/>
+                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_settingKeyPressed"/>
                               </Events>
                             </Component>
                           </SubComponents>
@@ -7228,7 +7228,7 @@
                         </Container>
                       </SubComponents>
                     </Container>
-                    <Container class="com.k33ptoo.components.KGradientPanel" name="kGradientPanel3">
+                    <Container class="com.k33ptoo.components.KGradientPanel" name="panel_accountmain">
                       <Properties>
                         <Property name="kBorderRadius" type="int" value="40"/>
                         <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -7251,7 +7251,7 @@
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Component id="kGradientPanel6" max="32767" attributes="0"/>
+                                      <Component id="panel_accountsetting" max="32767" attributes="0"/>
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -7267,7 +7267,7 @@
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Component id="kGradientPanel6" max="32767" attributes="0"/>
+                                      <Component id="panel_accountsetting" max="32767" attributes="0"/>
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -7275,7 +7275,7 @@
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Container class="com.k33ptoo.components.KGradientPanel" name="kGradientPanel6">
+                        <Container class="com.k33ptoo.components.KGradientPanel" name="panel_accountsetting">
                           <Properties>
                             <Property name="kBorderRadius" type="int" value="40"/>
                             <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">

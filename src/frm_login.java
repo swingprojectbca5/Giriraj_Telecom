@@ -1,10 +1,12 @@
 
+import connections.dbconnection;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.event.KeyEvent;
 import java.awt.geom.RoundRectangle2D;
 import javax.swing.ImageIcon;
+import java.sql.Connection;
 
 public class frm_login extends javax.swing.JFrame
 {
@@ -15,8 +17,13 @@ public class frm_login extends javax.swing.JFrame
     public frm_login()
     {
         initComponents();
-        setShape(new RoundRectangle2D.Double(0, 0, getWidth(), getHeight(), 30, 30));
 
+        setShape(new RoundRectangle2D.Double(0, 0, getWidth(), getHeight(), 30, 30));
+        Connection con = dbconnection.isconnected();
+        if (con == null)
+        {
+            System.exit(0);
+        }
     }
 
     @SuppressWarnings("unchecked")
