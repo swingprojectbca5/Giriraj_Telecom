@@ -16,15 +16,13 @@ import javax.swing.JTextField;
 import javax.swing.table.JTableHeader;
 import scrollbar.ScrollBarCustom;
 
-public class frm_dashboard extends javax.swing.JFrame
-{
+public class frm_dashboard extends javax.swing.JFrame {
 
     double first, second, result;
     String operation;
     String answer;
 
-    public frm_dashboard()
-    {
+    public frm_dashboard() {
         initComponents();
         panel_main.setVisible(true);
         visibility(jLabel2, false, false, false, false, false, false, true);
@@ -36,8 +34,7 @@ public class frm_dashboard extends javax.swing.JFrame
         jScrollPane6.setVerticalScrollBar(new ScrollBarCustom());
     }
 
-    public frm_dashboard(String name)
-    {
+    public frm_dashboard(String name) {
         initComponents();
         panel_main.setVisible(true);
         visibility(jLabel2, false, false, false, false, false, false, true);
@@ -47,12 +44,9 @@ public class frm_dashboard extends javax.swing.JFrame
         tableheader(table_custedit.getTableHeader());
         tableheader(table_custdet.getTableHeader());
 
-        if (name.equals("ADMIN"))
-        {
+        if (name.equals("ADMIN")) {
             lbl_customer.setEnabled(true);
-        }
-        else
-        {
+        } else {
             lbl_customer.setEnabled(false);
         }
     }
@@ -5468,7 +5462,12 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void lbl_accountKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_accountKeyPressed
     {//GEN-HEADEREND:event_lbl_accountKeyPressed
-//        visibility(evt.getKeyCode(), lbl_account, false, false, false, false, true, false, false);
+        visibility(evt.getKeyCode(), btn_setting, false, false, false, false, true, false, false);
+        panel_accountsetting.setVisible(true);
+        kGradientPanel5.setVisible(false);
+        indicatorasetting.setkStartColor(new Color(68, 82, 121));
+        indicatorasetting.setkEndColor(new Color(68, 82, 121));
+        indicatorasetting.setBackground(new Color(68, 82, 121));
     }//GEN-LAST:event_lbl_accountKeyPressed
 
     private void lbl_accountMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_accountMouseExited
@@ -5484,8 +5483,12 @@ public class frm_dashboard extends javax.swing.JFrame
     private void lbl_accountMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_accountMouseClicked
     {//GEN-HEADEREND:event_lbl_accountMouseClicked
         visibility(btn_setting, false, false, false, false, true, false, false);
-
         HoverColor(pnl_account, lbl_account, Color.WHITE, Color.WHITE, Color.BLACK);
+        panel_accountsetting.setVisible(true);
+        kGradientPanel5.setVisible(false);
+        indicatorasetting.setkStartColor(new Color(68, 82, 121));
+        indicatorasetting.setkEndColor(new Color(68, 82, 121));
+        indicatorasetting.setBackground(new Color(68, 82, 121));
     }//GEN-LAST:event_lbl_accountMouseClicked
 
     private void lbl_accountFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_accountFocusLost
@@ -6402,17 +6405,20 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void btn_settingFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_settingFocusGained
     {//GEN-HEADEREND:event_btn_settingFocusGained
-        // TODO add your handling code here:
+        HoverColor(btn_setting, new Color(68, 82, 121), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_settingFocusGained
 
     private void btn_settingFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_settingFocusLost
     {//GEN-HEADEREND:event_btn_settingFocusLost
-        // TODO add your handling code here:
+        HoverColor(btn_setting, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_settingFocusLost
 
     private void btn_settingMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_settingMouseClicked
     {//GEN-HEADEREND:event_btn_settingMouseClicked
-        // TODO add your handling code here:
+        txt_add_pro_id3.grabFocus();
+        indicatorasetting.setkStartColor(new Color(68, 82, 121));
+        indicatorasetting.setkEndColor(new Color(68, 82, 121));
+        indicatorasetting.setBackground(new Color(68, 82, 121));
     }//GEN-LAST:event_btn_settingMouseClicked
 
     private void btn_settingMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_settingMouseEntered
@@ -6422,7 +6428,13 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void btn_settingKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_settingKeyPressed
     {//GEN-HEADEREND:event_btn_settingKeyPressed
-        // TODO add your handling code here:
+        txt_add_pro_id3.grabFocus();
+        panel_accountsetting.setVisible(true);
+        kGradientPanel5.setVisible(false);
+        escape(lbl_account, evt.getKeyCode(), panel_account);
+        indicatorasetting.setkStartColor(new Color(68, 82, 121));
+        indicatorasetting.setkEndColor(new Color(68, 82, 121));
+        indicatorasetting.setBackground(new Color(68, 82, 121));
     }//GEN-LAST:event_btn_settingKeyPressed
 
     private void btn_updtbill1FocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_updtbill1FocusGained
@@ -6472,56 +6484,50 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void txt_add_pro_id3KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_pro_id3KeyPressed
     {//GEN-HEADEREND:event_txt_add_pro_id3KeyPressed
-        // TODO add your handling code here:
+        escape(btn_setting, evt.getKeyCode());
     }//GEN-LAST:event_txt_add_pro_id3KeyPressed
 
     private void txt_add_pro_id8KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_pro_id8KeyPressed
     {//GEN-HEADEREND:event_txt_add_pro_id8KeyPressed
-        // TODO add your handling code here:
+        escape(btn_setting, evt.getKeyCode());
     }//GEN-LAST:event_txt_add_pro_id8KeyPressed
 
     private void txt_add_pro_id9KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_pro_id9KeyPressed
     {//GEN-HEADEREND:event_txt_add_pro_id9KeyPressed
-        // TODO add your handling code here:
+        escape(btn_setting, evt.getKeyCode());
     }//GEN-LAST:event_txt_add_pro_id9KeyPressed
 
     private void txt_add_pro_id10KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_pro_id10KeyPressed
     {//GEN-HEADEREND:event_txt_add_pro_id10KeyPressed
-        // TODO add your handling code here:
+        escape(btn_setting, evt.getKeyCode());
     }//GEN-LAST:event_txt_add_pro_id10KeyPressed
 
     private void txt_add_pro_id11KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_pro_id11KeyPressed
     {//GEN-HEADEREND:event_txt_add_pro_id11KeyPressed
-        // TODO add your handling code here:
+        escape(btn_setting, evt.getKeyCode());
     }//GEN-LAST:event_txt_add_pro_id11KeyPressed
 
     private void txt_add_pro_id12KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_pro_id12KeyPressed
     {//GEN-HEADEREND:event_txt_add_pro_id12KeyPressed
-        // TODO add your handling code here:
+        escape(btn_setting, evt.getKeyCode());
     }//GEN-LAST:event_txt_add_pro_id12KeyPressed
 
-    public static void main(String args[])
-    {
-        java.awt.EventQueue.invokeLater(new Runnable()
-        {
-            public void run()
-            {
+    public static void main(String args[]) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
                 new frm_dashboard().setVisible(true);
             }
         });
     }
 
-    public void whitespaceremover(JTextField field)
-    {
-        if (field.getText().equals(" "))
-        {
+    public void whitespaceremover(JTextField field) {
+        if (field.getText().equals(" ")) {
             String txt = field.getText().replace(" ", "");
             field.setText(txt);
         }
     }
 
-    public void hoverColor(KGradientPanel panel, JLabel label, Color kcolor, Color bcolor, Color foreground, Font font, String text)
-    {
+    public void hoverColor(KGradientPanel panel, JLabel label, Color kcolor, Color bcolor, Color foreground, Font font, String text) {
         panel.setkStartColor(kcolor);
         panel.setkEndColor(kcolor);
         panel.setBackground(bcolor);
@@ -6531,22 +6537,19 @@ public class frm_dashboard extends javax.swing.JFrame
     }
 
     //Created by Mayank
-    public void HoverColor(KButton button, Color kColor, Color bColor)
-    {
+    public void HoverColor(KButton button, Color kColor, Color bColor) {
         button.setkStartColor(kColor);
         button.setkEndColor(kColor);
         button.setkForeGround(bColor);
     }
 
-    public void HoverColor(KGradientPanel panel, Color kColor, Color bColor)
-    {
+    public void HoverColor(KGradientPanel panel, Color kColor, Color bColor) {
         panel.setkStartColor(kColor);
         panel.setkEndColor(kColor);
         panel.setBackground(bColor);
     }
 
-    public void HoverColor(KGradientPanel panel, JLabel label, Color kColor, Color bColor, Color foreground)
-    {
+    public void HoverColor(KGradientPanel panel, JLabel label, Color kColor, Color bColor, Color foreground) {
         panel.setkStartColor(kColor);
         panel.setkEndColor(kColor);
         panel.setBackground(bColor);
@@ -6554,8 +6557,7 @@ public class frm_dashboard extends javax.swing.JFrame
     }
 //    Created by Mayank
 
-    public void indicator(KGradientPanel panel1, KGradientPanel panel2, KGradientPanel panel3)
-    {
+    public void indicator(KGradientPanel panel1, KGradientPanel panel2, KGradientPanel panel3) {
         //Panel 1
         panel1.setkStartColor(new Color(68, 82, 121));
         panel1.setkEndColor(new Color(68, 82, 121));
@@ -6572,8 +6574,7 @@ public class frm_dashboard extends javax.swing.JFrame
     }
 //    Created by Mayank
 
-    public void indicator(KGradientPanel panel1, KGradientPanel panel2, KGradientPanel panel3, KGradientPanel panel4)
-    {
+    public void indicator(KGradientPanel panel1, KGradientPanel panel2, KGradientPanel panel3, KGradientPanel panel4) {
         //Panel 1
         panel1.setkStartColor(new Color(68, 82, 121));
         panel1.setkEndColor(new Color(68, 82, 121));
@@ -6593,8 +6594,7 @@ public class frm_dashboard extends javax.swing.JFrame
     }
 //    Created by Mayank
 
-    public void indicatorOn(KGradientPanel panel, KGradientPanel rpanel2, KGradientPanel rpanel3)
-    {
+    public void indicatorOn(KGradientPanel panel, KGradientPanel rpanel2, KGradientPanel rpanel3) {
 
         //panel background color
         panel.setkStartColor(new Color(68, 82, 121));
@@ -6613,8 +6613,7 @@ public class frm_dashboard extends javax.swing.JFrame
     }
 //    Created by Mayank
 
-    public void indicatorOn(KGradientPanel panel, KGradientPanel rpanel2, KGradientPanel rpanel3, KGradientPanel rpanel4)
-    {
+    public void indicatorOn(KGradientPanel panel, KGradientPanel rpanel2, KGradientPanel rpanel3, KGradientPanel rpanel4) {
 
         //apply color in indicator
         panel.setkStartColor(new Color(68, 82, 121));
@@ -6637,50 +6636,39 @@ public class frm_dashboard extends javax.swing.JFrame
         rpanel4.setBackground(new Color(209, 216, 224));
     }
 
-    public void escape(JLabel label, int code)
-    {
-        if (code == KeyEvent.VK_ESCAPE)
-        {
+    public void escape(JLabel label, int code) {
+        if (code == KeyEvent.VK_ESCAPE) {
             label.grabFocus();
         }
     }
 
-    public void escape(KButton button, int code)
-    {
-        if (code == KeyEvent.VK_ESCAPE)
-        {
+    public void escape(KButton button, int code) {
+        if (code == KeyEvent.VK_ESCAPE) {
             button.grabFocus();
         }
     }
 
-    public void escape(JLabel label, int code, KGradientPanel panel)
-    {
-        if (code == KeyEvent.VK_ESCAPE)
-        {
+    public void escape(JLabel label, int code, KGradientPanel panel) {
+        if (code == KeyEvent.VK_ESCAPE) {
             label.grabFocus();
             panel.setVisible(false);
             panel_extra.setVisible(true);
         }
     }
 
-    public void clearplaceholder(JTextField field, String gottext, String text)
-    {
-        if (gottext.equals(text))
-        {
+    public void clearplaceholder(JTextField field, String gottext, String text) {
+        if (gottext.equals(text)) {
             field.setText("");
         }
     }
 
-    public void txtfocuslost(JTextField field, String gottext, String settext)
-    {
-        if (gottext.equals("") || gottext.equals(" "))
-        {
+    public void txtfocuslost(JTextField field, String gottext, String settext) {
+        if (gottext.equals("") || gottext.equals(" ")) {
             field.setText(settext);
         }
     }
 
-    public void screensize()
-    {
+    public void screensize() {
         Toolkit tk = Toolkit.getDefaultToolkit();
         int x = (int) tk.getScreenSize().getWidth();
         int y = (int) tk.getScreenSize().getHeight();
@@ -6690,16 +6678,13 @@ public class frm_dashboard extends javax.swing.JFrame
         this.setSize(x, y - taskbar);
     }
 
-    public void tableheader(JTableHeader header)
-    {
+    public void tableheader(JTableHeader header) {
         header.setFont(new Font("Cascadia Mono", Font.PLAIN, 20));
     }
 
     //to call when enter key pressed
-    public void visibility(int code, KButton button, boolean cust, boolean emp, boolean product, boolean bill, boolean account, boolean user, boolean extra)
-    {
-        if (code == KeyEvent.VK_ENTER)
-        {
+    public void visibility(int code, KButton button, boolean cust, boolean emp, boolean product, boolean bill, boolean account, boolean user, boolean extra) {
+        if (code == KeyEvent.VK_ENTER) {
             panel_customer.setVisible(cust);
             panel_employee.setVisible(emp);
             panel_product.setVisible(product);
@@ -6712,8 +6697,7 @@ public class frm_dashboard extends javax.swing.JFrame
     }
 
     //to call when from sidepane with mouseclick
-    public void visibility(JLabel label, boolean cust, boolean emp, boolean product, boolean bill, boolean account, boolean user, boolean extra)
-    {
+    public void visibility(JLabel label, boolean cust, boolean emp, boolean product, boolean bill, boolean account, boolean user, boolean extra) {
         panel_customer.setVisible(cust);
         panel_employee.setVisible(emp);
         panel_product.setVisible(product);
@@ -6724,8 +6708,7 @@ public class frm_dashboard extends javax.swing.JFrame
         label.grabFocus();
     }
 
-    public void visibility(KButton button, boolean cust, boolean emp, boolean product, boolean bill, boolean account, boolean user, boolean extra)
-    {
+    public void visibility(KButton button, boolean cust, boolean emp, boolean product, boolean bill, boolean account, boolean user, boolean extra) {
         panel_customer.setVisible(cust);
         panel_employee.setVisible(emp);
         panel_product.setVisible(product);
@@ -6737,10 +6720,8 @@ public class frm_dashboard extends javax.swing.JFrame
     }
 
     //to call when the enter key pressed in main panel
-    void visibility(int code, JTextField field, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool)
-    {
-        if (code == KeyEvent.VK_ENTER)
-        {
+    void visibility(int code, JTextField field, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool) {
+        if (code == KeyEvent.VK_ENTER) {
             add.setVisible(addbool);
             edit.setVisible(editbool);
             det.setVisible(detbool);
@@ -6749,8 +6730,7 @@ public class frm_dashboard extends javax.swing.JFrame
     }
 
     //while inside the main panel
-    public void visibility(JTextField filed, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool)
-    {
+    public void visibility(JTextField filed, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool) {
         add.setVisible(addbool);
         edit.setVisible(editbool);
         det.setVisible(detbool);
@@ -6758,18 +6738,15 @@ public class frm_dashboard extends javax.swing.JFrame
     }
 
     //to call from sidepane
-    public void visibility(KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool)
-    {
+    public void visibility(KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool) {
         add.setVisible(addbool);
         edit.setVisible(editbool);
         det.setVisible(detbool);
     }
 
     //to call when the enter key pressed in main panel
-    void visibility(int code, JTextField field, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool)
-    {
-        if (code == KeyEvent.VK_ENTER)
-        {
+    void visibility(int code, JTextField field, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool) {
+        if (code == KeyEvent.VK_ENTER) {
             add.setVisible(addbool);
             edit.setVisible(editbool);
             det.setVisible(detbool);
@@ -6779,8 +6756,7 @@ public class frm_dashboard extends javax.swing.JFrame
     }
 
     //while inside the main panel
-    public void visibility(JTextField field, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool)
-    {
+    public void visibility(JTextField field, KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool) {
         add.setVisible(addbool);
         edit.setVisible(editbool);
         det.setVisible(detbool);
@@ -6788,31 +6764,26 @@ public class frm_dashboard extends javax.swing.JFrame
         field.grabFocus();
     }
 
-    public void visibility(JTextField field, KGradientPanel add, boolean addbool)
-    {
+    public void visibility(JTextField field, KGradientPanel add, boolean addbool) {
         add.setVisible(addbool);
         field.grabFocus();
     }
 
     //to call from sidepane
-    public void visibility(KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool)
-    {
+    public void visibility(KGradientPanel add, boolean addbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool) {
         add.setVisible(addbool);
         edit.setVisible(editbool);
         det.setVisible(detbool);
         fulldet.setVisible(fulldetbool);
     }
 
-    public void visibility(KGradientPanel add, boolean addbool)
-    {
+    public void visibility(KGradientPanel add, boolean addbool) {
         add.setVisible(addbool);
     }
 
     //to call when the enter key pressed in main panel
-    void visibility(int code, JTextField field, KGradientPanel add, boolean addbool, KGradientPanel addmbc, boolean mbcbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool)
-    {
-        if (code == KeyEvent.VK_ENTER)
-        {
+    void visibility(int code, JTextField field, KGradientPanel add, boolean addbool, KGradientPanel addmbc, boolean mbcbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool) {
+        if (code == KeyEvent.VK_ENTER) {
             add.setVisible(addbool);
             addmbc.setVisible(mbcbool);
             edit.setVisible(editbool);
@@ -6823,8 +6794,7 @@ public class frm_dashboard extends javax.swing.JFrame
     }
 
     //while inside the main panel
-    public void visibility(JTextField field, KGradientPanel add, boolean addbool, KGradientPanel addmbc, boolean mbcbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool)
-    {
+    public void visibility(JTextField field, KGradientPanel add, boolean addbool, KGradientPanel addmbc, boolean mbcbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool) {
         add.setVisible(addbool);
         addmbc.setVisible(mbcbool);
         edit.setVisible(editbool);
@@ -6834,8 +6804,7 @@ public class frm_dashboard extends javax.swing.JFrame
     }
 
     //to call from sidepane
-    public void visibility(KGradientPanel add, boolean addbool, KGradientPanel addmbc, boolean mbcbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool)
-    {
+    public void visibility(KGradientPanel add, boolean addbool, KGradientPanel addmbc, boolean mbcbool, KGradientPanel edit, boolean editbool, KGradientPanel det, boolean detbool, KGradientPanel fulldet, boolean fulldetbool) {
         add.setVisible(addbool);
         addmbc.setVisible(mbcbool);
         edit.setVisible(editbool);
