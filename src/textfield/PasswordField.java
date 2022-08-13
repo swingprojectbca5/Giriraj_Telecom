@@ -220,7 +220,7 @@ public class PasswordField extends JPasswordField
     private void createHintText(Graphics2D g2)
     {
         Insets in = getInsets();
-        g2.setColor(new Color(68, 82, 121));
+        g2.setColor(new Color(228, 235, 246));
         FontMetrics ft = g2.getFontMetrics();
         Rectangle2D r2 = ft.getStringBounds(labelText, g2);
         double height = getHeight() - in.top - in.bottom;

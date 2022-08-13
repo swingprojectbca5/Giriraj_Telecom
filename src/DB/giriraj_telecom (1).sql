@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 06, 2022 at 04:38 AM
+-- Generation Time: Aug 13, 2022 at 05:49 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -35,6 +35,25 @@ CREATE TABLE `customer` (
   `sadd` varchar(50) NOT NULL,
   `time` timestamp NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `usn` varchar(25) NOT NULL,
+  `pswd` varchar(25) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`usn`, `pswd`) VALUES
+('ADMIN', 'admin'),
+('dhruv', 'dhruv');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

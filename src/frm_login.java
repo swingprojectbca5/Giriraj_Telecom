@@ -7,23 +7,32 @@ import java.awt.event.KeyEvent;
 import java.awt.geom.RoundRectangle2D;
 import javax.swing.ImageIcon;
 import java.sql.Connection;
+import java.sql.*;
+import javax.swing.BorderFactory;
+import javax.swing.JOptionPane;
+import javax.swing.border.Border;
 
 public class frm_login extends javax.swing.JFrame
 {
 
     int xMouse;
     int yMouse;
+    PreparedStatement ps;
+    ResultSet rs;
+    Connection con;
+    Border border;
 
     public frm_login()
     {
         initComponents();
 
         setShape(new RoundRectangle2D.Double(0, 0, getWidth(), getHeight(), 30, 30));
-        Connection con = dbconnection.isconnected();
+        con = dbconnection.isconnected();
         if (con == null)
         {
             System.exit(0);
         }
+        comboboxdata();
     }
 
     @SuppressWarnings("unchecked")
@@ -41,15 +50,13 @@ public class frm_login extends javax.swing.JFrame
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jComboBox1 = new javax.swing.JComboBox<>();
         jPanel11 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
+        jComboBox1 = new combo_suggestion.ComboBoxSuggestion();
         jPanel6 = new javax.swing.JPanel();
-        txt_pswd = new javax.swing.JPasswordField();
         jPanel9 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jPanel10 = new javax.swing.JPanel();
-        chk_show = new javax.swing.JCheckBox();
+        txt_pswd = new textfield.PasswordField();
         jPanel7 = new javax.swing.JPanel();
         loginBtn = new com.k33ptoo.components.KButton();
         jPanel12 = new javax.swing.JPanel();
@@ -160,12 +167,6 @@ public class frm_login extends javax.swing.JFrame
         jPanel5.setBackground(new java.awt.Color(178, 199, 231));
         jPanel5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
 
-        jComboBox1.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ADMIN", "EMPLOYEE" }));
-        jComboBox1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(178, 199, 231)));
-        jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jComboBox1.setNextFocusableComponent(txt_pswd);
-
         jPanel11.setBackground(new java.awt.Color(178, 199, 231));
         jPanel11.setPreferredSize(new java.awt.Dimension(64, 64));
 
@@ -186,6 +187,9 @@ public class frm_login extends javax.swing.JFrame
                 .addComponent(jLabel6))
         );
 
+        jComboBox1.setBackground(new java.awt.Color(228, 235, 246));
+        jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -199,39 +203,15 @@ public class frm_login extends javax.swing.JFrame
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jComboBox1)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 1, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel6.setBackground(new java.awt.Color(178, 199, 231));
         jPanel6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-
-        txt_pswd.setBackground(new java.awt.Color(178, 199, 231));
-        txt_pswd.setFont(new java.awt.Font("Cascadia Mono", 0, 24)); // NOI18N
-        txt_pswd.setText("Password");
-        txt_pswd.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(68, 82, 121)));
-        txt_pswd.setEchoChar('*');
-        txt_pswd.setNextFocusableComponent(loginBtn);
-        txt_pswd.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                txt_pswdFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                txt_pswdFocusLost(evt);
-            }
-        });
-        txt_pswd.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
-                txt_pswdKeyPressed(evt);
-            }
-        });
 
         jPanel9.setBackground(new java.awt.Color(178, 199, 231));
         jPanel9.setPreferredSize(new java.awt.Dimension(64, 64));
@@ -246,33 +226,16 @@ public class frm_login extends javax.swing.JFrame
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel3))
         );
 
-        jPanel10.setBackground(new java.awt.Color(178, 199, 231));
-        jPanel10.setPreferredSize(new java.awt.Dimension(64, 64));
-
-        chk_show.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
-        chk_show.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        chk_show.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/visibility.png"))); // NOI18N
-        chk_show.addItemListener(new java.awt.event.ItemListener()
-        {
-            public void itemStateChanged(java.awt.event.ItemEvent evt)
-            {
-                chk_showItemStateChanged(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(chk_show, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(chk_show, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        txt_pswd.setBackground(new java.awt.Color(178, 199, 231));
+        txt_pswd.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txt_pswd.setLabelText("Password");
+        txt_pswd.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_pswd.setShowAndHide(true);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -282,18 +245,16 @@ public class frm_login extends javax.swing.JFrame
                 .addGap(50, 50, 50)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(txt_pswd, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_pswd, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-            .addComponent(txt_pswd)
+            .addComponent(jPanel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txt_pswd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jPanel7.setBackground(new java.awt.Color(178, 199, 231));
@@ -333,6 +294,13 @@ public class frm_login extends javax.swing.JFrame
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
                 loginBtnActionPerformed(evt);
+            }
+        });
+        loginBtn.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                loginBtnKeyPressed(evt);
             }
         });
 
@@ -415,7 +383,7 @@ public class frm_login extends javax.swing.JFrame
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout kpanel_rightLayout = new javax.swing.GroupLayout(kpanel_right);
@@ -430,7 +398,7 @@ public class frm_login extends javax.swing.JFrame
             kpanel_rightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(kpanel_rightLayout.createSequentialGroup()
                 .addComponent(kGradientPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 50, Short.MAX_VALUE))
         );
 
         pnl_header.setBackground(new java.awt.Color(68, 82, 121));
@@ -567,7 +535,6 @@ public class frm_login extends javax.swing.JFrame
 
     private void loginBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBtnMouseEntered
         loginBtn.setCursor(new Cursor(Cursor.HAND_CURSOR));
-
     }//GEN-LAST:event_loginBtnMouseEntered
 
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
@@ -582,34 +549,6 @@ public class frm_login extends javax.swing.JFrame
         this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_formMouseDragged
 
-    private void txt_pswdFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_pswdFocusGained
-        if (txt_pswd.getText().equals("Password"))
-        {
-            txt_pswd.setText("");
-        }
-    }//GEN-LAST:event_txt_pswdFocusGained
-
-    private void txt_pswdFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_pswdFocusLost
-        if (txt_pswd.getText().equals("Password") || txt_pswd.getText().equals(""))
-        {
-            txt_pswd.setText("Password");
-        }
-    }//GEN-LAST:event_txt_pswdFocusLost
-
-    private void chk_showItemStateChanged(java.awt.event.ItemEvent evt)//GEN-FIRST:event_chk_showItemStateChanged
-    {//GEN-HEADEREND:event_chk_showItemStateChanged
-        if (evt.getStateChange() == 1)
-        {
-            txt_pswd.setEchoChar((char) 0);
-            chk_show.setIcon(new ImageIcon("src\\icons\\eye.png"));
-        }
-        else
-        {
-            chk_show.setIcon(new ImageIcon("src\\icons\\visibility.png"));
-            txt_pswd.setEchoChar('*');
-        }
-    }//GEN-LAST:event_chk_showItemStateChanged
-
     private void jLabel10MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_jLabel10MouseEntered
     {//GEN-HEADEREND:event_jLabel10MouseEntered
         jLabel10.setFont(new Font("Cascadia Monocai", Font.PLAIN, 20));
@@ -623,15 +562,6 @@ public class frm_login extends javax.swing.JFrame
         jLabel10.setForeground(Color.BLACK);
         jLabel10.setText("CLICK HERE");
     }//GEN-LAST:event_jLabel10MouseExited
-
-    private void txt_pswdKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_pswdKeyPressed
-    {//GEN-HEADEREND:event_txt_pswdKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
-        {
-            frm_dashboard dashboard = new frm_dashboard();
-            dashboard.setVisible(true);
-        }
-    }//GEN-LAST:event_txt_pswdKeyPressed
 
     private void loginBtnFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_loginBtnFocusGained
     {//GEN-HEADEREND:event_loginBtnFocusGained
@@ -679,12 +609,16 @@ public class frm_login extends javax.swing.JFrame
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_loginBtnActionPerformed
     {//GEN-HEADEREND:event_loginBtnActionPerformed
-        frm_dashboard dashboard = new frm_dashboard(jComboBox1.getSelectedItem().toString());
-        dashboard.setVisible(true);
-
-        dashboard.jLabel1.setText(jComboBox1.getSelectedItem().toString());
-        this.dispose();
+        checkuser();
     }//GEN-LAST:event_loginBtnActionPerformed
+
+    private void loginBtnKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_loginBtnKeyPressed
+    {//GEN-HEADEREND:event_loginBtnKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
+        {
+            checkuser();
+        }
+    }//GEN-LAST:event_loginBtnKeyPressed
 
     public static void main(String args[])
     {
@@ -697,16 +631,62 @@ public class frm_login extends javax.swing.JFrame
         });
     }
 
+    public void comboboxdata()
+    {
+        String query = "select * from login";
+        try
+        {
+            ps = con.prepareStatement(query);
+            rs = ps.executeQuery();
+
+            while (rs.next())
+            {
+                jComboBox1.addItem(rs.getString("usn"));
+            }
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, "Can't Retrive Username");
+        }
+    }
+
+    public void checkuser()
+    {
+        String query = "select * from login where usn ='" + jComboBox1.getSelectedItem() + "' and pswd ='" + txt_pswd.getText() + "'";
+        try
+        {
+            ps = con.prepareStatement(query);
+            rs = ps.executeQuery();
+
+            if (rs.next())
+            {
+                frm_dashboard dashboard = new frm_dashboard(jComboBox1.getSelectedItem().toString());
+                dashboard.setVisible(true);
+
+                dashboard.jLabel1.setText(jComboBox1.getSelectedItem().toString());
+                this.dispose();
+            }
+            else
+            {
+                txt_pswd.setLineColor(Color.red);
+                txt_pswd.grabFocus();
+                txt_pswd.setText("");
+            }
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, "checking failed");
+        }
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox chk_show;
-    public javax.swing.JComboBox<String> jComboBox1;
+    private combo_suggestion.ComboBoxSuggestion jComboBox1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLayeredPane jLayeredPane1;
-    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
@@ -727,6 +707,6 @@ public class frm_login extends javax.swing.JFrame
     private javax.swing.JPanel pnl_close;
     private javax.swing.JPanel pnl_header;
     private javax.swing.JPanel pnl_min;
-    private javax.swing.JPasswordField txt_pswd;
+    private textfield.PasswordField txt_pswd;
     // End of variables declaration//GEN-END:variables
 }
