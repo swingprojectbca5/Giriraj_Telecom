@@ -20,7 +20,6 @@ public class frm_login extends javax.swing.JFrame
     PreparedStatement ps;
     ResultSet rs;
     Connection con;
-    Border border;
 
     public frm_login()
     {

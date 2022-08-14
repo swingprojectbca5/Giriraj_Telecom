@@ -9,9 +9,14 @@ import java.awt.Image;
 import java.awt.Insets;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.table.JTableHeader;
 import scrollbar.ScrollBarCustom;
@@ -22,6 +27,9 @@ public class frm_dashboard extends javax.swing.JFrame
     double first, second, result;
     String operation;
     String answer;
+    PreparedStatement ps;
+    ResultSet rs;
+    Connection con;
 
     public frm_dashboard()
     {
@@ -34,6 +42,7 @@ public class frm_dashboard extends javax.swing.JFrame
         tableheader(table_custedit.getTableHeader());
         tableheader(table_custdet.getTableHeader());
         jScrollPane6.setVerticalScrollBar(new ScrollBarCustom());
+        autoId();
     }
 
     public frm_dashboard(String name)
@@ -6860,6 +6869,40 @@ public class frm_dashboard extends javax.swing.JFrame
         edit.setVisible(editbool);
         det.setVisible(detbool);
         fulldet.setVisible(fulldetbool);
+    }
+
+    private void autoId()
+    {
+        try
+        {
+            String query = "SELECT usn FROM login ORDER BY usn DESC LIMIT 1";
+            //ps = con.prepareStatement(query);
+            //rs = ps.executeQuery();
+
+            Statement st = con.createStatement();
+            rs = st.executeQuery(query);
+
+            if (rs.next())
+            {
+                String rnno = rs.getString("usn");
+                int co = rnno.length();
+                String txt = rnno.substring(0, 3);
+                String num = rnno.substring(3, co);
+                int n = Integer.parseInt(num);
+                n++;
+                String snum = Integer.toString(n);
+                String ftxt = txt + snum;
+                txt_add_custid.setText(ftxt);
+            }
+            else
+            {
+                txt_add_custid.setText("EMP_1");
+            }
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
