@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 13, 2022 at 05:49 AM
+-- Generation Time: Aug 16, 2022 at 02:15 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -27,14 +27,26 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `customer` (
-  `id` int(11) NOT NULL,
+  `id` varchar(20) NOT NULL,
   `nm` varchar(30) NOT NULL,
   `contact` varchar(10) NOT NULL,
   `email` varchar(50) NOT NULL,
   `snm` varchar(30) NOT NULL,
-  `sadd` varchar(50) NOT NULL,
-  `time` timestamp NOT NULL
+  `sadd` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`id`, `nm`, `contact`, `email`, `snm`, `sadd`) VALUES
+('CUST 1', 'fj', 'j', 'KJ@gmail.com', 'fj', 'k'),
+('CUST 2', 'jsdf', 'kjf', 'jf@gmail.com', 'jsdf', 'kjd'),
+('CUST 3', 'jsdf', 'kjf', 'jf@gmail.com', 'jsdf', 'kjd'),
+('CUST 4', 'jsdf', 'kjf', 'jf@gmail.com', 'jsdf', 'kjd'),
+('CUST 5', 'jsdf', 'kjf', 'jf@gmail.com', 'jsdf', 'kjd'),
+('CUST 6', 'dh', 'ahj', 'd@gmail.com', 'dh', 'jdh'),
+('CUST 7', 'dh', 'ahj', 'd@gmail.com', 'dh', 'jdh');
 
 -- --------------------------------------------------------
 
@@ -43,17 +55,9 @@ CREATE TABLE `customer` (
 --
 
 CREATE TABLE `login` (
-  `usn` varchar(25) NOT NULL,
+  `id` varchar(25) NOT NULL,
   `pswd` varchar(25) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `login`
---
-
-INSERT INTO `login` (`usn`, `pswd`) VALUES
-('ADMIN', 'admin'),
-('dhruv', 'dhruv');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
