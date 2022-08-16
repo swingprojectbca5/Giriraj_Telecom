@@ -967,13 +967,6 @@ public class frm_dashboard extends javax.swing.JFrame
                 loginBtnMouseEntered(evt);
             }
         });
-        loginBtn.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                loginBtnActionPerformed(evt);
-            }
-        });
         loginBtn.addKeyListener(new java.awt.event.KeyAdapter()
         {
             public void keyPressed(java.awt.event.KeyEvent evt)
@@ -1021,6 +1014,10 @@ public class frm_dashboard extends javax.swing.JFrame
             public void keyPressed(java.awt.event.KeyEvent evt)
             {
                 txt_add_custnoKeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_add_custnoKeyTyped(evt);
             }
         });
 
@@ -5660,7 +5657,6 @@ public class frm_dashboard extends javax.swing.JFrame
         visibility(btn_addcust, true, false, false, false, false, false, false);
         visibility(panel_addcust, true, panel_editcus, false, panel_custdetail, false);
         HoverColor(pnl_customer, lbl_customer, Color.WHITE, Color.WHITE, Color.BLACK);
-
         indicator(indicatorAddcust, indicatorEditcust, indicatorDetcust);
         autoId(txt_add_custid, "customer", "CUST 1");
     }//GEN-LAST:event_lbl_customerMouseClicked
@@ -5696,8 +5692,11 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void loginBtnKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_loginBtnKeyPressed
     {//GEN-HEADEREND:event_loginBtnKeyPressed
-        //escape(lbl_addcust, evt.getKeyCode());
-        autoId(txt_add_custid, "customer", "CUST 1");
+        if (checkEmptyTxtfiled(txt_add_custid, txt_add_custnm, txt_add_custno, txt_add_custemail, txt_add_custsnm, txt_add_custsaddress) == true)
+        {
+            addCustomer();
+            autoId(txt_add_custid, "customer", "CUS 1");
+        }
     }//GEN-LAST:event_loginBtnKeyPressed
 
     private void table_custdetKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_table_custdetKeyPressed
@@ -6545,17 +6544,22 @@ public class frm_dashboard extends javax.swing.JFrame
         escape(btn_setting, evt.getKeyCode());
     }//GEN-LAST:event_txt_add_pro_id12KeyPressed
 
-    private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
+    private void loginBtnMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_loginBtnMouseClicked
+    {//GEN-HEADEREND:event_loginBtnMouseClicked
         if (checkEmptyTxtfiled(txt_add_custid, txt_add_custnm, txt_add_custno, txt_add_custemail, txt_add_custsnm, txt_add_custsaddress) == true)
         {
             addCustomer();
+            autoId(txt_add_custid, "customer", "CUS 1");
         }
-    }//GEN-LAST:event_loginBtnActionPerformed
-
-    private void loginBtnMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_loginBtnMouseClicked
-    {//GEN-HEADEREND:event_loginBtnMouseClicked
-        autoId(txt_add_custid, "customer", "CUST 1");
     }//GEN-LAST:event_loginBtnMouseClicked
+
+    private void txt_add_custnoKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_custnoKeyTyped
+    {//GEN-HEADEREND:event_txt_add_custnoKeyTyped
+        if (evt.getKeyChar() < '0' || evt.getKeyChar() > '9' || txt_add_custno.getText().length() == 10)
+        {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_add_custnoKeyTyped
 
     public static void main(String args[])
     {
@@ -6917,9 +6921,9 @@ public class frm_dashboard extends javax.swing.JFrame
                 String txt = rnno.substring(0, 5);
                 String num = rnno.substring(5, co);
                 int n = Integer.parseInt(num);
-                n++;
+                ++n;
                 String snum = Integer.toString(n);
-                String ftxt = txt + " " + snum;
+                String ftxt = txt + snum;
                 field.setText(ftxt);
             }
             else
@@ -6999,7 +7003,7 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_custsaddress.setText("");
     }
 
-    public boolean addCustomer()
+    public void addCustomer()
     {
         try
         {
@@ -7011,13 +7015,10 @@ public class frm_dashboard extends javax.swing.JFrame
             String name = txt_add_custnm.getText();
             JOptionPane.showMessageDialog(null, name + " Customer added");
             //doEmptyTxtfiled();
-            con.close();
-            return true;
         }
         catch (Exception e)
         {
             JOptionPane.showInternalMessageDialog(null, "Error while add customer : " + e);
-            return false;
         }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
