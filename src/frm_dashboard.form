@@ -953,28 +953,24 @@
                                                   <Component id="txt_add_custsnm" pref="328" max="32767" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="100" pref="100" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="txt_add_custsaddress" max="32767" attributes="0"/>
-                                                  <Group type="102" attributes="0">
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="txt_add_custnm" min="-2" pref="300" max="-2" attributes="0"/>
-                                                          <Group type="102" alignment="0" attributes="0">
-                                                              <Component id="txt_add_custemail" min="-2" pref="200" max="-2" attributes="0"/>
-                                                              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                                                          </Group>
-                                                      </Group>
-                                                      <EmptySpace min="0" pref="25" max="32767" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="txt_add_custnm" min="-2" pref="300" max="-2" attributes="0"/>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="txt_add_custemail" min="-2" pref="200" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                                                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                                                   </Group>
+                                                  <Component id="textAreaScroll3" pref="0" max="32767" attributes="0"/>
                                               </Group>
+                                              <EmptySpace min="0" pref="149" max="32767" attributes="0"/>
                                           </Group>
                                           <Group type="102" attributes="0">
                                               <Component id="txt_add_custsnm2" min="-2" pref="157" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                                               <Component id="loginBtn" min="-2" pref="300" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -993,16 +989,16 @@
                                           <Component id="jLabel4" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="txt_add_custsnm" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txt_add_custsaddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="txt_add_custsnm" min="-2" max="-2" attributes="0"/>
+                                          <Component id="textAreaScroll3" min="-2" pref="121" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="loginBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="txt_add_custsnm2" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="115" max="32767" attributes="0"/>
+                                      <EmptySpace pref="93" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1151,27 +1147,6 @@
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_custsnmKeyPressed"/>
                               </Events>
                             </Component>
-                            <Component class="textfield.TextField" name="txt_add_custsaddress">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
-                                </Property>
-                                <Property name="horizontalAlignment" type="int" value="2"/>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Segoe UI" size="20" style="0"/>
-                                </Property>
-                                <Property name="labelText" type="java.lang.String" value="SHOP ADDRESS"/>
-                                <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="79" green="52" red="44" type="rgb"/>
-                                </Property>
-                                <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="79" green="52" red="44" type="rgb"/>
-                                </Property>
-                              </Properties>
-                              <Events>
-                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_custsaddressKeyPressed"/>
-                              </Events>
-                            </Component>
                             <Component class="javax.swing.JLabel" name="jLabel4">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -1204,6 +1179,36 @@
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_custsnm2KeyPressed"/>
                               </Events>
                             </Component>
+                            <Container class="textarea.TextAreaScroll" name="textAreaScroll3">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="24" style="0"/>
+                                </Property>
+                                <Property name="labelText" type="java.lang.String" value="SHOP ADDRESS"/>
+                              </Properties>
+
+                              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                              <SubComponents>
+                                <Component class="textarea.TextArea" name="txt_add_custsaddress">
+                                  <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                    </Property>
+                                    <Property name="columns" type="int" value="20"/>
+                                    <Property name="rows" type="int" value="5"/>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Segoe UI" size="20" style="0"/>
+                                    </Property>
+                                  </Properties>
+                                  <Events>
+                                    <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_custsaddressKeyPressed"/>
+                                  </Events>
+                                </Component>
+                              </SubComponents>
+                            </Container>
                           </SubComponents>
                         </Container>
                         <Container class="com.k33ptoo.components.KGradientPanel" name="panel_editcus">
@@ -1292,9 +1297,9 @@
                                                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                                                   <Component id="jTextField1" min="-2" pref="115" max="-2" attributes="0"/>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="loginBtn1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="editCustBtn" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="loginBtn2" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="deleteCustBtn" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace pref="23" max="32767" attributes="0"/>
@@ -1310,8 +1315,8 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jTextField1" alignment="1" max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="loginBtn2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="loginBtn1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="deleteCustBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="editCustBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
@@ -1333,39 +1338,39 @@
                                           <Font name="Segoe UI" size="24" style="0"/>
                                         </Property>
                                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                                          <Table columnCount="4" rowCount="5">
-                                            <Column editable="true" title="Title 1" type="java.lang.Object">
-                                              <Data value="spareparts"/>
-                                              <Data value="null"/>
-                                              <Data value="null"/>
-                                              <Data value="null"/>
-                                              <Data value="null"/>
-                                            </Column>
-                                            <Column editable="true" title="Title 2" type="java.lang.Object">
+                                          <Table columnCount="5" rowCount="5">
+                                            <Column editable="false" title=" Name" type="java.lang.Object">
                                               <Data value="chargin socket"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                             </Column>
-                                            <Column editable="true" title="Title 3" type="java.lang.Object">
+                                            <Column editable="false" title="Contact No." type="java.lang.Object">
                                               <Data value="display"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                             </Column>
-                                            <Column editable="true" title="Title 4" type="java.lang.Object">
+                                            <Column editable="false" title="Email" type="java.lang.Object"/>
+                                            <Column editable="false" title=" Shop Name" type="java.lang.Object">
                                               <Data value="combo"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                             </Column>
+                                            <Column editable="false" title="Shop Address" type="java.lang.Object"/>
                                           </Table>
                                         </Property>
                                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                                           <TableColumnModel selectionModel="0">
+                                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                              <Title/>
+                                              <Editor/>
+                                              <Renderer/>
+                                            </Column>
                                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                                               <Title/>
                                               <Editor/>
@@ -1393,10 +1398,13 @@
                                           <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                                         </Property>
                                       </Properties>
+                                      <Events>
+                                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="table_custeditMouseClicked"/>
+                                      </Events>
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Component class="com.k33ptoo.components.KButton" name="loginBtn1">
+                                <Component class="com.k33ptoo.components.KButton" name="editCustBtn">
                                   <Properties>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="null"/>
@@ -1410,20 +1418,27 @@
                                       <Color blue="79" green="52" red="44" type="rgb"/>
                                     </Property>
                                     <Property name="kHoverEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                      <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                     </Property>
                                     <Property name="kHoverForeGround" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="79" green="52" red="44" type="rgb"/>
                                     </Property>
                                     <Property name="kHoverStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                      <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                    </Property>
+                                    <Property name="kIndicatorColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                     </Property>
                                     <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="79" green="52" red="44" type="rgb"/>
                                     </Property>
                                   </Properties>
+                                  <Events>
+                                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="editCustBtnMouseEntered"/>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editCustBtnActionPerformed"/>
+                                  </Events>
                                 </Component>
-                                <Component class="com.k33ptoo.components.KButton" name="loginBtn2">
+                                <Component class="com.k33ptoo.components.KButton" name="deleteCustBtn">
                                   <Properties>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="null"/>
@@ -1437,18 +1452,22 @@
                                       <Color blue="79" green="52" red="44" type="rgb"/>
                                     </Property>
                                     <Property name="kHoverEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                      <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                     </Property>
                                     <Property name="kHoverForeGround" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="79" green="52" red="44" type="rgb"/>
                                     </Property>
                                     <Property name="kHoverStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                      <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                     </Property>
                                     <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="79" green="52" red="44" type="rgb"/>
                                     </Property>
                                   </Properties>
+                                  <Events>
+                                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="deleteCustBtnMouseEntered"/>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteCustBtnActionPerformed"/>
+                                  </Events>
                                 </Component>
                                 <Component class="javax.swing.JTextField" name="jTextField1">
                                   <Properties>
@@ -1991,6 +2010,7 @@
                                 <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_editcustFocusLost"/>
                                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_editcustMouseClicked"/>
                                 <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_editcustMouseEntered"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_editcustActionPerformed"/>
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_editcustKeyPressed"/>
                               </Events>
                             </Component>
