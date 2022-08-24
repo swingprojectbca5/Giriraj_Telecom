@@ -1338,7 +1338,8 @@
                                           <Font name="Segoe UI" size="24" style="0"/>
                                         </Property>
                                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                                          <Table columnCount="5" rowCount="5">
+                                          <Table columnCount="6" rowCount="5">
+                                            <Column editable="false" title="ID" type="java.lang.Object"/>
                                             <Column editable="false" title=" Name" type="java.lang.Object">
                                               <Data value="chargin socket"/>
                                               <Data value="null"/>
@@ -1366,6 +1367,11 @@
                                         </Property>
                                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                                           <TableColumnModel selectionModel="0">
+                                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                              <Title/>
+                                              <Editor/>
+                                              <Renderer/>
+                                            </Column>
                                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                                               <Title/>
                                               <Editor/>
@@ -1690,7 +1696,7 @@
                                           <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                         </Property>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                          <Font name="Segoe UI" size="36" style="0"/>
+                                          <Font name="Segoe UI" size="21" style="0"/>
                                         </Property>
                                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                                           <Table columnCount="4" rowCount="4">
@@ -1699,6 +1705,30 @@
                                             <Column editable="true" title="Title 3" type="java.lang.Object"/>
                                             <Column editable="true" title="Title 4" type="java.lang.Object"/>
                                           </Table>
+                                        </Property>
+                                        <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                                          <TableColumnModel selectionModel="0">
+                                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                              <Title/>
+                                              <Editor/>
+                                              <Renderer/>
+                                            </Column>
+                                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                              <Title/>
+                                              <Editor/>
+                                              <Renderer/>
+                                            </Column>
+                                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                              <Title/>
+                                              <Editor/>
+                                              <Renderer/>
+                                            </Column>
+                                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                              <Title/>
+                                              <Editor/>
+                                              <Renderer/>
+                                            </Column>
+                                          </TableColumnModel>
                                         </Property>
                                         <Property name="opaque" type="boolean" value="false"/>
                                         <Property name="rowHeight" type="int" value="40"/>
@@ -2280,7 +2310,7 @@
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="353" max="-2" attributes="0"/>
-                                              <Component id="loginBtn5" min="-2" pref="253" max="-2" attributes="0"/>
+                                              <Component id="addEmp" min="-2" pref="253" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
@@ -2318,14 +2348,14 @@
                                           <Component id="txt_add_empadd" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace pref="61" max="32767" attributes="0"/>
-                                      <Component id="loginBtn5" min="-2" max="-2" attributes="0"/>
+                                      <Component id="addEmp" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="com.k33ptoo.components.KButton" name="loginBtn5">
+                            <Component class="com.k33ptoo.components.KButton" name="addEmp">
                               <Properties>
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="null"/>
@@ -2352,6 +2382,9 @@
                                   <Color blue="79" green="52" red="44" type="rgb"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="addEmpMouseClicked"/>
+                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="lbl_add_empaddimg">
                               <Properties>
@@ -2535,9 +2568,11 @@
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
+                                              <Component id="lbl_edit_empid" min="-2" pref="80" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="lbl_edit_empimg" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -2546,22 +2581,11 @@
                                               </Group>
                                               <EmptySpace min="0" pref="74" max="32767" attributes="0"/>
                                           </Group>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="txt_edit_empnm" max="32767" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" attributes="0">
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="txt_edit_empnm1" max="32767" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="txt_edit_empadd" alignment="1" max="32767" attributes="0"/>
-                                                  <Component id="txt_edit_empsalary" alignment="1" max="32767" attributes="0"/>
-                                                  <Component id="txt_edit_empemail" max="32767" attributes="0"/>
-                                              </Group>
-                                          </Group>
+                                          <Component id="txt_edit_empnm" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="txt_edit_empno" max="32767" attributes="0"/>
+                                          <Component id="txt_edit_empadd" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="txt_edit_empsalary" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="txt_edit_empemail" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="panel_edit_emptable" max="32767" attributes="0"/>
@@ -2583,11 +2607,12 @@
                                                       <Component id="lbl_add_empaddimg1" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Component id="lbl_edit_empimg" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbl_edit_empid" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="txt_edit_empnm" min="-2" pref="57" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txt_edit_empnm1" min="-2" pref="57" max="-2" attributes="0"/>
+                                              <Component id="txt_edit_empno" min="-2" pref="57" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                                               <Component id="txt_edit_empemail" min="-2" pref="57" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -2630,9 +2655,9 @@
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                               <Component id="jScrollPane3" alignment="0" min="-2" pref="562" max="-2" attributes="0"/>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="loginBtn3" min="-2" pref="250" max="-2" attributes="0"/>
+                                                  <Component id="editEmp" min="-2" pref="250" max="-2" attributes="0"/>
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="loginBtn4" min="-2" pref="250" max="-2" attributes="0"/>
+                                                  <Component id="deleteEmp" min="-2" pref="250" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace pref="37" max="32767" attributes="0"/>
@@ -2646,8 +2671,8 @@
                                           <Component id="jScrollPane3" min="-2" pref="400" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="loginBtn3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="loginBtn4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="editEmp" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="deleteEmp" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace pref="22" max="32767" attributes="0"/>
                                       </Group>
@@ -2668,39 +2693,51 @@
                                           <Font name="Segoe UI" size="24" style="0"/>
                                         </Property>
                                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                                          <Table columnCount="4" rowCount="5">
-                                            <Column editable="true" title="Title 1" type="java.lang.Object">
+                                          <Table columnCount="6" rowCount="5">
+                                            <Column editable="false" title="Title 1" type="java.lang.Object">
                                               <Data value="spareparts"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                             </Column>
-                                            <Column editable="true" title="Title 2" type="java.lang.Object">
+                                            <Column editable="false" title="Title 2" type="java.lang.Object">
                                               <Data value="chargin socket"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                             </Column>
-                                            <Column editable="true" title="Title 3" type="java.lang.Object">
+                                            <Column editable="false" title="Title 3" type="java.lang.Object">
                                               <Data value="display"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                             </Column>
-                                            <Column editable="true" title="Title 4" type="java.lang.Object">
+                                            <Column editable="false" title="Title 4" type="java.lang.Object">
                                               <Data value="combo"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                             </Column>
+                                            <Column editable="false" title="title 5" type="java.lang.Object"/>
+                                            <Column editable="false" title="title 6" type="java.lang.Object"/>
                                           </Table>
                                         </Property>
                                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                                           <TableColumnModel selectionModel="0">
+                                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                              <Title/>
+                                              <Editor/>
+                                              <Renderer/>
+                                            </Column>
+                                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                              <Title/>
+                                              <Editor/>
+                                              <Renderer/>
+                                            </Column>
                                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                                               <Title/>
                                               <Editor/>
@@ -2728,10 +2765,13 @@
                                           <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                                         </Property>
                                       </Properties>
+                                      <Events>
+                                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="table_empeditMouseClicked"/>
+                                      </Events>
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Component class="com.k33ptoo.components.KButton" name="loginBtn3">
+                                <Component class="com.k33ptoo.components.KButton" name="editEmp">
                                   <Properties>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="null"/>
@@ -2757,8 +2797,11 @@
                                       <Color blue="79" green="52" red="44" type="rgb"/>
                                     </Property>
                                   </Properties>
+                                  <Events>
+                                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="editEmpMouseClicked"/>
+                                  </Events>
                                 </Component>
-                                <Component class="com.k33ptoo.components.KButton" name="loginBtn4">
+                                <Component class="com.k33ptoo.components.KButton" name="deleteEmp">
                                   <Properties>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="null"/>
@@ -2838,7 +2881,7 @@
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_edit_empnmKeyPressed"/>
                               </Events>
                             </Component>
-                            <Component class="textfield.TextField" name="txt_edit_empnm1">
+                            <Component class="textfield.TextField" name="txt_edit_empno">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f6" green="eb" red="e4" type="rgb"/>
@@ -2847,7 +2890,7 @@
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Segoe UI" size="20" style="0"/>
                                 </Property>
-                                <Property name="labelText" type="java.lang.String" value="EMPLOYEE NAME"/>
+                                <Property name="labelText" type="java.lang.String" value="CONTACT"/>
                                 <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="79" green="52" red="44" type="rgb"/>
                                 </Property>
@@ -2856,7 +2899,7 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_edit_empnm1KeyPressed"/>
+                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_edit_empnoKeyPressed"/>
                               </Events>
                             </Component>
                             <Component class="textfield.TextField" name="txt_edit_empemail">
@@ -2921,6 +2964,14 @@
                               <Events>
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_edit_empaddKeyPressed"/>
                               </Events>
+                            </Component>
+                            <Component class="javax.swing.JLabel" name="lbl_edit_empid">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="1"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="jLabel20"/>
+                              </Properties>
                             </Component>
                           </SubComponents>
                         </Container>
