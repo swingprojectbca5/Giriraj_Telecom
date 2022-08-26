@@ -10,6 +10,8 @@ import java.awt.Image;
 import java.awt.Insets;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,6 +20,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
@@ -42,6 +45,7 @@ public class frm_dashboard extends javax.swing.JFrame
     JTable table;
     DefaultTableModel TableModel;
     Connection con = dbconnection.isconnected();
+    FileInputStream fis;
 
     public frm_dashboard()
     {
@@ -185,7 +189,7 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_empsalary = new textfield.TextField();
         txt_add_empadd = new textfield.TextField();
         lbl_add_empimg = new javax.swing.JLabel();
-        txt_pswd = new textfield.PasswordField();
+        txt_add_emppswd = new textfield.PasswordField();
         txt_pswd1 = new textfield.PasswordField();
         panel_editemp = new com.k33ptoo.components.KGradientPanel();
         lbl_edit_empimg = new javax.swing.JLabel();
@@ -1893,6 +1897,10 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_add_empaddimg.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_add_empaddimg.addMouseListener(new java.awt.event.MouseAdapter()
         {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                lbl_add_empaddimgMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt)
             {
                 lbl_add_empaddimgMouseEntered(evt);
@@ -1908,6 +1916,10 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_add_emprmimg.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_add_emprmimg.addMouseListener(new java.awt.event.MouseAdapter()
         {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                lbl_add_emprmimgMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt)
             {
                 lbl_add_emprmimgMouseEntered(evt);
@@ -2005,11 +2017,11 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_add_empimg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_add_empimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/man.png"))); // NOI18N
 
-        txt_pswd.setBackground(new java.awt.Color(228, 235, 246));
-        txt_pswd.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        txt_pswd.setLabelText("Password");
-        txt_pswd.setLineColor(new java.awt.Color(68, 82, 121));
-        txt_pswd.setShowAndHide(true);
+        txt_add_emppswd.setBackground(new java.awt.Color(228, 235, 246));
+        txt_add_emppswd.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txt_add_emppswd.setLabelText("Password");
+        txt_add_emppswd.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_add_emppswd.setShowAndHide(true);
 
         txt_pswd1.setBackground(new java.awt.Color(228, 235, 246));
         txt_pswd1.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
@@ -2034,7 +2046,7 @@ public class frm_dashboard extends javax.swing.JFrame
                     .addGroup(panel_addempLayout.createSequentialGroup()
                         .addGap(131, 131, 131)
                         .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txt_pswd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txt_add_emppswd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txt_add_empid, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
                             .addComponent(txt_add_empno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txt_add_empsalary, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -2075,7 +2087,7 @@ public class frm_dashboard extends javax.swing.JFrame
                     .addComponent(txt_add_empadd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40)
                 .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_pswd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_add_emppswd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_pswd1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40)
                 .addComponent(addEmp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -6743,6 +6755,9 @@ public class frm_dashboard extends javax.swing.JFrame
         {
             addEmp();
             autoId(txt_add_empid, "emp", "EMP 1");
+            String filename = "D:\\BCA\\Sem -  5\\JavaProjects\\Girirarj_Telecom\\src\\icons\\man.png";
+            ImageIcon icon = new ImageIcon(new ImageIcon(filename).getImage().getScaledInstance(lbl_add_empimg.getWidth(), lbl_add_empimg.getHeight(), Image.SCALE_SMOOTH));
+            lbl_add_empimg.setIcon(icon);
         }
     }//GEN-LAST:event_addEmpMouseClicked
 
@@ -6770,6 +6785,31 @@ public class frm_dashboard extends javax.swing.JFrame
     {//GEN-HEADEREND:event_txt_det_empidKeyReleased
         searchdata(txt_det_empid.getText(), table_empdet);
     }//GEN-LAST:event_txt_det_empidKeyReleased
+
+    private void lbl_add_empaddimgMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_add_empaddimgMouseClicked
+    {//GEN-HEADEREND:event_lbl_add_empaddimgMouseClicked
+        try
+        {
+            JFileChooser chooser = new JFileChooser();
+            chooser.showOpenDialog(null);
+            File f = chooser.getSelectedFile();
+            fis = new FileInputStream(f);
+            String filename = f.getAbsolutePath();
+            System.out.println(filename);
+            ImageIcon icon = new ImageIcon(new ImageIcon(filename).getImage().getScaledInstance(lbl_add_empimg.getWidth(), lbl_add_empimg.getHeight(), Image.SCALE_SMOOTH));
+            lbl_add_empimg.setIcon(icon);
+        }
+        catch (Exception e)
+        {
+        }
+    }//GEN-LAST:event_lbl_add_empaddimgMouseClicked
+
+    private void lbl_add_emprmimgMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_add_emprmimgMouseClicked
+    {//GEN-HEADEREND:event_lbl_add_emprmimgMouseClicked
+        String filename = "D:\\BCA\\Sem -  5\\JavaProjects\\Girirarj_Telecom\\src\\icons\\man.png";
+        ImageIcon icon = new ImageIcon(new ImageIcon(filename).getImage().getScaledInstance(lbl_add_empimg.getWidth(), lbl_add_empimg.getHeight(), Image.SCALE_SMOOTH));
+        lbl_add_empimg.setIcon(icon);
+    }//GEN-LAST:event_lbl_add_emprmimgMouseClicked
 
     public static void main(String args[])
     {
@@ -7440,10 +7480,12 @@ public class frm_dashboard extends javax.swing.JFrame
     {
         try
         {
-            String insertQuery = "insert into emp (id,nm,contact,email,salary,address) values('" + txt_add_empid.getText() + "','"
+            String insertQuery = "insert into emp values('" + txt_add_empid.getText() + "','"
                     + txt_add_empnm.getText() + "','" + txt_add_empno.getText() + "','" + txt_add_empemail.getText() + "','" + txt_add_empsalary.getText() + "','"
-                    + txt_add_empadd.getText() + "');";
+                    + txt_add_empadd.getText() + "',?,'" + txt_add_emppswd.getText() + "');";
+
             ps = con.prepareStatement(insertQuery);
+            ps.setBinaryStream(1, fis, fis.available());
             ps.executeUpdate();
             String name = txt_add_empnm.getText();
             JOptionPane.showMessageDialog(null, name + " Employee added");
@@ -7718,6 +7760,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private textfield.TextField txt_add_empid;
     private textfield.TextField txt_add_empnm;
     private textfield.TextField txt_add_empno;
+    private textfield.PasswordField txt_add_emppswd;
     private textfield.TextField txt_add_empsalary;
     private textfield.TextField txt_add_pro_id;
     private textfield.TextField txt_add_pro_id1;
@@ -7751,7 +7794,6 @@ public class frm_dashboard extends javax.swing.JFrame
     private textfield.TextField txt_edit_empnm;
     private textfield.TextField txt_edit_empno;
     private textfield.TextField txt_edit_empsalary;
-    private textfield.PasswordField txt_pswd;
     private textfield.PasswordField txt_pswd1;
     // End of variables declaration//GEN-END:variables
 }

@@ -2320,7 +2320,7 @@
                                           <Group type="102" attributes="0">
                                               <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="txt_pswd" max="32767" attributes="0"/>
+                                                  <Component id="txt_add_emppswd" max="32767" attributes="0"/>
                                                   <Component id="txt_add_empid" pref="300" max="32767" attributes="0"/>
                                                   <Component id="txt_add_empno" alignment="0" max="32767" attributes="0"/>
                                                   <Component id="txt_add_empsalary" alignment="0" max="32767" attributes="0"/>
@@ -2374,7 +2374,7 @@
                                       </Group>
                                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="txt_pswd" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txt_add_emppswd" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="txt_pswd1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
@@ -2427,6 +2427,7 @@
                                 </Property>
                               </Properties>
                               <Events>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_add_empaddimgMouseClicked"/>
                                 <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_add_empaddimgMouseEntered"/>
                                 <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_add_empaddimgMouseExited"/>
                               </Events>
@@ -2442,6 +2443,7 @@
                                 </Property>
                               </Properties>
                               <Events>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_add_emprmimgMouseClicked"/>
                                 <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_add_emprmimgMouseEntered"/>
                                 <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_add_emprmimgMouseExited"/>
                               </Events>
@@ -2580,7 +2582,7 @@
                                 </Property>
                               </Properties>
                             </Component>
-                            <Component class="textfield.PasswordField" name="txt_pswd">
+                            <Component class="textfield.PasswordField" name="txt_add_emppswd">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f6" green="eb" red="e4" type="rgb"/>
