@@ -1238,6 +1238,10 @@
                                               <EmptySpace pref="58" max="32767" attributes="0"/>
                                               <Component id="jLabel5" min="-2" pref="94" max="-2" attributes="0"/>
                                           </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="lbl_edit_custid" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          </Group>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="kGradientPanel12" max="32767" attributes="0"/>
@@ -1248,25 +1252,27 @@
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <EmptySpace pref="50" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
+                                              <Component id="lbl_edit_custid" min="-2" pref="47" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="txt_edit_custnm" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
+                                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                               <Component id="txt_edit_custno" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
                                                   <Component id="txt_edit_custemail" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel5" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                                               </Group>
-                                              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                               <Component id="txt_edit_custsnm" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                               <Component id="txt_edit_custsadd" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="kGradientPanel12" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="75" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1605,6 +1611,14 @@
                                 <Property name="text" type="java.lang.String" value="CLICK HERE"/>
                               </Properties>
                             </Component>
+                            <Component class="javax.swing.JLabel" name="lbl_edit_custid">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="1"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="jLabel20"/>
+                              </Properties>
+                            </Component>
                           </SubComponents>
                         </Container>
                         <Container class="com.k33ptoo.components.KGradientPanel" name="panel_custdetail">
@@ -1699,15 +1713,27 @@
                                           <Font name="Segoe UI" size="21" style="0"/>
                                         </Property>
                                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                                          <Table columnCount="4" rowCount="4">
-                                            <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                                            <Column editable="true" title="Title 2" type="java.lang.Object"/>
-                                            <Column editable="true" title="Title 3" type="java.lang.Object"/>
-                                            <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                                          <Table columnCount="6" rowCount="4">
+                                            <Column editable="false" title="ID" type="java.lang.Object"/>
+                                            <Column editable="false" title="Name" type="java.lang.Object"/>
+                                            <Column editable="false" title="Contact" type="java.lang.Object"/>
+                                            <Column editable="false" title="Email" type="java.lang.Object"/>
+                                            <Column editable="false" title="Shop Name" type="java.lang.Object"/>
+                                            <Column editable="false" title="Address" type="java.lang.Object"/>
                                           </Table>
                                         </Property>
                                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                                           <TableColumnModel selectionModel="0">
+                                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                              <Title/>
+                                              <Editor/>
+                                              <Renderer/>
+                                            </Column>
+                                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                              <Title/>
+                                              <Editor/>
+                                              <Renderer/>
+                                            </Column>
                                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                                               <Title/>
                                               <Editor/>
@@ -1736,9 +1762,6 @@
                                           <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                                         </Property>
                                       </Properties>
-                                      <Events>
-                                        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="table_custdetKeyPressed"/>
-                                      </Events>
                                       <AuxValues>
                                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JTable()&#xa;"/>
                                       </AuxValues>
@@ -2294,9 +2317,10 @@
                                   </Group>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
                                               <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="txt_pswd" max="32767" attributes="0"/>
                                                   <Component id="txt_add_empid" pref="300" max="32767" attributes="0"/>
                                                   <Component id="txt_add_empno" alignment="0" max="32767" attributes="0"/>
                                                   <Component id="txt_add_empsalary" alignment="0" max="32767" attributes="0"/>
@@ -2306,10 +2330,11 @@
                                                   <Component id="txt_add_empnm" pref="300" max="32767" attributes="0"/>
                                                   <Component id="txt_add_empemail" alignment="0" max="32767" attributes="0"/>
                                                   <Component id="txt_add_empadd" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txt_pswd1" alignment="1" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="353" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="357" max="-2" attributes="0"/>
                                               <Component id="addEmp" min="-2" pref="253" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -2337,19 +2362,24 @@
                                           <Component id="txt_add_empid" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="txt_add_empnm" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="txt_add_empno" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="txt_add_empemail" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="txt_add_empsalary" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="txt_add_empadd" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="61" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="txt_pswd" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txt_pswd1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                       <Component id="addEmp" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace pref="14" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -2550,6 +2580,36 @@
                                 </Property>
                               </Properties>
                             </Component>
+                            <Component class="textfield.PasswordField" name="txt_pswd">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                                <Property name="labelText" type="java.lang.String" value="Password"/>
+                                <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="showAndHide" type="boolean" value="true"/>
+                              </Properties>
+                            </Component>
+                            <Component class="textfield.PasswordField" name="txt_pswd1">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                                <Property name="labelText" type="java.lang.String" value="Confirm Password"/>
+                                <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="showAndHide" type="boolean" value="true"/>
+                              </Properties>
+                            </Component>
                           </SubComponents>
                         </Container>
                         <Container class="com.k33ptoo.components.KGradientPanel" name="panel_editemp">
@@ -2596,7 +2656,7 @@
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="25" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="panel_edit_emptable" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" attributes="0">
@@ -2621,7 +2681,7 @@
                                               <Component id="txt_edit_empadd" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="75" max="32767" attributes="0"/>
+                                      <EmptySpace pref="50" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -2652,15 +2712,15 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="jScrollPane3" alignment="0" min="-2" pref="562" max="-2" attributes="0"/>
-                                              <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jScrollPane3" pref="574" max="32767" attributes="0"/>
+                                              <Group type="102" attributes="0">
                                                   <Component id="editEmp" min="-2" pref="250" max="-2" attributes="0"/>
-                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                                                   <Component id="deleteEmp" min="-2" pref="250" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
-                                          <EmptySpace pref="37" max="32767" attributes="0"/>
+                                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -2669,7 +2729,7 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                           <Component id="jScrollPane3" min="-2" pref="400" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="editEmp" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="deleteEmp" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2694,36 +2754,36 @@
                                         </Property>
                                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                                           <Table columnCount="6" rowCount="5">
-                                            <Column editable="false" title="Title 1" type="java.lang.Object">
+                                            <Column editable="false" title="ID" type="java.lang.Object"/>
+                                            <Column editable="false" title="Name" type="java.lang.Object">
                                               <Data value="spareparts"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                             </Column>
-                                            <Column editable="false" title="Title 2" type="java.lang.Object">
+                                            <Column editable="false" title="contact" type="java.lang.Object">
                                               <Data value="chargin socket"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                             </Column>
-                                            <Column editable="false" title="Title 3" type="java.lang.Object">
+                                            <Column editable="false" title="Email" type="java.lang.Object">
                                               <Data value="display"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                             </Column>
-                                            <Column editable="false" title="Title 4" type="java.lang.Object">
+                                            <Column editable="false" title="Salary" type="java.lang.Object">
                                               <Data value="combo"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                               <Data value="null"/>
                                             </Column>
-                                            <Column editable="false" title="title 5" type="java.lang.Object"/>
-                                            <Column editable="false" title="title 6" type="java.lang.Object"/>
+                                            <Column editable="false" title="Address" type="java.lang.Object"/>
                                           </Table>
                                         </Property>
                                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -2827,6 +2887,9 @@
                                       <Color blue="79" green="52" red="44" type="rgb"/>
                                     </Property>
                                   </Properties>
+                                  <Events>
+                                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="deleteEmpMouseClicked"/>
+                                  </Events>
                                 </Component>
                               </SubComponents>
                             </Container>
@@ -3032,6 +3095,7 @@
                               </Properties>
                               <Events>
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_det_empidKeyPressed"/>
+                                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_det_empidKeyReleased"/>
                               </Events>
                             </Component>
                             <Container class="javax.swing.JScrollPane" name="jScrollPane4">
@@ -3052,42 +3116,30 @@
                                       <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Segoe UI" size="36" style="0"/>
+                                      <Font name="Segoe UI" size="21" style="0"/>
                                     </Property>
                                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                                      <Table columnCount="4" rowCount="5">
-                                        <Column editable="true" title="Title 1" type="java.lang.Object">
-                                          <Data value="h"/>
-                                          <Data value="null"/>
-                                          <Data value=""/>
-                                          <Data value="null"/>
-                                          <Data value="null"/>
-                                        </Column>
-                                        <Column editable="true" title="Title 2" type="java.lang.Object">
-                                          <Data value="e"/>
-                                          <Data value="null"/>
-                                          <Data value="null"/>
-                                          <Data value="null"/>
-                                          <Data value="null"/>
-                                        </Column>
-                                        <Column editable="true" title="Title 3" type="java.lang.Object">
-                                          <Data value="l"/>
-                                          <Data value="null"/>
-                                          <Data value="null"/>
-                                          <Data value="null"/>
-                                          <Data value="null"/>
-                                        </Column>
-                                        <Column editable="true" title="Title 4" type="java.lang.Object">
-                                          <Data value="o"/>
-                                          <Data value="null"/>
-                                          <Data value="null"/>
-                                          <Data value="null"/>
-                                          <Data value="null"/>
-                                        </Column>
+                                      <Table columnCount="6" rowCount="0">
+                                        <Column editable="false" title="ID" type="java.lang.Object"/>
+                                        <Column editable="false" title="Name" type="java.lang.Object"/>
+                                        <Column editable="false" title="Contact" type="java.lang.Object"/>
+                                        <Column editable="false" title="Email" type="java.lang.Object"/>
+                                        <Column editable="false" title="Salary" type="java.lang.Object"/>
+                                        <Column editable="false" title="Address" type="java.lang.Object"/>
                                       </Table>
                                     </Property>
                                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                                       <TableColumnModel selectionModel="0">
+                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                          <Title/>
+                                          <Editor/>
+                                          <Renderer/>
+                                        </Column>
+                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                          <Title/>
+                                          <Editor/>
+                                          <Renderer/>
+                                        </Column>
                                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                                           <Title/>
                                           <Editor/>

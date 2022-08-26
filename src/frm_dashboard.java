@@ -49,6 +49,7 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_main.setVisible(true);
         visibility(jLabel2, false, false, false, false, false, false, true);
         lbl_edit_empid.setVisible(false);
+        lbl_edit_custid.setVisible(false);
 
         screensize();
 
@@ -153,6 +154,7 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_edit_custsnm = new textfield.TextField();
         txt_edit_custsadd = new textfield.TextField();
         jLabel5 = new javax.swing.JLabel();
+        lbl_edit_custid = new javax.swing.JLabel();
         panel_custdetail = new com.k33ptoo.components.KGradientPanel();
         kGradientPanel19 = new com.k33ptoo.components.KGradientPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -183,6 +185,8 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_empsalary = new textfield.TextField();
         txt_add_empadd = new textfield.TextField();
         lbl_add_empimg = new javax.swing.JLabel();
+        txt_pswd = new textfield.PasswordField();
+        txt_pswd1 = new textfield.PasswordField();
         panel_editemp = new com.k33ptoo.components.KGradientPanel();
         lbl_edit_empimg = new javax.swing.JLabel();
         panel_edit_emptable = new com.k33ptoo.components.KGradientPanel();
@@ -1357,6 +1361,9 @@ public class frm_dashboard extends javax.swing.JFrame
 
         jLabel5.setText("CLICK HERE");
 
+        lbl_edit_custid.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        lbl_edit_custid.setText("jLabel20");
+
         javax.swing.GroupLayout panel_editcusLayout = new javax.swing.GroupLayout(panel_editcus);
         panel_editcus.setLayout(panel_editcusLayout);
         panel_editcusLayout.setHorizontalGroup(
@@ -1371,7 +1378,10 @@ public class frm_dashboard extends javax.swing.JFrame
                     .addGroup(panel_editcusLayout.createSequentialGroup()
                         .addComponent(txt_edit_custemail, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_editcusLayout.createSequentialGroup()
+                        .addComponent(lbl_edit_custid)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
                 .addComponent(kGradientPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(25, 25, 25))
@@ -1379,22 +1389,24 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_editcusLayout.setVerticalGroup(
             panel_editcusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_editcusLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(panel_editcusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addContainerGap(50, Short.MAX_VALUE)
+                .addGroup(panel_editcusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_editcusLayout.createSequentialGroup()
+                        .addComponent(lbl_edit_custid, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(txt_edit_custnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(40, 40, 40)
                         .addComponent(txt_edit_custno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(56, 56, 56)
+                        .addGap(40, 40, 40)
                         .addGroup(panel_editcusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txt_edit_custemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(56, 56, 56)
+                        .addGap(40, 40, 40)
                         .addComponent(txt_edit_custsnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(56, 56, 56)
+                        .addGap(40, 40, 40)
                         .addComponent(txt_edit_custsadd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(kGradientPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addGap(50, 50, 50))
         );
 
         panel_custdetail.setkBorderRadius(40);
@@ -1414,25 +1426,29 @@ public class frm_dashboard extends javax.swing.JFrame
         table_custdet.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String []
             {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID", "Name", "Contact", "Email", "Shop Name", "Address"
             }
-        ));
-        table_custdet.setOpaque(false);
-        table_custdet.setRowHeight(40);
-        table_custdet.addKeyListener(new java.awt.event.KeyAdapter()
+        )
         {
-            public void keyPressed(java.awt.event.KeyEvent evt)
+            boolean[] canEdit = new boolean []
             {
-                table_custdetKeyPressed(evt);
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex)
+            {
+                return canEdit [columnIndex];
             }
         });
+        table_custdet.setOpaque(false);
+        table_custdet.setRowHeight(40);
         jScrollPane2.setViewportView(table_custdet);
 
         javax.swing.GroupLayout kGradientPanel19Layout = new javax.swing.GroupLayout(kGradientPanel19);
@@ -1989,6 +2005,18 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_add_empimg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_add_empimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/man.png"))); // NOI18N
 
+        txt_pswd.setBackground(new java.awt.Color(228, 235, 246));
+        txt_pswd.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txt_pswd.setLabelText("Password");
+        txt_pswd.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_pswd.setShowAndHide(true);
+
+        txt_pswd1.setBackground(new java.awt.Color(228, 235, 246));
+        txt_pswd1.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txt_pswd1.setLabelText("Confirm Password");
+        txt_pswd1.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_pswd1.setShowAndHide(true);
+
         javax.swing.GroupLayout panel_addempLayout = new javax.swing.GroupLayout(panel_addemp);
         panel_addemp.setLayout(panel_addempLayout);
         panel_addempLayout.setHorizontalGroup(
@@ -2006,6 +2034,7 @@ public class frm_dashboard extends javax.swing.JFrame
                     .addGroup(panel_addempLayout.createSequentialGroup()
                         .addGap(131, 131, 131)
                         .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txt_pswd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txt_add_empid, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
                             .addComponent(txt_add_empno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txt_add_empsalary, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -2013,9 +2042,10 @@ public class frm_dashboard extends javax.swing.JFrame
                         .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txt_add_empnm, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
                             .addComponent(txt_add_empemail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txt_add_empadd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(txt_add_empadd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txt_pswd1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(panel_addempLayout.createSequentialGroup()
-                        .addGap(353, 353, 353)
+                        .addGap(357, 357, 357)
                         .addComponent(addEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -2035,17 +2065,21 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_add_empid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_add_empnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(70, 70, 70)
+                .addGap(40, 40, 40)
                 .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_add_empno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_add_empemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(70, 70, 70)
+                .addGap(40, 40, 40)
                 .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_add_empsalary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_add_empadd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addGap(40, 40, 40)
+                .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_pswd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_pswd1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
                 .addComponent(addEmp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         panel_editemp.setkBorderRadius(40);
@@ -2065,7 +2099,7 @@ public class frm_dashboard extends javax.swing.JFrame
         table_empedit.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
-                {"spareparts", "chargin socket", "display", "combo", null, null},
+                {null, "spareparts", "chargin socket", "display", "combo", null},
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -2073,7 +2107,7 @@ public class frm_dashboard extends javax.swing.JFrame
             },
             new String []
             {
-                "Title 1", "Title 2", "Title 3", "Title 4", "title 5", "title 6"
+                "ID", "Name", "contact", "Email", "Salary", "Address"
             }
         )
         {
@@ -2123,6 +2157,13 @@ public class frm_dashboard extends javax.swing.JFrame
         deleteEmp.setkHoverForeGround(new java.awt.Color(68, 82, 121));
         deleteEmp.setkHoverStartColor(new java.awt.Color(178, 199, 231));
         deleteEmp.setkStartColor(new java.awt.Color(68, 82, 121));
+        deleteEmp.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                deleteEmpMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout panel_edit_emptableLayout = new javax.swing.GroupLayout(panel_edit_emptable);
         panel_edit_emptable.setLayout(panel_edit_emptableLayout);
@@ -2130,13 +2171,13 @@ public class frm_dashboard extends javax.swing.JFrame
             panel_edit_emptableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_edit_emptableLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(panel_edit_emptableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 562, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panel_edit_emptableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 574, Short.MAX_VALUE)
                     .addGroup(panel_edit_emptableLayout.createSequentialGroup()
                         .addComponent(editEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(62, 62, 62)
                         .addComponent(deleteEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addGap(25, 25, 25))
         );
         panel_edit_emptableLayout.setVerticalGroup(
             panel_edit_emptableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2281,7 +2322,7 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_editempLayout.setVerticalGroup(
             panel_editempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_editempLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(50, 50, 50)
                 .addGroup(panel_editempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(panel_edit_emptable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panel_editempLayout.createSequentialGroup()
@@ -2302,7 +2343,7 @@ public class frm_dashboard extends javax.swing.JFrame
                         .addComponent(txt_edit_empsalary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(txt_edit_empadd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         panel_detemp.setkBorderRadius(40);
@@ -2322,26 +2363,37 @@ public class frm_dashboard extends javax.swing.JFrame
             {
                 txt_det_empidKeyPressed(evt);
             }
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                txt_det_empidKeyReleased(evt);
+            }
         });
 
         jScrollPane4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
 
         table_empdet.setBackground(new java.awt.Color(228, 235, 246));
-        table_empdet.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        table_empdet.setFont(new java.awt.Font("Segoe UI", 0, 21)); // NOI18N
         table_empdet.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
-                {"h", "e", "l", "o"},
-                {null, null, null, null},
-                {"", null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String []
             {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID", "Name", "Contact", "Email", "Salary", "Address"
             }
-        ));
+        )
+        {
+            boolean[] canEdit = new boolean []
+            {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex)
+            {
+                return canEdit [columnIndex];
+            }
+        });
         table_empdet.setOpaque(false);
         table_empdet.setRowHeight(40);
         table_empdet.addKeyListener(new java.awt.event.KeyAdapter()
@@ -5794,11 +5846,6 @@ public class frm_dashboard extends javax.swing.JFrame
         }
     }//GEN-LAST:event_loginBtnKeyPressed
 
-    private void table_custdetKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_table_custdetKeyPressed
-    {//GEN-HEADEREND:event_table_custdetKeyPressed
-        //  escape(lbl_custdet, evt.getKeyCode());
-    }//GEN-LAST:event_table_custdetKeyPressed
-
     private void lbl_add_emprmimgMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_add_emprmimgMouseEntered
     {//GEN-HEADEREND:event_lbl_add_emprmimgMouseEntered
         lbl_add_emprmimg.setBorder(BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -5965,6 +6012,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
         indicatorOn(indicatorEmpdet, indicatorAddemp, indicatorEditemp);
         HoverColor(btn_empdet, new Color(178, 199, 231), new Color(255, 255, 255));
+        fetchDataIntoTableEmp(table_empdet, "emp");
     }//GEN-LAST:event_btn_empdetMouseClicked
 
     private void btn_empdetKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_empdetKeyPressed
@@ -5973,6 +6021,7 @@ public class frm_dashboard extends javax.swing.JFrame
         escape(lbl_employee, evt.getKeyCode(), panel_employee);
         indicatorOn(indicatorEmpdet, indicatorAddemp, indicatorEditemp);
         HoverColor(btn_empdet, new Color(178, 199, 231), new Color(255, 255, 255));
+        fetchDataIntoTableEmp(table_empdet, "emp");
     }//GEN-LAST:event_btn_empdetKeyPressed
 
     private void btn_addcustMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addcustMouseClicked
@@ -6015,6 +6064,7 @@ public class frm_dashboard extends javax.swing.JFrame
         escape(lbl_customer, evt.getKeyCode(), panel_customer);
         indicatorOn(indicatorDetcust, indicatorAddcust, indicatorEditcust);
         HoverColor(btn_detcust, new Color(178, 199, 231), new Color(255, 255, 255));
+        fetchDataIntoTableCust(table_custdet, "customer");
     }//GEN-LAST:event_btn_detcustKeyPressed
 
     private void btn_addproFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btn_addproFocusGained
@@ -6659,7 +6709,7 @@ public class frm_dashboard extends javax.swing.JFrame
         table = (JTable) evt.getSource();
         if (evt.getClickCount() == 2 && table.getSelectedRow() != -1)
         {
-//            fetchDataIntoTxtfiled(table_custedit, txt_edit_custnm, txt_edit_custno, txt_edit_custemail, txt_edit_custsnm, txt_edit_custsadd);
+            fetchDataIntoTxtfiled(lbl_edit_custid, table_custedit, txt_edit_custnm, txt_edit_custno, txt_edit_custemail, txt_edit_custsnm, txt_edit_custsadd);
         }
     }//GEN-LAST:event_table_custeditMouseClicked
 
@@ -6684,7 +6734,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void txt_det_custidKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_det_custidKeyReleased
     {//GEN-HEADEREND:event_txt_det_custidKeyReleased
-        searchdata(txt_det_custid.getText());
+        searchdata(txt_det_custid.getText(), table_custdet);
     }//GEN-LAST:event_txt_det_custidKeyReleased
 
     private void addEmpMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_addEmpMouseClicked
@@ -6692,7 +6742,7 @@ public class frm_dashboard extends javax.swing.JFrame
         if (checkEmptyTxtfiled(txt_add_empadd, txt_add_empnm, txt_add_empno, txt_add_empemail, txt_add_empsalary, txt_add_empadd) == true)
         {
             addEmp();
-            autoId(txt_add_empadd, "emp", "EMP 1");
+            autoId(txt_add_empid, "emp", "EMP 1");
         }
     }//GEN-LAST:event_addEmpMouseClicked
 
@@ -6710,6 +6760,16 @@ public class frm_dashboard extends javax.swing.JFrame
     {//GEN-HEADEREND:event_editEmpMouseClicked
         editEmp();
     }//GEN-LAST:event_editEmpMouseClicked
+
+    private void deleteEmpMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_deleteEmpMouseClicked
+    {//GEN-HEADEREND:event_deleteEmpMouseClicked
+        deleteEmp();
+    }//GEN-LAST:event_deleteEmpMouseClicked
+
+    private void txt_det_empidKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_det_empidKeyReleased
+    {//GEN-HEADEREND:event_txt_det_empidKeyReleased
+        searchdata(txt_det_empid.getText(), table_empdet);
+    }//GEN-LAST:event_txt_det_empidKeyReleased
 
     public static void main(String args[])
     {
@@ -7236,6 +7296,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
             while (rs.next())
             {
+                String id = rs.getString("id");
                 String nm = rs.getString("nm");
                 String contact = rs.getString("contact");
                 String email = rs.getString("email");
@@ -7244,7 +7305,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
                 String[] Row =
                 {
-                    nm, contact, email, snm, sadd
+                    id, nm, contact, email, snm, sadd
                 };
                 TableModel.addRow(Row);
             }
@@ -7273,7 +7334,7 @@ public class frm_dashboard extends javax.swing.JFrame
     {
         try
         {
-            String updateQuery = "update customer set nm='" + txt_edit_custnm.getText() + "',contact='" + txt_edit_custno.getText() + "',email='" + lbl_edit_empid.getText() + "',snm='" + txt_edit_custsnm.getText() + "',sadd='" + txt_edit_custsadd.getText() + "' where nm='" + txt_edit_custnm.getText() + "';";
+            String updateQuery = "update customer set nm='" + txt_edit_custnm.getText() + "',contact='" + txt_edit_custno.getText() + "',email='" + lbl_edit_empid.getText() + "',snm='" + txt_edit_custsnm.getText() + "',sadd='" + txt_edit_custsadd.getText() + "' where id='" + lbl_edit_custid.getText() + "';";
             ps = con.prepareStatement(updateQuery);
             ps.executeUpdate();
             JOptionPane.showMessageDialog(null, "Customer details updated successfully");
@@ -7311,7 +7372,7 @@ public class frm_dashboard extends javax.swing.JFrame
         {
             try
             {
-                String deleteQuery = "delete from customer where nm='" + txt_edit_custnm.getText() + "';";
+                String deleteQuery = "delete from customer where id='" + lbl_edit_custid.getText() + "';";
                 ps = con.prepareStatement(deleteQuery);
                 String name = txt_edit_custnm.getText();
                 ps.executeUpdate();
@@ -7332,17 +7393,46 @@ public class frm_dashboard extends javax.swing.JFrame
         }
     }
 
-    public void searchdata(String str)
+    public boolean deleteEmp()
+    {
+        int confirmMsg = JOptionPane.showConfirmDialog(null, "Are you really wants to delete this customer recored");
+        if (confirmMsg == 0)
+        {
+            try
+            {
+                String deleteQuery = "delete from emp where id='" + lbl_edit_empid.getText() + "';";
+                ps = con.prepareStatement(deleteQuery);
+                String name = txt_edit_empnm.getText();
+                ps.executeUpdate();
+                JOptionPane.showMessageDialog(null, name + " Employee details deleted successfully");
+                doEmptyTxtfiled(txt_edit_empnm, txt_edit_empno, txt_edit_empemail, txt_edit_empsalary, txt_edit_empadd);
+                fetchDataIntoTableEmp(table_empedit, "emp");
+                return true;
+            }
+            catch (Exception e)
+            {
+                JOptionPane.showInternalMessageDialog(null, "This employee details not updated " + e);
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public void searchdata(String str, JTable table)
     {
         try
         {
-            TableModel = (DefaultTableModel) table_custdet.getModel();
+            TableModel = (DefaultTableModel) table.getModel();
             TableRowSorter<DefaultTableModel> trs = new TableRowSorter<>(TableModel);
-            table_custdet.setRowSorter(trs);
+            table.setRowSorter(trs);
             trs.setRowFilter(RowFilter.regexFilter(str));
         }
         catch (Exception e)
         {
+            JOptionPane.showMessageDialog(null, e);
         }
     }
 
@@ -7518,6 +7608,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private javax.swing.JLabel lbl_bill;
     private javax.swing.JLabel lbl_close;
     private javax.swing.JLabel lbl_customer;
+    private javax.swing.JLabel lbl_edit_custid;
     private javax.swing.JLabel lbl_edit_empid;
     private javax.swing.JLabel lbl_edit_empimg;
     private javax.swing.JLabel lbl_employee;
@@ -7660,5 +7751,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private textfield.TextField txt_edit_empnm;
     private textfield.TextField txt_edit_empno;
     private textfield.TextField txt_edit_empsalary;
+    private textfield.PasswordField txt_pswd;
+    private textfield.PasswordField txt_pswd1;
     // End of variables declaration//GEN-END:variables
 }
