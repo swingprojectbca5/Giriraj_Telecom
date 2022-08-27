@@ -1043,6 +1043,7 @@
                             </Component>
                             <Component class="textfield.TextField" name="txt_add_custid">
                               <Properties>
+                                <Property name="editable" type="boolean" value="false"/>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                 </Property>
@@ -2330,7 +2331,7 @@
                                                   <Component id="txt_add_empnm" pref="300" max="32767" attributes="0"/>
                                                   <Component id="txt_add_empemail" alignment="0" max="32767" attributes="0"/>
                                                   <Component id="txt_add_empadd" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="txt_pswd1" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="txt_add_empcpswd" alignment="1" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
@@ -2375,7 +2376,7 @@
                                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="txt_add_emppswd" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txt_pswd1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txt_add_empcpswd" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                       <Component id="addEmp" min="-2" max="-2" attributes="0"/>
@@ -2450,6 +2451,7 @@
                             </Component>
                             <Component class="textfield.TextField" name="txt_add_empid">
                               <Properties>
+                                <Property name="editable" type="boolean" value="false"/>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                 </Property>
@@ -2509,6 +2511,7 @@
                               </Properties>
                               <Events>
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_empnoKeyPressed"/>
+                                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_empnoKeyTyped"/>
                               </Events>
                             </Component>
                             <Component class="textfield.TextField" name="txt_add_empemail">
@@ -2597,7 +2600,7 @@
                                 <Property name="showAndHide" type="boolean" value="true"/>
                               </Properties>
                             </Component>
-                            <Component class="textfield.PasswordField" name="txt_pswd1">
+                            <Component class="textfield.PasswordField" name="txt_add_empcpswd">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f6" green="eb" red="e4" type="rgb"/>

@@ -190,7 +190,7 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_empadd = new textfield.TextField();
         lbl_add_empimg = new javax.swing.JLabel();
         txt_add_emppswd = new textfield.PasswordField();
-        txt_pswd1 = new textfield.PasswordField();
+        txt_add_empcpswd = new textfield.PasswordField();
         panel_editemp = new com.k33ptoo.components.KGradientPanel();
         lbl_edit_empimg = new javax.swing.JLabel();
         panel_edit_emptable = new com.k33ptoo.components.KGradientPanel();
@@ -1000,6 +1000,7 @@ public class frm_dashboard extends javax.swing.JFrame
             }
         });
 
+        txt_add_custid.setEditable(false);
         txt_add_custid.setBackground(new java.awt.Color(228, 235, 246));
         txt_add_custid.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txt_add_custid.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
@@ -1930,6 +1931,7 @@ public class frm_dashboard extends javax.swing.JFrame
             }
         });
 
+        txt_add_empid.setEditable(false);
         txt_add_empid.setBackground(new java.awt.Color(228, 235, 246));
         txt_add_empid.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txt_add_empid.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
@@ -1969,6 +1971,10 @@ public class frm_dashboard extends javax.swing.JFrame
             public void keyPressed(java.awt.event.KeyEvent evt)
             {
                 txt_add_empnoKeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_add_empnoKeyTyped(evt);
             }
         });
 
@@ -2023,11 +2029,11 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_emppswd.setLineColor(new java.awt.Color(68, 82, 121));
         txt_add_emppswd.setShowAndHide(true);
 
-        txt_pswd1.setBackground(new java.awt.Color(228, 235, 246));
-        txt_pswd1.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        txt_pswd1.setLabelText("Confirm Password");
-        txt_pswd1.setLineColor(new java.awt.Color(68, 82, 121));
-        txt_pswd1.setShowAndHide(true);
+        txt_add_empcpswd.setBackground(new java.awt.Color(228, 235, 246));
+        txt_add_empcpswd.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txt_add_empcpswd.setLabelText("Confirm Password");
+        txt_add_empcpswd.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_add_empcpswd.setShowAndHide(true);
 
         javax.swing.GroupLayout panel_addempLayout = new javax.swing.GroupLayout(panel_addemp);
         panel_addemp.setLayout(panel_addempLayout);
@@ -2055,7 +2061,7 @@ public class frm_dashboard extends javax.swing.JFrame
                             .addComponent(txt_add_empnm, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
                             .addComponent(txt_add_empemail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txt_add_empadd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txt_pswd1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(txt_add_empcpswd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(panel_addempLayout.createSequentialGroup()
                         .addGap(357, 357, 357)
                         .addComponent(addEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -2088,7 +2094,7 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addGap(40, 40, 40)
                 .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_add_emppswd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_pswd1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_add_empcpswd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40)
                 .addComponent(addEmp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(14, Short.MAX_VALUE))
@@ -5975,14 +5981,13 @@ public class frm_dashboard extends javax.swing.JFrame
     }//GEN-LAST:event_btn_addempFocusLost
 
     private void btn_addempMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addempMouseClicked
-        visibility(txt_add_empid, panel_addemp, true, panel_editemp, false, panel_detemp, false);
+        visibility(txt_add_empnm, panel_addemp, true, panel_editemp, false, panel_detemp, false);
         indicatorOn(indicatorAddemp, indicatorEditemp, indicatorEmpdet);
         HoverColor(btn_addemp, new Color(68, 82, 121), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_addempMouseClicked
 
     private void btn_addempKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_addempKeyPressed
-        visibility(txt_add_empid, panel_addemp, true, panel_editemp, false, panel_detemp, false);
-
+        visibility(txt_add_empnm, panel_addemp, true, panel_editemp, false, panel_detemp, false);
         escape(lbl_employee, evt.getKeyCode(), panel_employee);
         HoverColor(btn_addemp, new Color(68, 82, 121), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_addempKeyPressed
@@ -6037,13 +6042,13 @@ public class frm_dashboard extends javax.swing.JFrame
     }//GEN-LAST:event_btn_empdetKeyPressed
 
     private void btn_addcustMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addcustMouseClicked
-        visibility(txt_add_custid, panel_addcust, true, panel_editcus, false, panel_custdetail, false);
+        visibility(txt_add_custnm, panel_addcust, true, panel_editcus, false, panel_custdetail, false);
         indicatorOn(indicatorAddcust, indicatorEditcust, indicatorDetcust);
         HoverColor(btn_editcust, new Color(68, 82, 121), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_addcustMouseClicked
 
     private void btn_addcustKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_addcustKeyPressed
-        visibility(txt_add_custid, panel_addcust, true, panel_editcus, false, panel_custdetail, false);
+        visibility(txt_add_custnm, panel_addcust, true, panel_editcus, false, panel_custdetail, false);
 
         escape(lbl_customer, evt.getKeyCode(), panel_customer);
         HoverColor(btn_addcust, new Color(68, 82, 121), new Color(255, 255, 255));
@@ -6753,11 +6758,19 @@ public class frm_dashboard extends javax.swing.JFrame
     {//GEN-HEADEREND:event_addEmpMouseClicked
         if (checkEmptyTxtfiled(txt_add_empadd, txt_add_empnm, txt_add_empno, txt_add_empemail, txt_add_empsalary, txt_add_empadd) == true)
         {
-            addEmp();
-            autoId(txt_add_empid, "emp", "EMP 1");
-            String filename = "D:\\BCA\\Sem -  5\\JavaProjects\\Girirarj_Telecom\\src\\icons\\man.png";
-            ImageIcon icon = new ImageIcon(new ImageIcon(filename).getImage().getScaledInstance(lbl_add_empimg.getWidth(), lbl_add_empimg.getHeight(), Image.SCALE_SMOOTH));
-            lbl_add_empimg.setIcon(icon);
+            if (txt_add_emppswd.getText().equals(txt_add_empcpswd.getText()))
+            {
+                addEmp();
+                autoId(txt_add_empid, "emp", "EMP 1");
+                String filename = "D:\\BCA\\Sem -  5\\JavaProjects\\Girirarj_Telecom\\src\\icons\\man.png";
+                ImageIcon icon = new ImageIcon(new ImageIcon(filename).getImage().getScaledInstance(lbl_add_empimg.getWidth(), lbl_add_empimg.getHeight(), Image.SCALE_SMOOTH));
+                lbl_add_empimg.setIcon(icon);
+            }
+            else
+            {
+                txt_add_empcpswd.setLineColor(Color.RED);
+                txt_add_empcpswd.grabFocus();
+            }
         }
     }//GEN-LAST:event_addEmpMouseClicked
 
@@ -6810,6 +6823,14 @@ public class frm_dashboard extends javax.swing.JFrame
         ImageIcon icon = new ImageIcon(new ImageIcon(filename).getImage().getScaledInstance(lbl_add_empimg.getWidth(), lbl_add_empimg.getHeight(), Image.SCALE_SMOOTH));
         lbl_add_empimg.setIcon(icon);
     }//GEN-LAST:event_lbl_add_emprmimgMouseClicked
+
+    private void txt_add_empnoKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_empnoKeyTyped
+    {//GEN-HEADEREND:event_txt_add_empnoKeyTyped
+        if (evt.getKeyChar() < '0' || evt.getKeyChar() > '9' || txt_add_empno.getText().length() == 10)
+        {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_add_empnoKeyTyped
 
     public static void main(String args[])
     {
@@ -7304,6 +7325,17 @@ public class frm_dashboard extends javax.swing.JFrame
         txt5.setText("");
     }
 
+    public void doEmptyTxtfiled(TextField txt1, TextField txt2, TextField txt3, TextField txt4, TextField txt5, JTextField txt6, JTextField txt7)
+    {
+        txt1.setText("");
+        txt2.setText("");
+        txt3.setText("");
+        txt4.setText("");
+        txt5.setText("");
+        txt6.setText("");
+        txt7.setText("");
+    }
+
     public void addCustomer()
     {
         try
@@ -7482,14 +7514,15 @@ public class frm_dashboard extends javax.swing.JFrame
         {
             String insertQuery = "insert into emp values('" + txt_add_empid.getText() + "','"
                     + txt_add_empnm.getText() + "','" + txt_add_empno.getText() + "','" + txt_add_empemail.getText() + "','" + txt_add_empsalary.getText() + "','"
-                    + txt_add_empadd.getText() + "',?,'" + txt_add_emppswd.getText() + "');";
+                    + txt_add_empadd.getText() + "',?,'" + txt_add_empcpswd.getLabelText() + "');";
 
             ps = con.prepareStatement(insertQuery);
             ps.setBinaryStream(1, fis, fis.available());
+//            ps.setString(2, txt_add_emppswd.getLabelText());
             ps.executeUpdate();
             String name = txt_add_empnm.getText();
             JOptionPane.showMessageDialog(null, name + " Employee added");
-            doEmptyTxtfiled(txt_add_empnm, txt_add_empno, txt_add_empemail, txt_add_empsalary, txt_add_empadd);
+            doEmptyTxtfiled(txt_add_empnm, txt_add_empno, txt_add_empemail, txt_add_empsalary, txt_add_empadd, txt_add_emppswd, txt_add_empcpswd);
         }
         catch (Exception e)
         {
@@ -7756,6 +7789,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private textfield.TextField txt_add_custsnm;
     private textfield.TextField txt_add_custsnm2;
     private textfield.TextField txt_add_empadd;
+    private textfield.PasswordField txt_add_empcpswd;
     private textfield.TextField txt_add_empemail;
     private textfield.TextField txt_add_empid;
     private textfield.TextField txt_add_empnm;
@@ -7794,6 +7828,5 @@ public class frm_dashboard extends javax.swing.JFrame
     private textfield.TextField txt_edit_empnm;
     private textfield.TextField txt_edit_empno;
     private textfield.TextField txt_edit_empsalary;
-    private textfield.PasswordField txt_pswd1;
     // End of variables declaration//GEN-END:variables
 }
