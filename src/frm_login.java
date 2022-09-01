@@ -9,7 +9,8 @@ import java.sql.Connection;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
-public class frm_login extends javax.swing.JFrame {
+public class frm_login extends javax.swing.JFrame
+{
 
     int xMouse;
     int yMouse;
@@ -17,12 +18,14 @@ public class frm_login extends javax.swing.JFrame {
     ResultSet rs;
     Connection con;
 
-    public frm_login() {
+    public frm_login()
+    {
         initComponents();
 
         setShape(new RoundRectangle2D.Double(0, 0, getWidth(), getHeight(), 30, 30));
         con = dbconnection.isconnected();
-        if (con == null) {
+        if (con == null)
+        {
             System.exit(0);
         }
         comboboxdata();
@@ -607,51 +610,67 @@ public class frm_login extends javax.swing.JFrame {
 
     private void loginBtnKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_loginBtnKeyPressed
     {//GEN-HEADEREND:event_loginBtnKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
+        {
             checkuser();
         }
     }//GEN-LAST:event_loginBtnKeyPressed
 
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+    public static void main(String args[])
+    {
+        java.awt.EventQueue.invokeLater(new Runnable()
+        {
+            public void run()
+            {
                 new frm_login().setVisible(true);
             }
         });
     }
 
-    public void comboboxdata() {
+    public void comboboxdata()
+    {
         String query = "select * from login";
-        try {
+        try
+        {
             ps = con.prepareStatement(query);
             rs = ps.executeQuery();
 
-            while (rs.next()) {
-                jComboBox1.addItem(rs.getString("usn"));
+            while (rs.next())
+            {
+                jComboBox1.addItem(rs.getString("id"));
             }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Can't Retrive Username");
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }
 
-    public void checkuser() {
-        String query = "select * from login where usn ='" + jComboBox1.getSelectedItem() + "' and pswd ='" + txt_pswd.getText() + "'";
-        try {
+    public void checkuser()
+    {
+        String query = "select * from login where id ='" + jComboBox1.getSelectedItem() + "' and pswd ='" + txt_pswd.getText() + "'";
+        try
+        {
             ps = con.prepareStatement(query);
             rs = ps.executeQuery();
 
-            if (rs.next()) {
+            if (rs.next())
+            {
                 frm_dashboard dashboard = new frm_dashboard(jComboBox1.getSelectedItem().toString());
                 dashboard.setVisible(true);
 
                 dashboard.jLabel1.setText(jComboBox1.getSelectedItem().toString());
                 this.dispose();
-            } else {
+            }
+            else
+            {
                 txt_pswd.setLineColor(Color.red);
                 txt_pswd.grabFocus();
                 txt_pswd.setText("");
             }
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             JOptionPane.showMessageDialog(null, "checking failed");
         }
     }
