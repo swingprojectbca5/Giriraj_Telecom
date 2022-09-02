@@ -3611,10 +3611,10 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="1061" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="1042" max="32767" attributes="0"/>
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
                                       <Component id="panel_editpro" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
@@ -3623,68 +3623,68 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                                       <Component id="panel_prodet" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="26" max="32767" attributes="0"/>
+                                      <EmptySpace pref="7" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                       <Component id="panel_pro_fulldet" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="103" rootIndex="4" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                       <Component id="panel_addpro" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                       <Component id="panel_addpro_mcb" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="660" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="643" max="32767" attributes="0"/>
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                       <Component id="panel_editpro" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                                      <EmptySpace pref="8" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                       <Component id="panel_prodet" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="23" max="32767" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                       <Component id="panel_pro_fulldet" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                                      <EmptySpace pref="8" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="103" rootIndex="4" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                       <Component id="panel_addpro" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                                      <EmptySpace pref="8" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                       <Component id="panel_addpro_mcb" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                                      <EmptySpace pref="8" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -4458,57 +4458,76 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jScrollPane5" min="-2" pref="961" max="-2" attributes="0"/>
+                                  <Component id="jSeparator8" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jSeparator9" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jSeparator10" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="25" pref="25" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                                      <Component id="jScrollPane7" min="-2" pref="300" max="-2" attributes="0"/>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="lbl_add_empimg2" min="-2" pref="144" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Group type="103" groupAlignment="0" attributes="0">
-                                                              <Component id="lbl_add_proaddimg1" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
-                                                              <Component id="lbl_add_prormimg1" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
-                                                          </Group>
-                                                      </Group>
-                                                  </Group>
-                                                  <Component id="jLabel6" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="txt_add_pro_id4" min="-2" pref="300" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="txt_add_pro_id5" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
-                                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                              <Component id="loginBtn7" alignment="0" max="32767" attributes="0"/>
-                                                              <Component id="jTextField2" alignment="1" min="-2" pref="300" max="-2" attributes="0"/>
-                                                          </Group>
-                                                      </Group>
-                                                  </Group>
-                                              </Group>
-                                              <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                   <Group type="102" attributes="0">
-                                                      <EmptySpace max="32767" attributes="0"/>
-                                                      <Component id="loginBtn9" min="-2" pref="300" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                                      <Component id="lbl_edit_proimg" min="-2" pref="144" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="txt_add_pro_id7" max="32767" attributes="0"/>
-                                                          <Component id="txt_add_pro_id6" max="32767" attributes="0"/>
+                                                          <Component id="lbl_edit_proaddimg" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
+                                                          <Component id="lbl_edit_prodelimg" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <Component id="combo_add_pro_proid" min="-2" pref="300" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" attributes="0">
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="txt_edit_pro_sprice" min="-2" pref="300" max="-2" attributes="0"/>
+                                                          <Component id="combo_edit_pro_model" min="-2" pref="300" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="1" attributes="0">
+                                                          <Component id="spinner_edit_pro_qty" min="-2" pref="300" max="-2" attributes="0"/>
+                                                          <Component id="combo_edit_pro_ctgy" min="-2" pref="300" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
+                                              </Group>
+                                              <EmptySpace min="31" pref="31" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="txt_edit_pro_cprice" max="32767" attributes="0"/>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="btn_edit_proedit" min="-2" pref="135" max="-2" attributes="0"/>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <Component id="btn_edit_prodel" min="-2" pref="135" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="combo_edit_pro_brand" alignment="1" min="-2" pref="300" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="combo_edit_pro_modelid" min="-2" pref="300" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="txt_edit_pro_modelnm" min="-2" pref="300" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                                              <Component id="btn_edit_modeledit" min="-2" pref="135" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="btn_edit_modeldel" min="-2" pref="135" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="combo_edit_pro_ctgyid" min="-2" pref="300" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="txt_edit_pro_ctgynm" min="-2" pref="300" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                              <Component id="btn_edit_ctgyedit" min="-2" pref="134" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="btn_edit_ctgydel" min="-2" pref="136" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="combo_edit_pro_brandid" min="-2" pref="300" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="txt_edit_pro_brandnm" min="-2" pref="300" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                                              <Component id="btn_edit_brandedit" min="-2" pref="135" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="btn_edit_branddel" min="-2" pref="135" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                                      <EmptySpace min="25" pref="25" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -4516,103 +4535,82 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="lbl_add_empimg2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                                   <Group type="102" attributes="0">
                                                       <Group type="103" groupAlignment="3" attributes="0">
-                                                          <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="txt_add_pro_id6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="txt_edit_pro_cprice" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="combo_add_pro_proid" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                                                      <Component id="lbl_add_prormimg1" min="-2" pref="26" max="-2" attributes="0"/>
+                                                      <Component id="lbl_edit_prodelimg" min="-2" pref="26" max="-2" attributes="0"/>
                                                       <EmptySpace max="32767" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="102" attributes="0">
-                                                      <Component id="lbl_add_proaddimg1" min="-2" pref="50" max="-2" attributes="0"/>
-                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jLabel6" min="-2" pref="47" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Component id="txt_add_pro_id4" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                                                      <Component id="txt_add_pro_id7" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
+                                              <Component id="lbl_edit_proaddimg" min="-2" pref="50" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
                                           </Group>
-                                      </Group>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                                              <Component id="txt_add_pro_id5" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace pref="50" max="32767" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="lbl_edit_proimg" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="loginBtn7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="loginBtn9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="txt_edit_pro_sprice" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="combo_edit_pro_brand" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                                                  <Component id="combo_edit_pro_ctgy" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
                                               </Group>
-                                          </Group>
-                                          <Group type="102" attributes="0">
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jScrollPane7" pref="0" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Component id="jScrollPane5" min="-2" pref="160" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="btn_edit_prodel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="combo_edit_pro_model" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="btn_edit_proedit" min="-2" max="-2" attributes="0"/>
+                                          <Component id="spinner_edit_pro_qty" alignment="1" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jSeparator8" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="txt_edit_pro_ctgynm" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btn_edit_ctgyedit" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btn_edit_ctgydel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="combo_edit_pro_ctgyid" alignment="0" min="-2" pref="54" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jSeparator9" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="txt_edit_pro_brandnm" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btn_edit_brandedit" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btn_edit_branddel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="combo_edit_pro_brandid" alignment="1" min="-2" pref="54" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jSeparator10" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="txt_edit_pro_modelnm" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                                          <Component id="btn_edit_modeledit" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btn_edit_modeldel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="combo_edit_pro_modelid" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace pref="30" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Container class="javax.swing.JScrollPane" name="jScrollPane5">
-                              <AuxValues>
-                                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-                              </AuxValues>
-
-                              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-                              <SubComponents>
-                                <Component class="javax.swing.JTable" name="jTable1">
-                                  <Properties>
-                                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                                      <Table columnCount="4" rowCount="4">
-                                        <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                                        <Column editable="true" title="Title 2" type="java.lang.Object"/>
-                                        <Column editable="true" title="Title 3" type="java.lang.Object"/>
-                                        <Column editable="true" title="Title 4" type="java.lang.Object"/>
-                                      </Table>
-                                    </Property>
-                                  </Properties>
-                                </Component>
-                              </SubComponents>
-                            </Container>
-                            <Component class="textfield.TextField" name="jTextField2">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
-                                </Property>
-                                <Property name="horizontalAlignment" type="int" value="2"/>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Segoe UI" size="20" style="0"/>
-                                </Property>
-                                <Property name="labelText" type="java.lang.String" value="PRODUCT ID"/>
-                                <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="79" green="52" red="44" type="rgb"/>
-                                </Property>
-                                <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="79" green="52" red="44" type="rgb"/>
-                                </Property>
-                              </Properties>
-                              <Events>
-                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextField2KeyPressed"/>
-                              </Events>
-                            </Component>
-                            <Component class="javax.swing.JLabel" name="lbl_add_empimg2">
+                            <Component class="javax.swing.JLabel" name="lbl_edit_proimg">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="0"/>
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -4620,7 +4618,7 @@
                                 </Property>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JLabel" name="lbl_add_prormimg1">
+                            <Component class="javax.swing.JLabel" name="lbl_edit_prodelimg">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="0"/>
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -4631,11 +4629,12 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_add_prormimg1MouseEntered"/>
-                                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_add_prormimg1MouseExited"/>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_edit_prodelimgMouseClicked"/>
+                                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_edit_prodelimgMouseEntered"/>
+                                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_edit_prodelimgMouseExited"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JLabel" name="lbl_add_proaddimg1">
+                            <Component class="javax.swing.JLabel" name="lbl_edit_proaddimg">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="0"/>
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -4646,11 +4645,33 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_add_proaddimg1MouseEntered"/>
-                                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_add_proaddimg1MouseExited"/>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_edit_proaddimgMouseClicked"/>
+                                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_edit_proaddimgMouseEntered"/>
+                                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_edit_proaddimgMouseExited"/>
                               </Events>
                             </Component>
-                            <Component class="textfield.TextField" name="txt_add_pro_id4">
+                            <Component class="textfield.TextField" name="txt_edit_pro_sprice">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="horizontalAlignment" type="int" value="2"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                                <Property name="labelText" type="java.lang.String" value="SELLING PRICE"/>
+                                <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_edit_pro_spriceKeyPressed"/>
+                              </Events>
+                            </Component>
+                            <Component class="textfield.TextField" name="txt_edit_pro_cprice">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f6" green="eb" red="e4" type="rgb"/>
@@ -4668,120 +4689,15 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_pro_id4KeyPressed"/>
+                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_edit_pro_cpriceKeyPressed"/>
                               </Events>
                             </Component>
-                            <Component class="textfield.TextField" name="txt_add_pro_id5">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
-                                </Property>
-                                <Property name="horizontalAlignment" type="int" value="2"/>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Segoe UI" size="20" style="0"/>
-                                </Property>
-                                <Property name="labelText" type="java.lang.String" value="COST PRICE"/>
-                                <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="79" green="52" red="44" type="rgb"/>
-                                </Property>
-                                <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="79" green="52" red="44" type="rgb"/>
-                                </Property>
-                              </Properties>
-                              <Events>
-                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_pro_id5KeyPressed"/>
-                              </Events>
-                            </Component>
-                            <Component class="textfield.TextField" name="txt_add_pro_id6">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
-                                </Property>
-                                <Property name="horizontalAlignment" type="int" value="2"/>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Segoe UI" size="20" style="0"/>
-                                </Property>
-                                <Property name="labelText" type="java.lang.String" value="COST PRICE"/>
-                                <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="79" green="52" red="44" type="rgb"/>
-                                </Property>
-                                <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="79" green="52" red="44" type="rgb"/>
-                                </Property>
-                              </Properties>
-                              <Events>
-                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_pro_id6KeyPressed"/>
-                              </Events>
-                            </Component>
-                            <Component class="textfield.TextField" name="txt_add_pro_id7">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
-                                </Property>
-                                <Property name="horizontalAlignment" type="int" value="2"/>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Segoe UI" size="20" style="0"/>
-                                </Property>
-                                <Property name="labelText" type="java.lang.String" value="COST PRICE"/>
-                                <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="79" green="52" red="44" type="rgb"/>
-                                </Property>
-                                <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="79" green="52" red="44" type="rgb"/>
-                                </Property>
-                              </Properties>
-                              <Events>
-                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_pro_id7KeyPressed"/>
-                              </Events>
-                            </Component>
-                            <Container class="javax.swing.JScrollPane" name="jScrollPane7">
-                              <AuxValues>
-                                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-                              </AuxValues>
-
-                              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-                              <SubComponents>
-                                <Component class="javax.swing.JList" name="jList2">
-                                  <Properties>
-                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="f6" green="eb" red="e4" type="rgb"/>
-                                    </Property>
-                                    <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                                      <StringArray count="16">
-                                        <StringItem index="0" value="Item 1"/>
-                                        <StringItem index="1" value="Item 2"/>
-                                        <StringItem index="2" value="Item 3"/>
-                                        <StringItem index="3" value="Item 4"/>
-                                        <StringItem index="4" value="Item 5"/>
-                                        <StringItem index="5" value="Item 1"/>
-                                        <StringItem index="6" value="Item 2"/>
-                                        <StringItem index="7" value="Item 3"/>
-                                        <StringItem index="8" value="Item 4"/>
-                                        <StringItem index="9" value="Item 5"/>
-                                        <StringItem index="10" value="Item 1"/>
-                                        <StringItem index="11" value="Item 2"/>
-                                        <StringItem index="12" value="Item 3"/>
-                                        <StringItem index="13" value="Item 4"/>
-                                        <StringItem index="14" value="Item 5"/>
-                                        <StringItem index="15" value=" "/>
-                                      </StringArray>
-                                    </Property>
-                                    <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                                      <ComponentRef name="loginBtn6"/>
-                                    </Property>
-                                  </Properties>
-                                  <AuxValues>
-                                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                                  </AuxValues>
-                                </Component>
-                              </SubComponents>
-                            </Container>
-                            <Component class="com.k33ptoo.components.KButton" name="loginBtn7">
+                            <Component class="com.k33ptoo.components.KButton" name="btn_edit_proedit">
                               <Properties>
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="null"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="ADD CUSTOMER"/>
+                                <Property name="text" type="java.lang.String" value="EDIT"/>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Segoe UI" size="24" style="0"/>
                                 </Property>
@@ -4803,15 +4719,15 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginBtn7ActionPerformed"/>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_edit_proeditMouseClicked"/>
                               </Events>
                             </Component>
-                            <Component class="com.k33ptoo.components.KButton" name="loginBtn9">
+                            <Component class="com.k33ptoo.components.KButton" name="btn_edit_prodel">
                               <Properties>
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="null"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="ADD CUSTOMER"/>
+                                <Property name="text" type="java.lang.String" value="DELETE"/>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Segoe UI" size="24" style="0"/>
                                 </Property>
@@ -4833,22 +4749,382 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginBtn9ActionPerformed"/>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_edit_prodelMouseClicked"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JLabel" name="jLabel6">
+                            <Component class="javax.swing.JSeparator" name="jSeparator8">
+                            </Component>
+                            <Component class="textfield.TextField" name="txt_edit_pro_ctgynm">
                               <Properties>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Cascadia Mono" size="24" style="0"/>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                 </Property>
-                                <Property name="horizontalAlignment" type="int" value="0"/>
-                                <Property name="text" type="java.lang.String" value="ALTERNATIVES"/>
-                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                    <LineBorder/>
-                                  </Border>
+                                <Property name="horizontalAlignment" type="int" value="2"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                                <Property name="labelText" type="java.lang.String" value="CATEGORY NAME"/>
+                                <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_edit_pro_ctgynmKeyPressed"/>
+                              </Events>
+                            </Component>
+                            <Component class="javax.swing.JSeparator" name="jSeparator9">
+                            </Component>
+                            <Component class="textfield.TextField" name="txt_edit_pro_brandnm">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="horizontalAlignment" type="int" value="2"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                                <Property name="labelText" type="java.lang.String" value="BRAND NAME"/>
+                                <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_edit_pro_brandnmKeyPressed"/>
+                              </Events>
+                            </Component>
+                            <Component class="com.k33ptoo.components.KButton" name="btn_edit_ctgyedit">
+                              <Properties>
+                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                  <Border info="null"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="EDIT"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="24" style="0"/>
+                                </Property>
+                                <Property name="kBorderRadius" type="int" value="30"/>
+                                <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverForeGround" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_edit_ctgyeditMouseClicked"/>
+                              </Events>
+                            </Component>
+                            <Component class="com.k33ptoo.components.KButton" name="btn_edit_ctgydel">
+                              <Properties>
+                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                  <Border info="null"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="DELETE"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="24" style="0"/>
+                                </Property>
+                                <Property name="kBorderRadius" type="int" value="30"/>
+                                <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverForeGround" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_edit_ctgydelMouseClicked"/>
+                              </Events>
+                            </Component>
+                            <Component class="javax.swing.JSeparator" name="jSeparator10">
+                            </Component>
+                            <Component class="textfield.TextField" name="txt_edit_pro_modelnm">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="horizontalAlignment" type="int" value="2"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                                <Property name="labelText" type="java.lang.String" value="MODEL NAME"/>
+                                <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_edit_pro_modelnmKeyPressed"/>
+                              </Events>
+                            </Component>
+                            <Component class="com.k33ptoo.components.KButton" name="btn_edit_brandedit">
+                              <Properties>
+                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                  <Border info="null"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="EDIT"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="24" style="0"/>
+                                </Property>
+                                <Property name="kBorderRadius" type="int" value="30"/>
+                                <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverForeGround" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_edit_brandeditMouseClicked"/>
+                              </Events>
+                            </Component>
+                            <Component class="com.k33ptoo.components.KButton" name="btn_edit_branddel">
+                              <Properties>
+                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                  <Border info="null"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="DELETE"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="24" style="0"/>
+                                </Property>
+                                <Property name="kBorderRadius" type="int" value="30"/>
+                                <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverForeGround" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_edit_branddelMouseClicked"/>
+                              </Events>
+                            </Component>
+                            <Component class="com.k33ptoo.components.KButton" name="btn_edit_modeledit">
+                              <Properties>
+                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                  <Border info="null"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="EDIT"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="24" style="0"/>
+                                </Property>
+                                <Property name="kBorderRadius" type="int" value="30"/>
+                                <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverForeGround" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_edit_modeleditMouseClicked"/>
+                              </Events>
+                            </Component>
+                            <Component class="com.k33ptoo.components.KButton" name="btn_edit_modeldel">
+                              <Properties>
+                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                  <Border info="null"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="DELETE"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="24" style="0"/>
+                                </Property>
+                                <Property name="kBorderRadius" type="int" value="30"/>
+                                <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverForeGround" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="kHoverStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="e7" green="c7" red="b2" type="rgb"/>
+                                </Property>
+                                <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_edit_modeldelMouseClicked"/>
+                              </Events>
+                            </Component>
+                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_edit_pro_brand">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                                  <StringArray count="1">
+                                    <StringItem index="0" value="BRAND"/>
+                                  </StringArray>
+                                </Property>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_edit_pro_ctgyid">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                                  <StringArray count="1">
+                                    <StringItem index="0" value="CATEGORY ID"/>
+                                  </StringArray>
+                                </Property>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="combo_edit_pro_ctgyidItemStateChanged"/>
+                              </Events>
+                            </Component>
+                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_edit_pro_model">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                                  <StringArray count="1">
+                                    <StringItem index="0" value="MODEL"/>
+                                  </StringArray>
+                                </Property>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                            <Component class="spinner.Spinner" name="spinner_edit_pro_qty">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                                <Property name="labelText" type="java.lang.String" value="QTY"/>
+                              </Properties>
+                            </Component>
+                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_edit_pro_ctgy">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                                  <StringArray count="1">
+                                    <StringItem index="0" value="CATEGORY"/>
+                                  </StringArray>
+                                </Property>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_edit_pro_brandid">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                                  <StringArray count="1">
+                                    <StringItem index="0" value="BRAND ID"/>
+                                  </StringArray>
+                                </Property>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="combo_edit_pro_brandidItemStateChanged"/>
+                              </Events>
+                            </Component>
+                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_edit_pro_modelid">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                                  <StringArray count="1">
+                                    <StringItem index="0" value="MODEL ID"/>
+                                  </StringArray>
+                                </Property>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="combo_edit_pro_modelidItemStateChanged"/>
+                              </Events>
+                            </Component>
+                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_add_pro_proid">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                                  <StringArray count="1">
+                                    <StringItem index="0" value="PRODUCT ID"/>
+                                  </StringArray>
+                                </Property>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="combo_add_pro_proidItemStateChanged"/>
+                              </Events>
                             </Component>
                           </SubComponents>
                         </Container>
@@ -5890,9 +6166,7 @@
                               <Events>
                                 <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_billdetFocusGained"/>
                                 <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_billdetFocusLost"/>
-                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_billdetMouseClicked"/>
                                 <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_billdetMouseEntered"/>
-                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_billdetKeyPressed"/>
                               </Events>
                             </Component>
                           </SubComponents>
