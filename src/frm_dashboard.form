@@ -6377,45 +6377,6 @@
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="combo_add_bill_cusid" max="32767" attributes="0"/>
-                                                  <Component id="jLabel7" max="32767" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                                              <Component id="combo_add_bill_snm" max="32767" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txt_add_bill_email" min="-2" pref="214" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jTextField5" min="-2" pref="259" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                  <Component id="jTextField6" max="32767" attributes="0"/>
-                                                  <Component id="jLabel8" pref="214" max="32767" attributes="0"/>
-                                              </Group>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="combo_add_pro_brand5" max="32767" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                                      <Component id="combo_add_pro_brand7" max="32767" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" attributes="0">
-                                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                                      <Component id="combo_add_pro_brand4" max="32767" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                                      <Component id="combo_add_pro_brand6" max="32767" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="loginBtn15" min="-2" pref="265" max="-2" attributes="0"/>
-                                                  <Component id="loginBtn16" min="-2" pref="265" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
                                               <Component id="jScrollPane8" min="-2" pref="674" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -6427,6 +6388,48 @@
                                                   </Group>
                                               </Group>
                                               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Group type="103" groupAlignment="1" attributes="0">
+                                                          <Component id="combo_add_bill_cusid" max="32767" attributes="0"/>
+                                                          <Component id="jLabel7" max="32767" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                                      <Component id="txt_add_bill_snm" min="-2" pref="214" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="txt_add_bill_email" min="-2" pref="214" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                                      <Component id="txt_add_bill_con" min="-2" pref="257" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Group type="103" groupAlignment="1" attributes="0">
+                                                          <Component id="jLabel8" min="-2" pref="214" max="-2" attributes="0"/>
+                                                          <Component id="txt_add_bill_model" min="-2" pref="214" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <Component id="txt_add_bill_price" min="-2" pref="214" max="-2" attributes="0"/>
+                                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                              <Component id="txt_add_bill_qty" min="-2" pref="214" max="-2" attributes="0"/>
+                                                              <EmptySpace max="32767" attributes="0"/>
+                                                              <Component id="loginBtn15" min="-2" pref="125" max="-2" attributes="0"/>
+                                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                              <Component id="loginBtn16" min="-2" pref="117" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <Component id="combo_add_bill_proid" max="32767" attributes="0"/>
+                                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                              <Component id="txt_add_bill_ctgry" min="-2" pref="214" max="-2" attributes="0"/>
+                                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                              <Component id="txt_add_bill_brand" min="-2" pref="263" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace min="25" pref="25" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -6448,35 +6451,32 @@
                                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                       <Component id="jLabel7" min="-2" pref="39" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="combo_add_bill_snm" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="3" attributes="0">
-                                                      <Component id="combo_add_bill_cusid" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="txt_add_bill_email" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
-                                                      <Component id="jTextField5" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jSeparator5" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jLabel8" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                                                  <Component id="combo_add_pro_brand7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="combo_add_pro_brand5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <Component id="loginBtn15" alignment="1" min="-2" pref="27" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="combo_add_bill_cusid" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txt_add_bill_email" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                                          <Component id="txt_add_bill_con" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                                          <Component id="txt_add_bill_snm" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jTextField6" alignment="1" min="-2" pref="41" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="combo_add_pro_brand6" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
-                                              <Component id="combo_add_pro_brand4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="loginBtn16" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                      <Component id="jSeparator5" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel8" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                                          <Component id="combo_add_bill_proid" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txt_add_bill_ctgry" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                                          <Component id="txt_add_bill_brand" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                              <Component id="txt_add_bill_qty" alignment="1" min="-2" pref="41" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="txt_add_bill_price" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                                                  <Component id="txt_add_bill_model" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
+                                          <Component id="loginBtn15" alignment="0" pref="42" max="32767" attributes="0"/>
+                                          <Component id="loginBtn16" alignment="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jSeparator6" min="-2" max="-2" attributes="0"/>
@@ -6503,9 +6503,9 @@
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="null"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="ADD"/>
+                                <Property name="text" type="java.lang.String" value="CALCULATE"/>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Segoe UI" size="24" style="0"/>
+                                  <Font name="Segoe UI" size="20" style="0"/>
                                 </Property>
                                 <Property name="kBorderRadius" type="int" value="30"/>
                                 <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -6534,100 +6534,26 @@
                                   <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                 </Property>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                  <StringArray count="4">
-                                    <StringItem index="0" value="Customer ID"/>
-                                    <StringItem index="1" value="John"/>
-                                    <StringItem index="2" value="Mark"/>
-                                    <StringItem index="3" value="Elon"/>
+                                  <StringArray count="1">
+                                    <StringItem index="0" value="CUSTOMER ID"/>
                                   </StringArray>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Segoe UI" size="20" style="0"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="combo_add_bill_cusidItemStateChanged"/>
+                              </Events>
                             </Component>
-                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_add_bill_snm">
+                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_add_bill_proid">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                 </Property>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                  <StringArray count="3">
-                                    <StringItem index="0" value="Shop Name"/>
-                                    <StringItem index="1" value="A001"/>
-                                    <StringItem index="2" value="A002"/>
-                                  </StringArray>
-                                </Property>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Segoe UI" size="20" style="0"/>
-                                </Property>
-                              </Properties>
-                            </Component>
-                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_add_pro_brand4">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
-                                </Property>
-                                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                  <StringArray count="4">
-                                    <StringItem index="0" value="Product Model"/>
-                                    <StringItem index="1" value="John"/>
-                                    <StringItem index="2" value="Mark"/>
-                                    <StringItem index="3" value="Elon"/>
-                                  </StringArray>
-                                </Property>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Segoe UI" size="20" style="0"/>
-                                </Property>
-                              </Properties>
-                            </Component>
-                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_add_pro_brand5">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
-                                </Property>
-                                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                  <StringArray count="4">
+                                  <StringArray count="1">
                                     <StringItem index="0" value="Product ID"/>
-                                    <StringItem index="1" value="John"/>
-                                    <StringItem index="2" value="Mark"/>
-                                    <StringItem index="3" value="Elon"/>
-                                  </StringArray>
-                                </Property>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Segoe UI" size="20" style="0"/>
-                                </Property>
-                              </Properties>
-                            </Component>
-                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_add_pro_brand6">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
-                                </Property>
-                                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                  <StringArray count="4">
-                                    <StringItem index="0" value="BRAND"/>
-                                    <StringItem index="1" value="John"/>
-                                    <StringItem index="2" value="Mark"/>
-                                    <StringItem index="3" value="Elon"/>
-                                  </StringArray>
-                                </Property>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Segoe UI" size="20" style="0"/>
-                                </Property>
-                              </Properties>
-                            </Component>
-                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_add_pro_brand7">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
-                                </Property>
-                                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                  <StringArray count="4">
-                                    <StringItem index="0" value="CATERGORY"/>
-                                    <StringItem index="1" value="John"/>
-                                    <StringItem index="2" value="Mark"/>
-                                    <StringItem index="3" value="Elon"/>
                                   </StringArray>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -6646,11 +6572,38 @@
                                   <Properties>
                                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                                       <Table columnCount="4" rowCount="4">
-                                        <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                                        <Column editable="true" title="MODEL" type="java.lang.Object"/>
                                         <Column editable="true" title="Title 2" type="java.lang.Object"/>
                                         <Column editable="true" title="Title 3" type="java.lang.Object"/>
                                         <Column editable="true" title="Title 4" type="java.lang.Object"/>
                                       </Table>
+                                    </Property>
+                                    <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                                      <TableColumnModel selectionModel="0">
+                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                          <Title/>
+                                          <Editor/>
+                                          <Renderer/>
+                                        </Column>
+                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                          <Title/>
+                                          <Editor/>
+                                          <Renderer/>
+                                        </Column>
+                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                          <Title/>
+                                          <Editor/>
+                                          <Renderer/>
+                                        </Column>
+                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                          <Title/>
+                                          <Editor/>
+                                          <Renderer/>
+                                        </Column>
+                                      </TableColumnModel>
+                                    </Property>
+                                    <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                                      <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                                     </Property>
                                   </Properties>
                                 </Component>
@@ -6841,9 +6794,9 @@
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="null"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="Calculator"/>
+                                <Property name="text" type="java.lang.String" value="ADD"/>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Segoe UI" size="24" style="0"/>
+                                  <Font name="Segoe UI" size="20" style="0"/>
                                 </Property>
                                 <Property name="kBorderRadius" type="int" value="30"/>
                                 <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -6862,9 +6815,6 @@
                                   <Color blue="79" green="52" red="44" type="rgb"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginBtn16ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="com.k33ptoo.components.KButton" name="loginBtn17">
                               <Properties>
@@ -6931,14 +6881,39 @@
                                 <Property name="text" type="java.lang.String" value="EMAIL"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="jTextField5">
+                            <Component class="javax.swing.JTextField" name="txt_add_bill_con">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="CONTACT NO."/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="jTextField6">
+                            <Component class="javax.swing.JTextField" name="txt_add_bill_qty">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="QTY"/>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JTextField" name="txt_add_bill_snm">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="SHOP NAME"/>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JTextField" name="txt_add_bill_price">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="PRICE"/>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JTextField" name="txt_add_bill_ctgry">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="CATEGORY"/>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JTextField" name="txt_add_bill_brand">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="BRAND"/>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JTextField" name="txt_add_bill_model">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="MODEL"/>
                               </Properties>
                             </Component>
                           </SubComponents>
