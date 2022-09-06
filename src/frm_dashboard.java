@@ -17,6 +17,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.imageio.ImageIO;
@@ -283,7 +284,10 @@ public class frm_dashboard extends javax.swing.JFrame
         combo_edit_pro_modelid = new combo_suggestion.ComboBoxSuggestion();
         combo_add_pro_proid = new combo_suggestion.ComboBoxSuggestion();
         panel_prodet = new com.k33ptoo.components.KGradientPanel();
-        jTextField3 = new javax.swing.JTextField();
+        txt_prodet_proid = new textfield.TextField();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        table_empdet1 = new javax.swing.JTable()
+        ;
         panel_pro_fulldet = new com.k33ptoo.components.KGradientPanel();
         panel_promenu = new com.k33ptoo.components.KGradientPanel();
         panel_addpro_menu = new com.k33ptoo.components.KGradientPanel();
@@ -315,8 +319,8 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_billmain = new com.k33ptoo.components.KGradientPanel();
         panel_createbill = new com.k33ptoo.components.KGradientPanel();
         loginBtn15 = new com.k33ptoo.components.KButton();
-        combo_add_pro_brand2 = new combo_suggestion.ComboBoxSuggestion();
-        combo_add_pro_brand3 = new combo_suggestion.ComboBoxSuggestion();
+        combo_add_bill_cusid = new combo_suggestion.ComboBoxSuggestion();
+        combo_add_bill_snm = new combo_suggestion.ComboBoxSuggestion();
         combo_add_pro_brand4 = new combo_suggestion.ComboBoxSuggestion();
         combo_add_pro_brand5 = new combo_suggestion.ComboBoxSuggestion();
         combo_add_pro_brand6 = new combo_suggestion.ComboBoxSuggestion();
@@ -340,7 +344,7 @@ public class frm_dashboard extends javax.swing.JFrame
         loginBtn16 = new com.k33ptoo.components.KButton();
         loginBtn17 = new com.k33ptoo.components.KButton();
         loginBtn18 = new com.k33ptoo.components.KButton();
-        jTextField4 = new javax.swing.JTextField();
+        txt_add_bill_email = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
         panel_updatbill = new com.k33ptoo.components.KGradientPanel();
@@ -2867,6 +2871,13 @@ public class frm_dashboard extends javax.swing.JFrame
                 loginBtn6MouseClicked(evt);
             }
         });
+        loginBtn6.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                loginBtn6ActionPerformed(evt);
+            }
+        });
 
         txt_add_pro_id.setBackground(new java.awt.Color(228, 235, 246));
         txt_add_pro_id.setHorizontalAlignment(javax.swing.JTextField.LEFT);
@@ -3743,23 +3754,79 @@ public class frm_dashboard extends javax.swing.JFrame
         panel_prodet.setkStartColor(new java.awt.Color(228, 235, 246));
         panel_prodet.setOpaque(false);
 
-        jTextField3.setText("jTextField3");
+        txt_prodet_proid.setBackground(new java.awt.Color(228, 235, 246));
+        txt_prodet_proid.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txt_prodet_proid.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txt_prodet_proid.setLabelText("EMPLOYEE ID OR NAME");
+        txt_prodet_proid.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_prodet_proid.setSelectionColor(new java.awt.Color(68, 82, 121));
+        txt_prodet_proid.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                txt_prodet_proidKeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                txt_prodet_proidKeyReleased(evt);
+            }
+        });
+
+        jScrollPane5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+
+        table_empdet1.setBackground(new java.awt.Color(228, 235, 246));
+        table_empdet1.setFont(new java.awt.Font("Segoe UI", 0, 21)); // NOI18N
+        table_empdet1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][]
+            {
+
+            },
+            new String []
+            {
+                "ID", "Coss Price", "Sell price", "Qty", "Category", "Brand", "Model"
+            }
+        )
+        {
+            boolean[] canEdit = new boolean []
+            {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex)
+            {
+                return canEdit [columnIndex];
+            }
+        });
+        table_empdet1.setOpaque(false);
+        table_empdet1.setRowHeight(40);
+        table_empdet1.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                table_empdet1KeyPressed(evt);
+            }
+        });
+        jScrollPane5.setViewportView(table_empdet1);
 
         javax.swing.GroupLayout panel_prodetLayout = new javax.swing.GroupLayout(panel_prodet);
         panel_prodet.setLayout(panel_prodetLayout);
         panel_prodetLayout.setHorizontalGroup(
             panel_prodetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_prodetLayout.createSequentialGroup()
-                .addGap(389, 389, 389)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(517, Short.MAX_VALUE))
+                .addGap(25, 25, 25)
+                .addGroup(panel_prodetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txt_prodet_proid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 961, Short.MAX_VALUE))
+                .addGap(25, 25, 25))
         );
         panel_prodetLayout.setVerticalGroup(
             panel_prodetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_prodetLayout.createSequentialGroup()
-                .addGap(206, 206, 206)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(369, Short.MAX_VALUE))
+                .addGap(25, 25, 25)
+                .addComponent(txt_prodet_proid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(25, 25, 25)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)
+                .addGap(25, 25, 25))
         );
 
         panel_pro_fulldet.setkBorderRadius(40);
@@ -4590,13 +4657,13 @@ public class frm_dashboard extends javax.swing.JFrame
             }
         });
 
-        combo_add_pro_brand2.setBackground(new java.awt.Color(228, 235, 246));
-        combo_add_pro_brand2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Customer ID", "John", "Mark", "Elon" }));
-        combo_add_pro_brand2.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        combo_add_bill_cusid.setBackground(new java.awt.Color(228, 235, 246));
+        combo_add_bill_cusid.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Customer ID", "John", "Mark", "Elon" }));
+        combo_add_bill_cusid.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
 
-        combo_add_pro_brand3.setBackground(new java.awt.Color(228, 235, 246));
-        combo_add_pro_brand3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Shop Name", "A001", "A002" }));
-        combo_add_pro_brand3.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        combo_add_bill_snm.setBackground(new java.awt.Color(228, 235, 246));
+        combo_add_bill_snm.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Shop Name", "A001", "A002" }));
+        combo_add_bill_snm.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
 
         combo_add_pro_brand4.setBackground(new java.awt.Color(228, 235, 246));
         combo_add_pro_brand4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Product Model", "John", "Mark", "Elon" }));
@@ -4768,7 +4835,7 @@ public class frm_dashboard extends javax.swing.JFrame
             }
         });
 
-        jTextField4.setText("EMAIL");
+        txt_add_bill_email.setText("EMAIL");
 
         jTextField5.setText("CONTACT NO.");
 
@@ -4785,12 +4852,12 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_createbillLayout.createSequentialGroup()
                         .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(combo_add_pro_brand2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(combo_add_bill_cusid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
-                        .addComponent(combo_add_pro_brand3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(combo_add_bill_snm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_add_bill_email, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(31, 31, 31))
@@ -4843,10 +4910,10 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_createbillLayout.createSequentialGroup()
                         .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(combo_add_pro_brand3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(combo_add_bill_snm, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(combo_add_pro_brand2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(combo_add_bill_cusid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_add_bill_email, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -6181,17 +6248,17 @@ public class frm_dashboard extends javax.swing.JFrame
     }//GEN-LAST:event_btn_detProFocusLost
 
     private void btn_detProMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_detProMouseClicked
-        visibility(jTextField3, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, true, panel_pro_fulldet, false);
+        visibility(txt_prodet_proid, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, true, panel_pro_fulldet, false);
         indicatorOn(indicatorDetpro, indicatorAddpro, indicatorAddmodal, indicatorEditpro);
         HoverColor(btn_detPro, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_detProMouseClicked
 
     private void btn_detProKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_detProKeyPressed
-        visibility(jTextField3, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, true, panel_pro_fulldet, false);
-
+        visibility(txt_prodet_proid, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, true, panel_pro_fulldet, false);
         escape(lbl_product, evt.getKeyCode(), panel_product);
         indicatorOn(indicatorDetpro, indicatorAddpro, indicatorAddmodal, indicatorEditpro);
         HoverColor(btn_detPro, new Color(178, 199, 231), new Color(255, 255, 255));
+        fetchDataIntoTablepro(table_empdet1, "product");
     }//GEN-LAST:event_btn_detProKeyPressed
 
     private void btn_addempMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addempMouseEntered
@@ -6367,10 +6434,12 @@ public class frm_dashboard extends javax.swing.JFrame
     private void btn_addbillKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_addbillKeyPressed
     {//GEN-HEADEREND:event_btn_addbillKeyPressed
         visibility(txt_add_promcb_ctgy_nm, panel_createbill, true, panel_updatbill, false, panel_detbill, false, panel_extrabill, false);
-
         escape(lbl_bill, evt.getKeyCode(), panel_bill);
         indicatorOn(indicatorAddbill, indicator_updt_bill, indicator_bill_det, indicatorExtraBill);
         HoverColor(btn_addbill, new Color(178, 199, 231), new Color(255, 255, 255));
+        comboboxdataId(combo_add_bill_cusid, "customer");
+        comboboxdata(combo_add_bill_snm, "customer");
+        comboboxdataId(combo_add_bill_cusid, "customer");
     }//GEN-LAST:event_btn_addbillKeyPressed
 
     private void btn_updtbillFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_updtbillFocusGained
@@ -6416,7 +6485,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void btn_detPro1MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_detPro1MouseClicked
     {//GEN-HEADEREND:event_btn_detPro1MouseClicked
-        visibility(jTextField3, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, true, panel_pro_fulldet, false);
+        visibility(txt_prodet_proid, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, true, panel_pro_fulldet, false);
         indicatorOn(indicatorDetpro, indicatorAddpro, indicatorAddmodal, indicatorEditpro);
         HoverColor(btn_detPro, new Color(178, 199, 231), new Color(255, 255, 255));
     }//GEN-LAST:event_btn_detPro1MouseClicked
@@ -6428,8 +6497,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void btn_detPro1KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_detPro1KeyPressed
     {//GEN-HEADEREND:event_btn_detPro1KeyPressed
-        visibility(jTextField3, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, true, panel_pro_fulldet, false);
-
+        visibility(txt_prodet_proid, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, true, panel_pro_fulldet, false);
         escape(lbl_product, evt.getKeyCode(), panel_product);
         indicatorOn(indicatorDetpro, indicatorAddpro, indicatorAddmodal, indicatorEditpro);
         HoverColor(btn_detPro, new Color(178, 199, 231), new Color(255, 255, 255));
@@ -6898,6 +6966,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private void loginBtn6MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_loginBtn6MouseClicked
     {//GEN-HEADEREND:event_loginBtn6MouseClicked
         addProduct();
+        autoId(txt_add_pro_id, "product");
     }//GEN-LAST:event_loginBtn6MouseClicked
 
     private void txt_edit_pro_brandnmKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_pro_brandnmKeyPressed
@@ -7083,6 +7152,26 @@ public class frm_dashboard extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_edit_modeldelMouseClicked
         brandDelete("model", combo_edit_pro_modelid);
     }//GEN-LAST:event_btn_edit_modeldelMouseClicked
+
+    private void txt_prodet_proidKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_prodet_proidKeyPressed
+    {//GEN-HEADEREND:event_txt_prodet_proidKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_prodet_proidKeyPressed
+
+    private void txt_prodet_proidKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_prodet_proidKeyReleased
+    {//GEN-HEADEREND:event_txt_prodet_proidKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_prodet_proidKeyReleased
+
+    private void table_empdet1KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_table_empdet1KeyPressed
+    {//GEN-HEADEREND:event_table_empdet1KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_table_empdet1KeyPressed
+
+    private void loginBtn6ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_loginBtn6ActionPerformed
+    {//GEN-HEADEREND:event_loginBtn6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loginBtn6ActionPerformed
 
     public static void main(String args[])
     {
@@ -7790,6 +7879,8 @@ public class frm_dashboard extends javax.swing.JFrame
             String selectQuery = "select * from " + dbTablenm;
             st = con.createStatement();
             rs = st.executeQuery(selectQuery);
+            ArrayList<frm_dashboard> list = new ArrayList<frm_dashboard>();
+            frm_dashboard f;
 
             while (rs.next())
             {
@@ -7804,6 +7895,43 @@ public class frm_dashboard extends javax.swing.JFrame
                 {
                     id, nm, contact, email, salary, address
                 };
+
+                TableModel.addRow(Row);
+
+            }
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, "Can't fetch employee data into the table because of: " + e);
+        }
+    }
+
+    public void fetchDataIntoTablepro(JTable tablenm, String dbTablenm)
+    {
+        try
+        {
+            TableModel = (DefaultTableModel) tablenm.getModel();
+            TableModel.setRowCount(0);
+            String selectQuery = "select * from " + dbTablenm;
+            st = con.createStatement();
+            rs = st.executeQuery(selectQuery);
+
+            while (rs.next())
+            {
+                String id = rs.getString("id");
+                String cprice = rs.getString("cprice");
+                String sprice = rs.getString("sprice");
+                String ctgry = rs.getString("ctgry");
+                String brand = rs.getString("brand");
+                String model = rs.getString("model");
+                String qty = rs.getString("qty");
+                String dsc = rs.getString("dsc");
+
+                String[] Row =
+                {
+                    id, cprice, sprice, ctgry, brand, model, qty, dsc
+                };
+
                 TableModel.addRow(Row);
             }
         }
@@ -8012,9 +8140,9 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KButton btn_setting;
     private com.k33ptoo.components.KButton btn_updtbill;
     private com.k33ptoo.components.KButton btn_updtbill1;
+    private combo_suggestion.ComboBoxSuggestion combo_add_bill_cusid;
+    private combo_suggestion.ComboBoxSuggestion combo_add_bill_snm;
     private combo_suggestion.ComboBoxSuggestion combo_add_pro_brand;
-    private combo_suggestion.ComboBoxSuggestion combo_add_pro_brand2;
-    private combo_suggestion.ComboBoxSuggestion combo_add_pro_brand3;
     private combo_suggestion.ComboBoxSuggestion combo_add_pro_brand4;
     private combo_suggestion.ComboBoxSuggestion combo_add_pro_brand5;
     private combo_suggestion.ComboBoxSuggestion combo_add_pro_brand6;
@@ -8074,6 +8202,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JSeparator jSeparator1;
@@ -8089,8 +8218,6 @@ public class frm_dashboard extends javax.swing.JFrame
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private com.k33ptoo.components.KGradientPanel kGradientPanel1;
@@ -8202,9 +8329,11 @@ public class frm_dashboard extends javax.swing.JFrame
     private javax.swing.JTable table_custdet;
     private javax.swing.JTable table_custedit;
     private javax.swing.JTable table_empdet;
+    private javax.swing.JTable table_empdet1;
     private javax.swing.JTable table_empedit;
     private textarea.TextAreaScroll textAreaScroll2;
     private textarea.TextAreaScroll textAreaScroll3;
+    private javax.swing.JTextField txt_add_bill_email;
     private textfield.TextField txt_add_custemail;
     private textfield.TextField txt_add_custid;
     private textfield.TextField txt_add_custid1;
@@ -8256,5 +8385,6 @@ public class frm_dashboard extends javax.swing.JFrame
     private textfield.TextField txt_edit_pro_ctgynm;
     private textfield.TextField txt_edit_pro_modelnm;
     private textfield.TextField txt_edit_pro_sprice;
+    private textfield.TextField txt_prodet_proid;
     // End of variables declaration//GEN-END:variables
 }
