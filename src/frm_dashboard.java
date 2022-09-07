@@ -7004,7 +7004,8 @@ public class frm_dashboard extends javax.swing.JFrame
                     combo_edit_pro_model.setSelectedItem(rs.getString("model"));
                     spinner_edit_pro_qty.setValue(Integer.parseInt(rs.getString("qty")));
                     BufferedImage im = ImageIO.read(rs.getBinaryStream("pic"));
-                    lbl_edit_proimg.setIcon(new ImageIcon(im));
+                    ImageIcon icon = new ImageIcon(new ImageIcon(im).getImage().getScaledInstance(lbl_edit_proimg.getWidth(), lbl_edit_proimg.getHeight(), Image.SCALE_SMOOTH));
+                    lbl_edit_proimg.setIcon(icon);
                 }
             }
             catch (Exception e)
@@ -8046,6 +8047,7 @@ public class frm_dashboard extends javax.swing.JFrame
         {
             ps = con.prepareStatement(query);
             rs = ps.executeQuery();
+
             combobox.setSelectedIndex(0);
             while (rs.next())
             {
