@@ -314,7 +314,7 @@ public class frm_dashboard extends javax.swing.JFrame {
         combo_add_bill_cusid = new combo_suggestion.ComboBoxSuggestion();
         combo_add_bill_proid = new combo_suggestion.ComboBoxSuggestion();
         jScrollPane8 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        productTable = new javax.swing.JTable();
         jLabel7 = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
         jLabel8 = new javax.swing.JLabel();
@@ -328,18 +328,19 @@ public class frm_dashboard extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
+        lbl_totalPrice = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
-        loginBtn16 = new com.k33ptoo.components.KButton();
+        btn_proadd_table = new com.k33ptoo.components.KButton();
         loginBtn17 = new com.k33ptoo.components.KButton();
         loginBtn18 = new com.k33ptoo.components.KButton();
         txt_add_bill_email = new javax.swing.JTextField();
         txt_add_bill_con = new javax.swing.JTextField();
-        txt_add_bill_qty = new javax.swing.JTextField();
         txt_add_bill_snm = new javax.swing.JTextField();
         txt_add_bill_price = new javax.swing.JTextField();
         txt_add_bill_ctgry = new javax.swing.JTextField();
         txt_add_bill_brand = new javax.swing.JTextField();
         txt_add_bill_model = new javax.swing.JTextField();
+        txt_add_pro_qty1 = new spinner.Spinner();
         panel_updatbill = new com.k33ptoo.components.KGradientPanel();
         jScrollPane9 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
@@ -4279,18 +4280,24 @@ public class frm_dashboard extends javax.swing.JFrame {
             }
         });
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        productTable.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        productTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "MODEL", "Title 2", "Title 3", "Title 4"
+                "ID", "CATEGORY", "BRAND", "MODEL", "PRICE", "QTY", "TOTAL"
             }
-        ));
-        jScrollPane8.setViewportView(jTable2);
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane8.setViewportView(productTable);
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 22)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -4350,6 +4357,9 @@ public class frm_dashboard extends javax.swing.JFrame {
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLabel18.setText("Net Total :");
 
+        lbl_totalPrice.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        lbl_totalPrice.setText("TOTAL :");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -4357,19 +4367,24 @@ public class frm_dashboard extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
-                        .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                            .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(9, 9, 9)
+                        .addComponent(lbl_totalPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel17))
-                .addContainerGap(136, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel14)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(lbl_totalPrice))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel15)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -4380,15 +4395,20 @@ public class frm_dashboard extends javax.swing.JFrame {
                 .addComponent(jLabel17))
         );
 
-        loginBtn16.setBorder(null);
-        loginBtn16.setText("ADD");
-        loginBtn16.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        loginBtn16.setkBorderRadius(30);
-        loginBtn16.setkEndColor(new java.awt.Color(68, 82, 121));
-        loginBtn16.setkHoverEndColor(new java.awt.Color(178, 199, 231));
-        loginBtn16.setkHoverForeGround(new java.awt.Color(68, 82, 121));
-        loginBtn16.setkHoverStartColor(new java.awt.Color(178, 199, 231));
-        loginBtn16.setkStartColor(new java.awt.Color(68, 82, 121));
+        btn_proadd_table.setBorder(null);
+        btn_proadd_table.setText("ADD");
+        btn_proadd_table.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        btn_proadd_table.setkBorderRadius(30);
+        btn_proadd_table.setkEndColor(new java.awt.Color(68, 82, 121));
+        btn_proadd_table.setkHoverEndColor(new java.awt.Color(178, 199, 231));
+        btn_proadd_table.setkHoverForeGround(new java.awt.Color(68, 82, 121));
+        btn_proadd_table.setkHoverStartColor(new java.awt.Color(178, 199, 231));
+        btn_proadd_table.setkStartColor(new java.awt.Color(68, 82, 121));
+        btn_proadd_table.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_proadd_tableMouseClicked(evt);
+            }
+        });
 
         loginBtn17.setBorder(null);
         loginBtn17.setText("SAVE");
@@ -4428,10 +4448,6 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_add_bill_con.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txt_add_bill_con.setText("CONTACT NO.");
 
-        txt_add_bill_qty.setEditable(false);
-        txt_add_bill_qty.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txt_add_bill_qty.setText("QTY");
-
         txt_add_bill_snm.setEditable(false);
         txt_add_bill_snm.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txt_add_bill_snm.setText("SHOP NAME");
@@ -4451,6 +4467,9 @@ public class frm_dashboard extends javax.swing.JFrame {
         txt_add_bill_model.setEditable(false);
         txt_add_bill_model.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txt_add_bill_model.setText("MODEL");
+
+        txt_add_pro_qty1.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txt_add_pro_qty1.setLabelText("QTY");
 
         javax.swing.GroupLayout panel_createbillLayout = new javax.swing.GroupLayout(panel_createbill);
         panel_createbill.setLayout(panel_createbillLayout);
@@ -4492,17 +4511,18 @@ public class frm_dashboard extends javax.swing.JFrame {
                                     .addGroup(panel_createbillLayout.createSequentialGroup()
                                         .addComponent(txt_add_bill_price, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(txt_add_bill_qty, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(loginBtn15, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(loginBtn16, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txt_add_pro_qty1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(panel_createbillLayout.createSequentialGroup()
                                         .addComponent(combo_add_bill_proid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(txt_add_bill_ctgry, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txt_add_bill_ctgry, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(18, 18, 18)
+                                .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txt_add_bill_brand, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_createbillLayout.createSequentialGroup()
+                                        .addComponent(loginBtn15, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(txt_add_bill_brand, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(btn_proadd_table, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(25, 25, 25))))
             .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_createbillLayout.createSequentialGroup()
@@ -4528,20 +4548,22 @@ public class frm_dashboard extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(combo_add_bill_proid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_add_bill_ctgry, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_add_bill_brand, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_add_bill_ctgry, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+                    .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(combo_add_bill_proid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_add_bill_brand, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txt_add_bill_qty, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txt_add_bill_price, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_add_bill_model, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(loginBtn15, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
-                    .addComponent(loginBtn16, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_add_bill_model, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_add_bill_price, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_add_pro_qty1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panel_createbillLayout.createSequentialGroup()
+                        .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(btn_proadd_table, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(loginBtn15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -5426,6 +5448,8 @@ public class frm_dashboard extends javax.swing.JFrame {
         visibility(evt.getKeyCode(), btn_addbill, false, false, false, true, false, false, false);
         visibility(panel_createbill, true, panel_updatbill, false, panel_detbill, false, panel_detbill, false);
         indicator(indicatorAddbill, indicator_updt_bill, indicator_bill_det);
+        comboboxdataId(combo_add_bill_cusid, "customer", "CUSTOMER ID");
+        comboboxdataId(combo_add_bill_proid, "product", "PRODUCT ID");
     }//GEN-LAST:event_lbl_billKeyPressed
 
     private void lbl_billMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_billMouseExited
@@ -5447,6 +5471,8 @@ public class frm_dashboard extends javax.swing.JFrame {
         comboboxdata(combo_add_pro_ctgry, "category");
         comboboxdata(combo_add_pro_brand, "brand");
         comboboxdata(combo_add_pro_model, "model");
+        comboboxdataId(combo_add_bill_cusid, "customer", "CUSTOMER ID");
+        comboboxdataId(combo_add_bill_proid, "product", "PRODUCT ID");
     }//GEN-LAST:event_lbl_billMouseClicked
 
     private void lbl_billFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_billFocusLost
@@ -6706,14 +6732,14 @@ public class frm_dashboard extends javax.swing.JFrame {
 
     private void combo_add_bill_cusidItemStateChanged(java.awt.event.ItemEvent evt)//GEN-FIRST:event_combo_add_bill_cusidItemStateChanged
     {//GEN-HEADEREND:event_combo_add_bill_cusidItemStateChanged
-        if ("CUSTOMER ID".equals(combo_add_bill_cusid.getSelectedItem().toString())) {
+        if (combo_add_bill_cusid.getSelectedItem() == "CUSTOMER ID") {
             txt_add_bill_con.setText("CONTACT NO.");
             txt_add_bill_email.setText("EMAIL");
             txt_add_bill_snm.setText("SHOP NAME");
 
         } else {
             try {
-                String query = "select * from customer where id = " + combo_add_bill_cusid.getSelectedItem().toString();
+                String query = "select * from customer";
                 ps = con.prepareStatement(query);
                 rs = ps.executeQuery();
                 while (rs.next()) {
@@ -6728,29 +6754,45 @@ public class frm_dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_combo_add_bill_cusidItemStateChanged
 
     private void combo_add_bill_proidItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_combo_add_bill_proidItemStateChanged
-        if ("PRODUCT ID".equals(combo_add_bill_proid.getSelectedItem().toString())) {
+        if (combo_add_bill_proid.getSelectedItem() == "PRODUCT ID") {
             txt_add_bill_ctgry.setText("CATEGORY");
             txt_add_bill_brand.setText("BRAND");
             txt_add_bill_model.setText("MODEL");
             txt_add_bill_price.setText("PRICE");
-            txt_add_bill_qty.setText("QTY");
         } else {
             try {
-                String query = "select * from product where id = " + combo_add_bill_proid.getSelectedItem().toString();
+                String query = "select * from product";
                 ps = con.prepareStatement(query);
                 rs = ps.executeQuery();
                 while (rs.next()) {
                     txt_add_bill_ctgry.setText(rs.getString("ctgry"));
                     txt_add_bill_brand.setText(rs.getString("brand"));
                     txt_add_bill_model.setText(rs.getString("model"));
-                    txt_add_bill_price.setText(rs.getString("price"));
-                    txt_add_bill_qty.setText(rs.getString("qty"));
+                    txt_add_bill_price.setText(rs.getString("sprice"));
                 }
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, e.getMessage());
             }
         }
     }//GEN-LAST:event_combo_add_bill_proidItemStateChanged
+
+    private void btn_proadd_tableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_proadd_tableMouseClicked
+        if (combo_add_bill_proid.getSelectedItem() != "PRODUCT ID") {
+            int total = Integer.parseInt(txt_add_bill_price.getText());
+            int qty = Integer.parseInt(txt_add_pro_qty1.getValue().toString());
+
+            DefaultTableModel model = (DefaultTableModel) productTable.getModel();
+            model.addRow(new Object[]{combo_add_bill_proid.getSelectedItem().toString(), txt_add_bill_ctgry.getText(), txt_add_bill_brand.getText(), txt_add_bill_model.getText(), total, qty, (total * qty)});
+
+//            Final total calculate here:
+            int rowCount = productTable.getRowCount();
+            int finalTotal = 0;
+            for (int i = 0; i < rowCount; i++) {
+                finalTotal = finalTotal + Integer.parseInt(productTable.getValueAt(i, 6).toString());
+            }
+            lbl_totalPrice.setText(Integer.toString(finalTotal));
+        }
+    }//GEN-LAST:event_btn_proadd_tableMouseClicked
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -7565,6 +7607,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private com.k33ptoo.components.KButton btn_editcust;
     private com.k33ptoo.components.KButton btn_editemp;
     private com.k33ptoo.components.KButton btn_empdet;
+    private com.k33ptoo.components.KButton btn_proadd_table;
     private com.k33ptoo.components.KButton btn_setting;
     private com.k33ptoo.components.KButton btn_updtbill;
     private com.k33ptoo.components.KButton btn_updtbill1;
@@ -7639,7 +7682,6 @@ public class frm_dashboard extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTextField jTextField1;
     private com.k33ptoo.components.KGradientPanel kGradientPanel1;
@@ -7673,10 +7715,10 @@ public class frm_dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_gt;
     private javax.swing.JLabel lbl_min;
     private javax.swing.JLabel lbl_product;
+    private javax.swing.JLabel lbl_totalPrice;
     private javax.swing.JLabel lbl_user;
     private com.k33ptoo.components.KButton loginBtn;
     private com.k33ptoo.components.KButton loginBtn15;
-    private com.k33ptoo.components.KButton loginBtn16;
     private com.k33ptoo.components.KButton loginBtn17;
     private com.k33ptoo.components.KButton loginBtn18;
     private com.k33ptoo.components.KButton loginBtn19;
@@ -7747,6 +7789,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private com.k33ptoo.components.KGradientPanel pnl_product;
     private com.k33ptoo.components.KGradientPanel pnl_sidepane;
     private com.k33ptoo.components.KGradientPanel pnl_user;
+    private javax.swing.JTable productTable;
     private spinner.Spinner spinner_edit_pro_qty;
     private javax.swing.JTable table_custdet;
     private javax.swing.JTable table_custedit;
@@ -7761,7 +7804,6 @@ public class frm_dashboard extends javax.swing.JFrame {
     private javax.swing.JTextField txt_add_bill_email;
     private javax.swing.JTextField txt_add_bill_model;
     private javax.swing.JTextField txt_add_bill_price;
-    private javax.swing.JTextField txt_add_bill_qty;
     private javax.swing.JTextField txt_add_bill_snm;
     private textfield.TextField txt_add_custemail;
     private textfield.TextField txt_add_custid;
@@ -7790,6 +7832,7 @@ public class frm_dashboard extends javax.swing.JFrame {
     private textfield.TextField txt_add_pro_id8;
     private textfield.TextField txt_add_pro_id9;
     private spinner.Spinner txt_add_pro_qty;
+    private spinner.Spinner txt_add_pro_qty1;
     private textfield.TextField txt_add_pro_sprice;
     private textfield.TextField txt_add_promcb_brand_id;
     private textfield.TextField txt_add_promcb_brand_nm;
