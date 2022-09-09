@@ -102,7 +102,7 @@
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="pnl_sidepane" max="32767" attributes="0"/>
-                          <Component id="panel_main" pref="715" max="32767" attributes="0"/>
+                          <Component id="panel_main" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
@@ -160,7 +160,7 @@
                           <Component id="pnl_account" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="pnl_user" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="26" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -786,25 +786,25 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Component id="panel_user" alignment="1" pref="715" max="32767" attributes="0"/>
+                          <Component id="panel_user" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-                          <Component id="panel_product" alignment="1" pref="715" max="32767" attributes="0"/>
+                          <Component id="panel_product" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
-                          <Component id="panel_bill" alignment="0" pref="715" max="32767" attributes="0"/>
+                          <Component id="panel_bill" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="4" groupAlignment="0" attributes="0">
-                          <Component id="panel_account" alignment="1" pref="715" max="32767" attributes="0"/>
+                          <Component id="panel_account" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
-                          <Component id="panel_employee" alignment="0" pref="715" max="32767" attributes="0"/>
+                          <Component id="panel_employee" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="6" groupAlignment="0" attributes="0">
-                          <Component id="panel_extra" alignment="1" pref="715" max="32767" attributes="0"/>
+                          <Component id="panel_extra" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="7" groupAlignment="0" attributes="0">
-                          <Component id="panel_customer" alignment="0" pref="715" max="32767" attributes="0"/>
+                          <Component id="panel_customer" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -836,7 +836,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="panel_custmenu" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                              <Component id="panel_custmain" pref="665" max="32767" attributes="0"/>
+                              <Component id="panel_custmain" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -6328,7 +6328,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                  <Component id="panel_createbill" min="-2" pref="610" max="-2" attributes="0"/>
+                                  <Component id="panel_createbill" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace pref="30" max="32767" attributes="0"/>
                               </Group>
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
@@ -6497,13 +6497,10 @@
                                                   <Component id="loginBtn17" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                                   <Component id="loginBtn18" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                               </Group>
-                                              <EmptySpace min="0" pref="7" max="32767" attributes="0"/>
                                           </Group>
-                                          <Group type="102" attributes="0">
-                                              <Component id="jScrollPane8" min="-2" pref="237" max="-2" attributes="0"/>
-                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                          </Group>
+                                          <Component id="jScrollPane8" min="-2" pref="237" max="-2" attributes="0"/>
                                       </Group>
+                                      <EmptySpace min="0" pref="7" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -6852,8 +6849,20 @@
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JTextField" name="txt_add_bill_dis">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                  </Properties>
+                                  <Events>
+                                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_bill_disKeyReleased"/>
+                                  </Events>
                                 </Component>
                                 <Component class="javax.swing.JTextField" name="txt_add_bill_tax">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                  </Properties>
+                                  <Events>
+                                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_bill_taxKeyReleased"/>
+                                  </Events>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="lbl_add_bill_tot">
                                   <Properties>
@@ -6926,7 +6935,6 @@
                               </Properties>
                               <Events>
                                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginBtn17MouseClicked"/>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginBtn17ActionPerformed"/>
                               </Events>
                             </Component>
                             <Component class="com.k33ptoo.components.KButton" name="loginBtn18">

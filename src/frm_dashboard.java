@@ -846,7 +846,7 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addComponent(pnl_account, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(pnl_user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pnl_header.setkBorderRadius(30);
@@ -1873,7 +1873,7 @@ public class frm_dashboard extends javax.swing.JFrame
             .addGroup(panel_customerLayout.createSequentialGroup()
                 .addComponent(panel_custmenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(5, 5, 5)
-                .addComponent(panel_custmain, javax.swing.GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE))
+                .addComponent(panel_custmain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panel_employee.setkEndColor(new java.awt.Color(228, 235, 246));
@@ -4775,6 +4775,24 @@ public class frm_dashboard extends javax.swing.JFrame
 
         lbl_add_bill_ntot.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
 
+        txt_add_bill_dis.setText("0");
+        txt_add_bill_dis.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                txt_add_bill_disKeyReleased(evt);
+            }
+        });
+
+        txt_add_bill_tax.setText("0");
+        txt_add_bill_tax.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                txt_add_bill_taxKeyReleased(evt);
+            }
+        });
+
         lbl_add_bill_tot.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -4856,13 +4874,6 @@ public class frm_dashboard extends javax.swing.JFrame
             public void mouseClicked(java.awt.event.MouseEvent evt)
             {
                 loginBtn17MouseClicked(evt);
-            }
-        });
-        loginBtn17.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                loginBtn17ActionPerformed(evt);
             }
         });
 
@@ -5017,11 +5028,9 @@ public class frm_dashboard extends javax.swing.JFrame
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(loginBtn17, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(loginBtn18, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 7, Short.MAX_VALUE))
-                    .addGroup(panel_createbillLayout.createSequentialGroup()
-                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addComponent(loginBtn18, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 7, Short.MAX_VALUE))
         );
 
         panel_updatbill.setkBorderRadius(40);
@@ -5232,7 +5241,7 @@ public class frm_dashboard extends javax.swing.JFrame
             panel_billmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_billmainLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(panel_createbill, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panel_createbill, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(30, Short.MAX_VALUE))
             .addGroup(panel_billmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_billmainLayout.createSequentialGroup()
@@ -5777,19 +5786,19 @@ public class frm_dashboard extends javax.swing.JFrame
             panel_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(panel_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panel_user, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 715, Short.MAX_VALUE))
+                .addComponent(panel_user, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panel_product, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 715, Short.MAX_VALUE))
+                .addComponent(panel_product, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panel_bill, javax.swing.GroupLayout.DEFAULT_SIZE, 715, Short.MAX_VALUE))
+                .addComponent(panel_bill, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panel_account, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 715, Short.MAX_VALUE))
+                .addComponent(panel_account, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panel_employee, javax.swing.GroupLayout.DEFAULT_SIZE, 715, Short.MAX_VALUE))
+                .addComponent(panel_employee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panel_extra, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 715, Short.MAX_VALUE))
+                .addComponent(panel_extra, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panel_customer, javax.swing.GroupLayout.DEFAULT_SIZE, 715, Short.MAX_VALUE))
+                .addComponent(panel_customer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout kGradientPanel2Layout = new javax.swing.GroupLayout(kGradientPanel2);
@@ -5811,7 +5820,7 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addGap(25, 25, 25)
                 .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnl_sidepane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panel_main, javax.swing.GroupLayout.DEFAULT_SIZE, 715, Short.MAX_VALUE))
+                    .addComponent(panel_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(25, 25, 25))
         );
 
@@ -6750,11 +6759,6 @@ public class frm_dashboard extends javax.swing.JFrame
         escape(btn_editPro, evt.getKeyCode());
     }//GEN-LAST:event_txt_edit_pro_spriceKeyPressed
 
-    private void loginBtn17ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_loginBtn17ActionPerformed
-    {//GEN-HEADEREND:event_loginBtn17ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_loginBtn17ActionPerformed
-
     private void loginBtn18ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_loginBtn18ActionPerformed
     {//GEN-HEADEREND:event_loginBtn18ActionPerformed
         // TODO add your handling code here:
@@ -7344,13 +7348,12 @@ public class frm_dashboard extends javax.swing.JFrame
             {
                 finalTotal = finalTotal + Integer.parseInt(productTable.getValueAt(i, 6).toString());
             }
-            lbl_add_bill_ntot.setText(Integer.toString(finalTotal));
+            lbl_add_bill_tot.setText(Integer.toString(finalTotal));
         }
     }//GEN-LAST:event_btn_proadd_tableMouseClicked
 
     private void loginBtn17MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_loginBtn17MouseClicked
     {//GEN-HEADEREND:event_loginBtn17MouseClicked
-
         txtarea_bill.append("\t\t Billing Application \n"
                 + "\n***************************************************************\n"
                 + "***************************************************************\n"
@@ -7379,6 +7382,37 @@ public class frm_dashboard extends javax.swing.JFrame
             Logger.getLogger(frm_dashboard.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_loginBtn17MouseClicked
+
+    private void txt_add_bill_taxKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_bill_taxKeyReleased
+    {//GEN-HEADEREND:event_txt_add_bill_taxKeyReleased
+        if (txt_add_bill_tax.getText().equals(""))
+        {
+            txt_add_bill_tax.setText("0");
+        }
+        else if (txt_add_bill_dis.getText().equals(""))
+        {
+            txt_add_bill_dis.setText("0");
+        }
+        int tax = Integer.parseInt(txt_add_bill_tax.getText());
+        int dis = Integer.parseInt(txt_add_bill_dis.getText());
+        lbl_add_bill_ntot.setText(Integer.toString(Integer.parseInt(lbl_add_bill_tot.getText()) + tax - dis));
+    }//GEN-LAST:event_txt_add_bill_taxKeyReleased
+
+    private void txt_add_bill_disKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_bill_disKeyReleased
+    {//GEN-HEADEREND:event_txt_add_bill_disKeyReleased
+        if (txt_add_bill_tax.getText().equals(""))
+        {
+            txt_add_bill_tax.setText("0");
+        }
+
+        else if (txt_add_bill_dis.getText().equals(""))
+        {
+            txt_add_bill_dis.setText("0");
+        }
+        int tax = Integer.parseInt(txt_add_bill_tax.getText());
+        int dis = Integer.parseInt(txt_add_bill_dis.getText());
+        lbl_add_bill_ntot.setText(Integer.toString(Integer.parseInt(lbl_add_bill_tot.getText()) + tax - dis));
+    }//GEN-LAST:event_txt_add_bill_disKeyReleased
 
     public static void main(String args[])
     {
