@@ -102,7 +102,7 @@
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="pnl_sidepane" max="32767" attributes="0"/>
-                          <Component id="panel_main" max="32767" attributes="0"/>
+                          <Component id="panel_main" pref="715" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
@@ -160,7 +160,7 @@
                           <Component id="pnl_account" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="pnl_user" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="26" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -786,25 +786,25 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Component id="panel_user" alignment="1" max="32767" attributes="0"/>
+                          <Component id="panel_user" alignment="1" pref="715" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-                          <Component id="panel_product" alignment="1" max="32767" attributes="0"/>
+                          <Component id="panel_product" alignment="1" pref="715" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
-                          <Component id="panel_bill" alignment="0" max="32767" attributes="0"/>
+                          <Component id="panel_bill" alignment="0" pref="715" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="4" groupAlignment="0" attributes="0">
-                          <Component id="panel_account" alignment="1" max="32767" attributes="0"/>
+                          <Component id="panel_account" alignment="1" pref="715" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
-                          <Component id="panel_employee" alignment="0" max="32767" attributes="0"/>
+                          <Component id="panel_employee" alignment="0" pref="715" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="6" groupAlignment="0" attributes="0">
-                          <Component id="panel_extra" alignment="1" max="32767" attributes="0"/>
+                          <Component id="panel_extra" alignment="1" pref="715" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="7" groupAlignment="0" attributes="0">
-                          <Component id="panel_customer" alignment="0" max="32767" attributes="0"/>
+                          <Component id="panel_customer" alignment="0" pref="715" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -836,7 +836,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="panel_custmenu" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                              <Component id="panel_custmain" max="32767" attributes="0"/>
+                              <Component id="panel_custmain" pref="665" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -6328,8 +6328,8 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                  <Component id="panel_createbill" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="25" max="32767" attributes="0"/>
+                                  <Component id="panel_createbill" min="-2" pref="610" max="-2" attributes="0"/>
+                                  <EmptySpace pref="30" max="32767" attributes="0"/>
                               </Group>
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
@@ -6377,17 +6377,18 @@
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                                               <Component id="jScrollPane8" min="-2" pref="674" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                                                  <Group type="102" attributes="0">
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="1" attributes="0">
                                                       <Component id="loginBtn17" min="-2" pref="130" max="-2" attributes="0"/>
-                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                                       <Component id="loginBtn18" min="-2" pref="130" max="-2" attributes="0"/>
                                                   </Group>
+                                                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                              <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -6464,7 +6465,7 @@
                                       <Component id="jSeparator5" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="txt_add_bill_ctgry" alignment="1" pref="44" max="32767" attributes="0"/>
+                                          <Component id="txt_add_bill_ctgry" alignment="1" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLabel8" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
                                               <Component id="combo_add_bill_proid" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -6478,27 +6479,31 @@
                                           <Component id="txt_add_pro_qty1" alignment="1" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                  <Component id="btn_proadd_table" alignment="0" pref="0" max="32767" attributes="0"/>
-                                                  <Component id="loginBtn15" alignment="0" pref="42" max="32767" attributes="0"/>
+                                                  <Component id="btn_proadd_table" alignment="0" pref="42" max="32767" attributes="0"/>
+                                                  <Component id="loginBtn15" alignment="0" pref="0" max="32767" attributes="0"/>
                                               </Group>
-                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              <EmptySpace min="0" pref="21" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jSeparator6" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
-                                              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="loginBtn18" alignment="1" min="-2" pref="27" max="-2" attributes="0"/>
-                                                  <Component id="loginBtn17" alignment="1" min="-2" pref="27" max="-2" attributes="0"/>
+                                                  <Component id="jSeparator6" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                                               </Group>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="loginBtn17" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                                  <Component id="loginBtn18" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="0" pref="7" max="32767" attributes="0"/>
                                           </Group>
-                                          <Component id="jScrollPane8" min="-2" pref="237" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <Component id="jScrollPane8" min="-2" pref="237" max="-2" attributes="0"/>
+                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -6745,19 +6750,23 @@
                                       <Group type="102" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                      <Component id="jLabel14" alignment="0" min="-2" pref="106" max="-2" attributes="0"/>
-                                                      <Component id="jLabel18" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="jLabel16" alignment="0" pref="123" max="32767" attributes="0"/>
-                                                      <Component id="jLabel15" alignment="0" max="32767" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                                                  <Component id="lbl_totalPrice" min="-2" pref="106" max="-2" attributes="0"/>
+                                              <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="jLabel14" alignment="0" min="-2" pref="106" max="-2" attributes="0"/>
+                                                  <Component id="jLabel18" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="jLabel16" alignment="0" pref="123" max="32767" attributes="0"/>
+                                                  <Component id="jLabel15" alignment="0" max="32767" attributes="0"/>
                                               </Group>
-                                              <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel17" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="32" max="32767" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="txt_add_bill_paid" pref="125" max="32767" attributes="0"/>
+                                              <Component id="txt_add_bill_tax" pref="125" max="32767" attributes="0"/>
+                                              <Component id="txt_add_bill_dis" max="32767" attributes="0"/>
+                                              <Component id="lbl_add_bill_ntot" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="lbl_add_bill_tot" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -6765,18 +6774,31 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lbl_totalPrice" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_add_bill_tot" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txt_add_bill_tax" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                          </Group>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace pref="16" max="32767" attributes="0"/>
-                                          <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txt_add_bill_dis" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                          </Group>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_add_bill_ntot" min="-2" pref="27" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txt_add_bill_paid" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -6811,7 +6833,7 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Segoe UI" size="20" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Amount Paid :"/>
+                                    <Property name="text" type="java.lang.String" value="Paid :"/>
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabel18">
@@ -6822,13 +6844,25 @@
                                     <Property name="text" type="java.lang.String" value="Net Total :"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="lbl_totalPrice">
+                                <Component class="javax.swing.JLabel" name="lbl_add_bill_ntot">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Segoe UI" size="20" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="TOTAL :"/>
                                   </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="txt_add_bill_dis">
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="txt_add_bill_tax">
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="lbl_add_bill_tot">
+                                  <Properties>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Segoe UI" size="20" style="1"/>
+                                    </Property>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="txt_add_bill_paid">
                                 </Component>
                               </SubComponents>
                             </Container>
@@ -6891,6 +6925,7 @@
                                 </Property>
                               </Properties>
                               <Events>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginBtn17MouseClicked"/>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginBtn17ActionPerformed"/>
                               </Events>
                             </Component>
@@ -7269,15 +7304,40 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <EmptySpace min="0" pref="1011" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane6" min="-2" pref="522" max="-2" attributes="0"/>
+                                      <EmptySpace pref="299" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <EmptySpace min="0" pref="610" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane6" min="-2" pref="373" max="-2" attributes="0"/>
+                                      <EmptySpace pref="138" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
+                          <SubComponents>
+                            <Container class="javax.swing.JScrollPane" name="jScrollPane6">
+                              <AuxValues>
+                                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                              </AuxValues>
+
+                              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                              <SubComponents>
+                                <Component class="javax.swing.JTextArea" name="txtarea_bill">
+                                  <Properties>
+                                    <Property name="columns" type="int" value="20"/>
+                                    <Property name="rows" type="int" value="5"/>
+                                  </Properties>
+                                </Component>
+                              </SubComponents>
+                            </Container>
+                          </SubComponents>
                         </Container>
                         <Container class="com.k33ptoo.components.KGradientPanel" name="panel_extrabill">
                           <Properties>
