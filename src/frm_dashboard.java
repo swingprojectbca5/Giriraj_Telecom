@@ -7046,7 +7046,7 @@ public class frm_dashboard extends javax.swing.JFrame {
         table1 = (JTable) evt.getSource();
         try {
             if (evt.getClickCount() == 2 && table1.getSelectedRow() != -1) {
-                System.out.println("Hello");
+                table_bill.remove(table_bill.getSelectedRow());
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
