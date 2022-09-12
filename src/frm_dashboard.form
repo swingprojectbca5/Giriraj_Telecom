@@ -5830,9 +5830,9 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                  <Component id="panel_addcustmenu9" min="-2" max="-2" attributes="0"/>
+                                  <Component id="panel_addBill" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                  <Component id="panel_addcustmenu11" min="-2" max="-2" attributes="0"/>
+                                  <Component id="panel_updateBill" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                                   <Component id="panel_addcustmenu17" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -5843,15 +5843,15 @@
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="panel_addcustmenu9" alignment="0" max="32767" attributes="0"/>
-                              <Component id="panel_addcustmenu11" alignment="0" max="32767" attributes="0"/>
+                              <Component id="panel_addBill" alignment="0" max="32767" attributes="0"/>
+                              <Component id="panel_updateBill" alignment="0" max="32767" attributes="0"/>
                               <Component id="panel_addcustmenu16" alignment="0" max="32767" attributes="0"/>
                               <Component id="panel_addcustmenu17" alignment="0" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Container class="com.k33ptoo.components.KGradientPanel" name="panel_addcustmenu9">
+                        <Container class="com.k33ptoo.components.KGradientPanel" name="panel_addBill">
                           <Properties>
                             <Property name="kBorderRadius" type="int" value="40"/>
                             <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -5963,7 +5963,7 @@
                             </Component>
                           </SubComponents>
                         </Container>
-                        <Container class="com.k33ptoo.components.KGradientPanel" name="panel_addcustmenu11">
+                        <Container class="com.k33ptoo.components.KGradientPanel" name="panel_updateBill">
                           <Properties>
                             <Property name="kBorderRadius" type="int" value="40"/>
                             <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -6638,6 +6638,9 @@
                                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                                     </Property>
                                   </Properties>
+                                  <Events>
+                                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="productTableMouseClicked"/>
+                                  </Events>
                                 </Component>
                               </SubComponents>
                             </Container>
@@ -6692,8 +6695,8 @@
                                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                                           <Component id="jLabel10" min="-2" pref="96" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace pref="50" max="32767" attributes="0"/>
+                                          <Component id="lbl_billno" min="-2" pref="36" max="-2" attributes="0"/>
+                                          <EmptySpace pref="14" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -6703,7 +6706,7 @@
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel13" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                              <Component id="lbl_billno" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -6718,12 +6721,11 @@
                                     <Property name="text" type="java.lang.String" value="BILL NO."/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel13">
+                                <Component class="javax.swing.JLabel" name="lbl_billno">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Segoe UI" size="24" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="40"/>
                                     <Property name="toolTipText" type="java.lang.String" value=""/>
                                   </Properties>
                                 </Component>
@@ -7062,24 +7064,24 @@
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <Component id="txt_add_custid2" min="-2" pref="214" max="-2" attributes="0"/>
+                                              <Component id="txt_searchBill_data" min="-2" pref="214" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jCheckBox1" min="-2" pref="200" max="-2" attributes="0"/>
+                                              <Component id="chk_paddingBill" min="-2" pref="200" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" attributes="0">
                                               <Component id="jScrollPane9" min="-2" pref="961" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="combo_add_pro_brand8" min="-2" max="-2" attributes="0"/>
+                                              <Component id="combo_edit_billid" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txt_add_custid1" min="-2" pref="214" max="-2" attributes="0"/>
+                                              <Component id="txt_edit_paidTotal" min="-2" pref="214" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="loginBtn19" min="-2" pref="160" max="-2" attributes="0"/>
+                                              <Component id="btn_edit_editPaidTotal" min="-2" pref="160" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="loginBtn20" min="-2" pref="160" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="loginBtn21" min="-2" pref="160" max="-2" attributes="0"/>
+                                              <Component id="btn_edit_deleteBillDet" min="-2" pref="160" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
@@ -7093,21 +7095,21 @@
                                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="combo_add_pro_brand8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="txt_add_custid1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="combo_edit_billid" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txt_edit_paidTotal" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="loginBtn20" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                              <Component id="loginBtn19" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                              <Component id="loginBtn21" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                              <Component id="btn_edit_editPaidTotal" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                              <Component id="btn_edit_deleteBillDet" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                       <Component id="jSeparator7" min="-2" pref="10" max="-2" attributes="0"/>
                                       <EmptySpace pref="32" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jCheckBox1" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
-                                          <Component id="txt_add_custid2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="chk_paddingBill" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                                          <Component id="txt_searchBill_data" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jScrollPane9" min="-2" pref="350" max="-2" attributes="0"/>
@@ -7124,44 +7126,131 @@
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                               <SubComponents>
-                                <Component class="javax.swing.JTable" name="jTable3">
+                                <Component class="javax.swing.JTable" name="table_bill">
                                   <Properties>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Segoe UI" size="16" style="0"/>
+                                    </Property>
                                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                                      <Table columnCount="4" rowCount="4">
-                                        <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                                        <Column editable="true" title="Title 2" type="java.lang.Object"/>
-                                        <Column editable="true" title="Title 3" type="java.lang.Object"/>
-                                        <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                                      <Table columnCount="13" rowCount="4">
+                                        <Column editable="false" title="ID" type="java.lang.Object"/>
+                                        <Column editable="true" title="SNAME" type="java.lang.Object"/>
+                                        <Column editable="false" title="EMAIL" type="java.lang.Object"/>
+                                        <Column editable="false" title="CONTACT" type="java.lang.Object"/>
+                                        <Column editable="false" title="CATEGORY" type="java.lang.Object"/>
+                                        <Column editable="false" title="BRAND" type="java.lang.Object"/>
+                                        <Column editable="false" title="MODEL" type="java.lang.Object"/>
+                                        <Column editable="false" title="PRICE" type="java.lang.Object"/>
+                                        <Column editable="false" title="QTY" type="java.lang.Object"/>
+                                        <Column editable="false" title="TAX" type="java.lang.Object"/>
+                                        <Column editable="false" title="DISCOUNT" type="java.lang.Object"/>
+                                        <Column editable="false" title="NET TOTAL" type="java.lang.Object"/>
+                                        <Column editable="false" title="PAID" type="java.lang.Object"/>
                                       </Table>
+                                    </Property>
+                                    <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                                      <TableColumnModel selectionModel="0">
+                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                          <Title/>
+                                          <Editor/>
+                                          <Renderer/>
+                                        </Column>
+                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                          <Title/>
+                                          <Editor/>
+                                          <Renderer/>
+                                        </Column>
+                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                          <Title/>
+                                          <Editor/>
+                                          <Renderer/>
+                                        </Column>
+                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                          <Title/>
+                                          <Editor/>
+                                          <Renderer/>
+                                        </Column>
+                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                          <Title/>
+                                          <Editor/>
+                                          <Renderer/>
+                                        </Column>
+                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                          <Title/>
+                                          <Editor/>
+                                          <Renderer/>
+                                        </Column>
+                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                          <Title/>
+                                          <Editor/>
+                                          <Renderer/>
+                                        </Column>
+                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                          <Title/>
+                                          <Editor/>
+                                          <Renderer/>
+                                        </Column>
+                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                          <Title/>
+                                          <Editor/>
+                                          <Renderer/>
+                                        </Column>
+                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                          <Title/>
+                                          <Editor/>
+                                          <Renderer/>
+                                        </Column>
+                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                          <Title/>
+                                          <Editor/>
+                                          <Renderer/>
+                                        </Column>
+                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                          <Title/>
+                                          <Editor/>
+                                          <Renderer/>
+                                        </Column>
+                                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                          <Title/>
+                                          <Editor/>
+                                          <Renderer/>
+                                        </Column>
+                                      </TableColumnModel>
+                                    </Property>
+                                    <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                                      <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                                     </Property>
                                   </Properties>
                                 </Component>
                               </SubComponents>
                             </Container>
-                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_add_pro_brand8">
+                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_edit_billid">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                 </Property>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                  <StringArray count="4">
+                                  <StringArray count="1">
                                     <StringItem index="0" value="BILL ID"/>
-                                    <StringItem index="1" value="John"/>
-                                    <StringItem index="2" value="Mark"/>
-                                    <StringItem index="3" value="Elon"/>
                                   </StringArray>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Segoe UI" size="20" style="0"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="combo_edit_billidItemStateChanged"/>
+                              </Events>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+                            <Component class="javax.swing.JCheckBox" name="chk_paddingBill">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="PENDING BILL"/>
                               </Properties>
+                              <Events>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="chk_paddingBillMouseClicked"/>
+                              </Events>
                             </Component>
-                            <Component class="textfield.TextField" name="txt_add_custid1">
+                            <Component class="textfield.TextField" name="txt_edit_paidTotal">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f6" green="eb" red="e4" type="rgb"/>
@@ -7179,10 +7268,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_custid1KeyPressed"/>
+                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_edit_paidTotalKeyPressed"/>
                               </Events>
                             </Component>
-                            <Component class="textfield.TextField" name="txt_add_custid2">
+                            <Component class="textfield.TextField" name="txt_searchBill_data">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f6" green="eb" red="e4" type="rgb"/>
@@ -7200,12 +7289,13 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_custid2KeyPressed"/>
+                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_searchBill_dataKeyPressed"/>
+                                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_searchBill_dataKeyReleased"/>
                               </Events>
                             </Component>
                             <Component class="javax.swing.JSeparator" name="jSeparator7">
                             </Component>
-                            <Component class="com.k33ptoo.components.KButton" name="loginBtn19">
+                            <Component class="com.k33ptoo.components.KButton" name="btn_edit_editPaidTotal">
                               <Properties>
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="null"/>
@@ -7234,6 +7324,9 @@
                                   <ComponentRef name="txt_add_custid"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_edit_editPaidTotalMouseClicked"/>
+                              </Events>
                             </Component>
                             <Component class="com.k33ptoo.components.KButton" name="loginBtn20">
                               <Properties>
@@ -7265,7 +7358,7 @@
                                 </Property>
                               </Properties>
                             </Component>
-                            <Component class="com.k33ptoo.components.KButton" name="loginBtn21">
+                            <Component class="com.k33ptoo.components.KButton" name="btn_edit_deleteBillDet">
                               <Properties>
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="null"/>
@@ -7294,6 +7387,9 @@
                                   <ComponentRef name="txt_add_custid"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_edit_deleteBillDetMouseClicked"/>
+                              </Events>
                             </Component>
                           </SubComponents>
                         </Container>
