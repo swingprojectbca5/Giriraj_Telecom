@@ -7936,6 +7936,7 @@ public class frm_dashboard extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Brand details not deleted " + e);
         }
     }
+//    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.k33ptoo.components.KButton addEmp;
     private com.k33ptoo.components.KButton btnAddBrand;
