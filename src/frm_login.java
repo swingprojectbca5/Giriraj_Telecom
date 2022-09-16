@@ -55,9 +55,6 @@ public class frm_login extends javax.swing.JFrame
         txt_pswd = new textfield.PasswordField();
         jPanel7 = new javax.swing.JPanel();
         loginBtn = new com.k33ptoo.components.KButton();
-        jPanel12 = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         pnl_header = new javax.swing.JPanel();
         pnl_close = new javax.swing.JPanel();
         lbl_close = new javax.swing.JLabel();
@@ -317,45 +314,6 @@ public class frm_login extends javax.swing.JFrame
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel12.setBackground(new java.awt.Color(178, 199, 231));
-        jPanel12.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-
-        jLabel9.setFont(new java.awt.Font("Cascadia Mono", 0, 20)); // NOI18N
-        jLabel9.setText("Forgot Password ? ");
-
-        jLabel10.setFont(new java.awt.Font("Cascadia Mono", 0, 20)); // NOI18N
-        jLabel10.setText("CLICK HERE");
-        jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel10.setNextFocusableComponent(jComboBox1);
-        jLabel10.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
-                jLabel10MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
-                jLabel10MouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
-        jPanel12.setLayout(jPanel12Layout);
-        jPanel12Layout.setHorizontalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addGap(152, 152, 152)
-                .addComponent(jLabel9)
-                .addGap(0, 0, 0)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel12Layout.setVerticalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
         javax.swing.GroupLayout kGradientPanel3Layout = new javax.swing.GroupLayout(kGradientPanel3);
         kGradientPanel3.setLayout(kGradientPanel3Layout);
         kGradientPanel3Layout.setHorizontalGroup(
@@ -364,7 +322,6 @@ public class frm_login extends javax.swing.JFrame
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         kGradientPanel3Layout.setVerticalGroup(
             kGradientPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -377,9 +334,7 @@ public class frm_login extends javax.swing.JFrame
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout kpanel_rightLayout = new javax.swing.GroupLayout(kpanel_right);
@@ -545,20 +500,6 @@ public class frm_login extends javax.swing.JFrame
         this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_formMouseDragged
 
-    private void jLabel10MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_jLabel10MouseEntered
-    {//GEN-HEADEREND:event_jLabel10MouseEntered
-        jLabel10.setFont(new Font("Cascadia Monocai", Font.PLAIN, 20));
-        jLabel10.setForeground(Color.WHITE);
-        jLabel10.setText("<html><u>CLICK HERE</u></html>");
-    }//GEN-LAST:event_jLabel10MouseEntered
-
-    private void jLabel10MouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_jLabel10MouseExited
-    {//GEN-HEADEREND:event_jLabel10MouseExited
-        jLabel10.setFont(new Font("Cascadia Monocai", Font.PLAIN, 20));
-        jLabel10.setForeground(Color.BLACK);
-        jLabel10.setText("CLICK HERE");
-    }//GEN-LAST:event_jLabel10MouseExited
-
     private void loginBtnFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_loginBtnFocusGained
     {//GEN-HEADEREND:event_loginBtnFocusGained
         loginBtn.setkStartColor(new Color(228, 235, 246));
@@ -629,7 +570,7 @@ public class frm_login extends javax.swing.JFrame
 
     public void comboboxdata()
     {
-        String query = "select * from login";
+        String query = "select * from emp";
         try
         {
             ps = con.prepareStatement(query);
@@ -637,7 +578,7 @@ public class frm_login extends javax.swing.JFrame
 
             while (rs.next())
             {
-                jComboBox1.addItem(rs.getString("id"));
+                jComboBox1.addItem(rs.getString("uname"));
             }
         }
         catch (Exception e)
@@ -648,7 +589,7 @@ public class frm_login extends javax.swing.JFrame
 
     public void checkuser()
     {
-        String query = "select * from login where id ='" + jComboBox1.getSelectedItem() + "' and pswd ='" + txt_pswd.getText() + "'";
+        String query = "select uname,pass from emp where uname ='" + jComboBox1.getSelectedItem() + "' and pass ='" + txt_pswd.getText() + "'";
         try
         {
             ps = con.prepareStatement(query);
@@ -671,20 +612,17 @@ public class frm_login extends javax.swing.JFrame
         }
         catch (Exception e)
         {
-            JOptionPane.showMessageDialog(null, "checking failed");
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private combo_suggestion.ComboBoxSuggestion jComboBox1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
