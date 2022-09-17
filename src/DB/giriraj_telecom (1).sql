@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 16, 2022 at 07:14 AM
+-- Generation Time: Sep 17, 2022 at 03:53 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `bill` (
-  `id` int(10) NOT NULL,
+  `id` varchar(10) NOT NULL,
   `sname` varchar(40) NOT NULL,
   `semail` varchar(50) NOT NULL,
   `scno` varchar(12) NOT NULL,
@@ -48,13 +48,13 @@ CREATE TABLE `bill` (
 --
 
 INSERT INTO `bill` (`id`, `sname`, `semail`, `scno`, `category`, `brand`, `model`, `price`, `qty`, `tax`, `discount`, `nettotal`, `paid`, `time`) VALUES
-(1, 'lks', 'f@gmail.com', '32', ' maynk', 'mm', 'x', '3000', '2', '010', '05', '12000', '6000', '2022-09-11 05:03:32'),
-(2, 'lks', 'f@gmail.com', '32', ' maynk', 'mm', 'x', '3000', '4', '010', '05', '18005', '1800', '2022-09-13 06:15:29'),
-(3, 'lks', 'f@gmail.com', '32', ' maynk', 'mm', 'x', '3000', '1', '0', '0', '', '', '2022-09-13 06:14:38'),
-(4, 'lks', 'f@gmail.com', '32', ' maynk', 'mm', 'x', '5000', '0', '0200', '030', '170', '', '2022-09-14 06:53:09'),
-(5, 'lks', 'f@gmail.com', '32', ' maynk', 'mm', 'x', '5000', '2', '0200', '0100', '45100', '', '2022-09-14 07:25:11'),
-(6, 'lks', 'f@gmail.com', '32', ' maynk', 'mm', 'x', '100', '2', '0100', '040', '560', '400', '2022-09-15 08:02:07'),
-(7, 'lks', 'f@gmail.com', '32', ' maynk', 'mm', 'x', '100', '1', '0', '0', '', '100', '2022-09-16 04:44:43');
+('1', 'lks', 'f@gmail.com', '32', ' maynk', 'mm', 'x', '3000', '2', '010', '05', '12000', '6000', '2022-09-11 05:03:32'),
+('2', 'lks', 'f@gmail.com', '32', ' maynk', 'mm', 'x', '3000', '4', '010', '05', '18005', '1800', '2022-09-13 06:15:29'),
+('3', 'lks', 'f@gmail.com', '32', ' maynk', 'mm', 'x', '3000', '1', '0', '0', '', '', '2022-09-13 06:14:38'),
+('4', 'lks', 'f@gmail.com', '32', ' maynk', 'mm', 'x', '5000', '0', '0200', '030', '170', '', '2022-09-14 06:53:09'),
+('5', 'lks', 'f@gmail.com', '32', ' maynk', 'mm', 'x', '5000', '2', '0200', '0100', '45100', '', '2022-09-14 07:25:11'),
+('6', 'lks', 'f@gmail.com', '32', ' maynk', 'mm', 'x', '100', '2', '0100', '040', '560', '400', '2022-09-15 08:02:07'),
+('7', 'lks', 'f@gmail.com', '32', ' maynk', 'mm', 'x', '100', '1', '0', '0', '', '100', '2022-09-16 04:44:43');
 
 -- --------------------------------------------------------
 
@@ -63,7 +63,7 @@ INSERT INTO `bill` (`id`, `sname`, `semail`, `scno`, `category`, `brand`, `model
 --
 
 CREATE TABLE `brand` (
-  `id` int(11) NOT NULL,
+  `id` varchar(20) NOT NULL,
   `nm` varchar(30) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -72,7 +72,7 @@ CREATE TABLE `brand` (
 --
 
 INSERT INTO `brand` (`id`, `nm`) VALUES
-(1, 'mm');
+('1', 'mm');
 
 -- --------------------------------------------------------
 
@@ -81,7 +81,7 @@ INSERT INTO `brand` (`id`, `nm`) VALUES
 --
 
 CREATE TABLE `category` (
-  `id` int(11) NOT NULL,
+  `id` varchar(10) NOT NULL,
   `nm` varchar(30) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -90,7 +90,7 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `nm`) VALUES
-(2, ' maynk');
+('2', ' maynk');
 
 -- --------------------------------------------------------
 
@@ -99,7 +99,7 @@ INSERT INTO `category` (`id`, `nm`) VALUES
 --
 
 CREATE TABLE `customer` (
-  `id` int(11) NOT NULL,
+  `id` varchar(20) NOT NULL,
   `nm` varchar(30) NOT NULL,
   `contact` varchar(10) NOT NULL,
   `email` varchar(50) NOT NULL,
@@ -112,7 +112,7 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`id`, `nm`, `contact`, `email`, `snm`, `sadd`) VALUES
-(1, 'lks', '32', 'f@gmail.com', 'lks', 'lkfjd	');
+('1', 'lks', '32', 'f@gmail.com', 'lks', 'lkfjd	');
 
 -- --------------------------------------------------------
 
@@ -145,33 +145,11 @@ INSERT INTO `emp` (`id`, `nm`, `uname`, `contact`, `email`, `salary`, `address`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login`
---
-
-CREATE TABLE `login` (
-  `id` varchar(25) NOT NULL,
-  `pswd` varchar(25) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `login`
---
-
-INSERT INTO `login` (`id`, `pswd`) VALUES
-('1', '1234'),
-('2', '1234'),
-('3', 'admin'),
-('4', '1234'),
-('5', '1234');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `model`
 --
 
 CREATE TABLE `model` (
-  `id` int(11) NOT NULL,
+  `id` varchar(20) NOT NULL,
   `nm` varchar(30) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -180,7 +158,7 @@ CREATE TABLE `model` (
 --
 
 INSERT INTO `model` (`id`, `nm`) VALUES
-(1, 'x');
+('1', 'x');
 
 -- --------------------------------------------------------
 
@@ -189,7 +167,7 @@ INSERT INTO `model` (`id`, `nm`) VALUES
 --
 
 CREATE TABLE `product` (
-  `id` int(11) NOT NULL,
+  `id` varchar(20) NOT NULL,
   `cprice` varchar(20) NOT NULL,
   `sprice` varchar(20) NOT NULL,
   `ctgry` varchar(20) NOT NULL,
@@ -204,9 +182,9 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `cprice`, `sprice`, `ctgry`, `brand`, `model`, `qty`, `dsc`) VALUES
-(1, '4000', '5000', ' maynk', 'mm', 'x', '5', 'hello java'),
-(2, '100', '100', ' maynk', 'mm', 'x', '3', 'skjhka'),
-(3, '', '', 'Category', 'brand', 'model', '0', '');
+('1', '4000', '5000', ' maynk', 'mm', 'x', '5', 'hello java'),
+('2', '100', '100', ' maynk', 'mm', 'x', '3', 'skjhka'),
+('3', '', '', 'Category', 'brand', 'model', '0', '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

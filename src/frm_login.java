@@ -589,7 +589,7 @@ public class frm_login extends javax.swing.JFrame
 
     public void checkuser()
     {
-        String query = "select uname,pass from emp where uname ='" + jComboBox1.getSelectedItem() + "' and pass ='" + txt_pswd.getText() + "'";
+        String query = "select * from emp where uname ='" + jComboBox1.getSelectedItem() + "' and pass ='" + txt_pswd.getText() + "'";
         try
         {
             ps = con.prepareStatement(query);
@@ -600,7 +600,7 @@ public class frm_login extends javax.swing.JFrame
                 frm_dashboard dashboard = new frm_dashboard(jComboBox1.getSelectedItem().toString());
                 dashboard.setVisible(true);
 
-                dashboard.jLabel1.setText(jComboBox1.getSelectedItem().toString());
+                dashboard.jLabel1.setText(rs.getString("nm"));
                 this.dispose();
             }
             else

@@ -134,6 +134,8 @@ public class frm_dashboard extends javax.swing.JFrame
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
+        pnl_logout = new com.k33ptoo.components.KGradientPanel();
+        lbl_logout = new javax.swing.JLabel();
         pnl_header = new com.k33ptoo.components.KGradientPanel();
         pnl_close = new com.k33ptoo.components.KGradientPanel();
         lbl_close = new javax.swing.JLabel();
@@ -643,6 +645,7 @@ public class frm_dashboard extends javax.swing.JFrame
         lbl_account.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/setting.png"))); // NOI18N
         lbl_account.setText("ACCOUNT MANAGEMENT");
         lbl_account.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lbl_account.setNextFocusableComponent(lbl_logout);
         lbl_account.addFocusListener(new java.awt.event.FocusAdapter()
         {
             public void focusGained(java.awt.event.FocusEvent evt)
@@ -682,12 +685,12 @@ public class frm_dashboard extends javax.swing.JFrame
         pnl_accountLayout.setHorizontalGroup(
             pnl_accountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_accountLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 30, Short.MAX_VALUE)
                 .addComponent(lbl_account, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         pnl_accountLayout.setVerticalGroup(
             pnl_accountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbl_account, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(lbl_account, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel4.setBackground(new java.awt.Color(178, 199, 231));
@@ -721,6 +724,66 @@ public class frm_dashboard extends javax.swing.JFrame
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 30)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
+        pnl_logout.setkBorderRadius(40);
+        pnl_logout.setkEndColor(new java.awt.Color(228, 235, 246));
+        pnl_logout.setkStartColor(new java.awt.Color(228, 235, 246));
+        pnl_logout.setOpaque(false);
+
+        lbl_logout.setDisplayedMnemonic('p');
+        lbl_logout.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lbl_logout.setForeground(new java.awt.Color(68, 82, 121));
+        lbl_logout.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lbl_logout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/logout.png"))); // NOI18N
+        lbl_logout.setText("LOGOUT");
+        lbl_logout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lbl_logout.setNextFocusableComponent(lbl_customer);
+        lbl_logout.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                lbl_logoutFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                lbl_logoutFocusLost(evt);
+            }
+        });
+        lbl_logout.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                lbl_logoutMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
+                lbl_logoutMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
+                lbl_logoutMouseExited(evt);
+            }
+        });
+        lbl_logout.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                lbl_logoutKeyPressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnl_logoutLayout = new javax.swing.GroupLayout(pnl_logout);
+        pnl_logout.setLayout(pnl_logoutLayout);
+        pnl_logoutLayout.setHorizontalGroup(
+            pnl_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_logoutLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(lbl_logout, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        pnl_logoutLayout.setVerticalGroup(
+            pnl_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbl_logout, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout pnl_sidepaneLayout = new javax.swing.GroupLayout(pnl_sidepane);
         pnl_sidepane.setLayout(pnl_sidepaneLayout);
         pnl_sidepaneLayout.setHorizontalGroup(
@@ -734,7 +797,8 @@ public class frm_dashboard extends javax.swing.JFrame
                     .addComponent(pnl_bill, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnl_account, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_logout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(50, Short.MAX_VALUE))
         );
         pnl_sidepaneLayout.setVerticalGroup(
@@ -742,19 +806,21 @@ public class frm_dashboard extends javax.swing.JFrame
             .addGroup(pnl_sidepaneLayout.createSequentialGroup()
                 .addGap(13, 13, 13)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addGap(18, 18, 18)
                 .addComponent(pnl_customer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
+                .addGap(40, 40, 40)
                 .addComponent(pnl_employee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
+                .addGap(40, 40, 40)
                 .addComponent(pnl_product, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
+                .addGap(40, 40, 40)
                 .addComponent(pnl_bill, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
+                .addGap(40, 40, 40)
                 .addComponent(pnl_account, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(40, 40, 40)
+                .addComponent(pnl_logout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         pnl_header.setkBorderRadius(30);
@@ -1362,6 +1428,7 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_det_custid.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         txt_det_custid.setLabelText("SHOP ADDRESS");
         txt_det_custid.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_det_custid.setNextFocusableComponent(txt_det_custid);
         txt_det_custid.setSelectionColor(new java.awt.Color(68, 82, 121));
         txt_det_custid.addKeyListener(new java.awt.event.KeyAdapter()
         {
@@ -1757,6 +1824,7 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_empid.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         txt_add_empid.setLabelText("EMPLOYEE ID");
         txt_add_empid.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_add_empid.setNextFocusableComponent(txt_add_empnm);
         txt_add_empid.setSelectionColor(new java.awt.Color(68, 82, 121));
         txt_add_empid.addKeyListener(new java.awt.event.KeyAdapter()
         {
@@ -1771,6 +1839,7 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_empnm.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         txt_add_empnm.setLabelText("EMPLOYEE NAME");
         txt_add_empnm.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_add_empnm.setNextFocusableComponent(txt_add_usnm);
         txt_add_empnm.setSelectionColor(new java.awt.Color(68, 82, 121));
         txt_add_empnm.addKeyListener(new java.awt.event.KeyAdapter()
         {
@@ -1803,6 +1872,7 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_empemail.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         txt_add_empemail.setLabelText("EMAIL");
         txt_add_empemail.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_add_empemail.setNextFocusableComponent(txt_add_empno);
         txt_add_empemail.setSelectionColor(new java.awt.Color(68, 82, 121));
         txt_add_empemail.addKeyListener(new java.awt.event.KeyAdapter()
         {
@@ -1817,6 +1887,7 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_empsalary.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         txt_add_empsalary.setLabelText("SALARY");
         txt_add_empsalary.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_add_empsalary.setNextFocusableComponent(txt_add_empcpswd);
         txt_add_empsalary.setSelectionColor(new java.awt.Color(68, 82, 121));
         txt_add_empsalary.addKeyListener(new java.awt.event.KeyAdapter()
         {
@@ -1831,6 +1902,7 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_empadd.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         txt_add_empadd.setLabelText("ADDRESS");
         txt_add_empadd.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_add_empadd.setNextFocusableComponent(txt_add_empsalary);
         txt_add_empadd.setSelectionColor(new java.awt.Color(68, 82, 121));
         txt_add_empadd.addKeyListener(new java.awt.event.KeyAdapter()
         {
@@ -1844,12 +1916,14 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_usnm.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         txt_add_usnm.setLabelText("USERNAME");
         txt_add_usnm.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_add_usnm.setNextFocusableComponent(txt_add_empemail);
         txt_add_usnm.setShowAndHide(true);
 
         txt_add_empcpswd.setBackground(new java.awt.Color(228, 235, 246));
         txt_add_empcpswd.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         txt_add_empcpswd.setLabelText("Confirm Password");
         txt_add_empcpswd.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_add_empcpswd.setNextFocusableComponent(txt_add_empnm);
         txt_add_empcpswd.setShowAndHide(true);
 
         javax.swing.GroupLayout panel_addempLayout = new javax.swing.GroupLayout(panel_addemp);
@@ -2078,7 +2152,6 @@ public class frm_dashboard extends javax.swing.JFrame
         });
 
         lbl_edit_empid.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        lbl_edit_empid.setText("jLabel20");
 
         txt_edit_empunm.setBackground(new java.awt.Color(228, 235, 246));
         txt_edit_empunm.setHorizontalAlignment(javax.swing.JTextField.LEFT);
@@ -3256,7 +3329,7 @@ public class frm_dashboard extends javax.swing.JFrame
         });
 
         combo_add_pro_proid.setBackground(new java.awt.Color(228, 235, 246));
-        combo_add_pro_proid.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "PRODUCT ID" }));
+        combo_add_pro_proid.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "CATEGORY" }));
         combo_add_pro_proid.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         combo_add_pro_proid.addItemListener(new java.awt.event.ItemListener()
         {
@@ -3282,7 +3355,7 @@ public class frm_dashboard extends javax.swing.JFrame
                                 .addComponent(combo_edit_pro_model, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(30, 30, 30)
                                 .addComponent(spinner_edit_pro_qty, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panel_editproLayout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_editproLayout.createSequentialGroup()
                                 .addComponent(combo_add_pro_proid, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(txt_edit_pro_cprice, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -3328,8 +3401,8 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addGap(25, 25, 25)
                 .addGroup(panel_editproLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_edit_pro_cprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(combo_add_pro_proid, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_edit_pro_sprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_edit_pro_sprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(combo_add_pro_proid, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(59, 59, 59)
                 .addGroup(panel_editproLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(combo_edit_pro_ctgy, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4057,7 +4130,7 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addComponent(panel_addBill, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(panel_updateBill, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 625, Short.MAX_VALUE))
+                .addGap(0, 606, Short.MAX_VALUE))
         );
         panel_billmenuLayout.setVerticalGroup(
             panel_billmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4677,7 +4750,7 @@ public class frm_dashboard extends javax.swing.JFrame
             .addGroup(panel_billmainLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(panel_createbill, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_billmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_billmainLayout.createSequentialGroup()
                     .addContainerGap(25, Short.MAX_VALUE)
@@ -4694,7 +4767,7 @@ public class frm_dashboard extends javax.swing.JFrame
             .addGroup(panel_billmainLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(panel_createbill, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_billmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_billmainLayout.createSequentialGroup()
                     .addGap(25, 25, 25)
@@ -5070,7 +5143,7 @@ public class frm_dashboard extends javax.swing.JFrame
         );
         panel_mainLayout.setVerticalGroup(
             panel_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 710, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(panel_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(panel_product, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -6098,43 +6171,6 @@ public class frm_dashboard extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_edit_pro_ctgynmKeyPressed
 
-    private void combo_add_pro_proidItemStateChanged(java.awt.event.ItemEvent evt)//GEN-FIRST:event_combo_add_pro_proidItemStateChanged
-    {//GEN-HEADEREND:event_combo_add_pro_proidItemStateChanged
-
-        if (combo_add_pro_proid.getSelectedItem() != "PRODUCT ID")
-        {
-            try
-            {
-                String selectQuery = "select * from product where id = '" + combo_add_pro_proid.getSelectedItem().toString() + "'";
-                ps = con.prepareStatement(selectQuery);
-                rs = ps.executeQuery();
-
-                while (rs.next())
-                {
-                    txt_edit_pro_cprice.setText(rs.getString("cprice"));
-                    txt_edit_pro_sprice.setText(rs.getString("sprice"));
-                    combo_edit_pro_ctgy.setSelectedItem(rs.getString("ctgry"));
-                    combo_edit_pro_brand.setSelectedItem(rs.getString("brand"));
-                    combo_edit_pro_model.setSelectedItem(rs.getString("model"));
-                    spinner_edit_pro_qty.setValue(Integer.parseInt(rs.getString("qty")));
-                }
-            }
-            catch (Exception e)
-            {
-                JOptionPane.showMessageDialog(null, e.getMessage());
-            }
-        }
-        else
-        {
-            txt_edit_pro_cprice.setText("");
-            txt_edit_pro_sprice.setText("");
-            combo_edit_pro_ctgy.setSelectedIndex(0);
-            combo_edit_pro_brand.setSelectedIndex(0);
-            combo_edit_pro_model.setSelectedIndex(0);
-            spinner_edit_pro_qty.setValue(0);
-        }
-    }//GEN-LAST:event_combo_add_pro_proidItemStateChanged
-
     private void combo_edit_pro_ctgyidItemStateChanged(java.awt.event.ItemEvent evt)//GEN-FIRST:event_combo_edit_pro_ctgyidItemStateChanged
     {//GEN-HEADEREND:event_combo_edit_pro_ctgyidItemStateChanged
         if (combo_edit_pro_ctgyid.getSelectedItem() != "CATEGORY ID")
@@ -6288,7 +6324,7 @@ public class frm_dashboard extends javax.swing.JFrame
         {
             try
             {
-                String query = "select * from customer where nm = '" + combo_add_bill_cusid.getSelectedItem().toString() + "'";
+                String query = "select * from customer where nm = '" + combo_add_bill_cusid.getSelectedItem() + "'";
                 ps = con.prepareStatement(query);
                 rs = ps.executeQuery();
                 while (rs.next())
@@ -6317,7 +6353,7 @@ public class frm_dashboard extends javax.swing.JFrame
         {
             try
             {
-                String query = "select * from product where id = '" + combo_add_bill_proid.getSelectedItem().toString() + "'";
+                String query = "select * from product where id = '" + combo_add_bill_proid.getSelectedItem() + "'";
                 ps = con.prepareStatement(query);
                 rs = ps.executeQuery();
                 while (rs.next())
@@ -6636,6 +6672,76 @@ public class frm_dashboard extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_edit_empunmKeyPressed
 
+    private void combo_add_pro_proidItemStateChanged(java.awt.event.ItemEvent evt)//GEN-FIRST:event_combo_add_pro_proidItemStateChanged
+    {//GEN-HEADEREND:event_combo_add_pro_proidItemStateChanged
+        if (combo_add_pro_proid.getSelectedItem() != "PRODUCT ID")
+        {
+            try
+            {
+                String selectQuery = "select * from product where id = '" + combo_add_pro_proid.getSelectedItem() + "'";
+                ps = con.prepareStatement(selectQuery);
+                rs = ps.executeQuery();
+
+                while (rs.next())
+                {
+                    txt_edit_pro_cprice.setText(rs.getString("cprice"));
+                    txt_edit_pro_sprice.setText(rs.getString("sprice"));
+                    combo_edit_pro_ctgy.setSelectedItem(rs.getString("ctgry"));
+                    combo_edit_pro_brand.setSelectedItem(rs.getString("brand"));
+                    combo_edit_pro_model.setSelectedItem(rs.getString("model"));
+                    spinner_edit_pro_qty.setValue(Integer.parseInt(rs.getString("qty")));
+                }
+            }
+            catch (Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e.getMessage());
+            }
+        }
+        else
+        {
+            txt_edit_pro_cprice.setText("");
+            txt_edit_pro_sprice.setText("");
+            combo_edit_pro_ctgy.setSelectedIndex(0);
+            combo_edit_pro_brand.setSelectedIndex(0);
+            combo_edit_pro_model.setSelectedIndex(0);
+            spinner_edit_pro_qty.setValue(0);
+        }
+    }//GEN-LAST:event_combo_add_pro_proidItemStateChanged
+
+    private void lbl_logoutFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_logoutFocusGained
+    {//GEN-HEADEREND:event_lbl_logoutFocusGained
+        hoverColor(pnl_logout, lbl_logout, new Color(68, 82, 121), Color.red, Color.WHITE, new Font("Cascadia Monocai", Font.PLAIN, 24), "<html><u>LOGOUT</u></html>");
+    }//GEN-LAST:event_lbl_logoutFocusGained
+
+    private void lbl_logoutFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_logoutFocusLost
+    {//GEN-HEADEREND:event_lbl_logoutFocusLost
+        hoverColor(pnl_logout, lbl_logout, new Color(228, 235, 246), Color.BLACK, new Color(68, 82, 121), new Font("Cascadia Monocai", Font.PLAIN, 24), "LOGOUT");
+    }//GEN-LAST:event_lbl_logoutFocusLost
+
+    private void lbl_logoutMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_logoutMouseEntered
+    {//GEN-HEADEREND:event_lbl_logoutMouseEntered
+        hoverColor(pnl_logout, lbl_logout, new Color(68, 82, 121), Color.red, Color.WHITE, new Font("Cascadia Monocai", Font.PLAIN, 24), "<html><u>LOGOUT</u></html>");
+    }//GEN-LAST:event_lbl_logoutMouseEntered
+
+    private void lbl_logoutMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_logoutMouseExited
+    {//GEN-HEADEREND:event_lbl_logoutMouseExited
+        hoverColor(pnl_logout, lbl_logout, new Color(228, 235, 246), Color.BLACK, new Color(68, 82, 121), new Font("Cascadia Monocai", Font.PLAIN, 24), "LOGOUT");
+    }//GEN-LAST:event_lbl_logoutMouseExited
+
+    private void lbl_logoutMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_logoutMouseClicked
+    {//GEN-HEADEREND:event_lbl_logoutMouseClicked
+        this.dispose();
+        frm_login login = new frm_login();
+        login.setVisible(true);
+    }//GEN-LAST:event_lbl_logoutMouseClicked
+
+    private void lbl_logoutKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_lbl_logoutKeyPressed
+    {//GEN-HEADEREND:event_lbl_logoutKeyPressed
+        this.dispose();
+        frm_login login = new frm_login();
+        login.setVisible(true);
+    }//GEN-LAST:event_lbl_logoutKeyPressed
+
     public static void main(String args[])
     {
         java.awt.EventQueue.invokeLater(new Runnable()
@@ -6942,7 +7048,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
             if (rs.next())
             {
-                int lastid = rs.getInt(1);
+                int lastid = Integer.parseInt(rs.getString(1));
                 ++lastid;
                 field.setText(Integer.toString(lastid));
 
@@ -6968,10 +7074,9 @@ public class frm_dashboard extends javax.swing.JFrame
 
             if (rs.next())
             {
-                int lastid = rs.getInt(1);
+                int lastid = Integer.parseInt(rs.getString(1));
                 ++lastid;
                 lbl.setText(Integer.toString(lastid));
-
             }
             else
             {
@@ -7849,6 +7954,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private javax.swing.JLabel lbl_edit_empid;
     private javax.swing.JLabel lbl_employee;
     private javax.swing.JLabel lbl_gt;
+    private javax.swing.JLabel lbl_logout;
     private javax.swing.JLabel lbl_min;
     private javax.swing.JLabel lbl_product;
     private com.k33ptoo.components.KButton loginBtn;
@@ -7908,6 +8014,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel pnl_customer;
     private com.k33ptoo.components.KGradientPanel pnl_employee;
     private com.k33ptoo.components.KGradientPanel pnl_header;
+    private com.k33ptoo.components.KGradientPanel pnl_logout;
     private javax.swing.JPanel pnl_min;
     private com.k33ptoo.components.KGradientPanel pnl_product;
     private com.k33ptoo.components.KGradientPanel pnl_sidepane;
