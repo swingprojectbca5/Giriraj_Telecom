@@ -60,8 +60,8 @@ public class frm_dashboard extends javax.swing.JFrame
         initComponents();
         panel_main.setVisible(true);
         visibility(jLabel2, false, false, false, false, false, false, true);
-        lbl_edit_empid.setVisible(false);
-        lbl_edit_custid.setVisible(false);
+//        lbl_edit_empid.setVisible(false);
+//        lbl_edit_custid.setVisible(false);
 
         screensize();
 
@@ -192,8 +192,8 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_empemail = new textfield.TextField();
         txt_add_empsalary = new textfield.TextField();
         txt_add_empadd = new textfield.TextField();
-        txt_add_usnm = new textfield.PasswordField();
         txt_add_empcpswd = new textfield.PasswordField();
+        txt_add_usnm = new textfield.TextField();
         panel_editemp = new com.k33ptoo.components.KGradientPanel();
         panel_edit_emptable = new com.k33ptoo.components.KGradientPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -1095,9 +1095,10 @@ public class frm_dashboard extends javax.swing.JFrame
                             .addComponent(txt_add_custsnm, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE))
                         .addGap(100, 100, 100)
                         .addGroup(panel_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_add_custnm, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_add_custemail, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textAreaScroll3, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(textAreaScroll3, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panel_addcustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(txt_add_custemail, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txt_add_custnm, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)))
                         .addGap(0, 149, Short.MAX_VALUE))
                     .addGroup(panel_addcustLayout.createSequentialGroup()
                         .addGap(194, 194, 194)
@@ -1182,16 +1183,13 @@ public class frm_dashboard extends javax.swing.JFrame
         editCustBtn.setkStartColor(new java.awt.Color(68, 82, 121));
         editCustBtn.addMouseListener(new java.awt.event.MouseAdapter()
         {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                editCustBtnMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt)
             {
                 editCustBtnMouseEntered(evt);
-            }
-        });
-        editCustBtn.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                editCustBtnActionPerformed(evt);
             }
         });
 
@@ -1206,6 +1204,10 @@ public class frm_dashboard extends javax.swing.JFrame
         deleteCustBtn.setkStartColor(new java.awt.Color(68, 82, 121));
         deleteCustBtn.addMouseListener(new java.awt.event.MouseAdapter()
         {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                deleteCustBtnMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt)
             {
                 deleteCustBtnMouseEntered(evt);
@@ -1289,6 +1291,10 @@ public class frm_dashboard extends javax.swing.JFrame
             public void keyPressed(java.awt.event.KeyEvent evt)
             {
                 txt_edit_custnoKeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_edit_custnoKeyTyped(evt);
             }
         });
 
@@ -1895,6 +1901,10 @@ public class frm_dashboard extends javax.swing.JFrame
             {
                 txt_add_empsalaryKeyPressed(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_add_empsalaryKeyTyped(evt);
+            }
         });
 
         txt_add_empadd.setBackground(new java.awt.Color(228, 235, 246));
@@ -1912,19 +1922,27 @@ public class frm_dashboard extends javax.swing.JFrame
             }
         });
 
-        txt_add_usnm.setBackground(new java.awt.Color(228, 235, 246));
-        txt_add_usnm.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        txt_add_usnm.setLabelText("USERNAME");
-        txt_add_usnm.setLineColor(new java.awt.Color(68, 82, 121));
-        txt_add_usnm.setNextFocusableComponent(txt_add_empemail);
-        txt_add_usnm.setShowAndHide(true);
-
         txt_add_empcpswd.setBackground(new java.awt.Color(228, 235, 246));
         txt_add_empcpswd.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         txt_add_empcpswd.setLabelText("Confirm Password");
         txt_add_empcpswd.setLineColor(new java.awt.Color(68, 82, 121));
         txt_add_empcpswd.setNextFocusableComponent(txt_add_empnm);
         txt_add_empcpswd.setShowAndHide(true);
+
+        txt_add_usnm.setBackground(new java.awt.Color(228, 235, 246));
+        txt_add_usnm.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txt_add_usnm.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txt_add_usnm.setLabelText("USERNAME");
+        txt_add_usnm.setLineColor(new java.awt.Color(68, 82, 121));
+        txt_add_usnm.setNextFocusableComponent(txt_add_empno);
+        txt_add_usnm.setSelectionColor(new java.awt.Color(68, 82, 121));
+        txt_add_usnm.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                txt_add_usnmKeyPressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panel_addempLayout = new javax.swing.GroupLayout(panel_addemp);
         panel_addemp.setLayout(panel_addempLayout);
@@ -1934,12 +1952,11 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_addempLayout.createSequentialGroup()
                         .addGap(131, 131, 131)
-                        .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txt_add_empid, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
-                                .addComponent(txt_add_empno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txt_add_empsalary, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(txt_add_usnm, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txt_add_empid, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+                            .addComponent(txt_add_empno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txt_add_empsalary, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txt_add_usnm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(100, 100, 100)
                         .addGroup(panel_addempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txt_add_empnm, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
@@ -2107,6 +2124,10 @@ public class frm_dashboard extends javax.swing.JFrame
             {
                 txt_edit_empnoKeyPressed(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_edit_empnoKeyTyped(evt);
+            }
         });
 
         txt_edit_empemail.setBackground(new java.awt.Color(228, 235, 246));
@@ -2134,6 +2155,10 @@ public class frm_dashboard extends javax.swing.JFrame
             public void keyPressed(java.awt.event.KeyEvent evt)
             {
                 txt_edit_empsalaryKeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_edit_empsalaryKeyTyped(evt);
             }
         });
 
@@ -2647,13 +2672,6 @@ public class frm_dashboard extends javax.swing.JFrame
                 loginBtn6MouseClicked(evt);
             }
         });
-        loginBtn6.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                loginBtn6ActionPerformed(evt);
-            }
-        });
 
         txt_add_pro_id.setBackground(new java.awt.Color(228, 235, 246));
         txt_add_pro_id.setHorizontalAlignment(javax.swing.JTextField.LEFT);
@@ -2681,6 +2699,10 @@ public class frm_dashboard extends javax.swing.JFrame
             {
                 txt_add_pro_cpriceKeyPressed(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_add_pro_cpriceKeyTyped(evt);
+            }
         });
 
         txt_add_pro_sprice.setBackground(new java.awt.Color(228, 235, 246));
@@ -2694,6 +2716,10 @@ public class frm_dashboard extends javax.swing.JFrame
             public void keyPressed(java.awt.event.KeyEvent evt)
             {
                 txt_add_pro_spriceKeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_add_pro_spriceKeyTyped(evt);
             }
         });
 
@@ -3086,6 +3112,10 @@ public class frm_dashboard extends javax.swing.JFrame
             {
                 txt_edit_pro_spriceKeyPressed(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_edit_pro_spriceKeyTyped(evt);
+            }
         });
 
         txt_edit_pro_cprice.setBackground(new java.awt.Color(228, 235, 246));
@@ -3099,6 +3129,10 @@ public class frm_dashboard extends javax.swing.JFrame
             public void keyPressed(java.awt.event.KeyEvent evt)
             {
                 txt_edit_pro_cpriceKeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_edit_pro_cpriceKeyTyped(evt);
             }
         });
 
@@ -4284,6 +4318,10 @@ public class frm_dashboard extends javax.swing.JFrame
             {
                 txt_add_bill_disKeyReleased(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_add_bill_disKeyTyped(evt);
+            }
         });
 
         txt_add_bill_tax.setText("0");
@@ -4293,9 +4331,21 @@ public class frm_dashboard extends javax.swing.JFrame
             {
                 txt_add_bill_taxKeyReleased(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_add_bill_taxKeyTyped(evt);
+            }
         });
 
         lbl_add_bill_tot.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+
+        txt_add_bill_paid.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_add_bill_paidKeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -5455,7 +5505,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void loginBtnKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_loginBtnKeyPressed
     {//GEN-HEADEREND:event_loginBtnKeyPressed
-        if (checkEmptyTxtfiled(txt_add_custid, txt_add_custnm, txt_add_custno, txt_add_custemail, txt_add_custsnm, txt_add_custsaddress) == true)
+        if (checkEmptyTxtfiled(txt_add_custnm, txt_add_custno, txt_add_custemail, txt_add_custsnm, txt_add_custsaddress) == true)
         {
             addCustomer();
             autoId(txt_add_custid, "customer");
@@ -5596,7 +5646,7 @@ public class frm_dashboard extends javax.swing.JFrame
         visibility(txt_add_pro_id, panel_addpro, true, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, false);
         indicatorOn(indicatorAddpro, indicatorAddmodal, indicatorEditpro, indicatorDetpro);
         HoverColor(btn_addpro, new Color(178, 199, 231), new Color(255, 255, 255));
-        comboboxdata(combo_add_pro_ctgry, "category", "CATEGOEY");
+        comboboxdata(combo_add_pro_ctgry, "category", "CATEGORY");
         comboboxdata(combo_add_pro_brand, "brand", "BRAND");
         comboboxdata(combo_add_pro_model, "model", "MODEL");
     }//GEN-LAST:event_btn_addproMouseClicked
@@ -5606,7 +5656,7 @@ public class frm_dashboard extends javax.swing.JFrame
         escape(lbl_product, evt.getKeyCode(), panel_product);
         HoverColor(btn_addpro, new Color(178, 199, 231), new Color(255, 255, 255));
         autoId(txt_add_pro_id, "product");
-        comboboxdata(combo_add_pro_ctgry, "category", "CATEGOEY");
+        comboboxdata(combo_add_pro_ctgry, "category", "CATEGORY");
         comboboxdata(combo_add_pro_brand, "brand", "BRAND");
         comboboxdata(combo_add_pro_model, "model", "MODEL");
     }//GEN-LAST:event_btn_addproKeyPressed
@@ -6025,7 +6075,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void loginBtnMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_loginBtnMouseClicked
     {//GEN-HEADEREND:event_loginBtnMouseClicked
-        if (checkEmptyTxtfiled(txt_add_custid, txt_add_custnm, txt_add_custno, txt_add_custemail, txt_add_custsnm, txt_add_custsaddress) == true)
+        if (checkEmptyTxtfiled(txt_add_custnm, txt_add_custno, txt_add_custemail, txt_add_custsnm, txt_add_custsaddress) == true)
         {
             addCustomer();
             autoId(txt_add_custid, "customer");
@@ -6034,10 +6084,11 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void txt_add_custnoKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_custnoKeyTyped
     {//GEN-HEADEREND:event_txt_add_custnoKeyTyped
-        if (evt.getKeyChar() < '0' || evt.getKeyChar() > '9' || txt_add_custno.getText().length() == 10)
-        {
-            evt.consume();
-        }
+//        if (evt.getKeyChar() < '0' || evt.getKeyChar() > '9' || txt_add_custno.getText().length() == 10)
+//        {
+//            evt.consume();
+//        }
+        isdigit(evt, txt_add_custno);
     }//GEN-LAST:event_txt_add_custnoKeyTyped
 
     private void txt_add_custsaddressKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_add_custsaddressKeyPressed
@@ -6060,10 +6111,6 @@ public class frm_dashboard extends javax.swing.JFrame
     private void deleteCustBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteCustBtnMouseEntered
         deleteCustBtn.setCursor(new Cursor(Cursor.HAND_CURSOR));
     }//GEN-LAST:event_deleteCustBtnMouseEntered
-
-    private void editCustBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editCustBtnActionPerformed
-        editCust();
-    }//GEN-LAST:event_editCustBtnActionPerformed
 
     private void deleteCustBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteCustBtnActionPerformed
         if (deleteCust() == true)
@@ -6089,12 +6136,18 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void editEmpMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_editEmpMouseClicked
     {//GEN-HEADEREND:event_editEmpMouseClicked
-        editEmp();
+        if (checkEmptyTxtfiled(txt_edit_empnm, txt_edit_empunm, txt_edit_empemail, txt_edit_empno, txt_edit_empadd, txt_edit_empsalary) == true)
+        {
+            editEmp();
+        }
     }//GEN-LAST:event_editEmpMouseClicked
 
     private void deleteEmpMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_deleteEmpMouseClicked
     {//GEN-HEADEREND:event_deleteEmpMouseClicked
-        deleteEmp();
+        if (checkEmptyTxtfiled(txt_edit_empnm, txt_edit_empunm, txt_edit_empno, txt_edit_empemail, txt_edit_empadd, txt_edit_empsalary) == true)
+        {
+            deleteEmp();
+        }
     }//GEN-LAST:event_deleteEmpMouseClicked
 
     private void txt_det_empidKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_det_empidKeyReleased
@@ -6152,8 +6205,11 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void loginBtn6MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_loginBtn6MouseClicked
     {//GEN-HEADEREND:event_loginBtn6MouseClicked
-        addProduct();
-        autoId(txt_add_pro_id, "product");
+        if (checkcombo(combo_add_pro_ctgry, "CATEGORY") && checkcombo(combo_add_pro_brand, "BRAND") && checkcombo(combo_add_pro_model, "MODEL"))
+        {
+            addProduct();
+            autoId(txt_add_pro_id, "product");
+        }
     }//GEN-LAST:event_loginBtn6MouseClicked
 
     private void txt_edit_pro_brandnmKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_pro_brandnmKeyPressed
@@ -6306,11 +6362,6 @@ public class frm_dashboard extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_table_empdet1KeyPressed
 
-    private void loginBtn6ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_loginBtn6ActionPerformed
-    {//GEN-HEADEREND:event_loginBtn6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_loginBtn6ActionPerformed
-
     private void combo_add_bill_cusidItemStateChanged(java.awt.event.ItemEvent evt)//GEN-FIRST:event_combo_add_bill_cusidItemStateChanged
     {//GEN-HEADEREND:event_combo_add_bill_cusidItemStateChanged
         if (combo_add_bill_cusid.getSelectedItem() == "CUSTOMER ID")
@@ -6444,7 +6495,7 @@ public class frm_dashboard extends javax.swing.JFrame
         }
         int tax = Integer.parseInt(txt_add_bill_tax.getText());
         int dis = Integer.parseInt(txt_add_bill_dis.getText());
-        lbl_add_bill_ntot.setText(Integer.toString(Integer.parseInt(lbl_add_bill_tot.getText()) + tax - dis));
+        lbl_add_bill_ntot.setText(Integer.toString(Integer.parseInt(lbl_add_bill_tot.getText()) * tax / 100 - dis));
     }//GEN-LAST:event_txt_add_bill_taxKeyReleased
 
     private void txt_add_bill_disKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_bill_disKeyReleased
@@ -6459,7 +6510,7 @@ public class frm_dashboard extends javax.swing.JFrame
         }
         int tax = Integer.parseInt(txt_add_bill_tax.getText());
         int dis = Integer.parseInt(txt_add_bill_dis.getText());
-        lbl_add_bill_ntot.setText(Integer.toString(Integer.parseInt(lbl_add_bill_tot.getText()) + tax - dis));
+        lbl_add_bill_ntot.setText(Integer.toString(Integer.parseInt(lbl_add_bill_tot.getText()) * tax / 100 - dis));
     }//GEN-LAST:event_txt_add_bill_disKeyReleased
 
     private void txt_searchBill_dataKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_searchBill_dataKeyReleased
@@ -6616,10 +6667,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void txt_add_empnoKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_empnoKeyTyped
     {//GEN-HEADEREND:event_txt_add_empnoKeyTyped
-        if (evt.getKeyChar() < '0' || evt.getKeyChar() > '9' || txt_add_empno.getText().length() == 10)
-        {
-            evt.consume();
-        }
+        isdigit(evt, txt_add_empno);
     }//GEN-LAST:event_txt_add_empnoKeyTyped
 
     private void txt_add_empnoKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_empnoKeyPressed
@@ -6639,15 +6687,10 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void addEmpMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_addEmpMouseClicked
     {//GEN-HEADEREND:event_addEmpMouseClicked
-        if (checkEmptyTxtfiled(txt_add_empadd, txt_add_empnm, txt_add_empno, txt_add_empemail, txt_add_empsalary, txt_add_empadd) == true)
+        if (checkEmptyTxtfiled(txt_add_empnm, txt_add_usnm, txt_add_empemail, txt_add_empno, txt_add_empadd, txt_add_empsalary) == true)
         {
             addEmp();
             autoId(txt_add_empid, "emp");
-        }
-        else
-        {
-            txt_add_empcpswd.setLineColor(Color.RED);
-            txt_add_empcpswd.grabFocus();
         }
     }//GEN-LAST:event_addEmpMouseClicked
 
@@ -6741,6 +6784,79 @@ public class frm_dashboard extends javax.swing.JFrame
         frm_login login = new frm_login();
         login.setVisible(true);
     }//GEN-LAST:event_lbl_logoutKeyPressed
+
+    private void editCustBtnMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_editCustBtnMouseClicked
+    {//GEN-HEADEREND:event_editCustBtnMouseClicked
+        if (checkEmptyTxtfiled(txt_edit_custnm, txt_edit_custno, txt_edit_custemail, txt_edit_custsnm, txt_edit_custsadd) == true)
+        {
+            editCust();
+        }
+    }//GEN-LAST:event_editCustBtnMouseClicked
+
+    private void deleteCustBtnMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_deleteCustBtnMouseClicked
+    {//GEN-HEADEREND:event_deleteCustBtnMouseClicked
+        deleteCust();
+    }//GEN-LAST:event_deleteCustBtnMouseClicked
+
+    private void txt_add_usnmKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_usnmKeyPressed
+    {//GEN-HEADEREND:event_txt_add_usnmKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_add_usnmKeyPressed
+
+    private void txt_edit_custnoKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_custnoKeyTyped
+    {//GEN-HEADEREND:event_txt_edit_custnoKeyTyped
+        isdigit(evt, txt_edit_custno);
+    }//GEN-LAST:event_txt_edit_custnoKeyTyped
+
+    private void txt_add_empsalaryKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_empsalaryKeyTyped
+    {//GEN-HEADEREND:event_txt_add_empsalaryKeyTyped
+        isdigit(evt, txt_add_empsalary);
+    }//GEN-LAST:event_txt_add_empsalaryKeyTyped
+
+    private void txt_edit_empnoKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_empnoKeyTyped
+    {//GEN-HEADEREND:event_txt_edit_empnoKeyTyped
+        isdigit(evt, txt_edit_empno);
+    }//GEN-LAST:event_txt_edit_empnoKeyTyped
+
+    private void txt_edit_empsalaryKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_empsalaryKeyTyped
+    {//GEN-HEADEREND:event_txt_edit_empsalaryKeyTyped
+        isdigit(evt, txt_edit_empsalary);
+    }//GEN-LAST:event_txt_edit_empsalaryKeyTyped
+
+    private void txt_add_pro_cpriceKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_pro_cpriceKeyTyped
+    {//GEN-HEADEREND:event_txt_add_pro_cpriceKeyTyped
+        isdigit(evt, txt_add_pro_cprice);
+    }//GEN-LAST:event_txt_add_pro_cpriceKeyTyped
+
+    private void txt_add_pro_spriceKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_pro_spriceKeyTyped
+    {//GEN-HEADEREND:event_txt_add_pro_spriceKeyTyped
+        isdigit(evt, txt_add_pro_sprice);
+    }//GEN-LAST:event_txt_add_pro_spriceKeyTyped
+
+    private void txt_edit_pro_cpriceKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_pro_cpriceKeyTyped
+    {//GEN-HEADEREND:event_txt_edit_pro_cpriceKeyTyped
+        isdigit(evt, txt_edit_pro_cprice);
+    }//GEN-LAST:event_txt_edit_pro_cpriceKeyTyped
+
+    private void txt_edit_pro_spriceKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_edit_pro_spriceKeyTyped
+    {//GEN-HEADEREND:event_txt_edit_pro_spriceKeyTyped
+        isdigit(evt, txt_edit_pro_sprice);
+    }//GEN-LAST:event_txt_edit_pro_spriceKeyTyped
+
+    private void txt_add_bill_taxKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_bill_taxKeyTyped
+    {//GEN-HEADEREND:event_txt_add_bill_taxKeyTyped
+        isdigit(evt, txt_add_bill_tax);
+    }//GEN-LAST:event_txt_add_bill_taxKeyTyped
+
+    private void txt_add_bill_disKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_bill_disKeyTyped
+    {//GEN-HEADEREND:event_txt_add_bill_disKeyTyped
+        isdigit(evt, txt_add_bill_dis);
+    }//GEN-LAST:event_txt_add_bill_disKeyTyped
+
+    private void txt_add_bill_paidKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_bill_paidKeyTyped
+    {//GEN-HEADEREND:event_txt_add_bill_paidKeyTyped
+        isdigit(evt, txt_add_bill_paid);
+    }//GEN-LAST:event_txt_add_bill_paidKeyTyped
 
     public static void main(String args[])
     {
@@ -7104,7 +7220,43 @@ public class frm_dashboard extends javax.swing.JFrame
         }
     }
 
-    public boolean checkEmptyTxtfiled(TextField txt1, TextField txt2, TextField txt3, TextField txt4, TextField txt5, TextArea txt6)
+    public boolean checkEmptyTxtfiled(TextField txt1, TextField txt2, TextField txt3, TextField txt4, TextArea txt5)
+    {
+        if (txt1.getText().equals(""))
+        {
+            txt1.setLineColor(Color.red);
+            txt1.grabFocus();
+            return false;
+        }
+        else if (txt2.getText().equals(""))
+        {
+            txt2.setLineColor(Color.red);
+            txt2.grabFocus();
+            return false;
+        }
+        else if (txt3.getText().equals(""))
+        {
+            txt3.setLineColor(Color.red);
+
+            txt3.grabFocus();
+            return false;
+        }
+        else if (txt4.getText().equals("") || emailVaildation(txt_add_custemail) == false)
+        {
+            txt4.setLineColor(Color.red);
+            txt4.grabFocus();
+            return false;
+        }
+        else if (txt5.getText().equals(""))
+        {
+//            txt5.setLineColor(Color.red);
+            txt5.grabFocus();
+            return false;
+        }
+        return true;
+    }
+
+    public boolean checkEmptyTxtfiled(TextField txt1, TextField txt2, TextField txt3, TextField txt4, TextField txt5)
     {
         if (txt1.getText().equals(""))
         {
@@ -7134,12 +7286,6 @@ public class frm_dashboard extends javax.swing.JFrame
         {
             txt5.setLineColor(Color.red);
             txt5.grabFocus();
-            return false;
-        }
-        else if (txt6.getText().equals(""))
-        {
-            textAreaScroll3.setLineColor(Color.red);
-            txt6.grabFocus();
             return false;
         }
         return true;
@@ -7268,6 +7414,16 @@ public class frm_dashboard extends javax.swing.JFrame
         {
             JOptionPane.showMessageDialog(null, "Can't fetch customer data into the table because of: " + e);
         }
+    }
+
+    public boolean checkcombo(combo_suggestion.ComboBoxSuggestion combo, String text)
+    {
+        if (combo.getSelectedItem().equals(text))
+        {
+            combo.grabFocus();
+            return false;
+        }
+        return true;
     }
 //    Fetch the customer data into textfiled
 
@@ -7840,6 +7996,22 @@ public class frm_dashboard extends javax.swing.JFrame
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }
+
+    public void isdigit(KeyEvent evt, TextField txt)
+    {
+        if (evt.getKeyChar() < '0' || evt.getKeyChar() > '9' || txt.getText().length() == 10)
+        {
+            evt.consume();
+        }
+    }
+
+    public void isdigit(KeyEvent evt, JTextField txt)
+    {
+        if (evt.getKeyChar() < '0' || evt.getKeyChar() > '9' || txt.getText().length() == 10)
+        {
+            evt.consume();
+        }
+    }
 //
 //
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -8069,7 +8241,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private textfield.TextField txt_add_promcb_ctgy_nm;
     private textfield.TextField txt_add_promcb_model_id;
     private textfield.TextField txt_add_promcb_model_nm;
-    private textfield.PasswordField txt_add_usnm;
+    private textfield.TextField txt_add_usnm;
     private textfield.TextField txt_det_custid;
     private textfield.TextField txt_det_empid;
     private textfield.TextField txt_edit_custemail;

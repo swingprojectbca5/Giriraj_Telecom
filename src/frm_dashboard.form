@@ -926,9 +926,11 @@
                                               </Group>
                                               <EmptySpace min="100" pref="100" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="txt_add_custnm" min="-2" pref="300" max="-2" attributes="0"/>
-                                                  <Component id="txt_add_custemail" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                                                   <Component id="textAreaScroll3" min="-2" pref="303" max="-2" attributes="0"/>
+                                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                      <Component id="txt_add_custemail" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txt_add_custnm" alignment="0" pref="300" max="32767" attributes="0"/>
+                                                  </Group>
                                               </Group>
                                               <EmptySpace min="0" pref="149" max="32767" attributes="0"/>
                                           </Group>
@@ -1366,8 +1368,8 @@
                                     </Property>
                                   </Properties>
                                   <Events>
+                                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="editCustBtnMouseClicked"/>
                                     <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="editCustBtnMouseEntered"/>
-                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editCustBtnActionPerformed"/>
                                   </Events>
                                 </Component>
                                 <Component class="com.k33ptoo.components.KButton" name="deleteCustBtn">
@@ -1397,6 +1399,7 @@
                                     </Property>
                                   </Properties>
                                   <Events>
+                                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="deleteCustBtnMouseClicked"/>
                                     <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="deleteCustBtnMouseEntered"/>
                                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteCustBtnActionPerformed"/>
                                   </Events>
@@ -1473,6 +1476,7 @@
                               </Properties>
                               <Events>
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_edit_custnoKeyPressed"/>
+                                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_edit_custnoKeyTyped"/>
                               </Events>
                             </Component>
                             <Component class="textfield.TextField" name="txt_edit_custsnm">
@@ -2182,13 +2186,11 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
                                               <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                      <Component id="txt_add_empid" pref="300" max="32767" attributes="0"/>
-                                                      <Component id="txt_add_empno" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="txt_add_empsalary" alignment="0" max="32767" attributes="0"/>
-                                                  </Group>
-                                                  <Component id="txt_add_usnm" min="-2" pref="300" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="txt_add_empid" pref="300" max="32767" attributes="0"/>
+                                                  <Component id="txt_add_empno" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txt_add_empsalary" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txt_add_usnm" alignment="0" max="32767" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -2386,6 +2388,7 @@
                               </Properties>
                               <Events>
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_empsalaryKeyPressed"/>
+                                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_empsalaryKeyTyped"/>
                               </Events>
                             </Component>
                             <Component class="textfield.TextField" name="txt_add_empadd">
@@ -2412,24 +2415,6 @@
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_empaddKeyPressed"/>
                               </Events>
                             </Component>
-                            <Component class="textfield.PasswordField" name="txt_add_usnm">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
-                                </Property>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Segoe UI" size="20" style="0"/>
-                                </Property>
-                                <Property name="labelText" type="java.lang.String" value="USERNAME"/>
-                                <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="79" green="52" red="44" type="rgb"/>
-                                </Property>
-                                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                                  <ComponentRef name="txt_add_empemail"/>
-                                </Property>
-                                <Property name="showAndHide" type="boolean" value="true"/>
-                              </Properties>
-                            </Component>
                             <Component class="textfield.PasswordField" name="txt_add_empcpswd">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -2447,6 +2432,30 @@
                                 </Property>
                                 <Property name="showAndHide" type="boolean" value="true"/>
                               </Properties>
+                            </Component>
+                            <Component class="textfield.TextField" name="txt_add_usnm">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f6" green="eb" red="e4" type="rgb"/>
+                                </Property>
+                                <Property name="horizontalAlignment" type="int" value="2"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                                <Property name="labelText" type="java.lang.String" value="USERNAME"/>
+                                <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                                  <ComponentRef name="txt_add_empno"/>
+                                </Property>
+                                <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="79" green="52" red="44" type="rgb"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_usnmKeyPressed"/>
+                              </Events>
                             </Component>
                           </SubComponents>
                         </Container>
@@ -2757,6 +2766,7 @@
                               </Properties>
                               <Events>
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_edit_empnoKeyPressed"/>
+                                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_edit_empnoKeyTyped"/>
                               </Events>
                             </Component>
                             <Component class="textfield.TextField" name="txt_edit_empemail">
@@ -2799,6 +2809,7 @@
                               </Properties>
                               <Events>
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_edit_empsalaryKeyPressed"/>
+                                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_edit_empsalaryKeyTyped"/>
                               </Events>
                             </Component>
                             <Component class="textfield.TextField" name="txt_edit_empadd">
@@ -3574,7 +3585,6 @@
                               </Properties>
                               <Events>
                                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginBtn6MouseClicked"/>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginBtn6ActionPerformed"/>
                               </Events>
                             </Component>
                             <Component class="textfield.TextField" name="txt_add_pro_id">
@@ -3617,6 +3627,7 @@
                               </Properties>
                               <Events>
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_pro_cpriceKeyPressed"/>
+                                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_pro_cpriceKeyTyped"/>
                               </Events>
                             </Component>
                             <Component class="textfield.TextField" name="txt_add_pro_sprice">
@@ -3638,6 +3649,7 @@
                               </Properties>
                               <Events>
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_pro_spriceKeyPressed"/>
+                                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_pro_spriceKeyTyped"/>
                               </Events>
                             </Component>
                             <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_add_pro_model">
@@ -4309,6 +4321,7 @@
                               </Properties>
                               <Events>
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_edit_pro_spriceKeyPressed"/>
+                                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_edit_pro_spriceKeyTyped"/>
                               </Events>
                             </Component>
                             <Component class="textfield.TextField" name="txt_edit_pro_cprice">
@@ -4330,6 +4343,7 @@
                               </Properties>
                               <Events>
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_edit_pro_cpriceKeyPressed"/>
+                                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_edit_pro_cpriceKeyTyped"/>
                               </Events>
                             </Component>
                             <Component class="com.k33ptoo.components.KButton" name="btn_edit_proedit">
@@ -6237,6 +6251,7 @@
                                   </Properties>
                                   <Events>
                                     <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_bill_disKeyReleased"/>
+                                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_bill_disKeyTyped"/>
                                   </Events>
                                 </Component>
                                 <Component class="javax.swing.JTextField" name="txt_add_bill_tax">
@@ -6245,6 +6260,7 @@
                                   </Properties>
                                   <Events>
                                     <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_bill_taxKeyReleased"/>
+                                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_bill_taxKeyTyped"/>
                                   </Events>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="lbl_add_bill_tot">
@@ -6255,6 +6271,9 @@
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JTextField" name="txt_add_bill_paid">
+                                  <Events>
+                                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_add_bill_paidKeyTyped"/>
+                                  </Events>
                                 </Component>
                               </SubComponents>
                             </Container>
