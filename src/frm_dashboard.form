@@ -1401,7 +1401,6 @@
                                   <Events>
                                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="deleteCustBtnMouseClicked"/>
                                     <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="deleteCustBtnMouseEntered"/>
-                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteCustBtnActionPerformed"/>
                                   </Events>
                                 </Component>
                               </SubComponents>
@@ -2447,7 +2446,7 @@
                                   <Color blue="79" green="52" red="44" type="rgb"/>
                                 </Property>
                                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                                  <ComponentRef name="txt_add_empno"/>
+                                  <ComponentRef name="txt_add_empemail"/>
                                 </Property>
                                 <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="79" green="52" red="44" type="rgb"/>
@@ -3589,6 +3588,7 @@
                             </Component>
                             <Component class="textfield.TextField" name="txt_add_pro_id">
                               <Properties>
+                                <Property name="editable" type="boolean" value="false"/>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                 </Property>
@@ -3681,6 +3681,9 @@
                                   <Font name="Segoe UI" size="20" style="0"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="combo_add_pro_ctgryKeyPressed"/>
+                              </Events>
                             </Component>
                             <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_add_pro_brand">
                               <Properties>
@@ -3883,6 +3886,7 @@
                               <SubComponents>
                                 <Component class="textfield.TextField" name="txt_add_promcb_ctgy_id">
                                   <Properties>
+                                    <Property name="editable" type="boolean" value="false"/>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                     </Property>
@@ -3958,6 +3962,7 @@
                                 </Component>
                                 <Component class="textfield.TextField" name="txt_add_promcb_brand_id">
                                   <Properties>
+                                    <Property name="editable" type="boolean" value="false"/>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                     </Property>
@@ -4048,6 +4053,7 @@
                                 </Component>
                                 <Component class="textfield.TextField" name="txt_add_promcb_model_id">
                                   <Properties>
+                                    <Property name="editable" type="boolean" value="false"/>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                     </Property>
@@ -4191,7 +4197,7 @@
                                                       <Component id="spinner_edit_pro_qty" min="-2" pref="300" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="combo_add_pro_proid" min="-2" pref="300" max="-2" attributes="0"/>
+                                                      <Component id="combo_edit_pro_proid" min="-2" pref="300" max="-2" attributes="0"/>
                                                       <EmptySpace max="32767" attributes="0"/>
                                                       <Component id="txt_edit_pro_cprice" min="-2" pref="300" max="-2" attributes="0"/>
                                                   </Group>
@@ -4249,7 +4255,7 @@
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="txt_edit_pro_cprice" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="txt_edit_pro_sprice" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="combo_add_pro_proid" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                                          <Component id="combo_edit_pro_proid" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
@@ -4762,14 +4768,14 @@
                                 <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="combo_edit_pro_modelidItemStateChanged"/>
                               </Events>
                             </Component>
-                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_add_pro_proid">
+                            <Component class="combo_suggestion.ComboBoxSuggestion" name="combo_edit_pro_proid">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f6" green="eb" red="e4" type="rgb"/>
                                 </Property>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="1">
-                                    <StringItem index="0" value="CATEGORY"/>
+                                    <StringItem index="0" value="PRODUCT ID"/>
                                   </StringArray>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -4777,7 +4783,7 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="combo_add_pro_proidItemStateChanged"/>
+                                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="combo_edit_pro_proidItemStateChanged"/>
                               </Events>
                             </Component>
                           </SubComponents>
@@ -5809,7 +5815,7 @@
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <Component id="txt_add_bill_price" min="-2" pref="214" max="-2" attributes="0"/>
                                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                              <Component id="txt_add_pro_qty1" max="32767" attributes="0"/>
+                                                              <Component id="txt_add_bill_qty" max="32767" attributes="0"/>
                                                           </Group>
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <Component id="combo_add_bill_proid" max="32767" attributes="0"/>
@@ -5871,7 +5877,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="txt_add_bill_model" alignment="1" min="-2" pref="41" max="-2" attributes="0"/>
                                           <Component id="txt_add_bill_price" alignment="1" min="-2" pref="42" max="-2" attributes="0"/>
-                                          <Component id="txt_add_pro_qty1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txt_add_bill_qty" alignment="1" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                                   <Component id="btn_proadd_table" alignment="0" pref="42" max="32767" attributes="0"/>
@@ -6432,7 +6438,7 @@
                                 <Property name="text" type="java.lang.String" value="MODEL"/>
                               </Properties>
                             </Component>
-                            <Component class="spinner.Spinner" name="txt_add_pro_qty1">
+                            <Component class="spinner.Spinner" name="txt_add_bill_qty">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Segoe UI" size="20" style="0"/>
@@ -7229,7 +7235,7 @@
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Segoe UI" size="20" style="0"/>
                                 </Property>
-                                <Property name="labelText" type="java.lang.String" value="Password"/>
+                                <Property name="labelText" type="java.lang.String" value="SALARY"/>
                                 <Property name="lineColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="79" green="52" red="44" type="rgb"/>
                                 </Property>
@@ -7307,6 +7313,9 @@
                                   <Font name="Segoe UI" size="20" style="0"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="combo_account_idItemStateChanged"/>
+                              </Events>
                             </Component>
                           </SubComponents>
                         </Container>

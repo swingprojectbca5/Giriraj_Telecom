@@ -275,7 +275,7 @@ public class frm_dashboard extends javax.swing.JFrame
         combo_edit_pro_ctgy = new combo_suggestion.ComboBoxSuggestion();
         combo_edit_pro_brandid = new combo_suggestion.ComboBoxSuggestion();
         combo_edit_pro_modelid = new combo_suggestion.ComboBoxSuggestion();
-        combo_add_pro_proid = new combo_suggestion.ComboBoxSuggestion();
+        combo_edit_pro_proid = new combo_suggestion.ComboBoxSuggestion();
         panel_prodet = new com.k33ptoo.components.KGradientPanel();
         txt_prodet_proid = new textfield.TextField();
         jScrollPane5 = new javax.swing.JScrollPane();
@@ -338,7 +338,7 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_bill_ctgry = new javax.swing.JTextField();
         txt_add_bill_brand = new javax.swing.JTextField();
         txt_add_bill_model = new javax.swing.JTextField();
-        txt_add_pro_qty1 = new spinner.Spinner();
+        txt_add_bill_qty = new spinner.Spinner();
         panel_updatbill = new com.k33ptoo.components.KGradientPanel();
         jScrollPane9 = new javax.swing.JScrollPane();
         table_bill = new javax.swing.JTable();
@@ -1213,13 +1213,6 @@ public class frm_dashboard extends javax.swing.JFrame
                 deleteCustBtnMouseEntered(evt);
             }
         });
-        deleteCustBtn.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                deleteCustBtnActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout kGradientPanel12Layout = new javax.swing.GroupLayout(kGradientPanel12);
         kGradientPanel12.setLayout(kGradientPanel12Layout);
@@ -1934,7 +1927,7 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_usnm.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         txt_add_usnm.setLabelText("USERNAME");
         txt_add_usnm.setLineColor(new java.awt.Color(68, 82, 121));
-        txt_add_usnm.setNextFocusableComponent(txt_add_empno);
+        txt_add_usnm.setNextFocusableComponent(txt_add_empemail);
         txt_add_usnm.setSelectionColor(new java.awt.Color(68, 82, 121));
         txt_add_usnm.addKeyListener(new java.awt.event.KeyAdapter()
         {
@@ -2673,6 +2666,7 @@ public class frm_dashboard extends javax.swing.JFrame
             }
         });
 
+        txt_add_pro_id.setEditable(false);
         txt_add_pro_id.setBackground(new java.awt.Color(228, 235, 246));
         txt_add_pro_id.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txt_add_pro_id.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
@@ -2730,6 +2724,13 @@ public class frm_dashboard extends javax.swing.JFrame
         combo_add_pro_ctgry.setBackground(new java.awt.Color(228, 235, 246));
         combo_add_pro_ctgry.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Category" }));
         combo_add_pro_ctgry.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        combo_add_pro_ctgry.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                combo_add_pro_ctgryKeyPressed(evt);
+            }
+        });
 
         combo_add_pro_brand.setBackground(new java.awt.Color(228, 235, 246));
         combo_add_pro_brand.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "brand" }));
@@ -2818,6 +2819,7 @@ public class frm_dashboard extends javax.swing.JFrame
         kGradientPanel4.setkStartColor(new java.awt.Color(228, 235, 246));
         kGradientPanel4.setOpaque(false);
 
+        txt_add_promcb_ctgy_id.setEditable(false);
         txt_add_promcb_ctgy_id.setBackground(new java.awt.Color(228, 235, 246));
         txt_add_promcb_ctgy_id.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txt_add_promcb_ctgy_id.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
@@ -2878,6 +2880,7 @@ public class frm_dashboard extends javax.swing.JFrame
             }
         });
 
+        txt_add_promcb_brand_id.setEditable(false);
         txt_add_promcb_brand_id.setBackground(new java.awt.Color(228, 235, 246));
         txt_add_promcb_brand_id.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txt_add_promcb_brand_id.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
@@ -2936,6 +2939,7 @@ public class frm_dashboard extends javax.swing.JFrame
         jLabel9.setText("ADD CATEGORY");
         jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        txt_add_promcb_model_id.setEditable(false);
         txt_add_promcb_model_id.setBackground(new java.awt.Color(228, 235, 246));
         txt_add_promcb_model_id.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txt_add_promcb_model_id.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
@@ -3362,14 +3366,14 @@ public class frm_dashboard extends javax.swing.JFrame
             }
         });
 
-        combo_add_pro_proid.setBackground(new java.awt.Color(228, 235, 246));
-        combo_add_pro_proid.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "CATEGORY" }));
-        combo_add_pro_proid.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        combo_add_pro_proid.addItemListener(new java.awt.event.ItemListener()
+        combo_edit_pro_proid.setBackground(new java.awt.Color(228, 235, 246));
+        combo_edit_pro_proid.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "PRODUCT ID" }));
+        combo_edit_pro_proid.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        combo_edit_pro_proid.addItemListener(new java.awt.event.ItemListener()
         {
             public void itemStateChanged(java.awt.event.ItemEvent evt)
             {
-                combo_add_pro_proidItemStateChanged(evt);
+                combo_edit_pro_proidItemStateChanged(evt);
             }
         });
 
@@ -3390,7 +3394,7 @@ public class frm_dashboard extends javax.swing.JFrame
                                 .addGap(30, 30, 30)
                                 .addComponent(spinner_edit_pro_qty, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_editproLayout.createSequentialGroup()
-                                .addComponent(combo_add_pro_proid, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(combo_edit_pro_proid, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(txt_edit_pro_cprice, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panel_editproLayout.createSequentialGroup()
@@ -3436,7 +3440,7 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addGroup(panel_editproLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_edit_pro_cprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_edit_pro_sprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(combo_add_pro_proid, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(combo_edit_pro_proid, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(59, 59, 59)
                 .addGroup(panel_editproLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(combo_edit_pro_ctgy, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4474,8 +4478,8 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_add_bill_model.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txt_add_bill_model.setText("MODEL");
 
-        txt_add_pro_qty1.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        txt_add_pro_qty1.setLabelText("QTY");
+        txt_add_bill_qty.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txt_add_bill_qty.setLabelText("QTY");
 
         javax.swing.GroupLayout panel_createbillLayout = new javax.swing.GroupLayout(panel_createbill);
         panel_createbill.setLayout(panel_createbillLayout);
@@ -4518,7 +4522,7 @@ public class frm_dashboard extends javax.swing.JFrame
                                     .addGroup(panel_createbillLayout.createSequentialGroup()
                                         .addComponent(txt_add_bill_price, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(txt_add_pro_qty1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(txt_add_bill_qty, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(panel_createbillLayout.createSequentialGroup()
                                         .addComponent(combo_add_bill_proid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -4565,7 +4569,7 @@ public class frm_dashboard extends javax.swing.JFrame
                 .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txt_add_bill_model, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_add_bill_price, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_add_pro_qty1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_add_bill_qty, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panel_createbillLayout.createSequentialGroup()
                         .addGroup(panel_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(btn_proadd_table, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
@@ -5025,7 +5029,7 @@ public class frm_dashboard extends javax.swing.JFrame
         txt_acc_sal.setBackground(new java.awt.Color(228, 235, 246));
         txt_acc_sal.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txt_acc_sal.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        txt_acc_sal.setLabelText("Password");
+        txt_acc_sal.setLabelText("SALARY");
         txt_acc_sal.setLineColor(new java.awt.Color(68, 82, 121));
         txt_acc_sal.setSelectionColor(new java.awt.Color(68, 82, 121));
         txt_acc_sal.addKeyListener(new java.awt.event.KeyAdapter()
@@ -5071,6 +5075,13 @@ public class frm_dashboard extends javax.swing.JFrame
         combo_account_id.setBackground(new java.awt.Color(228, 235, 246));
         combo_account_id.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "EMP ID" }));
         combo_account_id.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        combo_account_id.addItemListener(new java.awt.event.ItemListener()
+        {
+            public void itemStateChanged(java.awt.event.ItemEvent evt)
+            {
+                combo_account_idItemStateChanged(evt);
+            }
+        });
 
         javax.swing.GroupLayout panel_accountsettingLayout = new javax.swing.GroupLayout(panel_accountsetting);
         panel_accountsetting.setLayout(panel_accountsettingLayout);
@@ -5375,7 +5386,7 @@ public class frm_dashboard extends javax.swing.JFrame
         visibility(panel_addpro, true, panel_addpro_mcb, false, panel_editpro, false, panel_prodet, false);
         indicatorOn(indicatorAddpro, indicatorAddmodal, indicatorEditpro, indicatorDetpro);
         autoId(txt_add_pro_id, "product");
-        comboboxdata(combo_add_pro_ctgry, "category", "CATEGOEY");
+        comboboxdata(combo_add_pro_ctgry, "category", "CATEGORY");
         comboboxdata(combo_add_pro_brand, "brand", "BRAND");
         comboboxdata(combo_add_pro_model, "model", "MODEL");
     }//GEN-LAST:event_lbl_productKeyPressed
@@ -5780,10 +5791,10 @@ public class frm_dashboard extends javax.swing.JFrame
     }//GEN-LAST:event_btn_editProFocusLost
 
     private void btn_editProMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_editProMouseClicked
-        visibility(combo_add_pro_proid, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, true, panel_prodet, false);
+        visibility(combo_edit_pro_proid, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, true, panel_prodet, false);
         indicatorOn(indicatorEditpro, indicatorAddpro, indicatorAddmodal, indicatorDetpro);
         HoverColor(btn_editPro, new Color(178, 199, 231), new Color(255, 255, 255));
-        comboboxdataId(combo_add_pro_proid, "product", "PRODUCT ID");
+        comboboxdataId(combo_edit_pro_proid, "product", "PRODUCT ID");
         comboboxdataId(combo_edit_pro_ctgyid, "category", "CATEGORY ID");
         comboboxdataId(combo_edit_pro_brandid, "brand", "BRAND ID");
         comboboxdataId(combo_edit_pro_modelid, "model", "MODEL ID");
@@ -5797,11 +5808,11 @@ public class frm_dashboard extends javax.swing.JFrame
     }//GEN-LAST:event_btn_editProMouseEntered
 
     private void btn_editProKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_editProKeyPressed
-        visibility(combo_add_pro_proid, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, true, panel_prodet, false);
+        visibility(combo_edit_pro_proid, panel_addpro, false, panel_addpro_mcb, false, panel_editpro, true, panel_prodet, false);
         escape(lbl_product, evt.getKeyCode(), panel_product);
         indicatorOn(indicatorEditpro, indicatorAddpro, indicatorAddmodal, indicatorDetpro);
         HoverColor(btn_editPro, new Color(178, 199, 231), new Color(255, 255, 255));
-        comboboxdataId(combo_add_pro_proid, "product", "PRODUCT ID");
+        comboboxdataId(combo_edit_pro_proid, "product", "PRODUCT ID");
         comboboxdataId(combo_edit_pro_ctgyid, "category", "CATEGORY ID");
         comboboxdataId(combo_edit_pro_brandid, "brand", "BRAND ID");
         comboboxdataId(combo_edit_pro_modelid, "model", "MODEL ID");
@@ -6092,7 +6103,7 @@ public class frm_dashboard extends javax.swing.JFrame
     }//GEN-LAST:event_txt_add_custnoKeyTyped
 
     private void txt_add_custsaddressKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_add_custsaddressKeyPressed
-        //        escape(btn_addpro, evt.getKeyCode());
+        escape(btn_addcust, evt.getKeyCode());
     }//GEN-LAST:event_txt_add_custsaddressKeyPressed
 
     private void table_custeditMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_custeditMouseClicked
@@ -6111,13 +6122,6 @@ public class frm_dashboard extends javax.swing.JFrame
     private void deleteCustBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteCustBtnMouseEntered
         deleteCustBtn.setCursor(new Cursor(Cursor.HAND_CURSOR));
     }//GEN-LAST:event_deleteCustBtnMouseEntered
-
-    private void deleteCustBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteCustBtnActionPerformed
-        if (deleteCust() == true)
-        {
-
-        }
-    }//GEN-LAST:event_deleteCustBtnActionPerformed
 
     private void txt_det_custidKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_det_custidKeyReleased
     {//GEN-HEADEREND:event_txt_det_custidKeyReleased
@@ -6308,7 +6312,7 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void btn_edit_proeditMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_edit_proeditMouseClicked
     {//GEN-HEADEREND:event_btn_edit_proeditMouseClicked
-        editProduct();
+        editproduct(combo_edit_pro_proid, combo_edit_pro_ctgy, combo_edit_pro_brand, combo_edit_pro_model, txt_edit_pro_cprice, txt_edit_pro_sprice);
     }//GEN-LAST:event_btn_edit_proeditMouseClicked
 
     private void btn_edit_prodelMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_edit_prodelMouseClicked
@@ -6334,16 +6338,19 @@ public class frm_dashboard extends javax.swing.JFrame
     private void btn_edit_ctgydelMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_edit_ctgydelMouseClicked
     {//GEN-HEADEREND:event_btn_edit_ctgydelMouseClicked
         brandDelete("category", combo_edit_pro_ctgyid);
+        comboboxdataId(combo_edit_pro_ctgyid, "category", "CATEGORY ID");
     }//GEN-LAST:event_btn_edit_ctgydelMouseClicked
 
     private void btn_edit_branddelMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_edit_branddelMouseClicked
     {//GEN-HEADEREND:event_btn_edit_branddelMouseClicked
         brandDelete("brand", combo_edit_pro_brandid);
+        comboboxdataId(combo_edit_pro_brandid, "brand", "BRAND ID");
     }//GEN-LAST:event_btn_edit_branddelMouseClicked
 
     private void btn_edit_modeldelMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_edit_modeldelMouseClicked
     {//GEN-HEADEREND:event_btn_edit_modeldelMouseClicked
         brandDelete("model", combo_edit_pro_modelid);
+        comboboxdataId(combo_edit_pro_modelid, "model", "MODEL ID");
     }//GEN-LAST:event_btn_edit_modeldelMouseClicked
 
     private void txt_prodet_proidKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_prodet_proidKeyPressed
@@ -6407,12 +6414,13 @@ public class frm_dashboard extends javax.swing.JFrame
                 String query = "select * from product where id = '" + combo_add_bill_proid.getSelectedItem() + "'";
                 ps = con.prepareStatement(query);
                 rs = ps.executeQuery();
-                while (rs.next())
+                if (rs.next())
                 {
                     txt_add_bill_ctgry.setText(rs.getString("ctgry"));
                     txt_add_bill_brand.setText(rs.getString("brand"));
                     txt_add_bill_model.setText(rs.getString("model"));
                     txt_add_bill_price.setText(rs.getString("sprice"));
+                    txt_add_bill_qty.setValue(rs.getInt("qty"));
                 }
             }
             catch (Exception e)
@@ -6426,7 +6434,7 @@ public class frm_dashboard extends javax.swing.JFrame
         if (combo_add_bill_proid.getSelectedItem() != "PRODUCT ID")
         {
             int total = Integer.parseInt(txt_add_bill_price.getText());
-            int qty = Integer.parseInt(txt_add_pro_qty1.getValue().toString());
+            int qty = Integer.parseInt(txt_add_bill_qty.getValue().toString());
 
             DefaultTableModel model = (DefaultTableModel) productTable.getModel();
             model.addRow(new Object[]
@@ -6715,13 +6723,13 @@ public class frm_dashboard extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_edit_empunmKeyPressed
 
-    private void combo_add_pro_proidItemStateChanged(java.awt.event.ItemEvent evt)//GEN-FIRST:event_combo_add_pro_proidItemStateChanged
-    {//GEN-HEADEREND:event_combo_add_pro_proidItemStateChanged
-        if (combo_add_pro_proid.getSelectedItem() != "PRODUCT ID")
+    private void combo_edit_pro_proidItemStateChanged(java.awt.event.ItemEvent evt)//GEN-FIRST:event_combo_edit_pro_proidItemStateChanged
+    {//GEN-HEADEREND:event_combo_edit_pro_proidItemStateChanged
+        if (combo_edit_pro_proid.getSelectedItem() != "PRODUCT ID")
         {
             try
             {
-                String selectQuery = "select * from product where id = '" + combo_add_pro_proid.getSelectedItem() + "'";
+                String selectQuery = "select * from product where id = '" + combo_edit_pro_proid.getSelectedItem() + "'";
                 ps = con.prepareStatement(selectQuery);
                 rs = ps.executeQuery();
 
@@ -6749,7 +6757,7 @@ public class frm_dashboard extends javax.swing.JFrame
             combo_edit_pro_model.setSelectedIndex(0);
             spinner_edit_pro_qty.setValue(0);
         }
-    }//GEN-LAST:event_combo_add_pro_proidItemStateChanged
+    }//GEN-LAST:event_combo_edit_pro_proidItemStateChanged
 
     private void lbl_logoutFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_lbl_logoutFocusGained
     {//GEN-HEADEREND:event_lbl_logoutFocusGained
@@ -6795,7 +6803,10 @@ public class frm_dashboard extends javax.swing.JFrame
 
     private void deleteCustBtnMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_deleteCustBtnMouseClicked
     {//GEN-HEADEREND:event_deleteCustBtnMouseClicked
-        deleteCust();
+        if (checkEmptyTxtfiled(txt_edit_custnm, txt_edit_custno, txt_edit_custemail, txt_edit_custsnm, txt_edit_custsadd) == true)
+        {
+            deleteCust();
+        }
     }//GEN-LAST:event_deleteCustBtnMouseClicked
 
     private void txt_add_usnmKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_add_usnmKeyPressed
@@ -6857,6 +6868,47 @@ public class frm_dashboard extends javax.swing.JFrame
     {//GEN-HEADEREND:event_txt_add_bill_paidKeyTyped
         isdigit(evt, txt_add_bill_paid);
     }//GEN-LAST:event_txt_add_bill_paidKeyTyped
+
+    private void combo_add_pro_ctgryKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_combo_add_pro_ctgryKeyPressed
+    {//GEN-HEADEREND:event_combo_add_pro_ctgryKeyPressed
+        //escape(btn_addpro, evt.getKeyCode());
+    }//GEN-LAST:event_combo_add_pro_ctgryKeyPressed
+
+    private void combo_account_idItemStateChanged(java.awt.event.ItemEvent evt)//GEN-FIRST:event_combo_account_idItemStateChanged
+    {//GEN-HEADEREND:event_combo_account_idItemStateChanged
+        if (combo_account_id.getSelectedItem() != "EMP ID")
+        {
+            try
+            {
+                String selectQuery = "select * from emp where id= " + combo_account_id.getSelectedItem();
+                ps = con.prepareStatement(selectQuery);
+                rs = ps.executeQuery();
+
+                while (rs.next())
+                {
+                    txt_acc_nm.setText(rs.getString("nm"));
+                    txt_acc_no.setText(rs.getString("contact"));
+                    txt_acc_email.setText(rs.getString("email"));
+                    txt_acc_add.setText(rs.getString("address"));
+                    txt_acc_sal.setText(rs.getString("salary"));
+                    txt_acc_pswd.setText(rs.getString("pass"));
+                }
+            }
+            catch (Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e.getMessage());
+            }
+        }
+        else
+        {
+            txt_acc_nm.setText("");
+            txt_acc_no.setText("");
+            txt_acc_email.setText("");
+            txt_acc_add.setText("");
+            txt_acc_sal.setText("");
+            txt_acc_pswd.setText("");
+        }
+    }//GEN-LAST:event_combo_account_idItemStateChanged
 
     public static void main(String args[])
     {
@@ -7174,9 +7226,13 @@ public class frm_dashboard extends javax.swing.JFrame
                 field.setText("1");
             }
         }
+        catch (NumberFormatException ne)
+        {
+            field.setText("1");
+        }
         catch (Exception e)
         {
-            JOptionPane.showMessageDialog(null, e);
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }
 
@@ -7201,7 +7257,7 @@ public class frm_dashboard extends javax.swing.JFrame
         }
         catch (Exception e)
         {
-            JOptionPane.showMessageDialog(null, e);
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }
 
@@ -7276,7 +7332,7 @@ public class frm_dashboard extends javax.swing.JFrame
             txt3.grabFocus();
             return false;
         }
-        else if (txt4.getText().equals("") || emailVaildation(txt_add_custemail) == false)
+        else if (txt4.getText().equals(""))
         {
             txt4.setLineColor(Color.red);
             txt4.grabFocus();
@@ -7619,7 +7675,7 @@ public class frm_dashboard extends javax.swing.JFrame
             ps.setString(6, txt_add_bill_brand.getText());
             ps.setString(7, txt_add_bill_model.getText());
             ps.setString(8, txt_add_bill_price.getText());
-            ps.setString(9, txt_add_pro_qty1.getValue().toString());
+            ps.setString(9, txt_add_bill_qty.getValue().toString());
             ps.setString(10, txt_add_bill_tax.getText());
             ps.setString(11, txt_add_bill_dis.getText());
             ps.setString(12, lbl_add_bill_ntot.getText());
@@ -7641,7 +7697,7 @@ public class frm_dashboard extends javax.swing.JFrame
             txt_add_bill_dis.setText("");
             lbl_add_bill_ntot.setText("");
             txt_add_bill_paid.setText("");
-            txt_add_pro_qty1.setValue(0);
+            txt_add_bill_qty.setValue(0);
             DefaultTableModel model = (DefaultTableModel) productTable.getModel();
             model.setRowCount(0);
             return true;
@@ -7880,11 +7936,11 @@ public class frm_dashboard extends javax.swing.JFrame
             ps.setString(4, combo_edit_pro_brand.getSelectedItem().toString());
             ps.setString(5, combo_edit_pro_model.getSelectedItem().toString());
             ps.setString(6, spinner_edit_pro_qty.getValue().toString());
-            ps.setString(7, combo_add_pro_proid.getSelectedItem().toString());
+            ps.setString(7, combo_edit_pro_proid.getSelectedItem().toString());
             ps.executeUpdate();
 
             JOptionPane.showMessageDialog(null, "Product details updated successfully");
-            combo_add_pro_proid.setSelectedIndex(0);
+            combo_edit_pro_proid.setSelectedIndex(0);
             txt_edit_pro_cprice.setText("");
             txt_edit_pro_sprice.setText("");
             combo_edit_pro_ctgy.setSelectedIndex(0);
@@ -7906,11 +7962,13 @@ public class frm_dashboard extends javax.swing.JFrame
             String updateQuery = "delete from product where id=?";
             ps = con.prepareStatement(updateQuery);
 
-            ps.setString(1, combo_add_pro_proid.getSelectedItem().toString());
+            ps.setString(1, combo_edit_pro_proid.getSelectedItem().toString());
             ps.executeUpdate();
 
             JOptionPane.showMessageDialog(null, "Product details deleted successfully");
-            combo_add_pro_proid.setSelectedIndex(0);
+            combo_edit_pro_proid.setSelectedIndex(0);
+            comboboxdataId(combo_edit_pro_proid, "product", "PRODUCT ID");
+
         }
         catch (Exception e)
         {
@@ -8012,8 +8070,14 @@ public class frm_dashboard extends javax.swing.JFrame
             evt.consume();
         }
     }
-//
-//
+
+    public void editproduct(combo_suggestion.ComboBoxSuggestion combo_pro, combo_suggestion.ComboBoxSuggestion combo_categoty, combo_suggestion.ComboBoxSuggestion combo_brand, combo_suggestion.ComboBoxSuggestion combo_model, JTextField txt1, JTextField txt2)
+    {
+        if (checkcombo(combo_pro, "PRODUCT ID") && checkcombo(combo_categoty, "CATEGORY") && checkcombo(combo_brand, "BRAND") && checkcombo(combo_model, "MODEL") && !"".equals(txt1.getText()) && !"".equals(txt2.getText()))
+        {
+            editProduct();
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.k33ptoo.components.KButton addEmp;
     private com.k33ptoo.components.KButton btnAddBrand;
@@ -8050,7 +8114,6 @@ public class frm_dashboard extends javax.swing.JFrame
     private combo_suggestion.ComboBoxSuggestion combo_add_pro_brand;
     private combo_suggestion.ComboBoxSuggestion combo_add_pro_ctgry;
     private combo_suggestion.ComboBoxSuggestion combo_add_pro_model;
-    private combo_suggestion.ComboBoxSuggestion combo_add_pro_proid;
     private combo_suggestion.ComboBoxSuggestion combo_edit_billid;
     private combo_suggestion.ComboBoxSuggestion combo_edit_pro_brand;
     private combo_suggestion.ComboBoxSuggestion combo_edit_pro_brandid;
@@ -8058,6 +8121,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private combo_suggestion.ComboBoxSuggestion combo_edit_pro_ctgyid;
     private combo_suggestion.ComboBoxSuggestion combo_edit_pro_model;
     private combo_suggestion.ComboBoxSuggestion combo_edit_pro_modelid;
+    private combo_suggestion.ComboBoxSuggestion combo_edit_pro_proid;
     private com.k33ptoo.components.KButton deleteCustBtn;
     private com.k33ptoo.components.KButton deleteEmp;
     private com.k33ptoo.components.KButton editCustBtn;
@@ -8214,6 +8278,7 @@ public class frm_dashboard extends javax.swing.JFrame
     private javax.swing.JTextField txt_add_bill_model;
     private javax.swing.JTextField txt_add_bill_paid;
     private javax.swing.JTextField txt_add_bill_price;
+    private spinner.Spinner txt_add_bill_qty;
     private javax.swing.JTextField txt_add_bill_snm;
     private javax.swing.JTextField txt_add_bill_tax;
     private textfield.TextField txt_add_custemail;
@@ -8233,7 +8298,6 @@ public class frm_dashboard extends javax.swing.JFrame
     private textarea.TextArea txt_add_pro_desc;
     private textfield.TextField txt_add_pro_id;
     private spinner.Spinner txt_add_pro_qty;
-    private spinner.Spinner txt_add_pro_qty1;
     private textfield.TextField txt_add_pro_sprice;
     private textfield.TextField txt_add_promcb_brand_id;
     private textfield.TextField txt_add_promcb_brand_nm;
